@@ -7,8 +7,10 @@
 
 ###GRUPO 4 - Comisión 13. E-commerce de vinos.
 
-    ***Desde Rosé, apuntamos a un público determinado de entre 25 a 55 años, conocedor del mundo del vino pero interesado en salir de su zona de comfort y descubrir nuevas etiquetas que lo sorprendan. 
-    A su vez, queremos que más personas se adentren en este mundo y puedan disfrutar, como nosotros, de las bondades de esta bebida. Es por eso que creamos un sitio simple pero, a la vez, atractivo, que permitirá que el cliente cuente con información de fácil acceso y con una experiencia de compra ágil.***
+ *** Desde Rosé, apuntamos a un público determinado de entre 25 a 55 años, conocedor del mundo del vino pero interesado en salir de su zona de comfort y descubrir nuevas etiquetas que lo sorprendan. 
+    A su vez, queremos que más personas se adentren en este mundo y puedan disfrutar, como nosotros, de las bondades de esta bebida. Es por eso que creamos un sitio simple pero, a la vez, atractivo, que permitirá que el cliente cuente con información de fácil acceso y con una experiencia de compra ágil.  ***
+    
+    
     
       ##*Sobre Nosotros*
       
