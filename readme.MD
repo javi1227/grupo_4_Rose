@@ -2,12 +2,18 @@
 
 
 #LOGO
-![LOGO](C:\Users\javii\Desktop\INTEGRADOR\LOGO_PROYECTO.png)
+(C:\Users\javii\Desktop\INTEGRADOR\LOGO_PROYECTO.png)
 
 
 ###GRUPO 4 - Comisión 13. E-commerce de vinos.
 
     *Desde Rosé, apuntamos a un público determinado de entre 25 a 55 años, conocedor del mundo del vino pero interesado en salir de su zona de comfort y descubrir nuevas etiquetas que lo sorprendan. A su vez, queremos que más personas se adentren en este mundo y puedan disfrutar, como nosotros, de las bondades de esta bebida. Es por eso que creamos un sitio simple pero, a la vez, atractivo, que permitirá que el cliente cuente con información de fácil acceso y con una experiencia de compra ágil*.
+    
+      ##*Sobre Nosotros*
+      
+ ***Juan Pérez : Soy un aficionado a la degustación de vinos mi familia tiene viñedo y esta en el negocio ,por eso quise ser parte de este proyecto y compartir mi pasión y conocimiento con mis compañeros de equipo.***
+ 
+ ***Carlos Ramírez : Desde muy chico me considero enófilo, viajo por el mundo y en cada viaje aprendo un poco más de este hermoso mundo realacionado al vino, haber fundado Rosé junto a mis socios es el mayor logro de mi carrera profesional.
 
 
 ___________________________________________________________________________________________________________
@@ -17,8 +23,7 @@ ________________________________________________________________________________
 
 
  **Javier Garcia**: *Hola me llamo Javier Garcia, tengo 28 años, desde hace un tiempo empecé a conocer el mundo de la programacion web y me fascinó. En este momento estoy trabajando de camarero y cursando el curso de FullStack de Digital House y fundación Formar*.
- [Perfil Linkedin] (<https://linkedin.com/in/javiergarcia1227/> "Linkedin")
-
+[Linkedin](https://www.linkedin.com/in/javiergarcia1227/ "Linkedin")
  __________________________________________________________________
 
 **Tobias Román**: *Hola me llamo Tobias, tengo 23 años, desde muy chico soñé con programar, en este momento estoy trabajando de administrativo*.
@@ -48,4 +53,4 @@ ________________________________________________________________________________
 ___________________________________________________________________________________________________________
 
 
-[Url Trello]: (https://trello.com/b/RRPHpQI4/sprints-ros%C3%A9)
+[Url Trello](https://trello.com/b/RRPHpQI4/sprints-ros%C3%A9/ "Trello")
