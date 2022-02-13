@@ -44,6 +44,7 @@ __________________________________________________________________
 __________________________________________________________________
 
 **Noelia Veizaga Arce**: *Hola me llamo Noelia, tengo 25 años, trabajo como lider de equipo en una empresa que brinda servicios digitales y por eso mi acercamiento al mundo del rubro IT*.
+[Linkedin](https://www.linkedin.com/in/noelia-veizaga-arce-48391417b/ "Linkedin")
 
 ___________________________________________________________________________________________________________
 
