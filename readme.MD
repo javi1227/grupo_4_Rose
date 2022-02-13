@@ -16,6 +16,10 @@
  ***Juan Pérez : Soy un aficionado a la degustación de vinos mi familia tiene viñedo y esta en el negocio ,por eso quise ser parte de este proyecto y compartir mi pasión y conocimiento con mis compañeros de equipo.***
  
  ***Carlos Ramírez : Desde muy chico me considero enófilo, viajo por el mundo y en cada viaje aprendo un poco más de este hermoso mundo realacionado al vino, haber fundado Rosé junto a mis socios es el mayor logro de mi carrera profesional.***
+ 
+ ***Ernesto Peréz : Soy hermano de Juan Peréz y acompaño a mi hermano desde muy chico en todo lo que es relacionado al viñedo, estudié marketing en Cuba , mi rol en esta empresa es ocuparme del Marketing digital.***
+ 
+ ***Luciana Aimar: Soy co-fundadora mi rol en esta empresa es la de degustar y seleccionar los ingredientes de nuestros fúturos vinos, viajo mucho y me encanta conocer gente que esté ligada al mundo del vino.***
 
 
 ___________________________________________________________________________________________________________
