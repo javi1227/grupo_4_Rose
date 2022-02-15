@@ -1,8 +1,7 @@
 # grupo_4_Rosé_C.13
 
 
-# LOGO
-(C:\Users\javii\Desktop\INTEGRADOR\LOGO_PROYECTO.png)
+
 
 
 ### GRUPO 4 - Comisión 13. E-commerce de vinos.
