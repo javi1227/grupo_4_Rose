@@ -12,7 +12,7 @@
    
     ## Sobre nosotros:
       
- ***Juan Pérez : Soy un aficionado a la degustación de vinos mi familia tiene viñedo y esta en el negocio ,por eso quise ser parte de este proyecto y compartir mi pasión y conocimiento con mis compañeros de equipo.***
+ ***Juan Pérez : Soy un aficionado a la degustación de vinos, mi familia tiene viñedo y esta en el negocio ,por eso quise ser parte de este proyecto y compartir mi pasión y conocimiento con mis compañeros de equipo.***
  
  ***Carlos Ramírez : Desde muy chico me considero enófilo, viajo por el mundo y en cada viaje aprendo un poco más de este hermoso mundo realacionado al vino, haber fundado Rosé junto a mis socios es el mayor logro de mi carrera profesional.***
  
@@ -27,8 +27,7 @@ ________________________________________________________________________________
 ## Miembros del equipo:
 
 
- **Javier Garcia**: *Hola me llamo Javier Garcia, tengo 28 años, desde hace un tiempo empecé a conocer el mundo de la programacion web  por vía de Youtube y me fascinó. Empecé a estudiar autodidacta por vides del mismo sitio. Al tiempo tuve la suerte de quedar seleccionado para un puesto en la fundación Formar en la que en este sigo cursando y aprandiendo día a día un poco más.
- En este momento estoy trabajando de camarero en un hotel*.
+ **Javier Garcia**: *Hola me llamo Javier Garcia, tengo 28 años, desde hace un tiempo empecé a conocer el mundo de la programación web por vía de Youtube y me fascinó. Empecé a estudiar de forma autodidacta por videos del mismo sitio. Al tiempo tuve la suerte de quedar seleccionado para un puesto en el curso de la fundación Formar junto a Digital-house, en el mismo estoy cursando y aprandiendo día a día un poco más. En este momento estoy trabajando de camarero en un hotel*. <br>
     ## Mis Redes:
 [Linkedin](https://www.linkedin.com/in/javiergarcia1227/ "Linkedin")
 [GitHub](http://https://github.com/javi1227 "GitHub")
