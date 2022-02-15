@@ -1,24 +1,38 @@
-#grupo_4_Rosé_C.13
+# grupo_4_Rosé_C.13
 
 
-#LOGO
-![LOGO](C:\Users\javii\Desktop\INTEGRADOR\LOGO_PROYECTO.png)
+# LOGO
+(C:\Users\javii\Desktop\INTEGRADOR\LOGO_PROYECTO.png)
 
 
-###GRUPO 4 - Comisión 13. E-commerce de vinos.
+### GRUPO 4 - Comisión 13. E-commerce de vinos.
 
-    *Desde Rosé, apuntamos a un público determinado de entre 25 a 55 años, conocedor del mundo del vino pero interesado en salir de su zona de comfort y descubrir nuevas etiquetas que lo sorprendan. A su vez, queremos que más personas se adentren en este mundo y puedan disfrutar, como nosotros, de las bondades de esta bebida. Es por eso que creamos un sitio simple pero, a la vez, atractivo, que permitirá que el cliente cuente con información de fácil acceso y con una experiencia de compra ágil*.
+ ***Desde Rosé, apuntamos a un público determinado de entre 25 a 55 años, conocedor del mundo del vino pero interesado en salir de su zona de comfort y descubrir nuevas etiquetas que lo sorprendan. 
+    A su vez, queremos que más personas se adentren en este mundo y puedan disfrutar, como nosotros, de las bondades de esta bebida. Es por eso que creamos un sitio simple pero, a la vez, atractivo, que permitirá que el cliente cuente con información de fácil acceso y con una experiencia de compra ágil.***
+    
+   
+    ## Sobre nosotros:
+      
+ ***Juan Pérez : Soy un aficionado a la degustación de vinos mi familia tiene viñedo y esta en el negocio ,por eso quise ser parte de este proyecto y compartir mi pasión y conocimiento con mis compañeros de equipo.***
+ 
+ ***Carlos Ramírez : Desde muy chico me considero enófilo, viajo por el mundo y en cada viaje aprendo un poco más de este hermoso mundo realacionado al vino, haber fundado Rosé junto a mis socios es el mayor logro de mi carrera profesional.***
+ 
+ ***Ernesto Peréz : Soy hermano de Juan Peréz y acompaño a mi hermano desde muy chico en todo lo que es relacionado al viñedo, estudié marketing en Cuba , mi rol en esta empresa es ocuparme del Marketing digital.***
+ 
+ ***Luciana Aimar: Soy co-fundadora mi rol en esta empresa es la de degustar y seleccionar los ingredientes de nuestros fúturos vinos, viajo mucho y me encanta conocer gente que esté ligada al mundo del vino.***
 
 
 ___________________________________________________________________________________________________________
 
 
-##Miembros del equipo:
+## Miembros del equipo:
 
 
- **Javier Garcia**: *Hola me llamo Javier Garcia, tengo 28 años, desde hace un tiempo empecé a conocer el mundo de la programacion web y me fascinó. En este momento estoy trabajando de camarero y cursando el curso de FullStack de Digital House y fundación Formar*.
- [Perfil Linkedin] (<https://linkedin.com/in/javiergarcia1227/> "Linkedin")
-
+ **Javier Garcia**: *Hola me llamo Javier Garcia, tengo 28 años, desde hace un tiempo empecé a conocer el mundo de la programacion web  por vía de Youtube y me fascinó. Empecé a estudiar autodidacta por vides del mismo sitio. Al tiempo tuve la suerte de quedar seleccionado para un puesto en la fundación Formar en la que en este sigo cursando y aprandiendo día a día un poco más.
+ En este momento estoy trabajando de camarero en un hotel*.
+    ## Mis Redes:
+[Linkedin](https://www.linkedin.com/in/javiergarcia1227/ "Linkedin")
+[GitHub](http://https://github.com/javi1227 "GitHub")
  __________________________________________________________________
 
 **Tobias Román**: *Hola me llamo Tobias, tengo 23 años, desde muy chico soñé con programar, en este momento estoy trabajando de administrativo*.
@@ -30,6 +44,7 @@ __________________________________________________________________
 __________________________________________________________________
 
 **Noelia Veizaga Arce**: *Hola me llamo Noelia, tengo 25 años, trabajo como lider de equipo en una empresa que brinda servicios digitales y por eso mi acercamiento al mundo del rubro IT*.
+[Linkedin](https://www.linkedin.com/in/noelia-veizaga-arce-48391417b/ "Linkedin")
 
 ___________________________________________________________________________________________________________
 
@@ -48,4 +63,4 @@ ________________________________________________________________________________
 ___________________________________________________________________________________________________________
 
 
-[Url Trello]: (https://trello.com/b/RRPHpQI4/sprints-ros%C3%A9)
+[Url Trello](https://trello.com/b/RRPHpQI4/sprints-ros%C3%A9/ "Trello")
