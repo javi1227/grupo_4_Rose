@@ -12,7 +12,7 @@
    
     ## Sobre nosotros:
       
- ***Juan Pérez : Soy un aficionado a la degustación de vinos mi familia tiene viñedo y esta en el negocio ,por eso quise ser parte de este proyecto y compartir mi pasión y conocimiento con mis compañeros de equipo.***
+ ***Juan Pérez : Soy un aficionado a la degustación de vinos, mi familia tiene viñedo y esta en el negocio ,por eso quise ser parte de este proyecto y compartir mi pasión y conocimiento con mis compañeros de equipo.***
  
  ***Carlos Ramírez : Desde muy chico me considero enófilo, viajo por el mundo y en cada viaje aprendo un poco más de este hermoso mundo realacionado al vino, haber fundado Rosé junto a mis socios es el mayor logro de mi carrera profesional.***
  
@@ -27,22 +27,21 @@ ________________________________________________________________________________
 ## Miembros del equipo:
 
 
- **Javier Garcia**: *Hola me llamo Javier Garcia, tengo 28 años, desde hace un tiempo empecé a conocer el mundo de la programacion web  por vía de Youtube y me fascinó. Empecé a estudiar autodidacta por vides del mismo sitio. Al tiempo tuve la suerte de quedar seleccionado para un puesto en la fundación Formar en la que en este sigo cursando y aprandiendo día a día un poco más.
- En este momento estoy trabajando de camarero en un hotel*.
+ **Javier Garcia**: *Hola, me llamo Javier Garcia, tengo 28 años, desde hace un tiempo empecé a conocer el mundo de la programación web por vía de Youtube y me fascinó. Empecé a estudiar de forma autodidacta por videos del mismo sitio. Al tiempo tuve la suerte de quedar seleccionado para un puesto en el curso de la fundación Formar junto a Digital-house, en el mismo estoy cursando y aprandiendo día a día un poco más. En este momento estoy trabajando de camarero en un hotel*. <br>
     ## Mis Redes:
 [Linkedin](https://www.linkedin.com/in/javiergarcia1227/ "Linkedin")
 [GitHub](http://https://github.com/javi1227 "GitHub")
  __________________________________________________________________
 
-**Tobias Román**: *Hola me llamo Tobias, tengo 23 años, desde muy chico soñé con programar, en este momento estoy trabajando de administrativo*.
+**Tobias Román**: *Hola, me llamo Tobias, tengo 23 años, desde muy chico soñé con programar, en este momento estoy trabajando de administrativo*.
 
 __________________________________________________________________
 
-**Igor Demian Villar**: *Hola Me llamo igor Villar, Tengo 24 años, trabaje en una empresa de comercio en la parte de administración y siempre tuve curiosidad de saber como funcionaban las paginas y aplicaciones que usabamos. Por eso me quiero dedicar al mundo de la programación*.
+**Igor Demian Villar**: *Hola, Me llamo igor Villar, Tengo 24 años, trabaje en una empresa de comercio en la parte de administración y siempre tuve curiosidad de saber como funcionaban las paginas y aplicaciones que usabamos. Por eso me quiero dedicar al mundo de la programación*.
 
 __________________________________________________________________
 
-**Noelia Veizaga Arce**: *Hola me llamo Noelia, tengo 25 años, trabajo como lider de equipo en una empresa que brinda servicios digitales y por eso mi acercamiento al mundo del rubro IT*.
+**Noelia Veizaga Arce**: *Hola, me llamo Noelia, tengo 25 años, trabajo como lider de equipo en una empresa que brinda servicios digitales y por eso mi acercamiento al mundo del rubro IT*.
 [Linkedin](https://www.linkedin.com/in/noelia-veizaga-arce-48391417b/ "Linkedin")
 
 ___________________________________________________________________________________________________________
