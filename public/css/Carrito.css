@@ -133,7 +133,7 @@ body::-webkit-scrollbar-thumb {
 .Añadir-carro-figure-igor {
     display: flex;
     flex-direction: row-reverse;
-    padding: 1rem;
+    padding: 5px;
     text-align: center;
 }
 
@@ -312,7 +312,7 @@ ol li {
         
     }
 
-    .bloque-ofertas {
+    .bloque-ofertas-igor {
         display: inline-block;
         align-items: center;
         flex-direction: column;
@@ -320,7 +320,7 @@ ol li {
         font-family: 'Aleo', serif;
     }
 
-    .contenedor img {
+    .contenedor-igor img {
         width: 10rem;
         height: 10rem;
         display: flex;
@@ -331,7 +331,7 @@ ol li {
     }
        
     .summary-action .btn-submit{   
-        padding: 0px 70px 9px;
+        padding: 0px 75px 9px;
         margin: 8px; 
         -webkit-text-stroke: medium;
         color: white;
