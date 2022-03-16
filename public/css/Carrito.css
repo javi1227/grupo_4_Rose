@@ -133,7 +133,7 @@ body::-webkit-scrollbar-thumb {
 .Añadir-carro-figure-igor {
     display: flex;
     flex-direction: row-reverse;
-    padding: 1rem;
+    padding: 5px;
     text-align: center;
 }
 
