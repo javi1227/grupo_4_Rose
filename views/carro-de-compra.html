@@ -21,7 +21,6 @@
     />
     <!-- STYLES -->
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/carrito.css"/>
     <title>Rosé</title>
   </head>
   <body>
@@ -35,7 +34,7 @@
             <li class="nav-item"> <a href="#" class="nav-link">Tienda</a></li>
             <li class="nav-item"> <a href="#" class="nav-link">Contacto</a></li>
             <li class="nav-item"> <a href="#" class="nav-link">Login</a></li>
-            <li class="nav-item"> <a href="#" class="nav-link">Mi carrito</a></li>
+            <li class="nav-item"> <a href="carro-de-compra"  class="nav-link">Mi carrito</a></li>
               <li class="nav-item__burguer">
                 <a href=""><i class="iconosFooter fa-brands fa-facebook"></i></a>
                 <a href=""><i class="iconosFooter fa-brands fa-instagram"></i></a>
@@ -55,6 +54,8 @@
       
   </header>
 
+<!-- MENU -->
+
 <body class="Carrito-igor">  
 <!-- MENU CARRITO -->
 <div class="carrito-title">
@@ -70,8 +71,7 @@
                   <a href=""> Eliminar <i class="fa-solid fa-cart-arrow-down"></i></a>
             </div> 
             
-    </div>
-    <hr class="bar"> 
+    </div> 
 
     <div class="contenedor-igor">
             
@@ -96,63 +96,71 @@
             </div>
 
 </div>
-<script src="/js/main.js"></script>
+ <!-- -------------------------------------------------- -->
+  <!-- BOTON DE IR HACIA ABAJO -->
+  <div id="button-up">
+    <i class="fa-solid fa-chevron-up"></i>
+  </div>
 
-    <!-------------------- FOOTER ----------->
-    <footer>
-      <div class="container_footer">
-        <div class="box_footer">
-          <div class="logo" style="font-size: 20px">
-            <img src="images/LOGO.png" alt="ICONO" />
-          </div>
-          <div class="terms">
-            <p>
-              Beber con moderación. Prohibida su venta a menores de 18 años. El
-              abuso de alcohol es peligroso para la salud. Rosé Argentina apoya
-              el consumo responsable.
-            </p>
+
+
+  <!-- FIN DE BOTON HACIA ABAJO -->
+  <script src="/js/main.js"></script>
+
+  <!-------------------- FOOTER ----------->
+  <footer>
+    <div class="container_footer">
+      <div class="box_footer">
+        <div class="logo" style="font-size: 20px">
+          <img src="images/LOGO.png" alt="ICONO" />
+        </div>
+        <div class="terms">
+          <p>
+            Beber con moderación. Prohibida su venta a menores de 18 años. El
+            abuso de alcohol es peligroso para la salud. Rosé Argentina apoya
+            el consumo responsable.
+          </p>
+        </div>
+      </div>
+      <div class="organizarfooterRow">
+        <div class="box__footer">
+          <h2>Tus dudas</h2>
+          <a href="/PreguntasFrecuentes">Preguntas Frecuentes</a>
+          <a href="/privacidad">Privacidad</a>
+          <a href="/nosotros">Nosotros</a>
+        </div>
+
+        <div class="box__footer">
+          <h2>Contacto</h2>
+          <ol>
+            <li>Lunes a viernes de 08:00 a 20:30 hs.</li>
+            <li>Brandsen 805 CABA</li>
+            <li>(011) 5777-5757</li>
+            <li>rosé@rosé.com</li>
+          </ol>
+        </div>
+
+        <div class="box__footer">
+          <h2>SEGUINOS</h2>
+          <div class="redes">
+            <a href="#"
+              ><i class="iconosFooter fa-brands fa-instagram"></i
+            ></a>
+            <a href="#"
+              ><i class="iconosFooter fa-brands fa-linkedin-in"></i
+            ></a>
+            <a href="#"><i class="iconosFooter fa-brands fa-github"></i></a>
+            <a href="#"><i class="iconosFooter fa-brands fa-facebook"></i></a>
           </div>
         </div>
-        <div class="organizarfooterRow">
-          <div class="box__footer">
-            <h2>Tus dudas</h2>
-            <a href="/PreguntasFrecuentes">Preguntas Frecuentes</a>
-            <a href="/privacidad">Privacidad</a>
-            <a href="/nosotros">Nosotros</a>
-          </div>
-
-          <div class="box__footer">
-            <h2>Contacto</h2>
-            <ol>
-              <li>Lunes a viernes de 08:00 a 20:30 hs.</li>
-              <li>Brandsen 805 CABA</li>
-              <li>(011) 5777-5757</li>
-              <li>rosé@rosé.com</li>
-            </ol>
-          </div>
-
-          <div class="box__footer">
-            <h2>SEGUINOS</h2>
-            <div class="redes">
-              <a href="#"
-                ><i class="iconosFooter fa-brands fa-instagram"></i
-              ></a>
-              <a href="#"
-                ><i class="iconosFooter fa-brands fa-linkedin-in"></i
-              ></a>
-              <a href="#"><i class="iconosFooter fa-brands fa-github"></i></a>
-              <a href="#"><i class="iconosFooter fa-brands fa-facebook"></i></a>
-            </div>
-          </div>
-        </div>
-        <!---organizarfooterRow-->
       </div>
-      <!-- conteiner- footer-->
-      <div class="box__copyright">
-        <hr />
-        <p>Todos los derechos reservados © 2021-2022 <b>Rosé</b></p>
-      </div>
-    </footer>      
-                                                                                                                                               
+      <!---organizarfooterRow-->
+    </div>
+    <!-- conteiner- footer-->
+    <div class="box__copyright">
+      <hr />
+      <p>Todos los derechos reservados © 2021-2022 <b>Rosé</b></p>
+    </div>
+  </footer>
 </body>
 </html>
