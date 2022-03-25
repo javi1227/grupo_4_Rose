@@ -238,11 +238,10 @@ body::-webkit-scrollbar-thumb {
     color: white;
     width: 85px;
     height: 32px;
-    margin-bottom: 6.4rem;
-    margin-right: 2.4rem;
     display: none;
     position: absolute;
     transition: all 400ms ease;
+    
 }
 
 .Añadir-carro-figure :hover {
@@ -495,8 +494,12 @@ ol li {
     
 
 .Añadir-carro-figure {
-    margin-bottom: 7.4rem;
-    margin-right: 3.6rem;
+    margin-right: auto;
+    margin-left: auto;
+    left: 0;
+    right: 0;
+    position: absolute;
+
 }
 /* MEDIA PAGINA */
 .mediaPagina {
@@ -571,12 +574,16 @@ ol li {
 
 .contenedor img{  /*modificador de imagenes*/
     margin: auto;
-    
 }
 
+
 .Añadir-carro-figure {
-    margin-bottom: 5.6rem;
-    margin-right: 3.1rem;
+    margin-right: auto;
+    margin-left: auto;
+    left: 0;
+    right: 0;
+    position: absolute;
+
 }
 
 
@@ -666,7 +673,7 @@ ol li {
         transition: 0.3s;
         z-index: 1;
         height: 50vh;
-        padding: 1.5rem;
+        padding: 1rem;
         font-weight: bold;
     }
 
