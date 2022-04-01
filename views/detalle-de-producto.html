@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    
     <!-- FONT -->
-    <link rel="preconnect" href="https://fonts.googleapis.com/" />
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Lato:wght@300&family=Roboto&display=swap"
       rel="stylesheet"
@@ -20,143 +20,228 @@
       referrerpolicy="no-referrer"
     />
     <!-- STYLES -->
-    <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/detalle.css"/>
+    <link rel="stylesheet" href="./css/styles.css"/>
+    <link rel="stylesheet" href="./css/detalleProductos.css">
     <title>Rosé</title>
   </head>
   <body>
-<header id="navbar">
+    <header id="navbar">
       <nav class="navbar" >
           <a href="#" class="logo"><img src="/images/LOGO.png" alt="logo"></a>
 
-          <ul class="nav-menu"> 
-            <li class="nav-item"> <a href="#" class="nav-link">Inicio</a></li>
+          <ul class="nav-menu">
+            <li class="nav-item"> <a href="home" class="nav-link">Inicio</a></li>
             <li class="nav-item"> <a href="#" class="nav-link">Tienda</a></li>
             <li class="nav-item"> <a href="#" class="nav-link">Contacto</a></li>
-            <li class="nav-item"> <a href="#" class="nav-link">Login</a></li>
-            <li class="nav-item"> <a href="#" class="nav-link">Mi carrito</a></li>
+            <li class="nav-item"> <a href="login" class="nav-link">Login</a></li>
+            <li class="nav-item"> <a href="carro-de-compra"  class="nav-link">Mi carrito</a></li>
               <li class="nav-item__burguer">
                 <a href=""><i class="iconosFooter fa-brands fa-facebook"></i></a>
                 <a href=""><i class="iconosFooter fa-brands fa-instagram"></i></a>
                 <a href=""><i class="iconosFooter fa-brands fa-github"></i></a>
               </li>
-
+      
           </ul>
           <div class="hamburger">
               <span class="bar"></span>
               <span class="bar"></span>
               <span class="bar"></span>
-
+            
 
           </div>
       </nav>
 
-
+      
   </header>
 
-           <!--productos-->
-<body class="DETALLE-noe">  
+  <div class="body-Sin-footer">
 
-<div class="producto1-noe">
-             <p>Inicio / Producto / Vino</p>
-             
-             <div class="producto-noe">
-              <img  width="100px"  src="images/3raOFerta-Pittacum-Petit-Pittacum.png"> 
-              <div class="nombre-noe">                         
+      <div class="contenedor_productos">
+        <div class="conteneder_imagenes">
+            <img src="images/Petit-Voyage.png" alt="">
+        </div>
+        <div class="contenedor_textoProducto">
+                <h2>Le Petit Voyage</h2>
+            <hr>
+            <div class="precio_producto">
+                <span class="precio_productos">$1990,00</span>  <p class="star-DetalledeProducto"><i class="star-Carro fa-solid fa-star"></i><i class="star-Carro fa-solid fa-star"></i><i class="star-Carro fa-solid fa-star"></i><i class="star-Carro fa-solid fa-star"></i></p>
+            </div>
+            <hr>
+            <p class="p_productos">
+                Le Petit Voyage Criolla se hace con uvas de Vista Flores, cosechadas durante la primera semana de marzo. La elaboración del vino se hizo mediante una maceración carbónica con racimos enteros, luego se prensaron las uvas y la fermentación terminó sin hollejos, como un vino blanco. La adición de borras de pinot gris durante la crianza y el batonnage le dieron elegancia y volumen.
+            </p>
+            <div class="add-to-cart_producto">
+                <button><a href="carro-de-compra">Agregar al Carrito</a></button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <hr class="separador-DProducto">
+    <h2 class="h2_similar">Productos Similares</h2>
+    <div class="productos_similares">
+    <div class="bloque__similar">
+            <div class="similares_images">
+                <img src="images/4-Gatos-Locos-Malbec.png" alt="">
+            </div>
+            <div class="similares_texts">
+                <h4>4 Gatos Locos</h4>
+                <p class="star-Detalle-de-Producto"><i class="star-Carro fa-solid fa-star"></i><i class="star-Carro fa-solid fa-star"></i><i class="star-Carro fa-solid fa-star"></i></p>
+                <h5>$1800,00</h5>
+            </div>
+    </div>
+    <div class="bloque__similar">
+        <div class="similares_images">
+            <img src="images/Valdencanto-de-Rio.png" alt="">
+        </div>
+        <div class="similares_texts">
+            <h4>Valdecanto de Río</h4>
+            <p class="star-Detalle-de-Producto"><i class="star-Carro fa-solid fa-star"></i><i class="star-Carro fa-solid fa-star"></i><i class="star-Carro fa-solid fa-star"></i><i class="star-Carro fa-solid fa-star"></i></p>
+            <h5>$3000,00</h5>
+        </div>
+    </div>
+    <div class="bloque__similar">
+        <div class="similares_images">
+            <img src="images/Riccitelli-Kung-Fu-Tinto.png" alt="">
+        </div>
+        <div class="similares_texts">
+            <h4 class="price-DetalleProducto" >Kung-Fu Malbec 2021</h4>
+            <p class="star-Detalle-de-Producto"><i class="star-Carro fa-solid fa-star"></i><i class="star-Carro fa-solid fa-star"></i><i class="star-Carro fa-solid fa-star"></i><i class="star-Carro fa-solid fa-star"></i><i class="star-Carro fa-solid fa-star"></i></p>
+            <h5 class="price-DetalleProducto">$3400,00</h5>
+        </div>
+    </div>
+    </div> <!--PRODUCTO SIMILAR-->
+    <hr class="separador-DProducto">
+    <div class="reviews-producto">
+    <H2 class="H2-Detalle-Producto">RESEÑAS</H2>
+    <div class="reviews">
+        <div class="reviews_logo">
+            <img src="images/1persona.jpg" alt="foto">
+        </div>
+        <div class="reviews_datos">
+            <h3>Bratt Smith</h3>
+            <p>Agosto 2021</p>
+            <p class="star-DetalledeProducto"><i class="star-Carro fa-solid fa-star"></i><i class="star-Carro fa-solid fa-star"></i><i class="star-Carro fa-solid fa-star"></i><i class="star-Carro fa-solid fa-star"></i><i class="star-Carro fa-solid fa-star"></i></p>
+        </div>
+        <div class="reviews_coment">
+            <p>Excelente producto, recomendado al 100%.</p>
+        </div>
+    </div>
 
-                <span class="titulo-noe"><h3>Pittacum petit 2021</h3></span>
-                <span class="precio-noe">$3500</span>
-              </div>                     
-              <hr>
-              <div class="boton-noe">
-                <button type="submit" class="btn btn-submit">Comprar</button>           
-              </div>                           
-        <div class="descripcion1-noe">
-          <h2>Detalle :</h2>
-        
-          <h3>Petit Pittacum es el vino de la bodega que mejor refleja el carácter atlántico de los vinos del Bierzo. Procede de suelos arcillosos, más frescos, con viñas cultivadas sobre empinadas laderas orientadas al este y al norte. Son estos parajes los que Petit Pittacum busca mostrar, pura expresión atlántica, fluida y golosa al mismo tiempo.</h3>
-          <ol class="lista-noe">
-            <li>Elaborador: Pittacum</li>
-            <li>Año: 2021</li>
-            <li>Color: Tinto</li>
-            <li>Variedad: Mencía</li>
-            <li>Zona: Bierzo</li>
-            <li>País: España</li>
-            <li>Grado alcohólico: 13,5</li>
+    <div class="reviews">
+        <div class="reviews_logo">
+            <img src="images/2persona.jpg" alt="foto">
+        </div>
+        <div class="reviews_datos">
+            <h3>Juana Estevez</h3>
+            <p>Febrero 2022</p>
+            <p class="star-DetalledeProducto"><i class="star-Carro fa-solid fa-star"></i><i class="star-Carro fa-solid fa-star"></i><i class="star-Carro fa-solid fa-star"></i><i class="star-Carro fa-solid fa-star"></i></p>
+        </div>
+        <div class="reviews_coment">
+            <p>Excelente todo, el envío llegó en tiempo y forma.</p>
+        </div>
+    </div>
+
+    <div class="reviews">
+        <div class="reviews_logo">
+            <img src="images/3persona.jpg" alt="foto">
+        </div>
+        <div class="reviews_datos">
+            <h3>Juan Rivero</h3>
+            <p>Agosto 2020</p>
+            <p class="star-DetalledeProducto"><i class="star-Carro fa-solid fa-star"></i><i class="star-Carro fa-solid fa-star"></i><i class="star-Carro fa-solid fa-star"></i><i class="star-Carro fa-solid fa-star"></i><i class="star-Carro fa-solid fa-star"></i></p>
+        </div>
+        <div class="reviews_coment">
+            <p>Excelente atención en la Sucursal de La Boca</p>
+        </div>
+    </div>
+
+    <div class="reviews">
+        <div class="reviews_logo">
+            <img src="images/4persona.jpg" alt="foto">
+        </div>
+        <div class="reviews_datos">
+            <h3>Martin Guarraccino</h3>
+            <p>Marzo 2022</p>
+            <p class="star-DetalledeProducto"><i class="star-Carro fa-solid fa-star"></i><i class="star-Carro fa-solid fa-star"></i><i class="star-Carro fa-solid fa-star"></i><i class="star-Carro fa-solid fa-star"></i><i class="star-Carro fa-solid fa-star"></i></p>
+        </div>
+        <div class="reviews_coment">
+            <p>Excelente sabor, una delicia que me recuerda al Kun fu Malbec</p>
+        </div>
+    </div>
+    <div class="IniciarSeccionDetalles">
+        <h6>para dejar tu reseña del producto</h6>
+        <button class="btn-productos"><a href="login">Inicia Sesión</a></button>
+    </div>
+
+    </div>
+    <hr>
+
+</div> <!--Body.sin.Footer-->
+
+  <!-- -------------------------------------------------- -->
+  <!-- BOTON DE IR HACIA ABAJO -->
+  <div id="button-up">
+    <i class="fa-solid fa-chevron-up"></i>
+  </div>
+
+
+
+  <!-- FIN DE BOTON HACIA ABAJO -->
+  <script src="/js/main.js"></script>
+  <!-------------------- FOOTER ----------->
+  <footer>
+    <div class="container_footer">
+      <div class="box_footer">
+        <div class="logo" style="font-size: 20px">
+          <img src="images/LOGO.png" alt="ICONO" />
+        </div>
+        <div class="terms">
+          <p>
+            Beber con moderación. Prohibida su venta a menores de 18 años. El
+            abuso de alcohol es peligroso para la salud. Rosé Argentina apoya
+            el consumo responsable.
+          </p>
+        </div>
+      </div>
+      <div class="organizarfooterRow">
+        <div class="box__footer">
+          <h2>Tus dudas</h2>
+          <a href="/PreguntasFrecuentes">Preguntas Frecuentes</a>
+          <a href="/privacidad">Privacidad</a>
+          <a href="/nosotros">Nosotros</a>
+        </div>
+
+        <div class="box__footer">
+          <h2>Contacto</h2>
+          <ol>
+            <li>Lunes a viernes de 08:00 a 20:30 hs.</li>
+            <li>Brandsen 805 CABA</li>
+            <li>(011) 5777-5757</li>
+            <li>rosé@rosé.com</li>
           </ol>
         </div>
-</div>
 
-<div class="producto2-noe">
-  <p class="otro2-noe">Tambien te recomendamos</p>
-            
-  <img  width="100px"  src="images/3raOFerta-Pittacum-Petit-Pittacum.png"> 
-      <div class="nombre2-noe">                         
-          <span class="titulo2-noe"><h3>Michelini i Mufatto GY 2019</h3></span>
-          <span class="precio2-noe">$3.850</span>
+        <div class="box__footer">
+          <h2>SEGUINOS</h2>
+          <div class="redes">
+            <a href="#"
+              ><i class="iconosFooter fa-brands fa-instagram"></i
+            ></a>
+            <a href="#"
+              ><i class="iconosFooter fa-brands fa-linkedin-in"></i
+            ></a>
+            <a href="#"><i class="iconosFooter fa-brands fa-github"></i></a>
+            <a href="#"><i class="iconosFooter fa-brands fa-facebook"></i></a>
+          </div>
+        </div>
       </div>
-      <div class="ver-noe">
-       <a class="more-noe">ver más</a>
-      </div>
-</div>
-</div>
-
-
-           <!-------------------- FOOTER ----------->
-           <footer>
-            <div class="container_footer">
-              <div class="box_footer">
-                <div class="logo" style="font-size: 20px">
-                  <img src="images/LOGO.png" alt="ICONO" />
-                </div>
-                <div class="terms">
-                  <p>
-                    Beber con moderación. Prohibida su venta a menores de 18 años. El
-                    abuso de alcohol es peligroso para la salud. Rosé Argentina apoya
-                    el consumo responsable.
-                  </p>
-                </div>
-              </div>
-              <div class="organizarfooterRow">
-                <div class="box__footer">
-                  <h2>Tus dudas</h2>
-                  <a href="/PreguntasFrecuentes">Preguntas Frecuentes</a>
-                  <a href="/privacidad">Privacidad</a>
-                  <a href="/nosotros">Nosotros</a>
-                </div>
-      
-                <div class="box__footer">
-                  <h2>Contacto</h2>
-                  <ol>
-                    <li>Lunes a viernes de 08:00 a 20:30 hs.</li>
-                    <li>Brandsen 805 CABA</li>
-                    <li>(011) 5777-5757</li>
-                    <li>rosé@rosé.com</li>
-                  </ol>
-                </div>
-      
-                <div class="box__footer">
-                  <h2>SEGUINOS</h2>
-                  <div class="redes">
-                    <a href="#"
-                      ><i class="iconosFooter fa-brands fa-instagram"></i
-                    ></a>
-                    <a href="#"
-                      ><i class="iconosFooter fa-brands fa-linkedin-in"></i
-                    ></a>
-                    <a href="#"><i class="iconosFooter fa-brands fa-github"></i></a>
-                    <a href="#"><i class="iconosFooter fa-brands fa-facebook"></i></a>
-                  </div>
-                </div>
-              </div>
-              <!---organizarfooterRow-->
-            </div>
-            <!-- conteiner- footer-->
-            <div class="box__copyright">
-              <hr />
-              <p>Todos los derechos reservados © 2021-2022 <b>Rosé</b></p>
-            </div>
-          </footer>      
-                                                                                                                                                     
-      </body>
-      </html>
+      <!---organizarfooterRow-->
+    </div>
+    <!-- conteiner- footer-->
+    <div class="box__copyright">
+      <hr />
+      <p>Todos los derechos reservados © 2021-2022 <b>Rosé</b></p>
+    </div>
+  </footer>
+  </body>
+  </html>

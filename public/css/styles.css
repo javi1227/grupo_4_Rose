@@ -53,6 +53,7 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
     padding: 0 24px;
     font-weight: bold;
+    border-bottom: solid 4px var(--color-para-hover);
 }
 
 .nav-menu {
