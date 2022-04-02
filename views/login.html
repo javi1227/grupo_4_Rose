@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- FONT -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Lato:wght@300&family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+      rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
     <!-- FONTAWESONE -->
@@ -23,7 +26,7 @@
       referrerpolicy="no-referrer"
     />
     <!-- STYLES -->
-    <link rel="stylesheet" href="./css/register.css"/>
+    <link rel="stylesheet" href="./css/Login.css" />
     <title>Rosé</title>
   </head>
     <header id="navbar">
@@ -50,93 +53,115 @@
             
 
           </div>
-      </nav>
-
-      
+      </nav> 
   </header>
-<body class="forms">
+
    <!--  INICIO FORM -->
-    <section class="form-container-t login">
-        <h2 class="title-1-t-login">Rosé
-            <span class="title-2-t"></span>
-        </h2>
-        <hr class="hr-login">
-        <form action="" method="">
-            <div class="input-container-t">
-                <input type="text" class="input-style-t" name="userName" placeholder="Usuario">
-                <span class="error-message-t"></span>
-            </div>
-            <div class="input-container-t">
-                <input type="email" class="input-style-t" name="email" placeholder="E-mail">
-                <span class="error-message-t"></span>
-            </div>
-            <div class="input-container-t">
-                <input type="password" class="input-style-t" name="pass" placeholder="Contraseña">
-                <span class="error-message-t"></span>
-            </div>
-            <div class="input-check-container-t">
-                <label class="box1" for="remember">
-                    <input type="checkbox" name="terms" id="remember">     Recuérdame</label> 
-            <div class="btn-container-t">
-                <span class="error-message-t"></span>
-                <button type="submit" class="btn btn-submit-t">Iniciar sesión</button>
-            </div>
-            <span class="btn-sign-login"><a href="register.html"> No tengo cuenta</a></span>
-        </form>
-    </section>        <!-------------------- FOOTER ----------->
-    <footer>
-      <div class="container_footer">
-        <div class="box_footer">
-          <div class="logo" style="font-size: 20px">
-            <img src="images/LOGO.png" alt="ICONO" />
-          </div>
-          <div class="terms">
-            <p>
-              Beber con moderación. Prohibida su venta a menores de 18 años. El
-              abuso de alcohol es peligroso para la salud. Rosé Argentina apoya
-              el consumo responsable.
-            </p>
-          </div>
-        </div>
-        <div class="organizarfooterRow">
-          <div class="box__footer">
-            <h2>Tus dudas</h2>
-            <a href="/PreguntasFrecuentes">Preguntas Frecuentes</a>
-            <a href="/privacidad">Privacidad</a>
-            <a href="/nosotros">Nosotros</a>
-          </div>
+  <body>
+    <div class="container-t">
+      <div class="forms-container-t">
+        <div class="Signin-signup">
 
-          <div class="box__footer">
-            <h2>Contacto</h2>
-            <ol>
-              <li>Lunes a viernes de 08:00 a 20:30 hs.</li>
-              <li>Brandsen 805 CABA</li>
-              <li>(011) 5777-5757</li>
-              <li>rosé@rosé.com</li>
-            </ol>
-          </div>
-
-          <div class="box__footer">
-            <h2>SEGUINOS</h2>
-            <div class="redes">
-              <a href="#"
-                ><i class="iconosFooter fa-brands fa-instagram"></i
-              ></a>
-              <a href="#"
-                ><i class="iconosFooter fa-brands fa-linkedin-in"></i
-              ></a>
-              <a href="#"><i class="iconosFooter fa-brands fa-github"></i></a>
-              <a href="#"><i class="iconosFooter fa-brands fa-facebook"></i></a>
+          <form action="#" class="sign-in-form">
+            <h2 class="title-t">Iniciar sesión</h2>
+            <div class="input-box">
+              <i class="fas fa-user"></i>
+              <input class="input-t" type="text" placeholder="Usuario" />
+            </div>
+            <div class="input-box">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Contraseña" />
+            </div>
+            <input type="submit" class="btn solid" value="Iniciar sesión" />
+            <p class="smedia-text">O inicia sesión con una de las siguientes plataformas</p>
+            <div class="icon-container">
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </div>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
             </div>
           </div>
+          <p class="register-container"><a class="no-acc" href="register.html">No tengo cuenta</a></p>
+          </form>
+
         </div>
-        <!---organizarfooterRow-->
       </div>
-      <!-- conteiner- footer-->
-      <div class="box__copyright">
-        <hr />
-        <p>Todos los derechos reservados © 2021-2022 <b>Rosé</b></p>
-      </div>
-    </footer>
+
+      <div class="panel-t"></div>
+    </div>
+
+    <!-- inicio animacion -->
+    <!-- final animacion -->
+
+    <!-- FIN DE BOTON HACIA ABAJO -->
+
+
+        <script src="/js/main.js"></script>
+      </body>
+        <!-------------------- FOOTER ----------->
+        <footer>
+          <div class="container_footer">
+            <div class="box_footer">
+              <div class="logo" style="font-size: 20px">
+                <img src="images/LOGO.png" alt="ICONO" />
+              </div>
+              <div class="terms">
+                <p>
+                  Beber con moderación. Prohibida su venta a menores de 18 años. El
+                  abuso de alcohol es peligroso para la salud. Rosé Argentina apoya
+                  el consumo responsable.
+                </p>
+              </div>
+            </div>
+            <div class="organizarfooterRow">
+              <div class="box__footer">
+                <h2>Tus dudas</h2>
+                <a href="/PreguntasFrecuentes">Preguntas Frecuentes</a>
+                <a href="/privacidad">Privacidad</a>
+                <a href="/nosotros">Nosotros</a>
+              </div>
+    
+              <div class="box__footer">
+                <h2>Contacto</h2>
+                <ol>
+                  <li>Lunes a viernes de 08:00 a 20:30 hs.</li>
+                  <li>Brandsen 805 CABA</li>
+                  <li>(011) 5777-5757</li>
+                  <li>rosé@rosé.com</li>
+                </ol>
+              </div>
+    
+              <div class="box__footer">
+                <h2>SEGUINOS</h2>
+                <div class="redes">
+                  <a href="#"
+                    ><i class="iconosFooter fa-brands fa-instagram"></i
+                  ></a>
+                  <a href="#"
+                    ><i class="iconosFooter fa-brands fa-linkedin-in"></i
+                  ></a>
+                  <a href="#"><i class="iconosFooter fa-brands fa-github"></i></a>
+                  <a href="#"><i class="iconosFooter fa-brands fa-facebook"></i></a>
+                </div>
+              </div>
+            </div>
+            <!---organizarfooterRow-->
+          </div>
+          <!-- conteiner- footer-->
+          <div class="box__copyright">
+            <hr />
+            <p>Todos los derechos reservados © 2021-2022 <b>Rosé</b></p>
+          </div>
+        </footer>
 </body>
 </html>

@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
+
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,7 +26,7 @@
       referrerpolicy="no-referrer"
     />
     <!-- STYLES -->
-    <link rel="stylesheet" href="./css/register.css" />
+    <link rel="stylesheet" href="./css/Register.css" />
     <title>Rosé</title>
   </head>
     <header id="navbar">
@@ -51,46 +55,67 @@
           </div>
       </nav> 
   </header>
-  <body class="forms">
-   <!--  INICIO FORM -->
-    <section class="form-container-t">
-        <h2 class="title-register"><span class="title-1-t">ÚNETE</span>
-            <br>
-            <span class="title-2-t">A LA COMUNIDAD</span>
-            <br>
-            <span class="title-3-t">Rosé.</span>
-        </h2>
-        <hr class="hr-register">
-        <form action="" method="">
-            <div class="input-container-t">
-                <input type="text" class="input-style-t" name="userName" placeholder="Usuario">
-                <span class="error-message-t"></span>
-            </div>
-            <div class="input-container-t">
-                <input type="email" class="input-style-t" name="email" placeholder="E-mail">
-                <span class="error-message-t"></span>
-            </div>
-            <div class="input-container-t">
-                <input type="password" class="input-style-t" name="pass" placeholder="Contraseña">
-                <span class="error-message-t"></span>
-            </div>
-            <div class="input-container-t">
-                <input type="password" class="input-style-t" name="pass" placeholder="Repetir contraseña">
-                <span class="error-message-t"></span>
-            </div>
-            <div class="input-check-container-t">
-                <label for="remember"><a href=""><input type="checkbox" name="terms" id="remember">     Acepto los Términos y condiciones</a></label>
-                <span class="error-message-t"></span>
-            <div class="btn-container-t">
-                <span class="error-message-t"></span>
-                <button type="submit" class="btn btn-submit-t">CREAR CUENTA</button>
-            </div>
-            <span class="btn-sign-register"><a href="login.html">Ya tengo cuenta</a></span>
-        </form>
-    </section>
-        <!-- FIN DE BOTON HACIA ABAJO -->
-        <script src="/js/main.js"></script>
 
+   <!--  INICIO FORM -->
+  <body>
+    <div class="container-t">
+      <div class="forms-container-t">
+        <div class="Signin-signup">
+
+          <form action="#" class="sign-in-form">
+            <h2 class="title-t">Registrarse</h2>
+            <div class="input-box">
+              <i class="fas fa-user"></i>
+              <input class="input-t" type="text" placeholder="Usuario" />
+            </div>
+            <div class="input-box">
+              <i class="fas fa-user"></i>
+              <input class="input-t" type="text" placeholder="Email" />
+            </div>
+            <div class="input-box">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Contraseña" />
+            </div>
+            <div class="input-box">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Repetir contraseña" />
+            </div>
+            <input type="submit" class="btn solid" value="Crear cuenta" />
+            <p class="smedia-text">O inicia sesión con una de las siguientes plataformas</p>
+            <div class="icon-container">
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </div>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+            </div>
+          </div>
+          <p class="register-container"><a class="no-acc" href="login.html">Ya tengo cuenta</a></p>
+          </form>
+
+        </div>
+      </div>
+
+      <div class="panel-t"></div>
+    </div>
+
+    <!-- inicio animacion -->
+    <!-- final animacion -->
+
+    <!-- FIN DE BOTON HACIA ABAJO -->
+
+
+        <script src="/js/main.js"></script>
+      </body>
         <!-------------------- FOOTER ----------->
         <footer>
           <div class="container_footer">

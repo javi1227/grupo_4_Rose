@@ -1,7 +1,7 @@
 {
   "name": "html-mobile",
   "version": "1.0.0",
-  "description": "",
+  "description": "***Desde Rosé, apuntamos a un público determinado de entre 25 a 55 años, conocedor del mundo del vino pero interesado en salir de su zona de comfort y descubrir nuevas etiquetas que lo sorprendan. \r     A su vez, queremos que más personas se adentren en este mundo y puedan disfrutar, como nosotros, de las bondades de esta bebida. Es por eso que creamos un sitio simple pero, a la vez, atractivo, que permitirá que el cliente cuente con información de fácil acceso y con una experiencia de compra ágil.***",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,5 +10,14 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.3"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javi1227/grupo_4_Rose.git"
+  },
+  "bugs": {
+    "url": "https://github.com/javi1227/grupo_4_Rose/issues"
+  },
+  "homepage": "https://github.com/javi1227/grupo_4_Rose#readme"
 }
