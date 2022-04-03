@@ -2,31 +2,39 @@ const express= require('express');
 const app= express();
 const path= require('path');
 const PORT= 3050;
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname,'../public')));
+
+
+// Views Config
+
+app.set('view engine', 'ejs');
+app.set('views', 'src/views');
+
+// 
 
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname,'/views/index.html'))
+    res.render ('index')
 });
 
 app.get('/home', (req, res) => {
-    res.sendFile(path.join(__dirname,'/views/index.html'))
+    res.render ('index')
 });
 
 app.get('/carro-de-compra', (req, res) => {
-    res.sendFile(path.join(__dirname,'/views/carro-de-compra.html'))
+    res.render ('carro-de-compra')
 });
 
 app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname,'/views/login.html'))
+    res.render ('login')    
 });
 
 app.get('/register', (req, res) => {
-    res.sendFile(path.join(__dirname,'/views/register.html'))
+    res.render ('register')    
 });
 
 app.get('/detalle-de-producto', (req, res) => {
-    res.sendFile(path.join(__dirname,'/views/detalle-de-producto.html'))
+    res.render ('detalle-de-producto')
 });
 
 // app.get('/404', (req, res) => {

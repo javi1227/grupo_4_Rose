@@ -36,62 +36,6 @@ body::-webkit-scrollbar-thumb {
 
 /* ***********************HEADER*********************** */
 
-.logo {
-    height: 3.5rem;
-}
-
-.logo img {
-    width: 76px;
-    height: 53px;
-    position: initial;
-}
-
-.navbar{
-    min-height: 70px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 24px;
-    font-weight: bold;
-}
-
-.nav-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /*gap: 60px;*/
-}
-
-/* .nav-branding {
-    font-size: 2rem;
-} */
-
-.nav-link {
-    transition: 0.7s ease;
-}
-
-.nav-link:hover {
-    color: white;
-}
-
-.hamburger {
-    /*display: none;*/
-    cursor: pointer;
-}
-
-.bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: black;
-}
-
-.nav-item__burguer {
-    /*display: none;*/
-}
 /* ***********************FIN HEADER*********************** */
 /*******************************************************************************/
 
@@ -363,7 +307,7 @@ ol li {
         border-radius: 1rem;   
 }
 
-   /************* Tablet Carrito fin************/
+/************* Tablet Carrito fin************/
 
 
 /*-----------------------Header 768px-------------------------------------*/
@@ -404,89 +348,91 @@ ol li {
 /*************  Carrito media 1200px ************/
 @media (min-width: 1200px){
 
-    .carrito-title {
-      margin-left: 35px;
-      width: 95%;
-      border-radius: 1rem;
+.carrito-title {
+    margin-left: 35px;
+    width: 95%;
+    border-radius: 1rem;
     }
-    .contenedor-igor img {
-        margin-left: -16rem;
-        display: flex;
-        margin-right: 26rem;
+.contenedor-igor img {
+    margin-left: -16rem;
+    display: flex;
+    margin-right: 26rem;
         
     }
-    .primeraOpcionesCArrito  {
-        display: flex;    
-       }
+.primeraOpcionesCArrito  {
+    display: flex;    
+}
         
-  
-    .opcionesCarrito {
-        font-size: 10px;
-        width: 80%;
-        margin-left: 6.4rem;
-        display: flex;
-        background-color: white;
-        flex-direction: row-reverse;
-            
-    }
+.opcionesCarrito {
+    font-size: 10px;
+    width: 80%;
+    margin-left: 6.4rem;
+    display: flex;
+    background-color: white;
+    flex-direction: row-reverse;           
+}
     
-    .carritoOculto {
-        display: block;
-        width: 5rem;
-        border-radius: 5px;
-        background-color: none;
-        text-align: center;
-        margin-left: 3rem;
-        width: 66%;
+.carritoOculto {
+    display: block;
+    width: 5rem;
+    border-radius: 5px;
+    background-color: none;
+    text-align: center;
+    margin-left: 3rem;
+    width: 66%;
 
-       }
+}
     
-    .Añadir-carro-figure-igor {
-        margin-left: 4rem;
-        height: 3rem;
-        margin-top: 9rem;
-    }
+.Añadir-carro-figure-igor {
+    margin-left: 4rem;
+    height: 3rem;
+    margin-top: 9rem;
+}
+
+.textoCarrito {
+    text-align: center;
+    padding: 0.7rem 0.2rem 0;
+}
     
-        .textoCarrito {
-        text-align: center;
-        padding: 0.7rem 0.2rem 0;
-    }
+#number {
+    margin-left: -10.7rem;
+    border-radius: 1rem;
+    font-size: 20px;
     
-    #number {
-        margin-left: -10.7rem;
-        border-radius: 1rem;
-        font-size: 20px;
-    
-    }
-    .bloque-ofertas-igor {
-        margin-right: -1rem;
-        margin-right: 28rem;
-        margin-left: -14rem;
+}
+
+.bloque-ofertas-igor {
+    margin-right: -1rem;
+    margin-right: 28rem;
+    margin-left: -14rem;
         
     }
-     .Añadir-carro-figure-igor p{
-        margin-top: 12rem;
-        margin-right: 6.5rem;
-        font-size: 16px;
+
+.Añadir-carro-figure-igor p{
+    margin-top: 12rem;
+    margin-right: 6.5rem;
+    font-size: 16px;      
+}
+
+.Añadir-carro-figure-igor p{
+    font-size: 16px;
+    color: gray;
+    margin-left: -0.4rem;
+    margin-top: 2.6rem;
         
-    }
-    .Añadir-carro-figure-igor p{
-        font-size: 16px;
-        color: gray;
-        margin-left: -0.4rem;
-        margin-top: 2.6rem;
-        
-    }
-    .oferta-figure-igor { 
-        font-size: 26px;
-        font-weight: bold;
-        display: flex;
-        margin-right: -102rem;
-        margin-top: -11rem;
-    }
-    .carrito-compra{
-        margin-left: 54rem;
-    }
+}
+
+.oferta-figure-igor { 
+    font-size: 26px;
+    font-weight: bold;
+    display: flex;
+    margin-right: -102rem;
+    margin-top: -11rem;
+}
+
+.carrito-compra{
+    margin-left: 54rem;
+}
 
     } 
 
