@@ -59,7 +59,7 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 60px;
+    /*gap: 60px;*/
 }
 
 /* .nav-branding {
@@ -75,7 +75,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .hamburger {
-    display: none;
+    /*display: none;*/
     cursor: pointer;
 }
 
@@ -90,34 +90,41 @@ body::-webkit-scrollbar-thumb {
 }
 
 .nav-item__burguer {
-    display: none;
+    /*display: none;*/
 }
 /* ***********************FIN HEADER*********************** */
 /*******************************************************************************/
 
 /*******MENU CARRITO************ */
 
+.carrito-title p {
+    font-size: 1.5rem;
+}
+.Añadir-carro-figure-igor p{
+    font-size: 16px;
+        color: gray;
+    }
 
-/*******MENU CARRITO************ */
-
+.contenedor-igor img {
+    width: 12rem;
+    height: 12rem;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 10rem;
+    border: 1px solid #e6e6e6
+    /* margin-left: 4rem; */    
+}
 
 .carrito-title {
     display: flex;
-    width: 100%;
+    width: 85%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: white;
-}
-
-.contenedor-igor img {
-    width: 10rem;
-    height: 10rem;
-    display: flex;
-    align-items: center;
-    padding: 2rem;
-    border-top: 1px solid rgba(0,0,0,.07);
-    
+    margin-left: 2rem;
+    border-radius: 1rem;
 }
 
 .bloque-ofertas-igor {
@@ -125,20 +132,54 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
     flex-direction: column;
     padding: 0.5rem;
-   
+    
 }
+
+.Añadir-carro-figure-igor {
+    display: flex;
+    padding: 5px;
+    text-align: center;
+}
+
+#number {
+    width: 3rem;
+    margin-left: 4rem;
+    text-align: center;
+    border: 1px solid #e6e6e6;
+    border-radius: 1rem;
+
+}
+
+.opcionesCarrito {
+    width: 5rem;
+    border-radius: 5px;
+    background-color: var(--color-principal);
+    text-align: center;
+    margin-left: 3rem;
+    padding: 0.3rem;
+}
+
+.separadorCarros {
+    width: 82%;
+    margin: 0.5rem;
+    color: rgba(0,0,0,.30);
+
+}
+
+
+
+.carritoOculto {
+    display: none;
+}
+
 
 .oferta-figure-igor { 
     font-size: 1rem;
     font-weight: bold;
 }
 
-.Añadir-carro-figure-igor {
-    display: flex;
-    flex-direction: row-reverse;
-    padding: 5px;
-    text-align: center;
-}
+
+
 
 .summary-action .btn-submit{     
     padding: 0px 70px 9px;
@@ -153,12 +194,15 @@ body::-webkit-scrollbar-thumb {
 
 .carrito-compra  .summary-label{
     align-items: center;
-    padding-left: 70px;  
+    padding-left: 53px;  
     font-size: x-large;
     display: flex;
     background: var(--color-principal);
-    border-radius: 1rem;
     height: 2.5rem;
+    width: 15rem;
+    margin-left: 1.3rem;
+    border-radius: 1rem;
+    margin-top: 2rem;
 }
 
 .carrito-compra{
@@ -166,10 +210,7 @@ body::-webkit-scrollbar-thumb {
     flex-direction: column;
 }
 
-.carrito-title p {
-    font-size: 1.5rem;
-}
-/**********************FIN CARRITO ******************************/
+
 /**********************FIN CARRITO ******************************/
 
 
@@ -298,77 +339,36 @@ ol li {
 
 /* Media queries*/
 /************* Tablet Carrito************/
-@media (min-width: 768px){
+@media (min-width: 500px) {
 
-    .summary-action{
-        display: flex;
-    justify-content: end;
+    .contenedor-igor img {
+        width: 315px;
+        height: 300px;
+        
+    }
+    
+    .Añadir-carro-figure-igor {
+        margin-left: 4rem;
+    }
+
+    .opcionesCarrito {
+        width: 5rem;
+        margin-left: 7.3rem;
+
+        
     }
 
     .carrito-title {
-        display: inline-block;
-        width: 95%;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 40px 17px 0;
-        border-radius: 1rem;
-        
-    }
+        width: 90%;
+        border-radius: 1rem;   
+}
 
-    .bloque-ofertas-igor {
-        display: inline-block;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
-        font-family: 'Aleo', serif;
-    }
-
-    .contenedor-igor img {
-        width: 10rem;
-        height: 10rem;
-        display: flex;
-        align-items: center;
-        padding: 1rem;
-        
-        
-    }
-       
-    .summary-action .btn-submit{   
-        padding: 0px 75px 9px;
-        margin: 8px; 
-        -webkit-text-stroke: medium;
-        color: white;
-        background: #3483fa;
-        font-size: 1.9rem;
-        border-radius: 1rem;
-        display: flex;
-    }
-    
-    .carrito-compra  .summary-label{        
-        justify-content: end;
-        padding-right: 10px;
-        align-items: center;
-        padding-left: 70px;    
-        font-weight: 700;
-        font-size: x-large;
-        display: flex;
-        background: none;
-        border-radius: none;
-        height: 2.5rem;
-    }
-       
-    .carrito-title p {
-        font-size: 1.5rem;
-        text-align: center;
-    }
-    
    /************* Tablet Carrito fin************/
 
 
 /*-----------------------Header 768px-------------------------------------*/
 
-    @media (min-width: 720px) {
+    @media (min-width: 769px) {
         header div.burguer {
             display: none;     
     }
@@ -403,82 +403,103 @@ ol li {
 /*-------------------------fin Header 768px---------------------------*/
 /*************  Carrito media 1200px ************/
 @media (min-width: 1200px){
-    .carrito-title{
-        display: inline-block;
-        width: 70%;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 100px 17rem 80px;
-        border-radius: 1rem;
+
+    .carrito-title {
+      margin-left: 35px;
+      width: 95%;
+      border-radius: 1rem;
+    }
+    .contenedor-igor img {
+        margin-left: -16rem;
+        display: flex;
+        margin-right: 26rem;
         
     }
-    
-    .summary-action{
+    .primeraOpcionesCArrito  {
+        display: flex;    
+       }
+        
+  
+    .opcionesCarrito {
+        font-size: 10px;
+        width: 80%;
+        margin-left: 6.4rem;
         display: flex;
-    justify-content: end;
-    }
-      
-    }
-    .bloque-ofertas {
-        display: inline-block;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;  
-         
-    }
-
-    .contenedor img {
-        width: 10rem;
-        height: 10rem;
-        display: flex;
-        align-items: center;
-        padding: 1rem;   
+        background-color: white;
+        flex-direction: row-reverse;
+            
     }
     
-    .summary-action .btn-submit{   
-        padding: 0px 70px 9px;
-        margin: 8px; 
-        -webkit-text-stroke: medium;
-        color: white;
-        background: #3483fa;
-        font-size: 1.9rem;
-        border-radius: 1rem;
-        display: flex;
-    }
-    
-    .carrito-compra  .summary-label{        
-        justify-content: end;
-        padding-right: 10px;
-        align-items: center;
-        padding-left: 70px;
-        font-weight: 700;
-        font-size: x-large;
-        display: flex;
-        background: none;
-        border-radius: none;
-        height: 2.5rem;
-    }
-    
-    
-    
-    .carrito-title p {
-        font-size: 1.5rem;
+    .carritoOculto {
+        display: block;
+        width: 5rem;
+        border-radius: 5px;
+        background-color: none;
         text-align: center;
-        
+        margin-left: 3rem;
+        width: 66%;
+
+       }
+    
+    .Añadir-carro-figure-igor {
+        margin-left: 4rem;
+        height: 3rem;
+        margin-top: 9rem;
     }
     
+        .textoCarrito {
+        text-align: center;
+        padding: 0.7rem 0.2rem 0;
     }
+    
+    #number {
+        margin-left: -10.7rem;
+        border-radius: 1rem;
+        font-size: 20px;
+    
+    }
+    .bloque-ofertas-igor {
+        margin-right: -1rem;
+        margin-right: 28rem;
+        margin-left: -14rem;
+        
+    }
+     .Añadir-carro-figure-igor p{
+        margin-top: 12rem;
+        margin-right: 6.5rem;
+        font-size: 16px;
+        
+    }
+    .Añadir-carro-figure-igor p{
+        font-size: 16px;
+        color: gray;
+        margin-left: -0.4rem;
+        margin-top: 2.6rem;
+        
+    }
+    .oferta-figure-igor { 
+        font-size: 26px;
+        font-weight: bold;
+        display: flex;
+        margin-right: -102rem;
+        margin-top: -11rem;
+    }
+    .carrito-compra{
+        margin-left: 54rem;
+    }
+
+    } 
+
+
+
 }
-
-
     
 /* media menor a 768PX del HEADER */
 
 @media(max-width:768px) {
     .hamburger {
         display: block;
-        margin-right: 2rem;
+        margin-right: 1rem;
     }
 
     .nav-item__burguer {
@@ -525,4 +546,6 @@ ol li {
     .nav-menu.active {
         left: 0;
     }
-}
+
+   }
+ }
