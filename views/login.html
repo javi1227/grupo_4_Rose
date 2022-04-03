@@ -11,9 +11,6 @@
       href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Lato:wght@300&family=Roboto&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
     <!-- FONTAWESONE -->
     <link
       rel="stylesheet"
@@ -23,18 +20,21 @@
       referrerpolicy="no-referrer"
     />
     <!-- STYLES -->
-    <link rel="stylesheet" href="./css/register.css"/>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/login.css">
     <title>Rosé</title>
   </head>
+  <body class="Detalle-Producto">
+  
     <header id="navbar">
       <nav class="navbar" >
           <a href="#" class="logo"><img src="/images/LOGO.png" alt="logo"></a>
 
           <ul class="nav-menu">
-            <li class="nav-item"> <a href="index" class="nav-link">Inicio</a></li>
+            <li class="nav-item"> <a href="#" class="nav-link">Inicio</a></li>
             <li class="nav-item"> <a href="#" class="nav-link">Tienda</a></li>
             <li class="nav-item"> <a href="#" class="nav-link">Contacto</a></li>
-            <li class="nav-item"> <a href="#" class="nav-link">Login</a></li>
+            <li class="nav-item"> <a href="login" class="nav-link">Login</a></li>
             <li class="nav-item"> <a href="carro-de-compra"  class="nav-link">Mi carrito</a></li>
               <li class="nav-item__burguer">
                 <a href=""><i class="iconosFooter fa-brands fa-facebook"></i></a>
@@ -54,36 +54,66 @@
 
       
   </header>
-<body class="forms">
-   <!--  INICIO FORM -->
-    <section class="form-container-t login">
-        <h2 class="title-1-t-login">Rosé
-            <span class="title-2-t"></span>
-        </h2>
-        <hr class="hr-login">
-        <form action="" method="">
-            <div class="input-container-t">
-                <input type="text" class="input-style-t" name="userName" placeholder="Usuario">
-                <span class="error-message-t"></span>
-            </div>
-            <div class="input-container-t">
-                <input type="email" class="input-style-t" name="email" placeholder="E-mail">
-                <span class="error-message-t"></span>
-            </div>
-            <div class="input-container-t">
-                <input type="password" class="input-style-t" name="pass" placeholder="Contraseña">
-                <span class="error-message-t"></span>
-            </div>
-            <div class="input-check-container-t">
-                <label class="box1" for="remember">
-                    <input type="checkbox" name="terms" id="remember">     Recuérdame</label> 
-            <div class="btn-container-t">
-                <span class="error-message-t"></span>
-                <button type="submit" class="btn btn-submit-t">Iniciar sesión</button>
-            </div>
-            <span class="btn-sign-login"><a href="register.html"> No tengo cuenta</a></span>
+
+<!-- MENU -->
+<!--  INICIO FORM -->
+<body>
+  <div class="container-t">
+    <div class="forms-container-t">
+      <div class="Signin-signup">
+
+        <form action="#" class="sign-in-form">
+          <h2 class="title-t">Iniciar sesión</h2>
+          <div class="input-box">
+            <i class="fas fa-user"></i>
+            <input class="input-t" type="text" placeholder="Usuario" />
+          </div>
+          <div class="input-box">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Contraseña" />
+          </div>
+          <input type="submit" class="btn solid" value="Iniciar sesión" />
+          <p class="smedia-text">O inicia sesión con una de las siguientes plataformas</p>
+          <div class="icon-container">
+          <div class="social-media">
+            <a href="#" class="social-icon">
+              <i class="fab fa-facebook"></i>
+            </a>
+          </div>
+          <div class="social-media">
+            <a href="#" class="social-icon">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+          <div class="social-media">
+            <a href="#" class="social-icon">
+              <i class="fab fa-google"></i>
+            </a>
+          </div>
+        </div>
+        <p class="register-container"><a class="no-acc" href="register">No tengo cuenta</a></p>
         </form>
-    </section>        <!-------------------- FOOTER ----------->
+
+      </div>
+    </div>
+
+    <div class="panel-t"></div>
+  </div>
+<!-- FIN MENU -->
+
+
+    <!-- -------------------------------------------------- -->
+  <!-- BOTON DE IR HACIA ABAJO -->
+    <div id="button-up">
+      <i class="fa-solid fa-chevron-up"></i>
+    </div>
+
+
+
+    <!-- FIN DE BOTON HACIA ABAJO -->
+    <script src="/js/main.js"></script>
+
+    <!-------------------- FOOTER ----------->
     <footer>
       <div class="container_footer">
         <div class="box_footer">
@@ -138,5 +168,5 @@
         <p>Todos los derechos reservados © 2021-2022 <b>Rosé</b></p>
       </div>
     </footer>
-</body>
+  </body>
 </html>
