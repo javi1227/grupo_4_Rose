@@ -1,12 +1,13 @@
-.Signin-signup{
+.Signin-signup-login{
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 1rem;
+    margin-top: 3rem;
 }
 
-.sign-in-form {
+.sign-in-form-login {
     display: flex;
     position: relative;
     align-items: center;
@@ -17,10 +18,11 @@
     border-radius: 5%;
     width: 100%;
     max-width: 475px;
-    height: 30rem;
+    height: 31rem;
     padding-top: 2.5rem;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+
 
 .container-t {
     position: relative;
@@ -65,7 +67,7 @@ h2.title-t{
 
 .input-box{
     max-width: 380px;
-    width: 100%;
+    width: 90%;
     height: 55px;
     background-color: #e6e6e6;
     margin: 10px 0;
@@ -117,6 +119,8 @@ h2.title-t{
 
 .smedia-text{
     padding: 0.7rem 0;
+    margin: 1rem;
+    font-size: 18px;
 }
 
 .social-media{
@@ -164,10 +168,10 @@ h2.title-t{
     display: flex;
 }
 
-.register-container{
+.register-container-l{
     padding-top: 10px;
 }
-.no-acc{
+.no-acc-l{
     font-weight: bold;
     font-size: 17px;
 }
@@ -192,3 +196,27 @@ h2.title-t{
     }
 }
 
+@media (min-width: 1200px){
+    .sign-in-form-login{
+        max-width: 480px;
+        height: 36rem;
+    }
+    h2.title-t-l{
+        margin-top: 2rem;
+    }
+    .smedia-text-l{
+        font-size: 20px;
+    }
+    .no-acc-l{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .register-container-l{
+        margin-top: 20px;
+    }
+    #btn-login{
+        width: 180px;
+        height: 60px;
+        font-size: 16px;
+    }
+}

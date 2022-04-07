@@ -31,7 +31,7 @@
     border-radius: 5%;
     width: 100%;
     max-width: 475px;
-    height: 40rem;
+    height: 42.5rem;
     padding-top: 2.5rem;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
@@ -79,7 +79,7 @@ h2.title-t{
 
 .input-box{
     max-width: 380px;
-    width: 100%;
+    width: 90%;
     height: 55px;
     background-color: #e6e6e6;
     margin: 10px 0;
@@ -131,6 +131,7 @@ h2.title-t{
 
 .smedia-text{
     padding: 0.7rem 0;
+    margin: 1rem;
 }
 
 .social-media{
@@ -203,6 +204,31 @@ h2.title-t{
     }
     100% {
     background-position: 0% 50%;
+    }
+}
+
+@media (min-width: 1200px){
+    .sign-in-form{
+    max-width: 500px;
+    height: 45rem;
+    }
+    h2.title-t{
+        margin-top: 2rem;
+    }
+    .smedia-text{
+        font-size: 20px;
+    }
+    .no-acc{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .register-container{
+        margin-top: 20px;
+    }
+    .btn{
+        width: 180px;
+        height: 60px;
+        font-size: 16px;
     }
 }
 
