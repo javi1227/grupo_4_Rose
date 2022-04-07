@@ -3,7 +3,8 @@ const {getProducts} = require('../../data');
 module.exports = {
     index: (req, res) => {
         res.render('admin/adminIndex', {
-            titulo: "Admin"
+            titulo: "Admin",
+            productos: getProducts
         });
     }
 }

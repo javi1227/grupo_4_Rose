@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "name": "",
+        "name": "Pittacum Petit",
         "price": 1000,
         "description": "",
         "categoryId": 1,
@@ -12,7 +12,7 @@
     },
     {
         "id": 2,
-        "name": "",
+        "name": "Zuccardi",
         "price": 250,
         "description": "",
         "categoryId": 2,
@@ -23,7 +23,7 @@
     },
     {
         "id": 3,
-        "name": "",
+        "name": "Zorzal Eggo Franco",
         "price": 1500,
         "description": "",
         "categoryId": 3,

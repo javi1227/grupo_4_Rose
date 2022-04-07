@@ -5,13 +5,23 @@ const PORT= 3050;
 app.use(express.static(path.join(__dirname,'../public')));
 
 
+//Enrutadores 1 //
+
+const adminRouter = require("./routes/adminRouter");
+const productsRouter = require('./routes/productsRouter');
+
+app.use("/admin", adminRouter); //ABM productos , ABM projectos 
+app.use('/productos', productsRouter); // Listado, detalle
+
+  
+//             //  
+
 // Views Config
 
 app.set('view engine', 'ejs');
-app.set('views', 'src/views');
+app.set('views', path.join(__dirname, "views"));
 
 // 
-
 
 app.get('/', (req, res) => {
     res.render ('index')
