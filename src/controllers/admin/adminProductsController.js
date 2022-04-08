@@ -1,17 +1,20 @@
 const { getProducts, writeProducts } = require('../../data');
 
 module.exports = {
+    /* Envia la vista del listado de productos */
     list: (req, res) => {
         res.render('admin/products/listProducts', {
             titulo: "Listado de productos",
             productos: getProducts
         })
     },
+    /* Envia vista de form de creacion de producto */
     productAdd: (req, res) => {
         res.render('admin/products/addProduct', {
             titulo: "Agregar producto"
         })
     },
+    /* recibe datos de form de creacion y guarda */
     productCreate: (req, res) => {
         let lastId = 0;
         getProducts.forEach(product => {
@@ -45,6 +48,7 @@ module.exports = {
 
        res.redirect('/admin/productos')
     },
+    /* Envia la vista del form de edicion de prod */
     productEdit: (req, res) => {
         let idProducto = +req.params.id;
         let producto = getProducts.find(producto => producto.id === idProducto)

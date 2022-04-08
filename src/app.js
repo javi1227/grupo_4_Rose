@@ -3,6 +3,7 @@ const app = express();
 const path = require('path');
 const process = require('process');
 const PORT = process.env.PORT || 3050;
+const methodOverride = require('method-override');
 
 
 // Views Config
@@ -19,6 +20,7 @@ const adminRouter = require('./routes/adminRouter');
 app.use(express.static(path.join(__dirname,'../public')));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
+app.use(methodOverride('_method'));
 
 //MiddleWares Rutas : gestion de peticiones al "/"
 app.use('/', indexRouter); // HOME - Contact 
