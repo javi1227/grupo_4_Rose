@@ -1,60 +1,34 @@
-const express= require('express');
-const app= express();
-const path= require('path');
-const PORT= 3050;
-app.use(express.static(path.join(__dirname,'../public')));
+const express = require('express');
+const app = express();
+const path = require('path');
+const process = require('process');
+const PORT = process.env.PORT || 3050;
 
-
-//Enrutadores 1 //
-
-const adminRouter = require("./routes/adminRouter");
-const productsRouter = require('./routes/productsRouter');
-
-app.use("/admin", adminRouter); //ABM productos , ABM projectos 
-app.use('/productos', productsRouter); // Listado, detalle
-
-  
-//             //  
 
 // Views Config
-
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, "views"));
+app.set('views', 'src/views');
 
-// 
+/* Enrutadores */
+const indexRouter = require('./routes/indexRouter');
+const productsRouter = require('./routes/productsRouter');
+const usersRouter = require('./routes/usersRouter');
+const adminRouter = require('./routes/adminRouter');
 
-app.get('/', (req, res) => {
-    res.render ('index')
-});
 
-app.get('/home', (req, res) => {
-    res.render ('index')
-});
+app.use(express.static(path.join(__dirname,'../public')));
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
 
-app.get('/carro-de-compra', (req, res) => {
-    res.render ('carro-de-compra')
-});
-
-app.get('/login', (req, res) => {
-    res.render ('login')    
-});
-
-app.get('/register', (req, res) => {
-    res.render ('register')    
-});
-
-app.get('/detalle-de-producto', (req, res) => {
-    res.render ('detalle-de-producto')
-});
-
-// app.get('/404', (req, res) => {
-//     res.sendFile(path.join(__dirname,'/views/404.html'))
-// });
+//MiddleWares Rutas : gestion de peticiones al "/"
+app.use('/', indexRouter); // HOME - Contact 
+app.use('/productos', productsRouter); // Listado, detalle
+app.use('/usuarios', usersRouter); //Login, registro, perfil
+app.use('/admin', adminRouter);  // Admin, ABM Productos, ABM Projectos
 
 
 
-
-
-
-
-app.listen(PORT)
+app.listen(PORT, () => console.log(`
+Server listen port ${PORT}
+http://localhost:${PORT}
+`));

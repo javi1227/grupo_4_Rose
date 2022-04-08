@@ -100,69 +100,24 @@
       <!-- MENU -->
 
       <div class="menu-contenedor">
-        <div class="contenedor">
-          <img src="images/OFerta1-Petit-Voyage-Criolla.png" />
-          <div class="bloque-ofertas">
-            <span class="titulo-figure">
-                <h3>Le Petit Voyage Criolla 2021</h3>
-            </span>
-            <div class="precios">
-              <span class="precio-figure">$2.900,00</span>
-              <span class="oferta-figure">$1.990,00</span>
+        <% productos.forEach(producto => { %>
+          <div class="contenedor">
+            <img src="images/<%= producto.image %> " />
+            <div class="bloque-ofertas">
+              <span class="titulo-figure">
+                  <h3> <%= producto.name  %>  </h3>
+              </span>
+              <div class="precios">
+                <span class="precio-figure">$2.900,00</span>
+                <span class="oferta-figure"> <%= producto.price  %> </span>
+              </div>
+            </div>
+            <div class="Añadir-carro-figure">
+              <a href="detalle-de-producto"><i class="Carro fa-solid fa-cart-arrow-down"></i></a>
             </div>
           </div>
-          <div class="Añadir-carro-figure">
-            <a href="detalle-de-producto"><i class="Carro fa-solid fa-cart-arrow-down"></i></a>
-          </div>
-        </div>
-      
-        <div class="contenedor">
-          <img src="images/2da-Oferta-Zorzal-Eggo-Franco.png" />
-          <div class="bloque-ofertas">
-            <span class="titulo-figure">
-              <h3>Eggo Cabernet Franc 2018</h3>
-            </span>
-            <div class="precios">
-              <span class="precio-figure">$2.650,00</span>
-              <span class="oferta-figure">$2.300,00</span>
-            </div>
-          </div>
-          <div class="Añadir-carro-figure">
-            <a href="detalle-de-producto"><i class="Carro fa-solid fa-cart-arrow-down"></a></i>
-          </div>
-        </div>
-      
-        <div class="contenedor">
-          <img src="images/3raOFerta-Pittacum-Petit-Pittacum.png" />
-          <div class="bloque-ofertas">
-            <span class="titulo-figure">
-              <h3>Petit Pittacum Mencía 2018</h3></span >
-          
-            <div class="precios">
-              <span class="precio-figure">$5.400,00</span>
-              <span class="oferta-figure">$4.900,00</span>
-            </div>
-          </div>
-          <div class="Añadir-carro-figure">
-            <a href="detalle-de-producto"><i class="Carro fa-solid fa-cart-arrow-down"></i></a>
-          </div>
-        </div>
-
-        <div class="contenedor">
-          <img src="/images/4to-Zuccardi-Concreto.png" />
-          <div class="bloque-ofertas">
-            <span class="titulo-figure">
-              <h3>Zuccardi Concreto 2018</h3></span>
-            
-            <div class="precios">
-              <span class="precio-figure">$6.820,00</span>
-              <span class="oferta-figure">$5.820,00</span>
-            </div>
-          </div>
-          <div class="Añadir-carro-figure">
-            <a href="detalle-de-producto"><i class="Carro fa-solid fa-cart-arrow-down"></i></a>
-          </div>
-        </div>
+        <% }) %>
+  
       </div>
     </section>
     <!--FIN DIV MENU-CONTENEDOR-->

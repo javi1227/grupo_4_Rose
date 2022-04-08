@@ -13,23 +13,27 @@
       <div class="forms-container-t">
         <div class="Signin-signup">
 
-          <form action="#" class="sign-in-form">
+          <form action="/usuarios/registro" method="POST" class="sign-in-form">
             <h2 class="title-t">Registrarse</h2>
             <div class="input-box">
               <i class="fas fa-user"></i>
-              <input class="input-t" type="text" placeholder="Usuario" />
+              <label for="name"></label>
+              <input class="input-t" name="name" type="text" id="email" placeholder="Usuario" />
             </div>
             <div class="input-box">
               <i class="fas fa-user"></i>
-              <input class="input-t" type="text" placeholder="Email" />
+              <label for="email"></label>
+              <input class="input-t" name="email" type="email" id="email" placeholder="Email" />
             </div>
             <div class="input-box">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Contraseña" />
+              <label for="password"></label>
+              <input type="password" name="password" id="password" placeholder="Contraseña" />
             </div>
             <div class="input-box">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Repetir contraseña" />
+              <label for="password"></label>
+              <input type="password" name="password" id="password" placeholder="Repetir contraseña" />
             </div>
             <input type="submit" class="btn solid" value="Crear cuenta" />
             <p class="smedia-text">O inicia sesión con una de las siguientes plataformas</p>

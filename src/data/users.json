@@ -1,0 +1,18 @@
+[
+    {
+        "id": 0,
+        "name": "",
+        "email": "",
+        "password": "",
+        "avatar": ""
+    },
+    {
+        "id": 1,
+        "name": "dada",
+        "email": "",
+        "password": [
+            "",
+            ""
+        ]
+    }
+]
