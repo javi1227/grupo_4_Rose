@@ -6,7 +6,7 @@
         "description": "Le Petit Voyage Criolla se hace con uvas de Vista Flores, cosechadas durante la primera semana de marzo. La elaboración del vino se hizo mediante una maceración carbónica con racimos enteros",
         "categoryId": 1,
         "projectId": 1,
-        "discount": 10,
+        "discount": 2200,
         "image": "OFerta1-Petit-Voyage-Criolla.png",
         "stock": true
     },
@@ -17,7 +17,7 @@
         "description": "La línea Eggo son vinos sin paso por madera, fermentados y criados en huevos de hormigón, que surgieron como una búsqueda de expresión de terroir y pureza, con la mínima intervención posible. ",
         "categoryId": 2,
         "projectId": 2,
-        "discount": 5,
+        "discount": 3000,
         "image": "2da-Oferta-Zorzal-Eggo-Franco.png",
         "stock": false
     },
@@ -28,7 +28,7 @@
         "description": "Procede de suelos arcillosos, más frescos, con viñas cultivadas sobre empinadas laderas orientadas al este y al norte.",
         "categoryId": 3,
         "projectId": 3,
-        "discount": 10,
+        "discount": 5500,
         "image": "3raOFerta-Pittacum-Petit-Pittacum.png",
         "stock": true
     },
@@ -39,7 +39,7 @@
         "description": "aaaa",
         "categoryId": 4,
         "projectId": 4,
-        "discount": 15,
+        "discount": 7200,
         "image": "4to-Zuccardi-Concreto.png",
         "stock": true
     }
