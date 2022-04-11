@@ -29,6 +29,9 @@ app.use('/productos', productsRouter); // Listado, detalle
 app.use('/usuarios', usersRouter); //Login, registro, perfil
 app.use('/admin', adminRouter);  // Admin, ABM Productos, ABM Projectos
 app.use('/carro-de-compra', carroRouter); // Carrito de compra */
+app.use((req, res, next) => {
+    res.status(404).render("not-found") //Error 404
+})
 
 
 

@@ -12,10 +12,12 @@ module.exports = {
             titulo: "Register"
         })
     },
+
+    
     processRegister: (req, res) =>{
         /* Registrar un usuario - Guardarlo en el JSON */
         /* 1- Crear un objeto usuario */
-     let lastId = 0;
+    let lastId = 0;
         getUsers.forEach(user => {
             if(user.id > lastId){
                 lastId = user.id

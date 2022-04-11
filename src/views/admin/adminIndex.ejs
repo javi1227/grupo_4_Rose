@@ -13,7 +13,7 @@
             <th scope="col">Precio</th>
             <th scope="col">Categoría</th>     
             <th scope="col">Stock</th>
-           
+          
           </tr>
         </thead>
         <tbody>
@@ -26,18 +26,18 @@
               <td><%- producto.projectId %></td>
               <td><%- producto.stock %></td>
               <td>
-                <a href="/admin/productos/editar/<%- producto.id %>" class="btn btn-success">
+                <a href="/admin/productos/editar/<%- producto.id %>" class="btnUser btn btn-success">
                   <i class="fa-solid fa-pen-to-square"></i>
                 </a>
                 <form action="/admin/productos/eliminar/<%- producto.id %>?_method=DELETE" method="post">
-                  <button class="btn btn-danger" type="submit">
+                  <button class="btnUserDelete btn btn-danger" type="submit">
                     <i class="fa-solid fa-trash-can"></i>
                   </button>
                 </form>
               </td>
             </tr>
           <% }) %>  
-       
+      
         </tbody>
       </table>
   </main>
@@ -45,7 +45,7 @@
 
       <%- include('../partials/footer') %> 
       
-     
+
 
 </body>
 </html>

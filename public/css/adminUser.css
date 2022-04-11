@@ -1,0 +1,35 @@
+.btnUser {
+    width: 74px;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-radius: 14px;
+    background-color: var(--color-para-hover);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    transition: all 1s;
+}
+
+.btnUserDelete {
+    width: 74px;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-radius: 14px;
+    background-color: var(--color-para-hover);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    transition: all 1s;
+}
+
+.btnUser:hover{
+    background-color: green;
+}
+
+.btnUserDelete:hover{
+    background-color: red;
+}

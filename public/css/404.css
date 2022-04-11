@@ -1,0 +1,70 @@
+.Body404 {
+    background: url(/images/robot404.png) 86% 170px no-repeat;
+    /* padding-right: 20px; */
+}
+
+#logo {
+    display: inline-block;
+    height: 54px;
+    width: 150px;
+    
+}
+
+.P_de_404{
+    margin: 17px 54px 22px;
+    overflow: hidden;
+}
+
+ins {
+    color: #777;
+    text-decoration: none;
+}
+
+code {
+    font: 15px/22px arial,sans-serif;
+}
+
+ins {
+    color: #777;
+    text-decoration: none;
+    margin: 0 54px;
+}
+
+.contenedor_del_404 {
+    height: 29rem;
+
+}
+
+.logo404 {
+    height: 2.5rem;
+    display: flex;
+    margin-left: 4rem;
+    margin-top: 2rem;
+}
+
+.logo404 img {
+    width: 76px;
+    height: 53px;
+    position: initial;
+}
+
+
+
+@media(max-width:622px) {
+    .Body404 {
+        background: none;
+    
+    }
+
+    .contenedor_del_404{
+        display: flex;
+        flex-direction: column;
+    }
+    .P_de_404{
+        margin: 11px 21px 22px;
+        overflow: hidden;
+    }
+    ins {
+        margin: 0 21px ;
+    }
+}
