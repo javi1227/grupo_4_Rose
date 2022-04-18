@@ -1,6 +1,28 @@
 [
-{ "id": 0, "name": "", "email": "", "password": "", "avatar": "" },
-{ "id": 1, "name": "dada", "email": "", "password": ["", ""] },
-{ "id": 2, "name": "", "email": "", "password": ["", ""] }
 
+    {
+        "id": 0,
+        "name": "",
+        "email": "",
+        "password": "",
+        "avatar": ""
+    },
+    {
+        "id": 1,
+        "name": "dada",
+        "email": "",
+        "password": [
+            "",
+            ""
+        ]
+    },
+    {
+        "id": 2,
+        "name": "asda",
+        "email": "asda@gmail.com",
+        "password": [
+            "sada",
+            "asda"
+        ]
+    }
 ]

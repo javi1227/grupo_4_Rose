@@ -1,5 +1,5 @@
 
-const {getProducts} = require('../data')
+const {getProducts, getDiscount} = require('../data')
 
 /* Este archivo tiene la ejecución que se hace cuando se entra en home */
 module.exports = {
@@ -10,7 +10,7 @@ module.exports = {
             titulo: "Rosé",
             titulo_producto: "Novedades",
             descuento: "con descuentos",
-            productos: getProducts
+            productos: getDiscount
         })
     },
     contact: (req, res) => res.send("Contacto")
