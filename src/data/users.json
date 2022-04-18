@@ -14,5 +14,14 @@
             "",
             ""
         ]
+    },
+    {
+        "id": 2,
+        "name": "asda",
+        "email": "asda@gmail.com",
+        "password": [
+            "sada",
+            "asda"
+        ]
     }
 ]

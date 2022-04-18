@@ -13,14 +13,13 @@ app.set('views', 'src/views');
 /* Enrutadores */
 const indexRouter = require('./routes/indexRouter');
 const productsRouter = require('./routes/productsRouter');
-const usersRouter = require('./routes/usersRouter');
 const adminRouter = require('./routes/adminRouter');
-const carroRouter = require('./routes/carroRouter');
+const usersRouter = require('./routes/usersRouter');
 const productsDetailRouter = require('./routes/productDetailRouter');
 
 
 app.use(express.static(path.join(__dirname,'../public')));
-app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({extended: false})); /* captura la info que se envia en el req */
 app.use(express.json());
 app.use(methodOverride('_method'));
 
@@ -30,11 +29,10 @@ app.use('/detalle-de-producto', productsDetailRouter); // detalle de producto
 app.use('/productos', productsRouter); // Listado, detalle
 app.use('/usuarios', usersRouter); //Login, registro, perfil
 app.use('/admin', adminRouter);  // Admin, ABM Productos, ABM Projectos
-app.use('/carro-de-compra', carroRouter); // Carrito de compra */
 app.use((req, res, next) => {
     res.status(404).render("not-found") //Error 404
+    
 })
-
 
 
 app.listen(PORT, () => console.log(`

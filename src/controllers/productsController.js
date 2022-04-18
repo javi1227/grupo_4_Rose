@@ -1,4 +1,4 @@
-const { getCategories, getProducts } = require('../data');
+const { getCarro, getCategories, getProducts } = require('../data');
 
 
 module.exports = {
@@ -32,5 +32,15 @@ ${element.discount}
             res.write("Producto no existe")
         }
         res.end()
-    }
+    },
+    
+/* Este archivo tiene la ejecución que se hace cuando se entra en home */
+    /* envia la vista */
+    Carro: (req, res) =>{
+        /* reenderiza la vista ejs */
+        res.render('carro-de-compra', {
+            titulo: "Rosé",
+            detail: getCarro
+    })
+}
 };
