@@ -3,17 +3,10 @@ const { getCarro, getCategories, getProducts } = require('../data');
 
 module.exports = {
     getAll: (req, res) => {
-        res.set({'content-type':'text/plain;charset=utf-8'})
-        getProducts.forEach((element) => {
-            res.write(
-            `*****************
-${element.name}
-${element.price}
-${element.description}
-${element.discount}
-`)
-        })
-        res.end()
+        res.render('productos', {
+            titulo: "Rosé",
+            detail: getCarro
+    })
     },
     getOne: (req, res) => {
         res.set({'content-type':'text/plain;charset=utf-8'})
@@ -42,5 +35,6 @@ ${element.discount}
             titulo: "Rosé",
             detail: getCarro
     })
+    
 }
 };
