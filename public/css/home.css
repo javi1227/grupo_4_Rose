@@ -47,7 +47,7 @@ body::-webkit-scrollbar-thumb {
     position: initial;
 }
 
-.navbar{
+.navbar-header{
     min-height: 70px;
     display: flex;
     justify-content: space-between;

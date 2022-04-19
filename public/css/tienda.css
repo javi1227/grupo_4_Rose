@@ -1,0 +1,88 @@
+.body-de-tienda {
+    margin: 0px;
+    background-color: #ecece4;
+    font-family: 'Nerko One', cursive;
+    padding: 2.5rem 0;
+}
+
+#buttontienda{
+    font-size: 16px;
+    text-align: center;
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+
+.page-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.product-container-tienda {
+    margin: 15px;
+    padding: 2px 16px;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+    background-color: white;
+    cursor: pointer;
+    border-radius: 9px;
+
+}
+
+.product-container-tienda:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.product-container-tienda img {
+    width: 300px;
+}
+
+.product-container-tienda h1 {
+    margin-bottom: 10px;
+    margin-left: 15px;
+}
+
+.button-tienda {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50; /* Green */
+    transition-duration: 0.4s;
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+.button-tienda:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+
+/* next previous */
+#a-tienda {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+#a-tienda:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.tienda-previous {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.tienda-next {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.next-previous-tienda {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+}
