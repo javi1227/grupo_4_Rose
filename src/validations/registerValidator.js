@@ -6,7 +6,7 @@ let validateRegister = [
      .isLength({min:2}).withMessage("Ingrese un nombre válido"),
     check("email")
      .notEmpty().withMessage("El email es requerido").bail
-     .isEmail().withMessage("ingrese un email válido"),
+     //.isEmail().withMessage("ingrese un email válido"),//
     check("password")
      .notEmpty().withMessage("Ingrese una contraseña")
      .isLength({min: 8}).withMessage("La contraseña Debe tener por lo menos 8 caracteres"),
@@ -20,7 +20,7 @@ let validateRegister = [
     }).withMessage("Las contraseñas no coinciden"),
 
     check("terms")
-     .notEmpty().withMessage("Debes aceptar los términos y condiciones")
+    .isString("on").withMessage("Debes aceptar los términos y condiciones")
 ];
 
 module.exports = validateRegister;
