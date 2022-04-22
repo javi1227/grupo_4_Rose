@@ -5,7 +5,7 @@ let validateRegister = [
      .notEmpty().withMessage("El nombre es requerido").bail()
      .isLength({min:2}).withMessage("Ingrese un nombre válido"),
     check("email")
-     .notEmpty().withMessage("El email es requerido").bail
+     .notEmpty().withMessage("El email es requerido").bail, // sacar la coma
      //.isEmail().withMessage("ingrese un email válido"),//
     check("password")
      .notEmpty().withMessage("Ingrese una contraseña")

@@ -39,3 +39,26 @@
 ### 5. Dejar de hacer
 
 *** Dejar las tareas para lo último como en el 2 sprint , No frustrarse cuando algo no sale como esperamos .**
+
+
+                                                                    *** SPRINT 4 ***
+
+### 1. Comenzar a hacer 
+
+  *** Tenemos que fortalezer la comunicación del git para pisar nuestro trabajo.**
+
+### 2. Hacer más
+
+  *** Preguntar más sobre dudas de alguna tarea para no perder tiempo en la misma.**
+
+### 3. Continuar haciendo
+
+  *** Seguir teniando un buen compañerismo en el grupo y seguir juntandonos en disc para hacer tareas y practicar juntos .**
+
+###  4. Hacer menos
+
+ *** No ver las clases repetivamente para entender un tema sino que usar el playground para aprender del mismo .**
+
+### 5. Dejar de hacer
+
+*** No frustrarse cuando algo no sale como esperamos.**
