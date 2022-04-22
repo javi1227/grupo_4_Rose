@@ -20,6 +20,9 @@
               <i class="fas fa-user"></i>
               
               <input class="input-t" name="name" type="text" id="email" placeholder="Usuario" /><label for="name"></label>
+              <% if (locals.errors && errors.name) { %>
+                <small class"text-danger"><%= errors.name.msg %></small>
+              <% } %>
             </div>
             <div class="input-box">
               <i class="fas fa-user"></i>
@@ -34,7 +37,7 @@
             <div class="input-box">
               <i class="fas fa-lock"></i>
               
-              <input type="password" name="password" id="password" placeholder="Repetir contraseña" /><label for="password"></label>
+              <input type="password" name="password2" id="password" placeholder="Repetir contraseña" /><label for="password"></label>
             </div>
             <input type="submit" class="btn solid" value="Crear cuenta" />
             <p class="smedia-text">O inicia sesión con una de las siguientes plataformas</p>
