@@ -5,7 +5,7 @@ module.exports = {
     getAll: (req, res) => {
         res.render('productos', {
             titulo: "Rosé",
-            detail: getCarro
+            detail: getProducts
     })
     },
     getOne: (req, res) => {
