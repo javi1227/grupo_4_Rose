@@ -12,8 +12,9 @@
 
     <!-- MENU -->
     <div class="body-de-tienda">
-       <% detail.forEach(producto => { %>      
         <div class="page-content">
+       <% detail.forEach(producto => { %>      
+
             <div class="product-container-tienda">
                 <img src="images/<%= producto.image %> " />
                 <div class="bloque-ofertas-tienda">
@@ -23,9 +24,10 @@
                 </div>
             </div>
 
-        </div>
+
 
        <% }) %>
+    </div>
                     <div class="next-previous-tienda">
                         <a href="#" id="a-tienda" class="tienda-previous">&laquo; Previous</a>
                         <a href="#" id="a-tienda"class="tienda-next">Next &raquo;</a>
