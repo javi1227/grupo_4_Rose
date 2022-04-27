@@ -273,10 +273,10 @@ body::-webkit-scrollbar-thumb {
     width: 70%;
     position: relative;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 12px;
     outline-offset: -10px;
-    background-image: url(/images/fondo-Negro.jpg);
-    border: solid 0.8px black;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
 }
 
 .contenedor img{  /*modificador de imagenes*/
@@ -362,7 +362,7 @@ body::-webkit-scrollbar-thumb {
 } 
 /*EL MOVIMIENTO DE LA FIGURA DE LA VENTA*/
 .contenedor:hover > img{     
-    transform: scale(1.1);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 /* ***********************CONTENEDOR OFERTAS*********************** */

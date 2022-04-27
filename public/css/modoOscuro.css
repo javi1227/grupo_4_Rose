@@ -1,0 +1,147 @@
+/* config header */
+
+.oscuroIcon {
+    padding: 8px;
+}
+
+.switch {
+    background: #343D5B;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    outline: none;
+}
+
+.switch::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: #F1F1F1;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    /* -webkit-transition: .3s ease all; */
+    transition: .3s ease all;
+    /* -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2); */
+            box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.switch.active {
+    background:#cca43c;
+    color: #000;
+}
+
+.switch.active::after {
+    right: 0;
+    left: unset;
+}
+
+.switch span {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color: #fff;
+}
+
+/* fin config header */
+
+/* configurar home black */
+
+body.dark {
+    background-color: #343D5B;
+    color: white;
+}
+
+body.dark nav {
+    background: #343D5B;
+}
+
+body.dark nav a {
+    color: #C8C8C8;
+}
+
+body.dark nav a:hover {
+    color: #FEFEFE;
+}
+
+body.dark .ofertas-menu {
+    background: #343D5B;
+    color: #C8C8C8;
+
+}
+
+body.dark .product-container-tienda {
+    background: rgb(51,59,72);
+background: linear-gradient(180deg, rgba(51,59,72,1) 0%, rgba(169,177,190,1) 100%);
+}
+
+body.dark .contenedor {
+    background: rgb(51,59,72);
+    background: linear-gradient(180deg, rgba(51,59,72,1) 0%, rgba(169,177,190,1) 100%);
+}
+
+body.dark footer {
+    background: rgba(0, 0, 0, 0.594);
+    color: white;
+}
+
+body.dark footer a {
+    color: white;
+}
+
+body.dark footer h2 {
+    color: white;
+}
+
+/* fin configurar home black */
+
+/*  configurar login/register black*/
+body.dark .sign-in-form-login{
+    background-color: #343D5B;
+    color: white;
+}
+body.dark .sign-in-form{
+    background-color: #343D5B;
+    color: white;
+}
+
+body.dark .icon-container {
+    color: white;
+}
+
+body.dark .register-container-l {
+    color: white;
+}
+
+/* fin configurar login/register black*/
+
+/* configurar carrito black */
+body.dark .carrito-title{
+    background-color: #343D5B;
+    color: white;
+}
+
+body.dark .opcionesCarrito{
+    background-color: #343D5B;
+    color: white;
+}
+
+body.dark .summary-label{
+    background-color: #3483fa;
+    color: white;
+}
+
+body.dark .textoCarrito{
+    color: white;
+}
+
+/*  fin configurar carrito black */

@@ -1,4 +1,4 @@
-// burguer y menu
+const btnSwitch = document.querySelector('#switch');
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 // Fin burguer y menu
@@ -10,17 +10,16 @@ document.getElementById('button-up').addEventListener('click', scrollUp);
 
 
 function scrollUp() {
-    var currentScroll= document.documentElement.scrollTop /*|| document.body.scrollTop; */ /*esta variable nos dice que tengo el control del movimiento del scroll*/
+    var currentScroll= document.body.scrollTop /*|| document.body.scrollTop; */ /*esta variable nos dice que tengo el control del movimiento del scroll*/
     if(currentScroll > 0) {  /*Si currentScroll es mayor a 0 nos regresa arriba*/
         window.requestAnimationFrame(scrollUp);
         window.scrollTo(0,currentScroll - (currentScroll / 10));
     }
 }
 
-
+// BOTON para subir
 window.onscroll = function() {
-    var scroll= document.documentElement.scrollTop;
-
+    var scroll= document.body.scrollTop;
     if (scroll > 100) {
         buttonUp.style.transform= 'scale(1)';
     }else if (scroll < 500) {
@@ -70,14 +69,27 @@ function showSlides(n) {
 let i;
 let slides = document.getElementsByClassName("mySlides");
 let dots = document.getElementsByClassName("dot");
-if (n > slides.length) {slideIndex = 1}
-if (n < 1) {slideIndex = slides.length}
-for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+
+if (slides.length) {
+  if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    }  
 }
-for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-}
-slides[slideIndex-1].style.display = "block";
-dots[slideIndex-1].className += " active";
-}
+
+
+// modo incognito
+
+
+
+btnSwitch.addEventListener('click', () => {
+	document.body.classList.toggle('dark');
+	btnSwitch.classList.toggle('active');
+});
