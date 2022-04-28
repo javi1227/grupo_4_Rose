@@ -4,6 +4,7 @@ const path = require('path');
 const process = require('process');
 const PORT = process.env.PORT || 3050;
 const methodOverride = require('method-override');
+const logMiddleware = require ('./middlewares/userLogs');
 
 
 // Views Config
@@ -22,6 +23,7 @@ app.use(express.static(path.join(__dirname,'../public')));
 app.use(express.urlencoded({extended: false})); /* captura la info que se envia en el req */
 app.use(express.json());
 app.use(methodOverride('_method'));
+app.use(logMiddleware);
 
 //MiddleWares Rutas : gestion de peticiones al "/"
 app.use('/', indexRouter); // HOME - Contact 
@@ -31,8 +33,7 @@ app.use('/usuarios', usersRouter); //Login, registro, perfil
 app.use('/admin', adminRouter);  // Admin, ABM Productos, ABM Projectos
 app.use((req, res, next) => {
     res.status(404).render("not-found") //Error 404
-    
-})
+});
 
 
 app.listen(PORT, () => console.log(`

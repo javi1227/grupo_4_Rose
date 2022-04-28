@@ -35,7 +35,25 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* ***********************HEADER*********************** */
+.header_avatar {
+width: 3.5rem;
+height: 3.5rem;
+border-radius: 50%;
+background-color: var(--color-para-hover);
+margin: 0 auto;
+position: relative;
+order: 1;
+}
 
+.avatar_session {
+position: absolute;
+border-radius: 50%;
+background-color: lime;
+top: 0;
+right: 0;
+width: 10px;
+height: 10px;
+}
 
 .logo {
     height: 3.5rem;
@@ -733,6 +751,12 @@ ol li {
  /* media menor a 768PX del HEADER */
 
 @media(max-width:768px) {
+    .header_avatar {
+        order: 0;
+        width: 4rem;
+        height: 4rem;
+        }
+    
     .hamburger {
         display: block;
         margin-right: 2rem;
