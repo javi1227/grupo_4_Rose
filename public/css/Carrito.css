@@ -126,7 +126,6 @@ body::-webkit-scrollbar-thumb {
 
 
 .summary-action .btn-submit{     
-    padding: -1px 70px 9px;
     margin: 8px;
     -webkit-text-stroke: medium;
     color: white;
@@ -134,8 +133,10 @@ body::-webkit-scrollbar-thumb {
     font-size: 30px;
     border-radius: 1rem;
     display: flex;
-    margin-left: 4rem;
+    margin-left: 5rem;
     height: 3rem;
+    width: 11rem;
+    padding: 4px 9px;
 }
 
 .carrito-compra  .summary-label{
@@ -146,7 +147,7 @@ body::-webkit-scrollbar-thumb {
     background: var(--color-principal);
     height: 2.5rem;
     width: 15rem;
-    margin-left: 1.3rem;
+    margin-left: 2.5rem;
     border-radius: 1rem;
     margin-top: 2rem;
 }

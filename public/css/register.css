@@ -111,6 +111,10 @@ h2.title-t{
     font-weight: 500;
 }
 
+.inputRegister {
+    padding: 1rem 0px;
+}
+
 .btn {
     width: 150px;
     height: 49px;
@@ -210,7 +214,7 @@ h2.title-t{
 @media (min-width: 1200px){
     .sign-in-form{
     max-width: 500px;
-    height: 45rem;
+    height: 48rem;
     }
     .Signin-signup{
         padding-top: 4rem;
@@ -234,4 +238,3 @@ h2.title-t{
         font-size: 16px;
     }
 }
-

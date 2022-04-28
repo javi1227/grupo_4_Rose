@@ -3,7 +3,8 @@ const router = express.Router();
 const adminController = require('../controllers/admin/adminController');
 const adminProductsController = require('../controllers/admin/adminProductsController');
 const multer = require('multer');
-const path = require('path')
+const path = require('path');
+const adminMiddleware = require('../middlewares/userMiddleware');
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) =>{
@@ -18,7 +19,9 @@ const storage = multer.diskStorage({
 const uploadFile = multer({ storage });
 
 /* GET - Index */
-router.get('/', adminController.index);
+router.get('/', adminMiddleware ,adminController.index);
+
+
 
 /* ============== */
 /* CRUD PRODUCTOS */
