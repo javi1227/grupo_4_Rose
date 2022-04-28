@@ -17,6 +17,7 @@
     "id": 4,
     "name": "Javier",
     "email": "javier@hotmail.com",
-    "password": "123456789"
+    "password": "123456789",
+    "admin": true
   }
 ]
