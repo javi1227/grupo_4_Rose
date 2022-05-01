@@ -4,7 +4,9 @@
 
         <ul class="nav-menu">
             <div class="header_avatar">
-                <div class="avatar_session"></div>
+                <% if (locals.user) { %>
+                    <div class="avatar_session"></div>
+                <% } %>
             </div>
                 <li class="nav-item"> <a href="/" class="nav-link">Inicio</a></li>
                 <li class="nav-item"> <a href="/productos" class="nav-link">Tienda</a></li>

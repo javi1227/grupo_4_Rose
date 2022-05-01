@@ -5,6 +5,8 @@ const process = require('process');
 const PORT = process.env.PORT || 3050;
 const methodOverride = require('method-override');
 const logMiddleware = require ('./middlewares/userLogs');
+const session = require('express-session');
+
 
 
 // Views Config
@@ -18,12 +20,18 @@ const adminRouter = require('./routes/adminRouter');
 const usersRouter = require('./routes/usersRouter');
 const productsDetailRouter = require('./routes/productDetailRouter');
 
-
+// Middlewares de aplicación
 app.use(express.static(path.join(__dirname,'../public')));
 app.use(express.urlencoded({extended: false})); /* captura la info que se envia en el req */
 app.use(express.json());
 app.use(methodOverride('_method'));
 app.use(logMiddleware);
+app.use(session({
+    secret: 'Rosé ',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: true }
+}))
 
 //MiddleWares Rutas : gestion de peticiones al "/"
 app.use('/', indexRouter); // HOME - Contact 

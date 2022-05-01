@@ -1,4 +1,3 @@
-const { get } = require('express/lib/response');
 const {getUsers, writeUsers} = require('../data');
 const { validationResult } = require('express-validator');
 
@@ -7,20 +6,31 @@ module.exports = {
         res.render('login', {
             titulo: "Iniciar sesión"
         })
+    },
 
     processLogin: (req, res) =>{
         let errors = validationResult(req);
 
         if(errors.isEmpty()){
-        //levantar sesión
+        // levantar sesión
+        let user= users.find(user => user.email === req.body.email);
+
+        req.session.user = {
+            id: user.id,
+            name: user.name,
+            avatar:user.avatar,
+            email: user.email,
+        }
+
+        res.locals.user = req.session.user
+        // fin levantar sesión
         res.redirect('/');
         }else{
         res.render('login', {
-            titulo: "Iniciar sesión",
+            titulo: "Login",
         errors: errors.mapped() 
         })
         }
-    }
     },
     register: (req,res) => {
         res.render('register', {
