@@ -3,14 +3,15 @@ const {getUsers, writeUsers} = require('../data');
 const { validationResult } = require('express-validator');
 
 module.exports = {
-    login: (req,res) => {
+    login: (req, res) => {
         res.render('login', {
             titulo: "Iniciar sesión"
         })
-
-    processLogin: (req, res) =>{
+    },
+ 
+    processLogin: (req, res) => {
         let errors = validationResult(req);
-
+        
         if(errors.isEmpty()){
         //levantar sesión
         res.redirect('/');
@@ -19,7 +20,6 @@ module.exports = {
             titulo: "Iniciar sesión",
         errors: errors.mapped() 
         })
-        }
     }
     },
     register: (req,res) => {
@@ -33,7 +33,7 @@ module.exports = {
         // verificar si hubo errores en el form
         let errors = validationResult(req);
         res.send(errors)
-
+    
         // si no hay errores, crea el usuario
         if(errors.isEmpty()){
             // codigo para crear el usuario
@@ -42,16 +42,15 @@ module.exports = {
                     let lastId = 0;
                     getUsers.forEach(user => {
                         if(user.id > lastId){
-                            lastId = user.id
-                        }
-                    });
+                            lastId = user.id }
+                        });
 
                     let newUser = {
                         id: lastId + 1,
                         name: req.body.name,
                         email: req.body.email,
                         password: req.body.password,
-                    } 
+                    }
                     /* 2- Guardar el nuevo usuario en el array de usuarios */
                     getUsers.push(newUser)
                     /* 3- Escribir el JSON de usuarios con el array actual */

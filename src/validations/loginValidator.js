@@ -1,11 +1,11 @@
-const { check, body }= require('express-validator');
+const { check, body } = require('express-validator');
 const {users} = require('../data');
 
 let validateLogin = [
-    check('usuario')
+    check('email')
         .notEmpty().withMessage('El email es requerido').bail()
         .isEmail().withMessage('Ingrese un email valido'),
-    body('usuario').custom((value, { req })=>{
+    body('email').custom((value, { req })=>{
         let user = users.find(user => user.email === value);
         if(user.password === req.body.password){
           return true;
