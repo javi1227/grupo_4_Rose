@@ -1,4 +1,4 @@
-const { check, body }= require('express-validator');
+const { check, body } = require('express-validator');
 const {users} = require('../data');
 
 let validateLogin = [
@@ -8,9 +8,9 @@ let validateLogin = [
     body('name').custom((value, { req })=>{
         let user = users.find(user => user.email === value);
         if(user.password === req.body.password){
-          return true;
+        return true;
         }
-          return false;
+        return false;
     }).withMessage('Email o contraseña incorrecta'),
     check('password')
         .notEmpty().withMessage('Ingrese una contraseña')
