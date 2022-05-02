@@ -12,12 +12,12 @@
     "name": "igorelmascapito12",
     "email": "igor@igor",
     "password": ["1234", "1234"]
-},
+  },
   {
     "id": 4,
     "name": "Javier",
     "email": "javier@hotmail.com",
-    "password": "123456789",
-    "admin": true
-  }
+    "password": "123456789"
+  },
+  { "id": 5, "email": "javier1@hotmail.com", "password": "123456789" }
 ]

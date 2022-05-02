@@ -1,3 +1,9 @@
+.input-box .text-danger {
+    color: red;
+    font-size: 16px;
+    text-align: initial;
+}
+
 .Signin-signup-login{
     width: 100%;
     display: flex;

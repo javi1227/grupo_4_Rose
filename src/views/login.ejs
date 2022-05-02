@@ -19,21 +19,20 @@
           <h2 class="title-t-l">Iniciar sesión</h2>
           <div class="input-box">
             <i class="fas fa-user"></i>
-            <input class="input-t" type="email" placeholder="email" name="email" id="email"/><label for="email"></label>
-            <% if (locals.errors && errors.email) {%>
-              <small class="text-danger"><%= errors.email.msg %></small>
-        <% } %>
+            
+            <input class="input-t" name="name" type="text" id="userName" placeholder="Usuario" /><label for="name"></label>
+            <% if (locals.errors && errors.name) { %>
+              <small class="text-danger"><%= errors.name.msg %></small>
+            <% } %>
           </div>
           <div class="input-box">
             <i class="fas fa-lock"></i>
-            <input  type="password" placeholder="password" name="password" id="password"/><label for="password"></label>
-            <% if (locals.errors && errors.password) {%>
+            <input type="password" name="password" id="password" placeholder="Contraseña" /><label for="password"></label>
+            <% if (locals.errors && errors.password) { %>
               <small class="text-danger"><%= errors.password.msg %></small>
             <% } %>
           </div>
-          <% if (locals.errors && errors.email) { %>
-            <small class="text-danger"><%= errors.email.msg %></small>
-          <% } %>
+        
           <div>
           <input type="submit" id="btn-login" class="btn solid" value="Iniciar sesión" />
         </div>

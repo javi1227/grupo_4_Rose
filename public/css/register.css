@@ -192,6 +192,21 @@ h2.title-t{
     font-size: 17px;
 }
 
+.sign-in-form .text-danger {
+    color: red;
+    font-size: 16px;
+    text-align: initial;
+}
+
+.form-check-label {
+    margin: 0.5rem;
+}
+
+.checkRegister1 {
+    padding: 1.5rem;
+    cursor: pointer;
+}
+
 
 /* animation */
 .background {
@@ -215,7 +230,7 @@ h2.title-t{
 @media (min-width: 1200px){
     .sign-in-form{
     max-width: 500px;
-    height: 48rem;
+    height: 54rem;
     }
     .Signin-signup{
         padding-top: 4rem;

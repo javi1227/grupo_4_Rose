@@ -1,9 +1,9 @@
 const { check, body }= require('express-validator');
 
 let validateRegister = [
-    check('name')
-        .notEmpty().withMessage('El nombre es requerido').bail()
-        .isLength({min:4}).withMessage('Ingrese un nombre valido'),
+    check('userName')
+    .notEmpty().withMessage('Ingrese su usuario').bail()
+    .isLength({min:2, max:20}).withMessage('Ingrese un usuario valido'),
     check('email')
         .notEmpty().withMessage('El email es requerido').bail()
         .isEmail().withMessage('Ingrese un email valido'),
@@ -17,7 +17,9 @@ let validateRegister = [
                     return false;
                 }
                 return true;
-        }).withMessage('Las contraseñas no coinciden')
+        }).withMessage('Las contraseñas no coinciden'),
+    check("terms")
+        .isString("on").withMessage("Debes aceptar los términos y condiciones")
 ];
 
 module.exports = validateRegister;

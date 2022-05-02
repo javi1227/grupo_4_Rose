@@ -42,7 +42,6 @@ module.exports = {
     processRegister: (req, res) =>{
         // verificar si hubo errores en el form
         let errors = validationResult(req);
-        res.send(errors)
     
         // si no hay errores, crea el usuario
         if(errors.isEmpty()){
@@ -62,7 +61,7 @@ module.exports = {
                         password: req.body.password,
                     }
                     /* 2- Guardar el nuevo usuario en el array de usuarios */
-                    getUsers.push(newUser)
+                    users.push(newUser)
                     /* 3- Escribir el JSON de usuarios con el array actual */
                     writeUsers(getUsers)
                     /* 4- Devolver respuesta */
@@ -71,7 +70,8 @@ module.exports = {
             // codigo para mostrar errores
             res.render('register', {
                 titulo: "Register",
-                errors: errors.mapped()
+                errors: errors.mapped(),
+                session: req.session
             })
         }
     

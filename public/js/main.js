@@ -28,10 +28,8 @@ window.onscroll = function() {
     let Desplazamiento_Actual = window.pageYOffset;
     if(ubicacionPrincipal >= Desplazamiento_Actual){
         document.getElementById('navbar').style.top = '0';
-        console.log(document.getElementById('navbar').style.top);
     }else{
         document.getElementById('navbar').style.top = '-100px';
-        console.log(document.getElementById('navbar').style.top);
     }
     ubicacionPrincipal = Desplazamiento_Actual
 }
