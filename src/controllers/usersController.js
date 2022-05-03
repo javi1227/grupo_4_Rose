@@ -93,9 +93,9 @@ module.exports = {
     logout: (req, res) => {
         req.session.destroy();
 
-        // if(req.cookies.formarCookie){
-        //     res.cookie('formarCookie', "", { maxAge: -1 })
-        // }
+        if(req.cookies.formarCookie){
+            res.cookie('formarCookie', "", { maxAge: -1 })
+        }
 
         res.redirect('/')
     }

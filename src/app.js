@@ -6,6 +6,7 @@ const PORT = process.env.PORT || 3050;
 const methodOverride = require('method-override');
 const logMiddleware = require ('./middlewares/userLogs');
 const session = require('express-session');
+const cookieParser =  require('cookie-parser')
 
 
 
@@ -34,6 +35,7 @@ app.use(session({
     saveUninitialized: true,
     cookie: {}
 }))
+app.use(cookieParser())
 
 //MiddleWares Rutas : gestion de peticiones al "/"
 app.use('/', indexRouter); // HOME - Contact
