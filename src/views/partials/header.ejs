@@ -4,15 +4,24 @@
 
         <ul class="nav-menu">
             <div class="header_avatar">
-                <% if (locals.user) { %>
+                <% if (typeof session.user != "undefined") { %>
                     <div class="avatar_session"></div>
-                <% } %>
+                    <img src="images/avatar/<%= session.user.avatar %> " alt="">
+                <% } %> 
             </div>
                 <li class="nav-item"> <a href="/" class="nav-link">Inicio</a></li>
                 <li class="nav-item"> <a href="/productos" class="nav-link">Tienda</a></li>
                 <li class="nav-item"> <a href="#" class="nav-link">Contacto</a></li>
-                <li class="nav-item"> <a href="/usuarios/login" class="nav-link">Ingresá</a></li>
                 <li class="nav-item"> <a href="/productos/carro-de-compra"  class="nav-link">Mi carrito</a></li>
+                <% if (typeof session.user != "undefined") { %>
+                    <li><a href="/usuarios/perfil">Mi perfil</a></li>
+                    <li><a href="/usuarios/logout">Cerrar sesión</a></li>
+                <% if (session.user.rol === "ADMIN") { %>
+                    <li><a href="/admin">Admin</a></li>
+                <% } %>
+                <% }else{ %> 
+                    <li><a href="/usuarios/login">Ingresá</a></li>
+                <% } %> 
                 <button class="switch" id="switch">
                     <span><i class="oscuroIcon fas fa-sun"></i></span>
                     <span><i class="oscuroIcon fas fa-moon"></i></span>

@@ -4,7 +4,8 @@ const adminController = require('../controllers/admin/adminController');
 const adminProductsController = require('../controllers/admin/adminProductsController');
 const multer = require('multer');
 const path = require('path');
-const adminMiddleware = require('../middlewares/userMiddleware');
+const userSessionCheck = require('../middlewares/userSessionCheck');
+const adminCheck = require('../middlewares/adminCheck');
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) =>{
@@ -19,7 +20,7 @@ const storage = multer.diskStorage({
 const uploadFile = multer({ storage });
 
 /* GET - Index */
-router.get('/', adminMiddleware ,adminController.index);
+router.get('/', userSessionCheck, adminCheck, adminController.index);
 
 
 
@@ -27,13 +28,13 @@ router.get('/', adminMiddleware ,adminController.index);
 /* CRUD PRODUCTOS */
 /* ============== */
 /* GET - Lista de productos */
-router.get('/productos', adminProductsController.list);
+router.get('/productos', userSessionCheck, adminCheck, adminProductsController.list);
 /* GET - Agregar producto */
-router.get('/productos/agregar', adminProductsController.productAdd);
+router.get('/productos/agregar', userSessionCheck, adminCheck, adminProductsController.productAdd);
 /* POST - Crea un producto en la DB */
 router.post('/productos', uploadFile.any(''), adminProductsController.productCreate);
 /* GET - Editar producto */
-router.get('/productos/editar/:id', adminProductsController.productEdit);
+router.get('/productos/editar/:id', userSessionCheck, adminCheck, adminProductsController.productEdit);
 /* PUT - Actualiza producto en la DB */
 router.put('/productos/:id', adminProductsController.productUpdate);
 /* DELETE - Elimina un producto */

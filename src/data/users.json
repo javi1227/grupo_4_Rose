@@ -4,6 +4,6 @@
     "email": "javier@hotmail.com",
     "password": "123456789",
     "avatar": "default-image.png",
-    "rol": "USER"
+    "rol": "ADMIN"
   }
 ]

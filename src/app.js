@@ -26,11 +26,13 @@ app.use(express.urlencoded({extended: false})); /* captura la info que se envia 
 app.use(express.json());
 app.use(methodOverride('_method'));
 app.use(logMiddleware);
+/* session */
+app.set('trust proxy', 1);
 app.use(session({
     secret: 'Rosé ',
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: true }
+    cookie: {}
 }))
 
 //MiddleWares Rutas : gestion de peticiones al "/"

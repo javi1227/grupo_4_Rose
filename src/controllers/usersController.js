@@ -5,6 +5,7 @@ module.exports = {
     login: (req, res) => {
         res.render('login', {
             titulo: "Iniciar sesión",
+            session: req.session
             // session: req.session
         })
     },
@@ -13,25 +14,33 @@ module.exports = {
         let errors = validationResult(req);
         if(errors.isEmpty()){
         // levantar sesión
-        // let user= getUsers.find(user => user.email === req.body.email);
+        let user= getUsers.find(user => user.email === req.body.email);
 
-        // req.session.user = {
-        //     id: user.id,
-        //     name: user.name,
-        //     avatar:user.avatar,
-        //     email: user.email,
-        //     rol: user.rol
-        // }
+        req.session.user = {
+            id: user.id,
+            name: user.name,
+            avatar:user.avatar,
+            email: user.email,
+            rol: user.rol
+        }
 
-        // res.locals.user = req.session.user
-        // fin levantar sesión
-        console.log("asasasasa");
+        if(req.body.remember){
+            const TIME_IN_MILISECONDS = 60000;
+            res.cookie('formarCookie', req.session.user, {
+                expires: new Date(Date.now() + TIME_IN_MILISECONDS),
+                httpOnly: true,
+                secure: true
+            })
+        }
+
+        res.locals.user = req.session.user
+
         res.redirect('/');
         }else{
         res.render('login', {
             titulo: "Iniciar sesión",
             errors: errors.mapped(),
-            // session: req.session
+            session: req.session
         })
         }
     },
@@ -80,5 +89,14 @@ module.exports = {
             })
         }
     
+    },
+    logout: (req, res) => {
+        req.session.destroy();
+
+        // if(req.cookies.formarCookie){
+        //     res.cookie('formarCookie', "", { maxAge: -1 })
+        // }
+
+        res.redirect('/')
     }
 }

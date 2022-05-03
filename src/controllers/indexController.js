@@ -10,7 +10,8 @@ module.exports = {
             titulo: "Rosé",
             titulo_producto: "Novedades",
             descuento: "con descuentos",
-            productos: getDiscount
+            productos: getDiscount,
+            session: req.session
         })
     },
     contact: (req, res) => res.send("Contacto")
