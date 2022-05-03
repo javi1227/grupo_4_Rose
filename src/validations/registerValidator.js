@@ -7,6 +7,13 @@ let validateRegister = [
     check('email')
         .notEmpty().withMessage('El email es requerido').bail()
         .isEmail().withMessage('Ingrese un email valido'),
+    body("email").custom((value)=>{
+        let user = users.find(user => user.email === value);
+        if(user){
+            return false;
+        }
+        return true;
+    }).withMessage("Email ya registrado"),
     check('password')
         .notEmpty().withMessage('Ingrese una contraseña')
         .isLength({min: 8}).withMessage('La contraseña debe tener por lo menos 8 caracteres'),

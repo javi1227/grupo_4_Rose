@@ -15,14 +15,14 @@
     <div class="forms-container-t">
       <div class="Signin-signup-login">
 
-        <form action="#"  method = "POST" class="sign-in-form-login">
+        <form action="/usuarios/login"  method = "POST" class="sign-in-form-login">
           <h2 class="title-t-l">Iniciar sesión</h2>
           <div class="input-box">
             <i class="fas fa-user"></i>
             
-            <input class="input-t" name="name" type="text" id="userName" placeholder="Usuario" /><label for="name"></label>
-            <% if (locals.errors && errors.name) { %>
-              <small class="text-danger"><%= errors.name.msg %></small>
+            <input class="input-t" name="email" type="email" id="userName" placeholder="Email" /><label for="name"></label>
+            <% if (locals.errors && errors.email) { %>
+              <small class="text-danger"><%= errors.email.msg %></small>
             <% } %>
           </div>
           <div class="input-box">
@@ -32,6 +32,15 @@
               <small class="text-danger"><%= errors.password.msg %></small>
             <% } %>
           </div>
+          <div class="form-check mb-3">
+            <input class="form-check-input" name="remember" type="checkbox" id="remember">
+            <label class="form-check-label" for="remember">
+                Recordarme
+            </label>
+        </div>
+        <% if (locals.errors && errors.custom) { %>
+            <small class="text-danger"><%= errors.custom.msg %></small>
+        <% } %>
         
           <div>
           <input type="submit" id="btn-login" class="btn solid" value="Iniciar sesión" />

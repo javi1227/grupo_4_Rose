@@ -34,7 +34,7 @@ app.use(session({
 }))
 
 //MiddleWares Rutas : gestion de peticiones al "/"
-app.use('/', indexRouter); // HOME - Contact 
+app.use('/', indexRouter); // HOME - Contact
 app.use('/detalle-de-producto', productsDetailRouter); // detalle de producto
 app.use('/productos', productsRouter); // Listado, detalle
 app.use('/usuarios', usersRouter); //Login, registro, perfil

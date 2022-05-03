@@ -1,19 +1,20 @@
 const { check, body } = require('express-validator');
-const {users} = require('../data');
+const users = require('../data/users');
+
 
 let validateLogin = [
-    check('name')
-        .notEmpty().withMessage('El email es requerido').bail()
-        .isLength({min:4}).withMessage('Ingrese un nombre valido'),
-    body('name').custom((value, { req })=>{
-        let user = users.find(user => user.email === value);
-        if(user.password === req.body.password){
-        return true;
+    check("email")
+        .notEmpty().withMessage("El email es requerido").bail()
+        .isEmail().withMessage("Ingrese un email válido"),
+    body("custom").custom((value, { req })=>{
+        let user = users.find(user => user.email === req.body.email);
+        if(user.password ===req.body.password){
+            return true;
         }
         return false;
-    }).withMessage('Email o contraseña incorrecta'),
-    check('password')
-        .notEmpty().withMessage('Ingrese una contraseña')
+    }).withMessage("Email o contraseña incorrecto"),
+    check("password")
+        .notEmpty().withMessage("Ingrese una contraseña"),
 ];
 
 module.exports = validateLogin;
