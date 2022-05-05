@@ -5,7 +5,8 @@ module.exports = {
     getAll: (req, res) => {
         res.render('productos', {
             titulo: "Rosé",
-            detail: getProducts
+            detail: getProducts,
+            session: req.session
     })
     },
     getOne: (req, res) => {
@@ -33,8 +34,10 @@ module.exports = {
         /* reenderiza la vista ejs */
         res.render('carro-de-compra', {
             titulo: "Rosé",
-            detail: getCarro
+            detail: getCarro,
+            session: req.session
     })
     
 }
+
 };

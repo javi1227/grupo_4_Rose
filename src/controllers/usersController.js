@@ -6,7 +6,6 @@ module.exports = {
         res.render('login', {
             titulo: "Iniciar sesión",
             session: req.session
-            // session: req.session
         })
     },
 

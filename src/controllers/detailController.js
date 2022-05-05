@@ -6,7 +6,9 @@ module.exports = {
     /* envia la vista */
     detalle: (req, res) =>{
         /* reenderiza la vista ejs */
-        res.render('detalle-de-producto')
+        res.render('detalle-de-producto', {
+            session: req.session
+        })
     },
 
 }
