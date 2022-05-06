@@ -5,13 +5,15 @@ module.exports = {
     list: (req, res) => {
         res.render('admin/products/listProducts', {
             titulo: "Listado de productos",
-            productos: getProducts
+            productos: getProducts,
+            session: req.session
         })
     },
     /* Envia vista de form de creacion de producto */
     productAdd: (req, res) => {
         res.render('admin/products/addProduct', {
-            titulo: "Agregar producto"
+            titulo: "Agregar producto",
+            session: req.session
         })
     },
     /* recibe datos de form de creacion y guarda */
@@ -54,7 +56,8 @@ module.exports = {
         let producto = getProducts.find(producto => producto.id === idProducto)
         res.render('admin/products/editProduct', {
             titulo: "Edición",
-            producto
+            producto,
+            session: req.session
         })
     },
 
@@ -71,7 +74,7 @@ module.exports = {
                 producto.description = req.body.description
             }
         })
- 
+
         writeProducts(getProducts);
 
         res.redirect('/admin/productos');

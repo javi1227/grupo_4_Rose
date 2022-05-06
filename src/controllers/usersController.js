@@ -6,7 +6,6 @@ module.exports = {
         res.render('login', {
             titulo: "Iniciar sesión",
             session: req.session
-            // session: req.session
         })
     },
 
@@ -56,6 +55,7 @@ module.exports = {
         // verificar si hubo errores en el form
         let errors = validationResult(req);
         // si no hay errores, crea el usuario
+        console.log(req.file);
         if(errors.isEmpty()){
             // codigo para crear el usuario
                /* Registrar un usuario - Guardarlo en el JSON */
@@ -65,7 +65,6 @@ module.exports = {
                         if(user.id > lastId){
                             lastId = user.id }
                         });
-
                     let newUser = {
                         id: lastId + 1,
                         name: req.body.name,
@@ -93,9 +92,9 @@ module.exports = {
     logout: (req, res) => {
         req.session.destroy();
 
-        // if(req.cookies.formarCookie){
-        //     res.cookie('formarCookie', "", { maxAge: -1 })
-        // }
+        if(req.cookies.formarCookie){
+            res.cookie('formarCookie', "", { maxAge: -1 })
+        }
 
         res.redirect('/')
     }

@@ -13,13 +13,13 @@
     <div class="container-t">
       <div class="forms-container-t">
         <div class="Signin-signup">
-          <form action="/usuarios/registro" method="POST" class="sign-in-form">
+          <form action="/usuarios/registro" method="POST" class="sign-in-form" enctype="multipart/form-data">
             <h2 class="title-t">Registrarse</h2>
 
             <div class="input-box">
               <i class="fas fa-user"></i>
               
-              <input class="input-t" name="userName" type="text" id="userName" placeholder="Usuario" /><label for="name"></label>
+              <input class="input-t" name="name" type="text" id="userName" placeholder="Usuario" /><label for="name"></label>
               <% if (locals.errors && errors.userName) { %>
                 <small class="text-danger"><%= errors.userName.msg %></small>
               <% } %>

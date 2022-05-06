@@ -6,6 +6,8 @@ const PORT = process.env.PORT || 3050;
 const methodOverride = require('method-override');
 const logMiddleware = require ('./middlewares/userLogs');
 const session = require('express-session');
+const cookieParser =  require('cookie-parser');
+const cookieSession = require('./middlewares/cookieSession');
 
 
 
@@ -34,6 +36,8 @@ app.use(session({
     saveUninitialized: true,
     cookie: {}
 }))
+app.use(cookieParser());
+app.use(cookieSession);
 
 //MiddleWares Rutas : gestion de peticiones al "/"
 app.use('/', indexRouter); // HOME - Contact
@@ -42,7 +46,11 @@ app.use('/productos', productsRouter); // Listado, detalle
 app.use('/usuarios', usersRouter); //Login, registro, perfil
 app.use('/admin', adminRouter);  // Admin, ABM Productos, ABM Projectos
 app.use((req, res, next) => {
-    res.status(404).render("not-found") //Error 404
+    res.status(404).render('not-found', {
+        title: "404",
+        session: req.session
+    })
+ //Error 404
 });
 
 
