@@ -46,7 +46,11 @@ app.use('/productos', productsRouter); // Listado, detalle
 app.use('/usuarios', usersRouter); //Login, registro, perfil
 app.use('/admin', adminRouter);  // Admin, ABM Productos, ABM Projectos
 app.use((req, res, next) => {
-    res.status(404).render("not-found") //Error 404
+    res.status(404).render('not-found', {
+        title: "404",
+        session: req.session
+    })
+ //Error 404
 });
 
 

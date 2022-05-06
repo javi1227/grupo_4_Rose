@@ -2,22 +2,11 @@ const express = require('express');
 const router = express.Router();
 const adminController = require('../controllers/admin/adminController');
 const adminProductsController = require('../controllers/admin/adminProductsController');
-const multer = require('multer');
-const path = require('path');
 const userSessionCheck = require('../middlewares/userSessionCheck');
 const adminCheck = require('../middlewares/adminCheck');
+const uploadFile = require('../middlewares/uploadAvatar');
 
-const storage = multer.diskStorage({
-    destination: (req, file, cb) =>{
-        cb(null, '../public/images/avatars')
-    },
-    filename: (req, file, cb) => {
-        let = fileName = `${Date.now()}_img${path.extname(file.filename)}}`
-        cb(null, fileName);
-    }
-});
 
-const uploadFile = multer({ storage });
 
 /* GET - Index */
 router.get('/', userSessionCheck, adminCheck, adminController.index);

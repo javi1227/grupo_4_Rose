@@ -55,6 +55,12 @@ width: 10px;
 height: 10px;
 }
 
+.header_avatar img {  
+        width: 3.5rem;
+        border-radius: 50%;
+        height: 3.5rem;  
+}
+
 .logo {
     height: 3.5rem;
 }

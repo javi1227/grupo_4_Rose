@@ -55,6 +55,7 @@ module.exports = {
         // verificar si hubo errores en el form
         let errors = validationResult(req);
         // si no hay errores, crea el usuario
+        console.log(req.file);
         if(errors.isEmpty()){
             // codigo para crear el usuario
                /* Registrar un usuario - Guardarlo en el JSON */
@@ -64,7 +65,6 @@ module.exports = {
                         if(user.id > lastId){
                             lastId = user.id }
                         });
-
                     let newUser = {
                         id: lastId + 1,
                         name: req.body.name,
