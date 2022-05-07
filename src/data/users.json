@@ -1,10 +1,50 @@
 [
-  {
-    "id": 1,
-    "email": "javier@hotmail.com",
-    "password": "123456789",
-    "avatar": "default-image.jpg",
-    "rol": "ADMIN",
-    "name": "Javier"
-  }
+    {
+        "id": 1,
+        "email": "javier@hotmail.com",
+        "password": "123456789",
+        "avatar": "default-image.jpg",
+        "rol": "ADMIN",
+        "name": "Javier"
+    },
+    {
+        "id": 2,
+        "name": "jorge",
+        "email": "jajaja@email.com",
+        "password": "123456789",
+        "avatar": "1651962765106_img_.jpg",
+        "rol": "USER"
+    },
+    {
+        "id": 3,
+        "name": "marta",
+        "email": "lareina@email.com",
+        "password": "$2a$10$9/NYxedNtij0MKFTf4AbdOVWcxPfjiIYx9OF8UebTp/SZaw/L.e3C",
+        "avatar": "1651963187991_img_.jpg",
+        "rol": "USER"
+    },
+    {
+        "id": 4,
+        "name": "asd",
+        "email": "asdasdad@hotmail.com",
+        "password": "$2a$10$WZTvyJ73NB.EgCtu5WovvOiB3sPFxVnNrnzKgZJVDZPpYfB9ZndCq",
+        "avatar": "1651963348681_img_.jpg",
+        "rol": "USER"
+    },
+    {
+        "id": 5,
+        "name": "asd",
+        "email": "racing_igor@live.com",
+        "password": "$2a$10$l6avA9z4UxnaQ/r0ikanaeV8rbt8NxkMFExwVllysY7M9Om./djbS",
+        "avatar": "default-image.png",
+        "rol": "USER"
+    },
+    {
+        "id": 6,
+        "name": "hola",
+        "email": "holahola@hotmail.com",
+        "password": "$2a$10$AUqpZgu2xKiPiugJNGDftugS84QIhudvro8D9N1iVS603vriI7Lmu",
+        "avatar": "1651964220783_img_.jpg",
+        "rol": "ADMIN"
+    }
 ]
