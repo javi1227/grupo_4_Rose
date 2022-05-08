@@ -6,5 +6,29 @@
     "avatar": "default-image.jpg",
     "rol": "ADMIN",
     "name": "Javier"
+  },
+  {
+    "id": 2,
+    "name": "pepe",
+    "email": "pepe@hotmail.com",
+    "password": "123456789",
+    "avatar": "1651880416272_img_.png",
+    "rol": "USER"
+  },
+  {
+    "id": 3,
+    "name": "igor",
+    "email": "igor@hotmail.com",
+    "password": "123456789",
+    "avatar": "1651962783878_img_.png",
+    "rol": "ADMIN"
+  },
+  {
+    "id": 4,
+    "name": "kakashi",
+    "email": "kakashi@hotmail.com",
+    "password": "123456789",
+    "avatar": "1651964570737_img_.jpg",
+    "rol": "ADMIN"
   }
 ]

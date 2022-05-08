@@ -1,2 +1,10 @@
 El usuario ingresó a la ruta: /images/avatar/default-image.png
+El usuario ingresó a la ruta: /
+El usuario ingresó a la ruta: /admin
+El usuario ingresó a la ruta: /admin
+El usuario ingresó a la ruta: /usuarios/logout
+El usuario ingresó a la ruta: /
 El usuario ingresó a la ruta: /usuarios/login
+El usuario ingresó a la ruta: /usuarios/login
+El usuario ingresó a la ruta: /
+El usuario ingresó a la ruta: /admin
