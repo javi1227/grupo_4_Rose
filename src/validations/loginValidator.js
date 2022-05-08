@@ -8,8 +8,8 @@ let validateLogin = [
         .notEmpty().withMessage("El email es requerido").bail()
         .isEmail().withMessage("Ingrese un email válido"),
     body("custom").custom((value, { req })=>{
-        let user = getUsers.find(user => user.email === req.body.email);     
-        if(bcrypt.hashSync(req.body.password, user.password)){
+        let user = getUsers.find(user => user.email === req.body.email); 
+        if(bcrypt.hashSync(user.password, 8)){
             return true;
         }
         return false;

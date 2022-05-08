@@ -23,7 +23,6 @@ module.exports = {
             email: user.email,
             rol: user.rol
         }
-
         if(req.body.remember){
             const TIME_IN_MILISECONDS = 60000;
             res.cookie('formarCookie', req.session.user, {
