@@ -7,7 +7,9 @@
                 <% if (typeof session.user != "undefined") { %>
                     <div class="avatar_session"></div>
                     <img src="/images/avatar/<%= session.user.avatar %>" alt="">
-                <% } %> 
+                <% }else{ %> 
+                    <img src="/images/avatar/loginUsers.png" alt="">
+                <% } %>  
             </div>
                 <li class="nav-item"> <a href="/" class="nav-link">Inicio</a></li>
                 <li class="nav-item"> <a href="/productos" class="nav-link">Tienda</a></li>

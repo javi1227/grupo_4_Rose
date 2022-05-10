@@ -454,6 +454,7 @@ ol li {
     .nav-item__burguer {
         display: flex;
         justify-content: space-between;
+        padding: 0.3rem;
     }
     
     .hamburger.active .bar:nth-child(2) {
