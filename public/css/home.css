@@ -35,6 +35,69 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* ***********************HEADER*********************** */
+/* buscador */
+/* SearchBar */
+
+.logo_Buscador {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_searchBar {
+    border-radius: 5px;
+    border: 1px solid var(--color-para-hover);
+    padding: 0.5rem;
+    display: block;
+    margin-right: 40rem;
+    display: none;
+
+}
+
+.header_searchBar form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-primary);
+    display: none;
+}
+
+.header_searchBar form input {
+    border: none;
+    background: var(--color-primary);
+    display: none;
+}
+
+.header_searchBar form input:focus {
+    outline: none;
+    display: none;
+} 
+
+.header_searchBar form input::placeholder {
+    text-transform: uppercase;
+    color: black;
+    display: none;
+}
+
+.header_searchBar form button {
+    background-color: var(--color-primary);
+    border: none;
+    border-radius: 5px;
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    height: 2.5rem;
+    width: 2rem;
+    transition: all 0.5s ease-in;
+    display: none;
+}
+
+.header_searchBar form button:hover {
+    background-color: rgba(35, 179, 232, 0.1);
+    display: none;
+}
+
+/* END SearchBar */
+/*fin buscador*/
+
 .header_avatar {
 width: 3rem;
 height: 3rem;
@@ -86,10 +149,6 @@ height: 10px;
     align-items: center;
     gap: 60px;
 }
-
-/* .nav-branding {
-    font-size: 2rem;
-} */
 
 .nav-link {
     transition: 0.7s ease;
@@ -601,7 +660,7 @@ ol li {
 }
 /* FIN MEDIAQUERY TABLET */
 @media (min-width: 720px) {
-    
+
 
 .Añadir-carro-figure {
     margin-right: auto;
@@ -653,6 +712,66 @@ ol li {
 
 /* COMIENZO ESCRITORIO  XL*/
 @media (min-width: 1200px) {
+        /* buscador */
+/* SearchBar */
+
+.header_searchBar {
+    border-radius: 5px;
+    border: 1px solid var(--color-para-hover);
+    padding: 0.5rem;
+    display: block;
+    margin-right: 1rem;
+
+}
+
+.header_searchBar form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-primary);
+}
+
+.header_searchBar form input {
+    border: none;
+    background: var(--color-primary);
+    display: block;
+
+}
+
+.header_searchBar form input:focus {
+    outline: none;
+    display: block;
+
+} 
+
+.header_searchBar form input::placeholder {
+    text-transform: uppercase;
+    color: black;
+    display: block;
+
+}
+
+.header_searchBar form button {
+    background-color: var(--color-primary);
+    border: none;
+    border-radius: 5px;
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    height: 2.5rem;
+    width: 2rem;
+    transition: all 0.5s ease-in;
+    display: block;
+
+}
+
+.header_searchBar form button:hover {
+    background-color: rgba(35, 179, 232, 0.1);
+    display: block;
+
+}
+
+/* END SearchBar */
+/*fin buscador*/
     
 
 /* MEDIA PAGINA */

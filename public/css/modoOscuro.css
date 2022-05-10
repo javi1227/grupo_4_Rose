@@ -146,3 +146,9 @@ body.dark .textoCarrito{
 }
 
 /*  fin configurar carrito black */
+
+
+body.dark .header_searchBar form input::placeholder {
+    color: #C8C8C8;
+
+}
