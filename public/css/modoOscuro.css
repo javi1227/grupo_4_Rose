@@ -145,10 +145,16 @@ body.dark .textoCarrito{
     color: white;
 }
 
+body.dark .header_searchBar {
+    color: white;
+}
+
 /*  fin configurar carrito black */
 
-
 body.dark .header_searchBar form input::placeholder {
-    color: #C8C8C8;
+    color: white;
+}
 
+body.dark .nav-menu {
+    background: #0b0b1a;
 }

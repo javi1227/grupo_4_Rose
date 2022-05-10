@@ -2,16 +2,16 @@
     <nav class="navbar-header" >
         <div class="logo_Buscador">
             <a href="#" class="logo"><img src="/images/LOGO.png" alt="logo"></a>
+        </div>
+            <ul class="nav-menu">
                 <div class="header_searchBar">
                     <form action="">
-                        <input type="text" placeholder="buscar productos" style="width:12rem ; font-size: 14px">
+                        <input type="text" placeholder="buscar productos">
                             <button type="submit">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
                     </form>
                 </div>
-        </div>
-            <ul class="nav-menu">
                 <div class="header_avatar">
                     <% if (typeof session.user != "undefined") { %>
                         <div class="avatar_session"></div>
@@ -38,10 +38,10 @@
                         <span><i class="oscuroIcon fas fa-moon"></i></span>
                     </button>
                         <li class="nav-item__burguer">
-                            <a href=""><i class="iconosFooter fa-brands fa-facebook"></i></a>
-                            <a href=""><i class="iconosFooter fa-brands fa-instagram"></i></a>
-                            <a href=""><i class="iconosFooter fa-brands fa-github"></i></a>
-                        </li>
+                        <a href=""><i class="iconosFooter fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="iconosFooter fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="iconosFooter fa-brands fa-github"></i></a>
+                    </li>
 
             </ul>
             <div class="hamburger">
