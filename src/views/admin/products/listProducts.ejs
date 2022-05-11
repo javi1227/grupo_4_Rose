@@ -5,14 +5,13 @@
   <%- include('../partials/header') %> 
   
       <main class="container min-vh-100 pt-5">
-        <table class="table table-striped table-hover">
+        <table class="table table-hover">
             <thead>
               <tr>
                 <th scope="col">id</th>
                 <th scope="col">Nombre</th>
                 <th scope="col">Precio</th>
                 <th scope="col">Categoría</th>
-                <th scope="col">Emprendimiento</th>
                 <th scope="col">Stock</th>
                 <th scope="col"></th>
               </tr>
@@ -24,9 +23,8 @@
                   <td><%- producto.name %></td>
                   <td><%- producto.price %></td>
                   <td><%- producto.categoryId %></td>
-                  <td><%- producto.projectId %></td>
                   <td><%- producto.stock %></td>
-                  <td>
+                  <td style="display: flex; justify-content: space-evenly";>
                     <a href="/admin/productos/editar/<%- producto.id %>" class="btn btn-success">
                       <i class="fa-solid fa-pen-to-square"></i>
                     </a>

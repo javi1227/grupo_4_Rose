@@ -9,7 +9,7 @@
       <form class="row " action="/admin/productos" method="POST" enctype="multipart/form-data">
         <div class="mb-3 col-md-6">
           <label for="name" class="form-label">Nombre del producto</label>
-          <input type="text" name="name" class="form-control" id="name" placeholder="Ej: Pantuflas" value="<%= (locals.old && old.name) ? old.name : "" %>">
+          <input type="text" name="name" class="form-control" id="name"value="<%= (locals.old && old.name) ? old.name : "" %>">
           <% if (locals.errors && errors.name) { %>
             <small class="text-danger"><%= errors.name.msg%></small>
           <% } %>
@@ -32,29 +32,18 @@
           <label for="category" class="form-label">Categorias</label>
           <select name="categoryId" class="form-select" id="category" aria-label="Default select example">
             <option selected hidden value="">Categoría</option>
-            <option value="1" <%= (locals.old && old.categoryId) && old.categoryId === "1" ? "selected" : "" %>>Vino1</option>
-            <option value="2" <%= (locals.old && old.categoryId) && old.categoryId === "2" ? "selected" : "" %>>vino2</option>
-            <option value="3" <%= (locals.old && old.categoryId) && old.categoryId === "3" ? "selected" : "" %>>Vino3</option>
+            <option value="1" <%= (locals.old && old.categoryId) && old.categoryId === "1" ? "selected" : "" %>>Especial</option>
+            <option value="2" <%= (locals.old && old.categoryId) && old.categoryId === "2" ? "selected" : "" %>>Tintos</option>
+            <option value="3" <%= (locals.old && old.categoryId) && old.categoryId === "3" ? "selected" : "" %>>Blancos</option>
+            <option value="4" <%= (locals.old && old.categoryId) && old.categoryId === "3" ? "selected" : "" %>>Rosados</option>
           </select>
           <% if (locals.errors && errors.categoryId) { %>
             <small class="text-danger"><%= errors.categoryId.msg%></small>
           <% } %>
         </div>
-        <div class="mb-3 col-md-6">
-          <label for="project" id="project" class="form-label">Projectos</label>
-          <select name="projectId" class="form-select" aria-label="Default select example">
-            <option selected hidden value="">Projecto</option>
-            <option value="1"  <%= (locals.old && old.projectId) && old.projectId === "1" ? "selected" : "" %>>Tipo de vino 1</option>
-            <option value="2"  <%= (locals.old && old.projectId) && old.projectId === "2" ? "selected" : "" %>>Tipo de vino2</option>
-            <option value="3"  <%= (locals.old && old.projectId) && old.projectId === "3" ? "selected" : "" %>>Tipo de vino 3</option>
-          </select>
-          <% if (locals.errors && errors.projectId) { %>
-            <small class="text-danger"><%= errors.projectId.msg%></small>
-          <% } %>
-        </div>
-        <div class="mb-3 col-md-6">
-          <label for="inputFile" class="form-label">Imagen</label>
-          <input type="file" multiple class="form-control" id="inputFile" name="image"/>
+        <div class="image">
+          <label for="image" class="form-label">Imágen</label>
+          <input type="file" name="image" class="form-control" id="image">
         </div>
         <div class="form-check mb-3 form-switch">
           <input class="form-check-input" name="stock" type="checkbox" role="switch" id="stock" <%= (locals.old && old.stock) ? "checked" : "" %>>
@@ -67,7 +56,7 @@
         <div class="col-12">
           <button class="btn btn-primary" type="submit">Crear</button>
         </div>
-       </form>
+      </form>
     </fieldset>
   
   </main>
