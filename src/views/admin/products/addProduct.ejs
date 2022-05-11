@@ -32,9 +32,9 @@
           <label for="category" class="form-label">Categorias</label>
           <select name="categoryId" class="form-select" id="category" aria-label="Default select example">
             <option selected hidden value="">Categoría</option>
-            <option value="1" <%= (locals.old && old.categoryId) && old.categoryId === "1" ? "selected" : "" %>>Textil - Indumentaria</option>
-            <option value="2" <%= (locals.old && old.categoryId) && old.categoryId === "2" ? "selected" : "" %>>Alimentos y bebidas</option>
-            <option value="3" <%= (locals.old && old.categoryId) && old.categoryId === "3" ? "selected" : "" %>>Artesanías</option>
+            <option value="1" <%= (locals.old && old.categoryId) && old.categoryId === "1" ? "selected" : "" %>>Vino1</option>
+            <option value="2" <%= (locals.old && old.categoryId) && old.categoryId === "2" ? "selected" : "" %>>vino2</option>
+            <option value="3" <%= (locals.old && old.categoryId) && old.categoryId === "3" ? "selected" : "" %>>Vino3</option>
           </select>
           <% if (locals.errors && errors.categoryId) { %>
             <small class="text-danger"><%= errors.categoryId.msg%></small>
@@ -44,9 +44,9 @@
           <label for="project" id="project" class="form-label">Projectos</label>
           <select name="projectId" class="form-select" aria-label="Default select example">
             <option selected hidden value="">Projecto</option>
-            <option value="1"  <%= (locals.old && old.projectId) && old.projectId === "1" ? "selected" : "" %>>Emprendimiento 1</option>
-            <option value="2"  <%= (locals.old && old.projectId) && old.projectId === "2" ? "selected" : "" %>>Emprendimiento 2</option>
-            <option value="3"  <%= (locals.old && old.projectId) && old.projectId === "3" ? "selected" : "" %>>Emprendimiento 3</option>
+            <option value="1"  <%= (locals.old && old.projectId) && old.projectId === "1" ? "selected" : "" %>>Tipo de vino 1</option>
+            <option value="2"  <%= (locals.old && old.projectId) && old.projectId === "2" ? "selected" : "" %>>Tipo de vino2</option>
+            <option value="3"  <%= (locals.old && old.projectId) && old.projectId === "3" ? "selected" : "" %>>Tipo de vino 3</option>
           </select>
           <% if (locals.errors && errors.projectId) { %>
             <small class="text-danger"><%= errors.projectId.msg%></small>

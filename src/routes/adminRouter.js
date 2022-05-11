@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const adminCategoriesController = require('../controllers/admin/adminCategoriesController');
 const adminController = require('../controllers/admin/adminController');
 const adminProductsController = require('../controllers/admin/adminProductsController');
 const userSessionCheck = require('../middlewares/userSessionCheck');
@@ -29,4 +30,18 @@ router.put('/productos/:id', adminProductsController.productUpdate);
 /* DELETE - Elimina un producto */
 router.delete('/productos/eliminar/:id', adminProductsController.productDelete);
 
+
+
+
+router.get('/categorias',userSessionCheck, adminCheck, adminCategoriesController.list);
+/* GET - Agregar emprendimiento */
+router.get('/categorias/agregar',userSessionCheck, adminCheck, adminCategoriesController.categoryAdd);
+/* POST - Crea un emprendimiento en la DB */
+router.post('/categorias', adminCategoriesController.categoryCreate);
+/* GET - Editar emprendimiento */
+router.get('/categorias/editar/:id',userSessionCheck, adminCheck, adminCategoriesController.categoryEdit);
+/* PUT - Actualiza emprendimiento en la DB */
+router.put('/categorias/:id', adminCategoriesController.categoryUpdate);
+/* DELETE - Elimina un emprendimiento */
+router.delete('/categorias/eliminar/:id', adminCategoriesController.categoryDelete);
 module.exports = router;
