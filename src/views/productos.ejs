@@ -11,26 +11,117 @@
     <!-- END HEADER -->
 
     <!-- MENU -->
-    <div class="body-de-tienda">
-        <div class="page-content">
-        <% detail.forEach(producto => { %>      
 
-            <div class="product-container-tienda">
-                <img src="images/<%= producto.image %> " />
-                <div class="bloque-ofertas-tienda">
-                <h3 class="menuh3" >  <%= producto.name  %> </h3>
-                    <h1 class="tienda-h1"><%= producto.price  %></h1>
-                    <button class="button-tienda button-add" id="buttontienda" >Agregar</button>
+<div class="checkbox-Tienda">
+    <legend class="legendCategories" >Categorías</legend>
+        <form class="checkboxTotal">
+                <div class="bloque0">
+                    <h2 class="Tittle-Bloque-Tienda">Especial</h2>
+                    <div>
+                        <input type="checkbox" id="scales" name="scales"checked>
+                        <label for="scales">Todos</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="scales" name="scales"checked>
+                        <label for="scales">Ofertas</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="horns" name="horns">
+                        <label for="horns">Colección</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="horns" name="horns">
+                        <label for="horns">Accesorios</label>
+                    </div>
+                </div> 
+            
+                <div class="bloque1">
+                    <h2 class="Tittle-Bloque-Tienda">Tintos</h2>
+                    <div>
+                        <input type="checkbox" id="scales" name="scales"checked>
+                        <label for="scales">Todos</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="scales" name="scales"checked>
+                        <label for="scales">Cabernet</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="horns" name="horns">
+                        <label for="horns">Malbec</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="horns" name="horns">
+                        <label for="horns">Petit Verdot</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="horns" name="horns">
+                        <label for="horns">Sirah</label>
+                    </div>
                 </div>
+                <div class="bloque2">  
+                    <h2 class="Tittle-Bloque-Tienda">Blancos</h2>
+                    <div>
+                        <input type="checkbox" id="horns" name="horns">
+                        <label for="horns">Sauvignon</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="horns" name="horns">
+                        <label for="horns">Torrontes</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="horns" name="horns">
+                        <label for="horns">Chardonnay</label>
+                    </div>
+                </div>
+                <div class="bloque3">  
+                    <h2 class="Tittle-Bloque-Tienda">Rosados</h2>
+                    <div>
+                        <input type="checkbox" id="horns" name="horns">
+                        <label for="horns">Criolla</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="horns" name="horns">
+                        <label for="horns">Moscatel</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="horns" name="horns">
+                        <label for="horns">Rosé Malbec</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="horns" name="horns">
+                        <label for="horns">Dulce Natural</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="horns" name="horns">
+                        <label for="horns">Ofertas</label>
+                    </div>
+                </div> 
+            </form>
+            <div class="next-previous-tienda">
+                
             </div>
+        <div class="body-de-tienda">
+            <div class="page-content">
+                <% detail.forEach(producto => { %>      
 
-        <% }) %>
+                    <div class="product-container-tienda">
+                        <img src="images/<%= producto.image %> " />
+                        <div class="bloque-ofertas-tienda">
+                        <h3 class="menuh3" >  <%= producto.name  %> </h3>
+                            <h1 class="tienda-h1"><%= producto.price  %></h1>
+                            <button class="button-tienda button-add" id="buttontienda" >Agregar</button>
+                        </div>
+                    </div>
+
+                <% }) %>
+            </div>
+        </div>
     </div>
                     <div class="next-previous-tienda">
                         <a href="#" id="a-tienda" class="tienda-previous">&laquo; Previous</a>
                         <a href="#" id="a-tienda"class="tienda-next">Next &raquo;</a>
                     </div>
-    </div>
+    
 
 <!-- FIN MENU -->
 
