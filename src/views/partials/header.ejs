@@ -1,44 +1,55 @@
 <header id="navbar">
     <nav class="navbar-header" >
-        <a href="#" class="logo"><img src="/images/LOGO.png" alt="logo"></a>
-
-        <ul class="nav-menu">
-            <div class="header_avatar">
-                <% if (typeof session.user != "undefined") { %>
-                    <div class="avatar_session"></div>
-                    <img src="/images/avatar/<%= session.user.avatar %>" alt="">
-                <% } %> 
-            </div>
-                <li class="nav-item"> <a href="/" class="nav-link">Inicio</a></li>
-                <li class="nav-item"> <a href="/productos" class="nav-link">Tienda</a></li>
-                <li class="nav-item"> <a href="#" class="nav-link">Contacto</a></li>
-                <li class="nav-item"> <a href="/productos/carro-de-compra"  class="nav-link">Mi carrito</a></li>
-                <% if (typeof session.user != "undefined") { %>
-                    <li><a href="/usuarios/perfil">Mi perfil</a></li>
-                    <li><a href="/usuarios/logout">Cerrar sesión</a></li>
-                <% if (session.user.rol === "ADMIN") { %>
-                    <li><a href="/admin">Admin</a></li>
-                <% } %>
-                <% }else{ %> 
-                    <li><a href="/usuarios/login">Ingresá</a></li>
-                <% } %> 
-                <button class="switch" id="switch">
-                    <span><i class="oscuroIcon fas fa-sun"></i></span>
-                    <span><i class="oscuroIcon fas fa-moon"></i></span>
-                </button>
-                    <li class="nav-item__burguer">
+        <div class="logo_Buscador">
+            <a href="#" class="logo"><img src="/images/LOGO.png" alt="logo"></a>
+        </div>
+            <ul class="nav-menu">
+                <div class="header_searchBar">
+                    <form action="">
+                        <input type="text" placeholder="buscar productos">
+                            <button type="submit">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                    </form>
+                </div>
+                <div class="header_avatar">
+                    <% if (typeof session.user != "undefined") { %>
+                        <div class="avatar_session"></div>
+                        <img src="/images/avatar/<%= session.user.avatar %>" alt="">
+                    <% }else{ %> 
+                        <img src="/images/avatar/loginUsers.png" alt="">
+                    <% } %>  
+                </div>
+                    <li class="nav-item"> <a href="/" class="nav-link">Inicio</a></li>
+                    <li class="nav-item"> <a href="/productos" class="nav-link">Tienda</a></li>
+                    <li class="nav-item"> <a href="#" class="nav-link">Contacto</a></li>
+                    <li class="nav-item"> <a href="/productos/carro-de-compra"  class="nav-link">Mi carrito</a></li>
+                    <% if (typeof session.user != "undefined") { %>
+                        <li><a href="/usuarios/perfil">Mi perfil</a></li>
+                        <li><a href="/usuarios/logout">Cerrar sesión</a></li>
+                    <% if (session.user.rol === "ADMIN") { %>
+                        <li><a href="/admin">Admin</a></li>
+                    <% } %>
+                    <% }else{ %> 
+                        <li><a href="/usuarios/login">Ingresá</a></li>
+                    <% } %> 
+                    <button class="switch" id="switch">
+                        <span><i class="oscuroIcon fas fa-sun"></i></span>
+                        <span><i class="oscuroIcon fas fa-moon"></i></span>
+                    </button>
+                        <li class="nav-item__burguer">
                         <a href=""><i class="iconosFooter fa-brands fa-facebook"></i></a>
                         <a href=""><i class="iconosFooter fa-brands fa-instagram"></i></a>
                         <a href=""><i class="iconosFooter fa-brands fa-github"></i></a>
                     </li>
-    
-        </ul>
-        <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
 
-        </div>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+
+            </div>
     </nav>
 
     
