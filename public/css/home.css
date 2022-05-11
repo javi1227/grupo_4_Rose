@@ -881,8 +881,7 @@ ol li {
         text-align: center;
         transition: 0.3s;
         z-index: 1;
-        /* height: 50vh; */
-        height: 84vh;
+        height: 118vh;
         padding: 1rem;
         font-weight: bold;
     }
