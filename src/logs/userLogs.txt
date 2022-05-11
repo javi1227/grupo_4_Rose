@@ -123,3 +123,5 @@ El usuario ingresó a la ruta: /
 El usuario ingresó a la ruta: /admin
 El usuario ingresó a la ruta: /admin
 >>>>>>> d1cb55b5ec8cc4878d821a372decdeb1612bf035
+El usuario ingresó a la ruta: /admin
+El usuario ingresó a la ruta: /usuarios/login
