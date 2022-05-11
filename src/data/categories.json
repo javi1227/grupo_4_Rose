@@ -1,14 +1,26 @@
 [
     {
         "id": 1,
-        "name": "Linea essential rosé"
+        "name": "Cabernet"
     },
     {
         "id": 2,
-        "name": "Vino rosa"
+        "name": "Malbec"
     },
     {
         "id": 3,
-        "name": "Espumantes"
+        "name": "Chardonnay"
+    },
+    {
+        "id": 5,
+        "name": "Moscatel"
+    },
+    {
+        "id": 7,
+        "name": "Sauvignon"
+    },
+    {
+        "id": 8,
+        "name": "Ofertas"
     }
 ]

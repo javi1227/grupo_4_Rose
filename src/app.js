@@ -4,7 +4,6 @@ const path = require('path');
 const process = require('process');
 const PORT = process.env.PORT || 3050;
 const methodOverride = require('method-override');
-const logMiddleware = require ('./middlewares/userLogs');
 const session = require('express-session');
 const cookieParser =  require('cookie-parser');
 const cookieSession = require('./middlewares/cookieSession');
@@ -27,7 +26,6 @@ app.use(express.static(path.join(__dirname,'../public')));
 app.use(express.urlencoded({extended: false})); /* captura la info que se envia en el req */
 app.use(express.json());
 app.use(methodOverride('_method'));
-app.use(logMiddleware);
 /* session */
 app.set('trust proxy', 1);
 app.use(session({
