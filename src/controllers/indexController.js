@@ -8,8 +8,7 @@ module.exports = {
         /* reenderiza la vista ejs */
         res.render('index', {
             titulo: "Rosé",
-            titulo_producto: "Novedades",
-            descuento: "con descuentos",
+            titulo_producto: "Productos",
             productos: getDiscount,
             session: req.session
         })
