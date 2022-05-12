@@ -15,7 +15,7 @@ module.exports = {
     /* Recibe los datos del form de creación y guarda el categorias en la DB */
     categoryCreate: (req, res) => {
       let lastId = 0;
-      categories.forEach(categoria => {
+      getCategories.forEach(categoria => {
         if(categoria.id > lastId){
           lastId = categoria.id
         }
@@ -26,9 +26,9 @@ module.exports = {
         id: lastId + 1
       };
 
-      categories.push(newCategory);
+      getCategories.push(newCategory);
 
-      writeCategories(categories);
+      writeCategories(getCategories);
 
       res.redirect('/admin/categorias');
     },
