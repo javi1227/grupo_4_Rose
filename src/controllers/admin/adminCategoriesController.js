@@ -1,11 +1,11 @@
-const {categories, writeCategories} = require('../../data');
+const { getCategories, writeCategories} = require('../../data');
 
 module.exports = {
     /* Envia la vista de listado de las categorias */
     list: (req, res) => {
       res.render('admin/categories/listCategories', {
           titulo: "Categorías",
-          categorias: categories
+          categorias:  getCategories
       })
     },
     /* Envia la vista de formulario de creación de categorias */
