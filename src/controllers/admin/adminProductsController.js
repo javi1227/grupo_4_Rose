@@ -32,18 +32,6 @@ module.exports = {
             stock: req.body.stock ? true : false
         }
         
-        /* let newProduct = {
-            id: lastId + 1,
-            name: req.body.name,
-            price: req.body.price,
-            description: req.body.description,
-            categoryId: req.body.categoryId,
-            projectId: req.body.projectId,
-            discount: req.body.discount,
-            image: "desayuno.jpg",
-            stock: req.body.stock ? true : false
-        } */
-
         getProducts.push(newProduct)
 
        writeProducts(getProducts)
