@@ -1,42 +1,50 @@
 [
-{
-    "id": 1,
-    "email": "javier@hotmail.com",
-    "password": "123456789",
-    "avatar": "default-image.jpg",
-    "rol": "ADMIN",
-    "name": "Javier"
-},
-{
-    "id": 2,
-    "name": "pepe",
-    "email": "pepe@hotmail.com",
-    "password": "123456789",
-    "avatar": "1651880416272_img_.png",
-    "rol": "USER"
-},
-{
-    "id": 3,
-    "name": "igor",
-    "email": "igor@hotmail.com",
-    "password": "123456789",
-    "avatar": "1651962783878_img_.png",
-    "rol": "ADMIN"
-},
-{
-    "id": 4,
-    "name": "kakashi",
-    "email": "kakashi@hotmail.com",
-    "password": "123456789",
-    "avatar": "1651964570737_img_.jpg",
-    "rol": "ADMIN"
-},
-{
-    "id": 5,
-    "name": "aaaaaaaaaaa",
-    "email": "aa@hotmail.com",
-    "password": "$2a$10$S5snvcFIaWOAN2FnWv0xoedO/AqfSWO4R4NTW12e2VOdG6qbtmYsq",
-    "avatar": "default-image.png",
-    "rol": "USER"
-}
+    {
+        "id": 1,
+        "email": "javier@hotmail.com",
+        "password": "123456789",
+        "avatar": "default-image.jpg",
+        "rol": "ADMIN",
+        "name": "Javier"
+    },
+    {
+        "id": 2,
+        "name": "pepe",
+        "email": "pepe@hotmail.com",
+        "password": "123456789",
+        "avatar": "1651880416272_img_.png",
+        "rol": "USER"
+    },
+    {
+        "id": 3,
+        "name": "igor",
+        "email": "igor@hotmail.com",
+        "password": "123456789",
+        "avatar": "1651962783878_img_.png",
+        "rol": "ADMIN"
+    },
+    {
+        "id": 4,
+        "name": "kakashi",
+        "email": "kakashi@hotmail.com",
+        "password": "123456789",
+        "avatar": "1651964570737_img_.jpg",
+        "rol": "ADMIN"
+    },
+    {
+        "id": 5,
+        "name": "aaaaaaaaaaa",
+        "email": "aa@hotmail.com",
+        "password": "$2a$10$S5snvcFIaWOAN2FnWv0xoedO/AqfSWO4R4NTW12e2VOdG6qbtmYsq",
+        "avatar": "default-image.png",
+        "rol": "USER"
+    },
+    {
+        "id": 6,
+        "name": "Igor",
+        "email": "jorge@email.com",
+        "password": "$2a$10$vkqjhjmsw9MZtlkypqVdfOyVW1slAdSYFAuo/MbwSf6vg9kjKHDoq",
+        "avatar": "default-image.png",
+        "rol": "USER"
+    }
 ]

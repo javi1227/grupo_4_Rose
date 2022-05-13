@@ -5,7 +5,6 @@
     box-sizing: border-box;
 }
 
-
 .btnUser {
     width: 74px;
     height: 30px;
@@ -76,3 +75,10 @@
     padding: 5px;
     margin-top: 1rem;
 }
+
+
+td .edit-deleteAdmin {
+    display: flex;
+    justify-content: space-evenly;
+}
+

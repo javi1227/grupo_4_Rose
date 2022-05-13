@@ -1,3 +1,32 @@
+.checkbox-Tienda {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkboxTotal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 98%;
+    margin: 0 1%;
+    border: solid 1px ;
+    border-radius: 11px;
+    cursor: pointer;
+}
+
+.bloque0 .bloque1 , .bloque2, .bloque3{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.legendCategories {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 500;
+    padding: 1px 0 5px;  
+}
+
 .body-de-tienda {
     margin: 0px;
     /* background-color: #ecece4; */
@@ -111,3 +140,9 @@
     justify-content: center;
     margin-top: 4rem;
 }
+
+
+@media(min-width:1086px) {
+
+}
+ 
