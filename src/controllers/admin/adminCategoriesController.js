@@ -36,7 +36,7 @@ module.exports = {
     categoryEdit: (req, res) => {
       let categoryId = +req.params.id;
 
-      let categoria = categories.find(emprendimiento => emprendimiento.id === categoryId)
+      let categoria = getCategories.find(emprendimiento => emprendimiento.id === categoryId)
 
       res.render('admin/categories/editCategory', {
         titulo: "Editar categoria",
@@ -47,13 +47,13 @@ module.exports = {
     categoryUpdate: (req, res) => {
       let categoryId = +req.params.id;
       
-      categories.forEach(categoria => {
+      getCategories.forEach(categoria => {
         if(categoria.id === categoryId){
           categoria.name = req.body.name
         }
       });
 
-      writeCategories(categories);
+      writeCategories(getCategories);
 
       res.redirect('/admin/categorias');
     },
@@ -61,14 +61,14 @@ module.exports = {
     categoryDelete: (req, res) => {
         let categoryId = +req.params.id;
 
-        categories.forEach(categoria => {
+        getCategories.forEach(categoria => {
             if(categoria.id === categoryId){
-                let categoryToDeleteIndex = categories.indexOf(categoria);
-                categories.splice(categoryToDeleteIndex, 1)
+                let categoryToDeleteIndex = getCategories.indexOf(categoria);
+                getCategories.splice(categoryToDeleteIndex, 1)
             }
         })
        
-        writeCategories(categories);
+        writeCategories(getCategories);
        
         res.redirect('/admin/categorias')
     },
