@@ -33,130 +33,181 @@ body::-webkit-scrollbar-thumb {
     background-color: #414141;
     border-radius: 5px;
 }
-
-/* ***********************HEADER*********************** */
-
 /* ***********************FIN HEADER*********************** */
-/*******************************************************************************/
 
-/*******MENU CARRITO************ */
-
-.carrito-title p {
-    font-size: 1.5rem;
-}
-.Añadir-carro-figure-igor p{
-    font-size: 16px;
-        color: gray;
-    }
-
-.contenedor-igor img {
-    width: 12rem;
-    height: 12rem;
-    display: flex;
-    align-items: center;
-    padding: 2rem;
-    border-radius: 10rem;
-    border: 1px solid #e6e6e6
-    /* margin-left: 4rem; */    
+.igor-padre1 {
+    position: relative;
 }
 
-.carrito-title {
-    display: flex;
-    width: 85%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    margin-left: 2rem;
-    border-radius: 1rem;
+.img1 {
+    width: 7rem;
+    padding: 10px;
+    border: solid 4px aliceblue;
+    background-color: aliceblue;
+    margin-top: 5%;
+    margin-left: 2%;
+    box-sizing: border-box;
+    align-items: flex-end;
+}
+.titulo-figure-igor {
+    font-size: 0.8rem;
+    position: absolute;
+    left: 150px;
+    bottom: 110px;
+    top: 15px;
+}
+.igor-li1{
+    position: absolute;
+    left: 225px;
+    top: 50px;
+    font-size: 0.7rem;
+    line-height: 20px;
+}
+.igor-li2{
+    position: absolute;
+    left: 265px;
+    top: 50px;
+    font-size: 0.7rem;
+    line-height: 20px;
+}
+.igorli2-1{
+    color: green;
+}
+.igorli2-2{
+    color: blue;
+}
+.igor-c{
+    position: absolute;
+    left: 150px;
+    top: 140px;
+    font-size: 0.7rem;
+    line-height: 20px;
 }
 
-.bloque-ofertas-igor {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 0.5rem;
-    
-}
-
-.Añadir-carro-figure-igor {
-    display: flex;
-    padding: 5px;
-    text-align: center;
-}
-
-#number {
+#number{
     width: 3rem;
-    margin-left: 4rem;
+    margin-left: 3rem;
     text-align: center;
     border: 1px solid #e6e6e6;
     border-radius: 1rem;
-
+    position: absolute;
+    left: 100px;
+    top: 160px;
+    font-size: 0.7rem;
+    line-height: 20px;
 }
-
-.opcionesCarrito {
-    width: 5rem;
-    border-radius: 5px;
-    background-color: var(--color-principal);
-    text-align: center;
+.igor-op3{
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: underline;
+    font-size: 0.5rem;
+}
+.img2{
+    width: 7rem;
+    padding: 10px;
+    border: solid 4px aliceblue;
+    background-color: aliceblue;
+    margin-top: 5%;
+    margin-left: 2%;
+    box-sizing: border-box;
+    align-items: flex-end;
+}
+.titulo-figure-igor2-tit2{
+    font-size: 0.8rem;
+    position: absolute;
+    left: 150px;
+    bottom: 250px;
+}
+.igor-li4{
+    position: absolute;
+    left: 225px;
+    top: 310px;
+    font-size: 0.7rem;
+    line-height: 20px;
+}
+.igor-li5{
+    position: absolute;
+    left: 265px;
+    top: 310px;
+    font-size: 0.7rem;
+    line-height: 20px;
+}
+.unidad{
+    position: absolute;
+    left: 150px;
+    top: 320px;
+    font-size: 0.7rem;
+    line-height: 20px;
+}
+#number1{
+    width: 3rem;
     margin-left: 3rem;
-    padding: 0.3rem;
-}
-
-.separadorCarros {
-    width: 82%;
-    margin: 0.5rem;
-    color: rgba(0,0,0,.30);
-
-}
-
-
-
-.carritoOculto {
-    display: none;
-}
-
-
-.oferta-figure-igor { 
-    font-size: 1rem;
-    font-weight: bold;
-}
-
-
-
-
-.summary-action .btn-submit{     
-    margin: 8px;
-    -webkit-text-stroke: medium;
-    color: white;
-    background: #3483fa;
-    font-size: 30px;
+    text-align: center;
+    border: 1px solid #e6e6e6;
     border-radius: 1rem;
-    display: flex;
-    margin-left: 5rem;
-    height: 3rem;
-    width: 11rem;
-    padding: 4px 9px;
+    position: absolute;
+    left: 100px;
+    top: 340px;
+    font-size: 0.7rem;
+    line-height: 20px;
+}
+.igor-op5{
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: underline;
+    font-size: 0.5rem;
 }
 
-.carrito-compra  .summary-label{
-    align-items: center;
-    padding-left: 53px;  
-    font-size: x-large;
-    display: flex;
-    background: var(--color-principal);
-    height: 2.5rem;
-    width: 15rem;
-    margin-left: 2.5rem;
-    border-radius: 1rem;
-    margin-top: 2rem;
+.igor-fin4p{
+    margin-top: 10px;
+    margin-left: 60px;
+    display: inline-block;
+    background-color: white;
+    width: 60%;
+    height: 30%;
+    text-align: center;
+    font-size: 0.7rem;
 }
-
-.carrito-compra{
+.igor-cupon{
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
 }
+.igor-cp1{
+    background-color: #ece4d4;
+    width: 60%;
+    margin-top: 10px;
+    margin-left: 10px;
+    color: rgba(14, 13, 13, 0.4)
+}
+.igor-cp2{
+    background-color: #cca43c;
+    width: 30%;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+.igor-cp3{
+    position: absolute;
+    left: 25%;
+    top: 84%;
+    font-size: 0.7rem;
+    line-height: 20px;
+    text-align: left;
 
+}
+.igor-pago-2{
+    position: absolute;
+    right: 50%;
+    top: 84%;
+    font-size: 0.7rem;
+    line-height: 20px;
+    text-align: left;
+}
+.summary-action{
+    position: absolute;
+    right: 28%;
+    bottom: -5%;
+
+}
 
 /**********************FIN CARRITO ******************************/
 
@@ -279,222 +330,177 @@ ol li {
     font-size: 1rem;
     padding: 0 0.5rem;
 }
+/*fin del footer*/
 
-
-
-
-
-/* Media queries*/
 /************* Tablet Carrito************/
 @media (min-width: 500px) {
-
-    .contenedor-igor img {
-        width: 315px;
-        height: 300px;
-        
+    .igor-padre1 {
+        position: relative;
     }
     
-    .Añadir-carro-figure-igor {
-        margin-left: 4rem;
+    .img1 {
+        width: 9rem;
+        padding: 10px;
+        border: solid 4px aliceblue;
+        background-color: aliceblue;
+        margin-top: 5%;
+        margin-left: 2%;
+        box-sizing: border-box;
+        align-items: flex-end;
     }
-
-    .opcionesCarrito {
-        width: 5rem;
-        margin-left: 7.3rem;
-
-        
+    .titulo-figure-igor {
+        position: flex;
+        font-size: 0.8rem;
+        left: 65%;
+        top: 20%;
     }
-
-    .carrito-title {
-        width: 90%;
-        border-radius: 1rem;   
-}
-
-/************* Tablet Carrito fin************/
-
-
-/*-----------------------Header 768px-------------------------------------*/
-
-    @media (min-width: 769px) {
-        header div.burguer {
-            display: none;     
+    .igor-li1{
+        position: flex;
+        left: 65%;
+        top: 50%;
+        font-size: 0.7rem;
+        line-height: 20px;
     }
-    
-    
-    header nav ul.opciones-menu {
-        display: block;
+    .igor-li2{
+        position: flex;
+        left: 80%;
+        top: 50%;
+        font-size: 0.7rem;
+        line-height: 20px;
     }
-    
-    nav {
-        display: flex;
+    .igorli2-1{
+        color: green;
     }
-    
-    header nav ul.opciones-menu {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+    .igorli2-2{
+        color: blue;
     }
-    
-    .opciones-menu :hover {
-        color: var(--color-para-hover);
+    .igor-c{
+        position: flex;
+        left: 45%;
+        top: 30%;
     }
     
-    header ul li {
-        display: block;
+    #number{
+        width: 3rem;
+        margin-left: 3rem;
+        border: 1px solid #e6e6e6;
+        border-radius: 1rem;
+        position: flex;
+        left: 35%;
+        top: 35%;
+        font-size: 0.7rem;
+    }
+    .igor-op3{
+        display: inline-block;
+        padding: 5px 10px;
+        text-decoration: underline;
+        font-size: 0.5rem;
+    }
+    .img2{
+        width: 9rem;
+        padding: 10px;
+        border: solid 4px aliceblue;
+        background-color: aliceblue;
+        margin-top: 5%;
+        margin-left: 2%;
+        box-sizing: border-box;
+        align-items: flex-end;
+    }
+    .titulo-figure-igor2-tit2{
+        position: flex;
+        font-size: 0.8rem;
+        left: 65%;
+        bottom: 37%;
+    }
+    .igor-li4{
+        position: flex;
+        left: 65%;
+        top: 70%;
+        font-size: 0.7rem;
+        line-height: 20px;
+    }
+    .igor-li5{
+        position: flex;
+        left: 80%;
+        top: 70%;
+        font-size: 0.7rem;
+        line-height: 20px;
+    }
+    .unidad{
+        position: flex;
+        left: 45%;
+        top: 65%;
+    }
+    #number1{
+        width: 3rem;
+        margin-left: 3rem;
+        border: 1px solid #e6e6e6;
+        border-radius: 1rem;
+        position: flex;
+        left: 35%;
+        top: 70%;
+        font-size: 0.7rem;
+    }
+    .igor-op5{
+        display: inline-block;
+        padding: 5px 10px;
+        text-decoration: underline;
+        font-size: 0.5rem;
     }
     
-    header ul li a {
-        display: block;
-    }
-
-/*-------------------------fin Header 768px---------------------------*/
-/*************  Carrito media 1200px ************/
-@media (min-width: 1200px){
-
-.carrito-title {
-    margin-left: 35px;
-    width: 95%;
-    border-radius: 1rem;
-    }
-.contenedor-igor img {
-    margin-left: -16rem;
-    display: flex;
-    margin-right: 26rem;
-        
-    }
-.primeraOpcionesCArrito  {
-    display: flex;    
-}
-        
-.opcionesCarrito {
-    font-size: 10px;
-    width: 80%;
-    margin-left: 6.4rem;
-    display: flex;
-    background-color: white;
-    flex-direction: row-reverse;           
-}
-    
-.carritoOculto {
-    display: block;
-    width: 5rem;
-    border-radius: 5px;
-    background-color: none;
-    text-align: center;
-    margin-left: 3rem;
-    width: 66%;
-
-}
-    
-.Añadir-carro-figure-igor {
-    margin-left: 4rem;
-    height: 3rem;
-    margin-top: 9rem;
-}
-
-.textoCarrito {
-    text-align: center;
-    padding: 0.7rem 0.2rem 0;
-}
-    
-#number {
-    margin-left: -10.7rem;
-    border-radius: 1rem;
-    font-size: 20px;
-    
-}
-
-.bloque-ofertas-igor {
-    margin-right: -1rem;
-    margin-right: 28rem;
-    margin-left: -14rem;
-        
-    }
-
-.Añadir-carro-figure-igor p{
-    margin-top: 12rem;
-    margin-right: 6.5rem;
-    font-size: 16px;      
-}
-
-.Añadir-carro-figure-igor p{
-    font-size: 16px;
-    color: gray;
-    margin-left: -0.4rem;
-    margin-top: 2.6rem;
-        
-}
-
-.oferta-figure-igor { 
-    font-size: 26px;
-    font-weight: bold;
-    display: flex;
-    margin-right: -102rem;
-    margin-top: -11rem;
-}
-
-.carrito-compra{
-    margin-left: 54rem;
-}
-
-    } 
-
-
-
-}
-    
-/* media menor a 768PX del HEADER */
-
-@media(max-width:768px) {
-    .hamburger {
-        display: block;
-        margin-right: 1rem;
-    }
-
-    .nav-item__burguer {
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);  
-    }
-
-    .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);  
-    }
-
-    .nav-menu {
-        position: absolute;
-        left: -100%;
-        top: 70px;
-        gap: 0;
-        flex-direction: column;
-        background-color: var(--color-para-hover);
-        width: 100%;
+    .igor-fin4p{
+        margin-top: 20px;
+        margin-left: 70px;
+        display: inline-block;
+        background-color: white;
+        width: 70%;
+        height: 40%;
         text-align: center;
-        transition: 0.3s;
-        z-index: 1;
-        height: 50vh;
-        padding: 1.5rem;
-        font-weight: bold;
+        font-size: 0.9rem;
     }
-
-    .navbar {
-        padding: 0 12px;
+    .igor-cupon{
+        display: flex;
+        justify-content: space-around;
     }
-
-    nav-item{
-        margin: 16px 0;
+    .igor-cp1{
+        width: 90%;
+        height: 80%;
+        background-color: #ece4d4;
+        margin-top: 10px;
+        margin-left: 10px;
+        padding: 20px;
+        color: rgba(14, 13, 13, 0.4)
     }
-
-    .nav-menu.active {
-        left: 0;
+    .igor-cp2{
+        display: block;
+        text-align:center;
+        background-color: #cca43c;
+        width: 30%;
+        margin-top: 10px;
+        margin-right: 10px;
+        padding: 20px;
     }
-
-   }
- }
+    .igor-cp3{
+        position: flex;
+        left: 30%;
+        top: 110%;
+        font-size: 0.9rem;
+        line-height: 25px;
+        text-align: left;
+    
+    }
+    .igor-pago-2{
+        position: flex;
+        left: 40%;
+        top: 110%;
+        font-size: 0.9rem;
+        line-height: 25px;
+        text-align: left;
+    }
+    .summary-action{
+        position: absolute;
+        right: 35%;
+        top: 120%;
+    
+    }
+}
