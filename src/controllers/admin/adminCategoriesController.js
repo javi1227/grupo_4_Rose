@@ -1,11 +1,11 @@
-const {categories, writeCategories} = require('../../data');
+const { getCategories, writeCategories} = require('../../data');
 
 module.exports = {
     /* Envia la vista de listado de las categorias */
     list: (req, res) => {
       res.render('admin/categories/listCategories', {
           titulo: "Categorías",
-          categorias: categories
+          categorias:  getCategories
       })
     },
     /* Envia la vista de formulario de creación de categorias */
@@ -15,7 +15,7 @@ module.exports = {
     /* Recibe los datos del form de creación y guarda el categorias en la DB */
     categoryCreate: (req, res) => {
       let lastId = 0;
-      categories.forEach(categoria => {
+      getCategories.forEach(categoria => {
         if(categoria.id > lastId){
           lastId = categoria.id
         }
@@ -26,9 +26,9 @@ module.exports = {
         id: lastId + 1
       };
 
-      categories.push(newCategory);
+      getCategories.push(newCategory);
 
-      writeCategories(categories);
+      writeCategories(getCategories);
 
       res.redirect('/admin/categorias');
     },

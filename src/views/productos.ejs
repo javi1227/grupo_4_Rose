@@ -103,15 +103,16 @@
         <div class="body-de-tienda">
             <div class="page-content">
                 <% detail.forEach(producto => { %>      
-
+                    <a href="/productos/detalle/<%- producto.id  %> ">
                     <div class="product-container-tienda">
                         <img src="images/<%= producto.image %> " />
                         <div class="bloque-ofertas-tienda">
                         <h3 class="menuh3" >  <%= producto.name  %> </h3>
-                            <h1 class="tienda-h1"><%= producto.price  %></h1>
+                            <h1 class="tienda-h1"> <%- toThousand(producto.price - producto.price * producto.discount / 100)%></h1>
                             <button class="button-tienda button-add" id="buttontienda" >Agregar</button>
                         </div>
                     </div>
+                    </a>
 
                 <% }) %>
             </div>
