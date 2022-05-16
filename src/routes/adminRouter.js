@@ -3,9 +3,11 @@ const router = express.Router();
 const adminCategoriesController = require('../controllers/admin/adminCategoriesController');
 const adminController = require('../controllers/admin/adminController');
 const adminProductsController = require('../controllers/admin/adminProductsController');
+const adminUsersController = require('../controllers/admin/adminUsersController');
 const userSessionCheck = require('../middlewares/userSessionCheck');
 const adminCheck = require('../middlewares/adminCheck');
 const uploadFile = require('../middlewares/uploadAvatar');
+
 
 
 
@@ -45,3 +47,21 @@ router.put('/categorias/:id', adminCategoriesController.categoryUpdate);
 /* DELETE - Elimina un emprendimiento */
 router.delete('/categorias/eliminar/:id', adminCategoriesController.categoryDelete);
 module.exports = router;
+
+
+/* ============== */
+/* CRUD PRODUCTOS */
+/* ============== */
+/* GET - Lista de productos */
+router.get('/usuarios', userSessionCheck, adminCheck, adminUsersController.list);
+/* GET - Agregar producto */
+router.get('/usuarios/agregar', userSessionCheck, adminCheck, adminUsersController.usersAdd);
+/* POST - Crea un usero en la DB */
+router.post('/usuarios', uploadFile.any(''), adminUsersController.usersCreate);
+/* GET - Editar usero */
+router.get('/usuarios/editar/:id', userSessionCheck, adminCheck, adminUsersController.usersEdit);
+/* PUT - Actualiza usero en la DB */
+router.put('/usuarios/:id', adminUsersController.usersUpdate);
+/* DELETE - Elimina un usero */
+router.delete('/usuarios/eliminar/:id', adminUsersController.usersDelete);
+

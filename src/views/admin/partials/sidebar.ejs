@@ -1,0 +1,100 @@
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+  <ul class="nav">
+    <li class="nav-item nav-profile">
+      <a href="#" class="nav-link">
+        <div class="nav-profile-image">
+            <% if (typeof session.user != "undefined") { %>
+                <div class="avatar_session"></div>
+                <img src="/images/avatar/<%= session.user.avatar %>" alt="">
+            <% }else{ %> 
+                <img src="/images/avatar/loginUsers.png" alt="">
+            <% } %> 
+          <span class="login-status online"></span>
+          <!--change to offline or busy as needed-->
+        </div>
+        <div class="nav-profile-text d-flex flex-column">
+          <span class="font-weight-bold mb-2"><%= session.user.name %> </span>
+          <span class="text-secondary text-small">Admin</span>
+        </div>
+        <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/admin">
+        <span class="menu-title">Inicio</span>
+        <i class="mdi mdi-home menu-icon"></i>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/admin/productos">
+        <span class="menu-title">Productos</span>
+        <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/admin/categorias">
+        <span class="menu-title">Categorias</span>
+        <i class="mdi mdi-table-large menu-icon"></i>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/admin/usuarios">
+        <span class="menu-title">Usuarios</span>
+        <i class="mdi mdi-contacts menu-icon""></i>
+      </a>
+    </li>
+    <!-- <li class="nav-item">
+      <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+        <span class="menu-title">Productos</span>
+        <i class="menu-arrow"></i>
+        <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+      </a>
+      <div class="collapse" id="ui-basic">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" href="/admin/productos">Listado</a></li>
+          <li class="nav-item"> <a class="nav-link" href="/admin/productos/agregar">Agregar</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+        <span class="menu-title">Categorias</span>
+        <i class="menu-arrow"></i>
+        <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+      </a>
+      <div class="collapse" id="ui-basic">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" href="/admin/categorias">Listado</a></li>
+          <li class="nav-item"> <a class="nav-link" href="/admin/categorias/agregar">Agregar</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+        <span class="menu-title">Usuarios</span>
+        <i class="menu-arrow"></i>
+        <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+      </a>
+      <div class="collapse" id="ui-basic">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" href="/admin/usuarios">Listado</a></li>
+          <li class="nav-item"> <a class="nav-link" href="../../pages/usuarios/agregarUsuarios.html">Agregar</a></li>
+        </ul>
+      </div>
+    </li> -->
+    <!-- <li class="nav-item">
+      <a class="nav-link" href="../../pages/estadisticas/estadisticas.html">
+        <span class="menu-title">Estadisticas</span>
+        <i class="mdi mdi-table-large menu-icon"></i>
+      </a> -->
+    <li class="nav-item sidebar-actions">
+      <span class="nav-link">
+      
+        <div class="mt-4">
+          <div class="border-bottom">
+          </div> 
+        </div>
+      </span>
+    </li>
+  </ul>
+</nav>

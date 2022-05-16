@@ -3,7 +3,7 @@ const { getProducts, writeProducts } = require('../../data');
 module.exports = {
     /* Envia la vista del listado de productos */
     list: (req, res) => {
-        res.render('admin/products/listProducts', {
+        res.render('admin/pages/productos/listado', {
             titulo: "Listado de productos",
             productos: getProducts,
             session: req.session
@@ -11,7 +11,7 @@ module.exports = {
     },
     /* Envia vista de form de creacion de producto */
     productAdd: (req, res) => {
-        res.render('admin/products/addProduct', {
+        res.render('admin/pages/productos/agregarProducto', {
             titulo: "Agregar producto",
             session: req.session
         })
@@ -42,7 +42,7 @@ module.exports = {
     productEdit: (req, res) => {
         let idProducto = +req.params.id;
         let producto = getProducts.find(producto => producto.id === idProducto)
-        res.render('admin/products/editProduct', {
+        res.render('admin/pages/productos/editarProducto', {
             titulo: "Edición",
             producto,
             session: req.session

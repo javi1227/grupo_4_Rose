@@ -3,14 +3,18 @@ const { getCategories, writeCategories} = require('../../data');
 module.exports = {
     /* Envia la vista de listado de las categorias */
     list: (req, res) => {
-      res.render('admin/categories/listCategories', {
+      res.render('admin/pages/categorias/listadoCategorias', {
           titulo: "Categorías",
-          categorias:  getCategories
+          categorias:  getCategories,
+          session: req.session
       })
     },
     /* Envia la vista de formulario de creación de categorias */
     categoryAdd: (req, res) => {
-      res.render('admin/categories/addCategory', { titulo: "Agregar categoría"})
+      res.render('admin/pages/categorias/agregarCategorias', 
+      { titulo: "Agregar categoría",
+       session: req.session
+      })
     },
     /* Recibe los datos del form de creación y guarda el categorias en la DB */
     categoryCreate: (req, res) => {
@@ -36,11 +40,12 @@ module.exports = {
     categoryEdit: (req, res) => {
       let categoryId = +req.params.id;
 
-      let categoria = getCategories.find(emprendimiento => emprendimiento.id === categoryId)
+      let categoria = getCategories.find(categoria => categoria.id === categoryId)
 
-      res.render('admin/categories/editCategory', {
+      res.render('admin/pages/categorias/editarCategorias', {
         titulo: "Editar categoria",
-        categoria
+        categoria,
+        session: req.session
       })
     },
     /* Recibe los datos actualizados del form de edición */
