@@ -39,9 +39,9 @@
                     <tbody>
                       <% categorias.forEach(categoria => { %>
                       <tr>
-                        <td><%- categoria.id %></td>
-                        <td> <%- categoria.name %> </td>
-                        <td>Sub</td>
+                        <td data-label="id"><%- categoria.id %></td>
+                        <td data-label="Nombre"> <%- categoria.name %> </td>
+                        <td data-label="Subcategoria">Sub</td>
                         <td><div class="d-grid gap-2 d-md-flex justify-content-md-end">
                           <a href="/admin/categorias/editar/<%= categoria.id %>" >
                           <button class="btn btn-primary me-md-2" type="button">Editar</button>
