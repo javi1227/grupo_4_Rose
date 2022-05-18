@@ -8,13 +8,14 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Overpass', sans-serif;
     box-sizing: border-box;
 }
 
 a {
     color: black;
     text-decoration: none; /*sacar subrayado*/
+    font-family: 'Overpass', sans-serif;
 }
 
 ul{
@@ -23,15 +24,18 @@ ul{
 
 body {
     background-color: #ffffff;
+    font-family: 'Overpass', sans-serif;
 }
 
 body::-webkit-scrollbar {
     width: 8px;
+    font-family: 'Overpass', sans-serif;
 }
 
 body::-webkit-scrollbar-thumb {
     background-color: #414141;
     border-radius: 5px;
+    font-family: 'Overpass', sans-serif;
 }
 
 /* ***********************HEADER*********************** */
@@ -316,7 +320,7 @@ height: 10px;
     padding: 5px 6rem;
     position: relative;
     top: 2rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Overpass', sans-serif;
     text-shadow: 0px 2px 5px rgb(0 0 0 / 15%);
     /* font-family: Arial, Helvetica, sans-serif; */
 }
@@ -326,7 +330,7 @@ height: 10px;
     align-items: center;
     font-size: 1rem;
     padding-bottom: 1rem;
-    font-family: Arial, Helvetica, sans-serif
+    font-family: 'Overpass', sans-serif;
 
     
 }
@@ -468,7 +472,7 @@ height: 10px;
     text-align: center;
     font-size: 1rem;
     padding: 1rem 0.3rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Overpass', sans-serif;
 }
 
 .iconoMenu{
@@ -582,21 +586,21 @@ ol li {
 /* PREGUNTAS FRECUENTES */
 .PreguntasFrecuentes {
     background-color: #ece4d4;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Overpass', sans-serif;
 }
 
 /* PRIVACIDAD */
 .privacidad {
     background-color: #ece4d4;
     padding: 50px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Overpass', sans-serif;
 }
 
 /* NOSOTROS */
 .nosotros {
     background-color: #ece4d4;
     padding: 100px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Overpass', sans-serif;
 }
 .nosotrosimg {
     display: flex;
