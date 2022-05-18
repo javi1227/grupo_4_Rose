@@ -1,6 +1,6 @@
 :root {
     /* COLORES */
-    --color-principal : #ece4d4;
+    --color-principal : white;
     --color-para-hover : #cca43c;
 }
 
@@ -22,7 +22,7 @@ ul{
 }
 
 body {
-    background-color: #ece4d4;
+    background-color: white;
 }
 
 body::-webkit-scrollbar {

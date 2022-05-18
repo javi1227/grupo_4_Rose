@@ -1,1 +1,7 @@
-[{"id":8,"name":"Ofertas"},{"name":"adadafa3q","id":9},{"name":"javi gay afaf","id":10},{"name":"ssdadada","id":11}]
+[
+  { "name": "VinosTinto" },
+  { "name": "Vinos Blanco" },
+  { "name": "Vinos Rosa" },
+  { "name": "Ofertas" },
+  { "name": "Accesorios"}
+]

@@ -1,5 +1,6 @@
 
 const {getProducts} = require('../data')
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 /* Este archivo tiene la ejecución que se hace cuando se entra en home */
 module.exports = {
@@ -13,7 +14,8 @@ module.exports = {
             titulo_producto: "Productos",
             productos: getProducts,
             productsInSale,
-            session: req.session
+            session: req.session,
+            toThousand,
         })
     },
     contact: (req, res) => res.send("Contacto")
