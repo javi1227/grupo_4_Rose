@@ -158,3 +158,9 @@ body.dark .header_searchBar form input::placeholder {
 body.dark .nav-menu {
     background: #343D5B;;
 }
+
+
+/* TIENDA */
+body.dark checkbox-Tienda {
+    background: #343D5B;
+}
