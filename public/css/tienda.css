@@ -1,6 +1,7 @@
 .checkbox-Tienda {
     display: flex;
     flex-direction: column;
+
 }
 
 .checkboxTotal{
@@ -142,7 +143,9 @@
 }
 
 
-@media(min-width:1086px) {
-
+@media(min-width:998px) {
+ .checkbox-Tienda{
+    margin-top: 6rem;
+ }
 }
  
