@@ -7,6 +7,7 @@ module.exports = {
     /* envia la vista */
     index: (req, res) =>{
         let productsInSale = getProducts.filter(product => product.discount > 0);
+        let specialProducts = getProducts.filter(product => product.projectId === 1);
 
         /* reenderiza la vista ejs */
         res.render('index', {
@@ -14,6 +15,7 @@ module.exports = {
             titulo_producto: "Productos",
             productos: getProducts,
             productsInSale,
+            specialProducts,
             session: req.session,
             toThousand,
         })

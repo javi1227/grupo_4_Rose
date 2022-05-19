@@ -15,13 +15,13 @@ module.exports = {
     getOne: (req, res) => {
         let product = getProducts.find(product => product.id === +req.params.id)
 
-        res.render('detalle-de-producto', {
-           detail: getProducts,
-           product,
-           toThousand,
-           session: req.session
+    res.render('detalle-de-producto', {
+        detail: getProducts,
+        product,
+        toThousand,
+        session: req.session
 
-       })
+    })
     },
 /* Este archivo tiene la ejecución que se hace cuando se entra en home */
     /* envia la vista */

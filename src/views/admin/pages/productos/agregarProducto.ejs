@@ -54,7 +54,7 @@
                         <label for="category">Categoria</label>
                         <select name="categoryId" class="form-select" id="category" aria-label="Default select example">
                         <option selected hidden value="">Categoría</option>
-                        <option value="1" <%= (locals.old && old.categoryId) && old.categoryId === "1" ? "selected" : "" %>>Especial</option>
+                        <option value="1" <%= (locals.old && old.categoryId) && old.categoryId === "Especial" ? "selected" : "" %>>Especial</option>
                         <option value="2" <%= (locals.old && old.categoryId) && old.categoryId === "2" ? "selected" : "" %>>Tintos</option>
                         <option value="3" <%= (locals.old && old.categoryId) && old.categoryId === "3" ? "selected" : "" %>>Blancos</option>
                         <option value="4" <%= (locals.old && old.categoryId) && old.categoryId === "3" ? "selected" : "" %>>Rosados</option>
