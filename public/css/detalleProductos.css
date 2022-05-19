@@ -35,7 +35,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0.5rem;
+  margin: 0 6rem;
 }
 
 .conteneder_imagenes {
@@ -44,7 +44,6 @@ body {
   align-items: center;
   align-self: center;
   padding: 2rem 0.5rem;
-  width: 90%;
   border-radius: 10px;
 }
 
@@ -172,7 +171,6 @@ body {
 /* MOBILE TABLET */
 @media (min-width: 500px) {
   .conteneder_imagenes {
-    width: 100%;
     height: 100%;
   }
 
@@ -271,7 +269,7 @@ body {
   .contenedor_productos {
     flex-direction: row;
     height: 28rem;
-    margin: 2rem;
+    margin: 0 6rem;
     align-self: none;
   }
 

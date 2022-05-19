@@ -1,6 +1,11 @@
 
-const {getProducts} = require('../data')
+const {getProducts} = require('../data');
+const { search } = require('../routes/indexRouter');
+
+
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+const removeAccents = (str) => {return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
 
 /* Este archivo tiene la ejecución que se hace cuando se entra en home */
 module.exports = {
@@ -20,5 +25,24 @@ module.exports = {
             toThousand,
         })
     },
-    contact: (req, res) => res.send("Contacto")
+    contact: (req, res) => res.send("Contacto"),
+
+
+    
+    search: (req, res) => {
+		let searchResult = []
+		getProducts.forEach(product => {
+			if(removeAccents(product.name.toLowerCase()).includes(req.query.keywords.toLowerCase())){
+				searchResult.push(product)
+			}
+		});        
+		res.render('results',{
+			searchResult,
+			keyword: req.query.keywords,
+            session: req.session,
+			toThousand,
+
+		})		
+	},
+
 }

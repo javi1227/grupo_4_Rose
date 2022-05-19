@@ -713,7 +713,7 @@ ol li {
     justify-content: center;
     flex-direction: row;
     padding: 5rem;
-
+    cursor: pointer;
 }
 
 .primeralinea {
