@@ -1,506 +1,202 @@
-:root {
-    /* COLORES */
-    --color-principal : white;
-    --color-para-hover : #cca43c;
-}
-
-
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Lato', sans-serif;
-    box-sizing: border-box;
-}
-
-a {
-    color: black;
-    text-decoration: none; /*sacar subrayado*/
-}
-
-ul{
-    list-style: none; /*sacarle las viñetas*/
-}
-
-body {
-    background-color: white;
-}
-
-body::-webkit-scrollbar {
-    width: 8px;
-}
-
-body::-webkit-scrollbar-thumb {
-    background-color: #414141;
-    border-radius: 5px;
-}
-/* ***********************FIN HEADER*********************** */
-
-.igor-padre1 {
-    position: relative;
-}
-
-.img1 {
-    width: 7rem;
-    padding: 10px;
-    border: solid 4px aliceblue;
-    background-color: aliceblue;
-    margin-top: 5%;
-    margin-left: 2%;
-    box-sizing: border-box;
-    align-items: flex-end;
-}
-.titulo-figure-igor {
-    font-size: 0.8rem;
-    position: absolute;
-    left: 150px;
-    bottom: 110px;
-    top: 15px;
-}
-.igor-li1{
-    position: absolute;
-    left: 225px;
-    top: 50px;
-    font-size: 0.7rem;
-    line-height: 20px;
-}
-.igor-li2{
-    position: absolute;
-    left: 265px;
-    top: 50px;
-    font-size: 0.7rem;
-    line-height: 20px;
-}
-.igorli2-1{
-    color: green;
-}
-.igorli2-2{
-    color: blue;
-}
-.igor-c{
-    position: absolute;
-    left: 150px;
-    top: 140px;
-    font-size: 0.7rem;
-    line-height: 20px;
-}
-
-#number{
-    width: 3rem;
-    margin-left: 3rem;
-    text-align: center;
-    border: 1px solid #e6e6e6;
-    border-radius: 1rem;
-    position: absolute;
-    left: 100px;
-    top: 160px;
-    font-size: 0.7rem;
-    line-height: 20px;
-}
-.igor-op3{
-    display: inline-block;
-    padding: 5px 10px;
-    text-decoration: underline;
-    font-size: 0.5rem;
-}
-.img2{
-    width: 7rem;
-    padding: 10px;
-    border: solid 4px aliceblue;
-    background-color: aliceblue;
-    margin-top: 5%;
-    margin-left: 2%;
-    box-sizing: border-box;
-    align-items: flex-end;
-}
-.titulo-figure-igor2-tit2{
-    font-size: 0.8rem;
-    position: absolute;
-    left: 150px;
-    bottom: 250px;
-}
-.igor-li4{
-    position: absolute;
-    left: 225px;
-    top: 310px;
-    font-size: 0.7rem;
-    line-height: 20px;
-}
-.igor-li5{
-    position: absolute;
-    left: 265px;
-    top: 310px;
-    font-size: 0.7rem;
-    line-height: 20px;
-}
-.unidad{
-    position: absolute;
-    left: 150px;
-    top: 320px;
-    font-size: 0.7rem;
-    line-height: 20px;
-}
-#number1{
-    width: 3rem;
-    margin-left: 3rem;
-    text-align: center;
-    border: 1px solid #e6e6e6;
-    border-radius: 1rem;
-    position: absolute;
-    left: 100px;
-    top: 340px;
-    font-size: 0.7rem;
-    line-height: 20px;
-}
-.igor-op5{
-    display: inline-block;
-    padding: 5px 10px;
-    text-decoration: underline;
-    font-size: 0.5rem;
-}
-
-.igor-fin4p{
-    margin-top: 10px;
-    margin-left: 60px;
-    display: inline-block;
-    background-color: white;
-    width: 60%;
-    height: 30%;
-    text-align: center;
-    font-size: 0.7rem;
-}
-.igor-cupon{
-    display: flex;
-    justify-content: space-around;
-}
-.igor-cp1{
-    background-color: #ece4d4;
-    width: 60%;
-    margin-top: 10px;
-    margin-left: 10px;
-    color: rgba(14, 13, 13, 0.4)
-}
-.igor-cp2{
-    background-color: #cca43c;
-    width: 30%;
-    margin-top: 10px;
-    margin-right: 5px;
-}
-.igor-cp3{
-    position: absolute;
-    left: 25%;
-    top: 84%;
-    font-size: 0.7rem;
-    line-height: 20px;
+.miCarrito{
+    padding: 1.5rem 0;
     text-align: left;
-
+    margin-left: 1rem;
+    font-weight: 300;
 }
-.igor-pago-2{
-    position: absolute;
-    right: 50%;
-    top: 84%;
-    font-size: 0.7rem;
-    line-height: 20px;
-    text-align: left;
-}
-.summary-action{
-    position: absolute;
-    right: 28%;
-    bottom: -5%;
-
-}
-
-/**********************FIN CARRITO ******************************/
-
-
-
-footer{
-    width: 100%;
-    padding: 50px 0.7rem;
-    background-image:  url(../images/iconfinder-icon.svg);
-    background-size: cover;
-}
-
-.container_footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: auto;
-    margin-top: 100px;
-}
-
-.box__footer {
+.totalCarrito {
     display: flex;
     flex-direction: column;
-    padding: 40px;
+    position: relative;
 }
-
-.box__footer .logo img {
-    width: 180px;
+.xBorrar {
+    position: absolute;
+    right: 1.2rem;
+    top: 0.5rem;
 }
-
-.box__footer .terms {
-    max-width: 350px;
-    margin-top: 20px;
-    font-weight: 500;
-    color: #7a7a7a;
-    font-size: 18px;
-    padding: 0.5rem;
+.eliminarBorrar {
+    display: none;
 }
-
-.box__footer h2 {
-    margin-bottom: 30px;
-    color: #343434;
-    font-weight: 700;
+.productoEnCarrito{
+    display: flex;
+    justify-content: space-evenly;
+    box-sizing: solid 1px black;
+    -webkit-box-shadow: 1px 1px 18px 0px rgb(0 0 0 / 30%);
+    width: 98%;
+    margin-left: 1%;
+    margin-bottom: 3rem;
+    border-radius: 5px;
 }
-
-.box__footer a {
-    margin-top: 10px;
-    color: #7a7a7a;
-    font-weight: 600;
+.nombreDelProducto {
+    text-align: center;
+    margin: 1.5rem 1rem ;
+}
+.numerosCarritos {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1.5rem;
+    text-align: center;
+}
+.imagenTotalProducto img {
+    width: 6rem;
+    height: 6rem;
+    margin: 0.5rem 0;
+    border-radius: 7px;
     
 }
 
-.box__footer a:hover{
-    opacity: 0.8;
+.codigoDescuento {
+    padding: 2.5rem 0;
+    box-sizing: 0px white   ;
+    -webkit-box-shadow: 1px 1px 18px 0px rgba(202, 201, 201, 0.3); 
+    text-align: center; 
+    width: 98%;
+    margin-left: 1%;
+    margin-bottom: 2px;
+    border-radius: 6px;
+    background-color: white;
 }
-.box__copyright {
-    max-width: 1200px;
-    margin: auto;
+.cuponDescuento {
     text-align: center;
-    padding: 0px 40px;
 }
-
-.box__copyright p {
-    margin-top: 20px;
-    color: #7a7a7a;
-}
-.box__copyright hr {
-    border: none;
-    height: 1px;
-    background-color: #7a7a7a;
-}
-
-ol li {
-    list-style: none;
-    border-top: 20px;
-}
-
-
-/* PREGUNTAS FRECUENTES */
-.PreguntasFrecuentes {
-    background-color: #ece4d4;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-/* PRIVACIDAD */
-.privacidad {
-    background-color: #ece4d4;
-    padding: 50px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-/* NOSOTROS */
-.nosotros {
-    background-color: #ece4d4;
-    padding: 100px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.nosotrosimg {
+.barraDeDescuento {
     display: flex;
     justify-content: center;
-    align-items: center;
-    
 }
-
-.nosotrosimg img {
-    width: 80%;
-    height: 30em;
-    border-radius: 2em;
+.btnAplicar{
+    margin-left: 0.5rem;
+    margin-top: 4px;
+    height: 1.3rem;
 }
-
-.redes {
+.coupon-value{
+    padding-bottom: 0px;
     display: flex;
+    margin: 4px 0;
+}
+
+.totalYsubtotal {
+    display: flex;
+    flex-direction: column;
+    box-sizing: 0px white   ;
+    /* -webkit-box-shadow: 1px 1px 18px 0px rgb(0 0 0 / 20%); */
+    width: 98%;
+    margin-left: 1%;
+    margin-bottom: 3rem;
+    border-radius: 5px;
+    background: #f5f5f7;
+
+}
+.subTotalCarrito {
+    display: flex;
+    margin: 0.5rem 0;
     justify-content: space-between;
-    flex-direction: row;
+    width: 97%;
+    background: #f5f5f7;
+}
+.submit-Compra {
+    width: 98%;
+    padding: 5px 0;
+    margin: 4px 6px;
+    color: #343d5b;
+    font-weight: 600;
+    background-color: white;
+}
+.h2delCArrito{
+    text-align: center;
+    margin: 1.5rem 0;
+}
+.todosLosProductos{
+    display: flex;
+    flex-direction: column;
+    /* padding: 2rem 0; */
+    border: solid 1px #e0e0e0;
+    width: 90%;
+    margin: 11px 4% 0;
+}
+.otrosProductos {
+    /* padding: 1.5rem 0; */
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    margin-left: 3%;
+    height: 5rem;
+    margin-top: 8px;
+}
+.textoPalabras {
+    text-align: center;
+    /* padding: 1.5rem 0; */
+}
+.submit-carrito {
+    width: 90%;
+    /* padding: 5px 0; */
+    margin: 4px 0;
+    background-color: #343d5b;
+    color: white;
+    font-weight: 600;
+}
+.imagenOtroProducto img {
+    width: 4rem;
+    height: 4.5rem;
+    /* margin: 0.5rem 0; */
+    border-radius: 7px;
+    
+}
+.totalCarroDeCompraDeProductos{
+    padding-bottom: 2rem;
 }
 
-.iconosFooter {
-    font-size: 1rem;
-    padding: 0 0.5rem;
-}
-/*fin del footer*/
 
-/************* Tablet Carrito************/
-@media (min-width: 500px) {
-    .igor-padre1 {
-        position: relative;
-    }
-    
-    .img1 {
-        width: 9rem;
-        padding: 10px;
-        border: solid 4px aliceblue;
-        background-color: aliceblue;
-        margin-top: 5%;
-        margin-left: 2%;
-        box-sizing: border-box;
-        align-items: flex-end;
-    }
-    .titulo-figure-igor {
-        position: flex;
-        font-size: 0.8rem;
-        left: 65%;
-        top: 20%;
-    }
-    .igor-li1{
-        position: flex;
-        left: 65%;
-        top: 50%;
-        font-size: 0.7rem;
-        line-height: 20px;
-    }
-    .igor-li2{
-        position: flex;
-        left: 80%;
-        top: 50%;
-        font-size: 0.7rem;
-        line-height: 20px;
-    }
-    .igorli2-1{
-        color: green;
-    }
-    .igorli2-2{
-        color: blue;
-    }
-    .igor-c{
-        position: flex;
-        left: 45%;
-        top: 30%;
-    }
-    
-    #number{
-        width: 3rem;
-        margin-left: 3rem;
-        border: 1px solid #e6e6e6;
-        border-radius: 1rem;
-        position: flex;
-        left: 35%;
-        top: 35%;
-        font-size: 0.7rem;
-    }
-    .igor-op3{
-        display: inline-block;
-        padding: 5px 10px;
-        text-decoration: underline;
-        font-size: 0.5rem;
-    }
-    .img2{
-        width: 9rem;
-        padding: 10px;
-        border: solid 4px aliceblue;
-        background-color: aliceblue;
-        margin-top: 5%;
-        margin-left: 2%;
-        box-sizing: border-box;
-        align-items: flex-end;
-    }
-    .titulo-figure-igor2-tit2{
-        position: flex;
-        font-size: 0.8rem;
-        left: 65%;
-        bottom: 37%;
-    }
-    .igor-li4{
-        position: flex;
-        left: 65%;
-        top: 70%;
-        font-size: 0.7rem;
-        line-height: 20px;
-    }
-    .igor-li5{
-        position: flex;
-        left: 80%;
-        top: 70%;
-        font-size: 0.7rem;
-        line-height: 20px;
-    }
-    .unidad{
-        position: flex;
-        left: 45%;
-        top: 65%;
-    }
-    #number1{
-        width: 3rem;
-        margin-left: 3rem;
-        border: 1px solid #e6e6e6;
-        border-radius: 1rem;
-        position: flex;
-        left: 35%;
-        top: 70%;
-        font-size: 0.7rem;
-    }
-    .igor-op5{
-        display: inline-block;
-        padding: 5px 10px;
-        text-decoration: underline;
-        font-size: 0.5rem;
-    }
-    
-    .igor-fin4p{
-        margin-top: 20px;
-        margin-left: 70px;
-        display: inline-block;
+/* @media(max-width:768px) { */
+    /* .codigoDescuento {
+        padding: 2.5rem 0;
+        box-sizing: 0px white   ;
+        -webkit-box-shadow: 1px 1px 18px 0px rgba(202, 201, 201, 0.3); 
+        text-align: center; 
+        width: 44rem;
+        margin: 6px 2.5rem;
         background-color: white;
-        width: 70%;
-        height: 40%;
+    } */
+    /* .cuponDescuento {
         text-align: center;
-        font-size: 0.9rem;
-    }
-    .igor-cupon{
+    } */
+    /* .barraDeDescuento {
         display: flex;
-        justify-content: space-around;
-    }
-    .igor-cp1{
-        width: 90%;
-        height: 80%;
-        background-color: #ece4d4;
-        margin-top: 10px;
-        margin-left: 10px;
-        padding: 20px;
-        color: rgba(14, 13, 13, 0.4)
-    }
-    .igor-cp2{
-        display: block;
-        text-align:center;
-        background-color: #cca43c;
-        width: 30%;
-        margin-top: 10px;
-        margin-right: 10px;
-        padding: 20px;
-    }
-    .igor-cp3{
-        position: flex;
-        left: 30%;
-        top: 110%;
-        font-size: 0.9rem;
-        line-height: 25px;
-        text-align: left;
+        justify-content: center;
+    } */
+    /* .btnAplicar{
+        margin-left: 0.5rem;
+        margin-top: 4px;
+        height: 1.3rem;
+    } */
+    /* .coupon-value{
+        padding-bottom: 0px;
+        display: flex;
+        margin: 4px 0;
+    } */
     
-    }
-    .igor-pago-2{
-        position: flex;
-        left: 40%;
-        top: 110%;
-        font-size: 0.9rem;
-        line-height: 25px;
-        text-align: left;
-    }
-    .summary-action{
-        position: absolute;
-        right: 35%;
-        top: 120%;
+    /* .totalYsubtotal {
+        display: flex;
+        flex-direction: column;
+        box-sizing: 0px white   ; */
+        /* -webkit-box-shadow: 1px 1px 18px 0px rgb(0 0 0 / 20%); */
+        /* width: 44rem;
+        margin: 6px 2.5rem;
+        background: #f5f5f7;
     
+    } */
+    /* .subTotalCarrito {
+        display: flex;
+        margin: 0.5rem 0;
+        justify-content: space-between;
+        width: 97%;
+        background: #f5f5f7;
     }
-}
+    .submit-Compra {
+        width: 98%;
+        padding: 5px 0;
+        margin: 4px 6px;
+        color: blue;
+        font-weight: 600;
+        background-color: white;
+    }
+} */
