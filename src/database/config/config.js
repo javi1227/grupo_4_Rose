@@ -1,5 +1,5 @@
 module.exports = {
-  {
+  
     "development": {
       "username": "root",
       "password": null,
@@ -20,7 +20,7 @@ module.exports = {
       "database": "database_production",
       "host": "127.0.0.1",
       "dialect": "mysql"
-    }
+    
   }
   
 }
