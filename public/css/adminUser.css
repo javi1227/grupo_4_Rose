@@ -1,3 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Overpass', sans-serif;
+    box-sizing: border-box;
+}
+
 .btnUser {
     width: 74px;
     height: 30px;
@@ -33,3 +40,49 @@
 .btnUserDelete:hover{
     background-color: red;
 }
+
+.adminIndex {
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.adminIndexUsers {
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 2.5rem;
+    font-weight: 900;
+}
+
+.imgAdmingLogin{
+    border-radius: 50%;
+    width: 7rem;
+    height: 7rem;
+    margin-bottom: 1rem;
+}
+.imgAdminUser {
+    display: flex;
+    justify-content: center;
+}
+
+.divProductosAdmin {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+
+}
+
+.adminIndexButton{
+    background-color: var(--color-para-hover);
+    text-align: center;
+    border-radius: 7px; 
+    padding: 5px;
+    margin-top: 1rem;
+}
+
+
+td .edit-deleteAdmin {
+    display: flex;
+    justify-content: space-evenly;
+}
+

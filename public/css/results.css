@@ -1,0 +1,9 @@
+/*====== Products ======*/
+h2.products-title {
+    text-align: center;
+    padding: 8rem 0 2rem;
+    font-size: 3rem;
+    color:#cca43c;
+    font-weight: bold;
+    cursor:pointer ;
+}

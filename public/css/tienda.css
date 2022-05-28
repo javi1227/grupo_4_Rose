@@ -1,7 +1,48 @@
+.checkbox-Tienda {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.checkboxTotal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 98%;
+    margin: 0 1%;
+    border: solid 1px ;
+    border-radius: 11px;
+    cursor: pointer;
+}
+
+.bloque0 .bloque1 , .bloque2, .bloque3{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.legendCategories {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 500;
+    padding: 1px 0 5px; 
+    position: relative;
+    top: 3.3rem;
+    background-color: black;
+    width: 84%;
+    color: white;
+    display: flex;
+    margin-left: 8%;
+    text-align: center;
+    justify-content: center;
+    border-radius: 9px 0 9px 0;
+    height: 2.5rem;
+}
+
 .body-de-tienda {
     margin: 0px;
     /* background-color: #ecece4; */
-    font-family: 'Nerko One', cursive;
+    font-family: 'Overpass', sans-serif;
     padding: 2.5rem 0;
 }
 
@@ -17,10 +58,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    margin: 2rem;
 }
 
 .product-container-tienda {
-    margin: 15px;
+    /* margin: 15px; */
     padding: 2px 16px;
     position: relative;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
@@ -29,6 +71,20 @@
     border-radius: 12px;
     height: 24rem;
 }
+
+.items-producto{
+    box-shadow: 1px 1px 18px 0px rgba(0,0,0,0.50);
+-webkit-box-shadow: 1px 1px 18px 0px rgba(0,0,0,0.30);
+-moz-box-shadow: 1px 1px 18px 0px rgba(0,0,0,0.76);
+margin: 3rem;
+}
+.page-content a {
+    position: relative;
+    z-index: -1;
+    border-radius: 2%;
+    margin-bottom: 6rem;
+}
+
 
 .bloque-ofertas-tienda {
     display: flex;
@@ -111,3 +167,17 @@
     justify-content: center;
     margin-top: 4rem;
 }
+
+
+@media(min-width:998px) {
+ .checkbox-Tienda{
+    margin-top: 6rem;
+ }
+}
+
+@media(min-width:1513px){
+    .items-producto{ 
+        margin: 1rem;
+}
+}
+ 

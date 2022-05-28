@@ -6,6 +6,25 @@ buttonUp = document.getElementById('button-up');
 let ubicacionPrincipal  = window.pageYOffset;
 document.getElementById('button-up').addEventListener('click', scrollUp);
 
+
+// modo incognito
+
+
+const theme = localStorage.getItem('theme');
+    if (theme === 'dark') {
+        document.body.classList.toggle('dark');
+        btnSwitch.classList.toggle('active');
+    }  
+    btnSwitch.addEventListener('click', () => {     
+        if (!theme) {        
+            localStorage.setItem('theme', 'dark')     
+        } else {         
+            localStorage.clear()     
+        }      
+        document.body.classList.toggle('dark');
+            btnSwitch.classList.toggle('active');
+        });
+
 // Inicio click y subir a header
 
 
@@ -28,10 +47,8 @@ window.onscroll = function() {
     let Desplazamiento_Actual = window.pageYOffset;
     if(ubicacionPrincipal >= Desplazamiento_Actual){
         document.getElementById('navbar').style.top = '0';
-        console.log(document.getElementById('navbar').style.top);
     }else{
         document.getElementById('navbar').style.top = '-100px';
-        console.log(document.getElementById('navbar').style.top);
     }
     ubicacionPrincipal = Desplazamiento_Actual
 }
@@ -83,13 +100,3 @@ if (slides.length) {
     dots[slideIndex-1].className += " active";
     }  
 }
-
-
-// modo incognito
-
-
-
-btnSwitch.addEventListener('click', () => {
-	document.body.classList.toggle('dark');
-	btnSwitch.classList.toggle('active');
-});

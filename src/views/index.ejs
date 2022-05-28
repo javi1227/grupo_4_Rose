@@ -14,20 +14,17 @@
 
   <!-- Full-width images with number and caption text -->
   <div class="mySlides fade">
-    <div class="numbertext">1 / 3</div>
-    <img src="/images/FOTOOOOOOOOOO.jpg" style="width:100%"">
+    <img src="/images/FONDO3.jpg" style="width:100%">
     <div class="text">Rosé</div>
   </div>
 
   <div class="mySlides fade">
-    <div class="numbertext">2 / 3</div>
     <img src="/images/FONDO2.jpg" style="width:100%">
     <div class="text">El vino es poesía en una botella </div>
   </div>
 
   <div class="mySlides fade">
-    <div class="numbertext">3 / 3</div>
-    <img src="/images/FONDO3.jpg" style="width:100%">
+    <img src="/images/FOTOOOOOOOOOO.jpg" style="width:100%">
     <div class="text">La pasión de compartir</div>
   </div>
 
@@ -93,31 +90,31 @@
     <section class="ofertas-menu">
       <hr class="hr-mediaPagina" />
       <div class="ofertas">
-        <h2>Novedades</h2>
-        <h3>con descuentos</h3>
+        <h2>PRODUCTOS DESTACADOS</h2>
       </div>
 
       <!-- MENU -->
 
       <div class="menu-contenedor">
-        <% productos.forEach(producto => { %>
-          <div class="contenedor">
-            <img src="images/<%= producto.image %> " />
-            <div class="bloque-ofertas">
-              <span class="titulo-figure">
-                  <h3> <%= producto.name  %>  </h3>
-              </span>
-              <div class="precios">
-                <span class="precio-figure">$<%= producto.discount %></span>
-                <span class="oferta-figure"><%= producto.price  %></span>
+          
+          <%specialProducts.forEach(producto => { %>
+            <div class="contenedor">
+              <img src="images/productos/<%= producto.image %> " />
+              <div class="bloque-ofertas">
+                <span class="titulo-figure">
+                    <h3> <%= producto.name  %>  </h3>
+                </span>
+                <div class="precios">
+                  <span class="precio-figure">$<%= producto.discount %>,00</span>
+                  <span class="oferta-figure">$<%= producto.price  %>,00</span>
+                </div>
+              </div>
+              <div class="Añadir-carro-figure">
+                <a href="/productos/detalle/<%- producto.id  %> "><i class="Carro fa-solid fa-cart-arrow-down"></i></a>
               </div>
             </div>
-            <div class="Añadir-carro-figure">
-              <a href="detalle-de-producto"><i class="Carro fa-solid fa-cart-arrow-down"></i></a>
-            </div>
-          </div>
-        <% }) %>
-  
+          <% }) %>
+      
       </div>
     </section>
     <!--FIN DIV MENU-CONTENEDOR-->
@@ -135,14 +132,47 @@
         </p>
         <br />
         <div class="ultimoMenuRedes">
-          <a href="#"><i class="iconoMenu fa-brands fa-facebook"></i></a>
-          <a href="#"><i class="iconoMenu fa-brands fa-github"></i></a>
-          <a href="#"><i class="iconoMenu fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/Fundacion-Formar-269783010205963" target="_blank"><i class="iconoMenu fa-brands fa-facebook"></i></a>
+          <a href="https://github.com/javi1227/grupo_4_Rose" target="_blank" ><i class="iconoMenu fa-brands fa-github"></i></a>
+          <a href="https://www.instagram.com/fundacionformar/" target="_blank"><i class="iconoMenu fa-brands fa-instagram"></i></a>
         </div>
       </div>
     </div>
 
 <!-- FIN MENU -->
+
+ <!-- fin media main -->
+ <section class="ofertas-menu">
+  <hr class="hr-mediaPagina" />
+  <div class="ofertas">
+    <h2>NUESTRAS OFERTAS</h2>
+  </div>
+
+  <!-- MENU -->
+
+  <div class="menu-contenedor">
+      
+      <%productsInSale.forEach(producto => { %>
+        <div class="contenedor">
+          <img src="images/productos/<%= producto.image %> " />
+          <div class="bloque-ofertas">
+            <span class="titulo-figure">
+                <h3> <%= producto.name  %>  </h3>
+            </span>
+            <div class="precios">
+              <span class="precio-figure">$<%= producto.discount %>,00</span>
+              <span class="oferta-figure">$<%= producto.price  %>,00</span>
+            </div>
+          </div>
+          <div class="Añadir-carro-figure">
+            <a href="/productos/detalle/<%- producto.id  %> "><i class="Carro fa-solid fa-cart-arrow-down"></i></a>
+          </div>
+        </div>
+      <% }) %>
+  
+  </div>
+</section>
+<!--FIN DIV MENU-CONTENEDOR-->
 
 <!-- JS del home -->
 <%- include('partials/js') %> 

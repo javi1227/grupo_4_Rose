@@ -3,15 +3,17 @@ const { getProducts, writeProducts } = require('../../data');
 module.exports = {
     /* Envia la vista del listado de productos */
     list: (req, res) => {
-        res.render('admin/products/listProducts', {
+        res.render('admin/pages/productos/listado', {
             titulo: "Listado de productos",
-            productos: getProducts
+            productos: getProducts,
+            session: req.session
         })
     },
     /* Envia vista de form de creacion de producto */
     productAdd: (req, res) => {
-        res.render('admin/products/addProduct', {
-            titulo: "Agregar producto"
+        res.render('admin/pages/productos/agregarProducto', {
+            titulo: "Agregar producto",
+            session: req.session
         })
     },
     /* recibe datos de form de creacion y guarda */
@@ -30,18 +32,6 @@ module.exports = {
             stock: req.body.stock ? true : false
         }
         
-        /* let newProduct = {
-            id: lastId + 1,
-            name: req.body.name,
-            price: req.body.price,
-            description: req.body.description,
-            categoryId: req.body.categoryId,
-            projectId: req.body.projectId,
-            discount: req.body.discount,
-            image: "desayuno.jpg",
-            stock: req.body.stock ? true : false
-        } */
-
         getProducts.push(newProduct)
 
        writeProducts(getProducts)
@@ -52,9 +42,10 @@ module.exports = {
     productEdit: (req, res) => {
         let idProducto = +req.params.id;
         let producto = getProducts.find(producto => producto.id === idProducto)
-        res.render('admin/products/editProduct', {
+        res.render('admin/pages/productos/editarProducto', {
             titulo: "Edición",
-            producto
+            producto,
+            session: req.session
         })
     },
 
@@ -71,7 +62,7 @@ module.exports = {
                 producto.description = req.body.description
             }
         })
- 
+
         writeProducts(getProducts);
 
         res.redirect('/admin/productos');

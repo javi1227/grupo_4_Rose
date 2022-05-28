@@ -2,9 +2,10 @@ const {getProducts} = require('../../data');
 
 module.exports = {
     index: (req, res) => {
-        res.render('admin/adminIndex', {
+        res.render('admin/index', {
             titulo: "Admin",
-            productos: getProducts
+            productos: getProducts,
+            session: req.session
         });
     }
 }

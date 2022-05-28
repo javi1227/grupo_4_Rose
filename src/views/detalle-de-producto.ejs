@@ -11,18 +11,18 @@
 
     <div class="contenedor_productos">
             <a href=""></a>
-        <div class="conteneder_imagenes">
-            <img src="images/Petit-Voyage.png" alt="">
+        <div class="conteneder_imagenes"> 
+            <img src="/images/productos/<%= product.image %>" alt="ejs">
         </div>
         <div class="contenedor_textoProducto">
-                <h2>Le Petit Voyage</h2>
+                <h2> <%= product.name  %> </h2>
             <hr>
             <div class="precio_producto">
-                <span class="precio_productos">  $1990,00</span>  <p class="star-DetalledeProducto"><i class="star-Carro fa-solid fa-star"></i><i class="star-Carro fa-solid fa-star"></i><i class="star-Carro fa-solid fa-star"></i><i class="star-Carro fa-solid fa-star"></i></p>
+                <span class="precio_productos"> $<%- toThousand(product.price - product.price * product.discount / 100) %>0,00</span>  <p class="star-DetalledeProducto"><i class="star-Carro fa-solid fa-star"></i><i class="star-Carro fa-solid fa-star"></i><i class="star-Carro fa-solid fa-star"></i><i class="star-Carro fa-solid fa-star"></i></p>
             </div>
             <hr>
             <p class="p_productos">
-                Le Petit Voyage Criolla se hace con uvas de Vista Flores, cosechadas durante la primera semana de marzo. La elaboración del vino se hizo mediante una maceración carbónica con racimos enteros, luego se prensaron las uvas y la fermentación terminó sin hollejos, como un vino blanco. La adición de borras de pinot gris durante la crianza y el batonnage le dieron elegancia y volumen.
+                <%= product.description %> 
             </p>
             <div class="add-to-cart_producto">
                 <button><a href="carro-de-compra">Agregar al Carrito</a></button>
@@ -35,7 +35,7 @@
     <div class="productos_similares">
         <div class="bloque__similar">
                 <div class="similares_images">
-                    <img src="images/4-Gatos-Locos-Malbec.png" alt="">
+                    <img src="/images/productos/4-Gatos-Locos-Malbec.png" alt="">
                 </div>
                 <div class="similares_texts">
                     <h4>4 Gatos Locos</h4>
@@ -45,7 +45,7 @@
         </div>
         <div class="bloque__similar">
             <div class="similares_images">
-                <img src="images/Valdencanto-de-Rio.png" alt="">
+                <img src="/images/productos/Valdencanto-de-Rio.png" alt="">
             </div>
             <div class="similares_texts">
                 <h4>Valdecanto de Río</h4>
@@ -55,7 +55,7 @@
         </div>
         <div class="bloque__similar">
             <div class="similares_images">
-                <img src="images/Riccitelli-Kung-Fu-Tinto.png" alt="">
+                <img src="/images/productos/Riccitelli-Kung-Fu-Tinto.png" alt="">
             </div>
             <div class="similares_texts">
                 <h4 class="price-DetalleProducto" >Kung-Fu Malbec 2021</h4>
@@ -69,7 +69,7 @@
     <H2 class="H2-Detalle-Producto">RESEÑAS</H2>
     <div class="reviews">
         <div class="reviews_logo">
-            <img src="images/1persona.jpg" alt="foto">
+            <img src="/images/1persona.jpg" alt="foto">
         </div>
         <div class="reviews_datos">
             <h3>Bratt Smith</h3>
@@ -83,7 +83,7 @@
 
     <div class="reviews">
         <div class="reviews_logo">
-            <img src="images/2persona.jpg" alt="foto">
+            <img src="/images/2persona.jpg" alt="foto">
         </div>
         <div class="reviews_datos">
             <h3>Juana Estevez</h3>
@@ -97,7 +97,7 @@
 
     <div class="reviews">
         <div class="reviews_logo">
-            <img src="images/3persona.jpg" alt="foto">
+            <img src="/images/3persona.jpg" alt="foto">
         </div>
         <div class="reviews_datos">
             <h3>Juan Rivero</h3>
@@ -111,7 +111,7 @@
 
     <div class="reviews">
         <div class="reviews_logo">
-            <img src="images/4persona.jpg" alt="foto">
+            <img src="/images/4persona.jpg" alt="foto">
         </div>
         <div class="reviews_datos">
             <h3>Martin Guarraccino</h3>

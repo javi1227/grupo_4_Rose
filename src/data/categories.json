@@ -1,14 +1,7 @@
 [
-    {
-        "id": 1,
-        "name": "Linea essential rosé"
-    },
-    {
-        "id": 2,
-        "name": "Vino rosa"
-    },
-    {
-        "id": 3,
-        "name": "Espumantes"
-    }
+  { "name": "VinosTinto" },
+  { "name": "Vinos Blanco" },
+  { "name": "Vinos Rosa" },
+  { "name": "Ofertas" },
+  { "name": "Accesorios"}
 ]

@@ -1,30 +1,52 @@
-const { get } = require('express/lib/response');
 const {getUsers, writeUsers} = require('../data');
 const { validationResult } = require('express-validator');
+const bcrypt = require("bcryptjs")
 
 module.exports = {
-    login: (req,res) => {
+    login: (req, res) => {
         res.render('login', {
-            titulo: "Iniciar sesión"
+            titulo: "Iniciar sesión",
+            session: req.session
         })
+    },
 
     processLogin: (req, res) =>{
         let errors = validationResult(req);
-
         if(errors.isEmpty()){
-        //levantar sesión
+        // levantar sesión
+        let user= getUsers.find(user => user.email === req.body.email);
+
+        req.session.user = {
+            id: user.id,
+            name: user.name,
+            avatar:user.avatar,
+            email: user.email,
+            rol: user.rol
+        }
+        if(req.body.remember){
+            const TIME_IN_MILISECONDS = 60000;
+            res.cookie('formarCookie', req.session.user, {
+                expires: new Date(Date.now() + TIME_IN_MILISECONDS),
+                httpOnly: true,
+                secure: true
+            })
+        }
+
+        res.locals.user = req.session.user
+
         res.redirect('/');
         }else{
         res.render('login', {
             titulo: "Iniciar sesión",
-        errors: errors.mapped() 
+            errors: errors.mapped(),
+            session: req.session
         })
         }
-    }
     },
     register: (req,res) => {
         res.render('register', {
-            titulo: "Register"
+            titulo: "Register",
+            session: req.session
         })
     },
 
@@ -32,9 +54,8 @@ module.exports = {
     processRegister: (req, res) =>{
         // verificar si hubo errores en el form
         let errors = validationResult(req);
-        res.send(errors)
-
         // si no hay errores, crea el usuario
+        console.log(req.file);
         if(errors.isEmpty()){
             // codigo para crear el usuario
                /* Registrar un usuario - Guardarlo en el JSON */
@@ -42,16 +63,16 @@ module.exports = {
                     let lastId = 0;
                     getUsers.forEach(user => {
                         if(user.id > lastId){
-                            lastId = user.id
-                        }
-                    });
-
+                            lastId = user.id }
+                        });
                     let newUser = {
                         id: lastId + 1,
                         name: req.body.name,
                         email: req.body.email,
-                        password: req.body.password,
-                    } 
+                        password: bcrypt.hashSync(req.body.password, 10),
+                        avatar: req.file ? req.file.filename : "default-image.png",
+                        rol: "USER"
+                    }
                     /* 2- Guardar el nuevo usuario en el array de usuarios */
                     getUsers.push(newUser)
                     /* 3- Escribir el JSON de usuarios con el array actual */
@@ -62,9 +83,19 @@ module.exports = {
             // codigo para mostrar errores
             res.render('register', {
                 titulo: "Register",
-                errors: errors.mapped()
+                errors: errors.mapped(),
+                session: req.session
             })
         }
     
+    },
+    logout: (req, res) => {
+        req.session.destroy();
+
+        if(req.cookies.formarCookie){
+            res.cookie('formarCookie', "", { maxAge: -1 })
+        }
+
+        res.redirect('/')
     }
 }

@@ -1,98 +1,99 @@
-<!-- HEAD -->
-<%- include('partials/head') %> 
-<!-- END HEAD -->
+
+  <!-- HEAD -->
+  <%- include('partials/head') %> 
+  <!-- END HEAD -->
     
-<!-- HEADER -->
-<%- include('partials/header') %> 
-<!-- END HEADER -->
-
-
-<!-- MENU -->
-
-<body class="Carrito-igor">  
-<!-- MENU CARRITO -->
-
-<body class="Carrito-igor">  
-    <!-- MENU CARRITO -->
-    <div class="carrito-title">
-            <p>Carrito (2)</p>
-        <hr class="separadorCarros">  
-            <div class="contenedor-igor">
-                <div class="primeraOpcionesCArrito">
-                    <div class="igor2">
-                        <div class="fondoimg">
-                            <img  width="100px"  src="../images/3raOFerta-Pittacum-Petit-Pittacum.png">
-                        </div>
-                        <div class="bloque-ofertas-igor">                         
-                            <span class="titulo-figure-igor"><h3>Pittacum petit 2021</h3></span>
-                            <span class="oferta-figure-igor">$3500</span>
-                        </div>                     
-                    </div>
-    
-                    <div class="Añadir-carro-figure-igor">                   
-                        <div class="unidad">
-                            <p>Unidad</p>  
-                        </div>                               
-                        <input id="number" type="number" value="1">                
-                    </div> 
+  <!-- HEADER -->
+  <%- include('partials/header') %> 
+  <!-- END HEADER -->
+<body>
+    <div class="miCarrito"><h2>Mi Carrito</h2></div>
+    <div class="totalCarrito">
+        <div class="cruzParaBorrar">
+            <i class="xBorrar fa-solid fa-circle-xmark"></i>
+        </div>
+        <div class="eliminarBorrar">
+            eliminar
+        </div>
+        <div class="productoEnCarrito">
+                <div class="imagenTotalProducto">
+                    <img src="../../images/productos/4to-Zuccardi-Concreto.png" alt="img">
                 </div>
-    
-                    <div class="opcionesCarrito">
-                        <a href="#"> <h4 class="textoCarrito">Eliminar</h4></a>
-                        <div class="carritoOculto">
-                            <a href="#"><h4 class="textoCarrito"> Ver más productos</h4></a>
-                        </div>
-                        <div class="carritoOculto">
-                            <a href="#"><h4 class="textoCarrito"> Comprar ahora </h4></a>
-                        </div>
-                    </div>
-            </div> 
-        <hr class="separadorCarros">                   
-    
-        <div class="contenedor-igor">
-            <div class="primeraOpcionesCArrito">
-                <div class="igor2">
-                    <div class="fondoimg">
-                        <img  width="100px"  src="../images/3raOFerta-Pittacum-Petit-Pittacum.png">
-                    </div>
-                    <div class="bloque-ofertas-igor">                         
-                        <span class="titulo-figure-igor"><h3>Pittacum petit 2021</h3></span>
-                        <span class="oferta-figure-igor">$3500</span>
-                    </div>                     
-                </div>
-    
-                <div class="Añadir-carro-figure-igor">                   
-                    <div class="unidad">
-                        <p>Unidad</p>  
-                    </div>                               
-                    <input id="number" type="number" value="1">                
-                </div> 
-            </div>
-    
-                <div class="opcionesCarrito">
-                    <a href="#"> <h4 class="textoCarrito">Eliminar</h4></a>
-                    <div class="carritoOculto">
-                        <a href="#"><h4 class="textoCarrito"> Ver más productos</h4></a>
-                    </div>
-                    <div class="carritoOculto">
-                        <a href="#"><h4 class="textoCarrito"> Comprar ahora </h4></a>
+                <div class="nombreDelProducto">
+                    <h3>Producto a vender</h3>
+                    <div class="numerosCarritos">
+                        <span> <i class="menosMinus fa-solid fa-circle-minus"></i> 1 <i class="menosMinus fa-solid fa-circle-plus"></i></span> <span>$200</span> 
                     </div>
                 </div>
         </div> 
-        <hr class="separadorCarros">                     
-                <div class="carrito-compra">
-                    <div class="summary">
-                        <p class="summary-label">Total $7.000</p>                                                                                                         
+    </div>
+    <div class="codigoDescuento">
+        <h4>¿Tenes un código de descuento?</h4>
+        <div class="cuponDescuento">
+            <div class="barraDeDescuento">
+                <input type="text" class="coupon-value" placeholder="Insertar Código">
+                <button type="submit" class="btnAplicar" style="background: #343d5b ; color: #cca43c;" >APLICAR</button>   
+            </div>      
+        </div>
+    </div>
+    <div class="totalYsubtotal">
+        <div class="subTotalCarrito">
+            <span>Subtotal</span> <span>$200</span>
+        </div>
+        <div class="subTotalCarrito" style="font-weight: 800 ; font-size: 1.3rem;">
+            <span>Total</span> <span>$200</span>
+        </div>
+        <span><button class="submit-Compra" type="submit" style="background: #343d5b ; color: #cca43c;" >FINALIZAR COMPRA</button></span>
+        <span><button class="submit-Compra" type="submit">CONTINUAR COMPRANDO</button></span>
+    </div>
+        <h2 class="h2delCArrito">Personas que compraron este producto también compraron</h2>
+   <div class="totalCarroDeCompraDeProductos">
+        <div class="todosLosProductos">
+                <div class="otrosProductos">
+                    <div class="imagenOtroProducto">
+                        <img src="../../images/productos/Salentein Chardonnay.png" alt="img">
                     </div>
-    
-                    <div class="summary-action">
-                        <button type="submit" class="btn btn-submit">Comprar</button>           
-                    </div>
+                    <div class="textoPalabras">
+                        <h5>Lorem ipsum dolor sit, amet consectetur adipisicing elit</h5>
+                        <div class="otrosProductosTexto"><span>$3999</span></div>
+                        <button type="submit" class="submit-carrito" >AGREGAR AL CARRITO</button>
 
+                    </div>
+            
                 </div>
                 
-</div>
-<!-- -------------------------------------------------- -->
+        </div>
+        <div class="todosLosProductos">
+            <div class="otrosProductos">
+                <div class="imagenOtroProducto">
+                    <img src="../../images/productos/Salentein Chardonnay.png" alt="img">
+                </div>
+                <div class="textoPalabras">
+                    <h5>Lorem ipsum dolor sit, amet consectetur adipisicing elit</h5>
+                    <div class="otrosProductosTexto"><span>$3999</span></div>
+                    <button type="submit" class="submit-carrito" >AGREGAR AL CARRITO</button>
+
+                </div>
+        
+            </div>
+            
+    </div>
+    <div class="todosLosProductos">
+        <div class="otrosProductos">
+            <div class="imagenOtroProducto">
+                <img src="../../images/productos/Salentein Chardonnay.png" alt="img">
+            </div>
+            <div class="textoPalabras">
+                <h5>Lorem ipsum dolor sit, amet consectetur adipisicing elit</h5>
+                <div class="otrosProductosTexto"><span>$3999</span></div>
+                <button type="submit" class="submit-carrito" >AGREGAR AL CARRITO</button>
+
+            </div>
+
+        </div>
+        
+    </div>
+</div> 
 <!-- JS del home -->
 <%- include('partials/js') %> 
 <!-- END JS del home -->

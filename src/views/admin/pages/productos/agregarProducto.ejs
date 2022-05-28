@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../../partials/head-head')  %> 
+  <body>
+    <div class="container-scroller">
+      <!-- partial:../../partials/_navbar.html -->
+        <%- include('../../partials/bar')  %> 
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:../../partials/_sidebar.html -->
+        <%- include('../../partials/sidebar') %> 
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="page-header">
+              <h3 class="page-title"> Productos </h3>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Editar productos</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Admin</li>
+                </ol>
+              </nav>
+            </div>
+            <div class="row">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Agregar producto</h4>
+                  <p class="card-description"> </p>
+                </div> 
+                  <form class="forms-sample" action="/admin/productos" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                      <label for="name" class="form-label">Nombre del producto</label>
+                      <input type="text" name="name" class="form-control" id="name" placeholder="Ej: Vino" value="<%= (locals.old && old.name) ? old.name : "" %>">
+                      <% if (locals.errors && errors.name) { %>
+                        <small class="text-danger"><%= errors.name.msg%></small>
+                        <% } %>
+                      </div>
+                    <div class="form-group">
+                      <label for="price">Precio</label>
+                      <input type="number" name="price" class="form-control" id="price" placeholder="Ej: 1500" value="<%= (locals.old && old.price) ? old.price : "" %>">
+                      <% if (locals.errors && errors.price) { %>
+                        <small class="text-danger"><%= errors.price.msg%>
+                        <% } %>
+                      </div>
+                    
+                    <div class="form-group">
+                      <label for="discount">Descuento</label>
+                      <input type="number" name="discount" class="form-control" id="discount" placeholder="Ej: 1500" value="<%= (locals.old && old.discount) ? old.discount : "" %>">
+                      <% if (locals.errors && errors.discount) { %>
+                        <small class="text-danger"><%= errors.discount.msg%></small>
+                        <% } %>
+                      </div>
+                      <div class="form-group">
+                        <label for="category">Categoria</label>
+                        <select name="categoryId" class="form-select" id="category" aria-label="Default select example">
+                        <option selected hidden value="">Categoría</option>
+                        <option value="1" <%= (locals.old && old.categoryId) && old.categoryId === "Especial" ? "selected" : "" %>>Especial</option>
+                        <option value="2" <%= (locals.old && old.categoryId) && old.categoryId === "2" ? "selected" : "" %>>Tintos</option>
+                        <option value="3" <%= (locals.old && old.categoryId) && old.categoryId === "3" ? "selected" : "" %>>Blancos</option>
+                        <option value="4" <%= (locals.old && old.categoryId) && old.categoryId === "3" ? "selected" : "" %>>Rosados</option>
+                      </select>
+                    <% if (locals.errors && errors.categoryId) { %>
+                      <small class="text-danger"><%= errors.categoryId.msg%></small>
+                    <% } %>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>Imagen del producto</label>
+                      <input type="file" name="img[]" class="file-upload-default">
+                      <div class="input-group col-xs-12">
+                        <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
+                        <span class="input-group-append">
+                          <button class="file-upload-browse btn btn-gradient-primary" type="button">Seleccionar imagen</button>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputCity1">Stock</label>
+                      <div class="form-check form-switch">
+                        <label class="form-check-label" for="flexSwitchCheckChecked">  <input class="form-check-input" name="stock" type="checkbox" role="switch" id="stock" <%= (locals.old && old.stock) ? "checked" : "" %>> </label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="description">Descripción</label>
+                      <textarea name="description" class="form-control" id="description" rows="3"><%= (locals.old && old.description) ? old.description : "" %></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-gradient-primary me-2">Agregar</button>
+                    <button class="btn btn-light">Borrar</button>
+                  </form>
+                </div>
+              </div>
+          </div>
+          <!-- content-wrapper ends -->
+          <!-- partial:../../partials/_footer.html -->
+          <footer class="footer">
+            <div class="container-fluid d-flex justify-content-between">
+              <span class="text-muted d-block text-center text-sm-start d-sm-inline-block">Copyright © bootstrapdash.com 2021</span>
+              <span class="float-none float-sm-end mt-1 mt-sm-0 text-end"> Free <a href="https://www.bootstrapdash.com/bootstrap-admin-template/" target="_blank">Bootstrap admin template</a> from Bootstrapdash.com</span>
+            </div>
+          </footer>
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="../../assets/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="../../assets/vendors/chart.js/Chart.min.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="../../assets/js/off-canvas.js"></script>
+    <script src="../../assets/js/hoverable-collapse.js"></script>
+    <script src="../../assets/js/misc.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    <script src="../../assets/js/chart.js"></script>
+    <!-- End custom js for this page -->
+  </body>
+</html>

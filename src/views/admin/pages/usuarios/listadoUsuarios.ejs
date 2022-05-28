@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../../partials/head-head')  %> 
+  <body>
+    <div class="container-scroller">
+      <!-- partial:../../partials/_navbar.html -->
+        <%- include('../../partials/bar')  %> 
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:../../partials/_sidebar.html -->
+        <%- include('../../partials/sidebar') %> 
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="page-header">
+              <h3 class="page-title"> Usuarios </h3>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Agregar usuarios</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Usuarios</li>
+                </ol>
+              </nav>
+            </div>
+          <div class="row">
+            <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Listado de usuarios</h4>
+                  <p class="card-description"> Edición y eliminado de usuarios
+                  </p>
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th> # </th>
+                        <th> Nombre </th>
+                        <th> Email </th>
+                        <th> Contraseña </th>
+                        <th> Permisos </th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <% users.forEach(usuario => { %>
+                        <tr>
+                          <td data-label="id" class="1231"> <%- usuario.id %></td>
+                          <td data-label="Nombre"> <%- usuario.name %>  </td>
+                          <td data-label="Email"> <%- usuario.email %> </td>
+                          <td data-label="Contraseña"> <%- usuario.password %></td>
+                          <td data-label="Rol"> <%- usuario.rol%></td>
+                          <td data-label="Avatar"> <%- usuario.avatar %>  </td>
+                          <td></td>
+                          <td> <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <a href="/admin/usuarios/editar/<%- usuario.id %>">
+                              <button class="btn btn-primary me-md-2"  type="button">Editar</button>
+                            </a>
+                            <form action="/admin/usuarios/eliminar/<%- usuario.id %>?_method=DELETE" method="post">
+                              <button class="btn btn-primary" type="button">Eliminar</button>
+                            </form>
+                           
+                          </div>
+                        </td>
+                            <% }) %> 
+                    
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- content-wrapper ends -->
+          <!-- partial:../../partials/_footer.html -->
+          <footer class="footer">
+            <div class="container-fluid d-flex justify-content-between">
+              <span class="text-muted d-block text-center text-sm-start d-sm-inline-block">Copyright © bootstrapdash.com 2021</span>
+              <span class="float-none float-sm-end mt-1 mt-sm-0 text-end"> Free <a href="https://www.bootstrapdash.com/bootstrap-admin-template/" target="_blank">Bootstrap admin template</a> from Bootstrapdash.com</span>
+            </div>
+          </footer>
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="../../assets/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="../../assets/vendors/chart.js/Chart.min.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="../../assets/js/off-canvas.js"></script>
+    <script src="../../assets/js/hoverable-collapse.js"></script>
+    <script src="../../assets/js/misc.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    <script src="../../assets/js/chart.js"></script>
+    <!-- End custom js for this page -->
+  </body>
+</html>

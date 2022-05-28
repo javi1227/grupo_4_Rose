@@ -145,6 +145,35 @@ body.dark .textoCarrito{
     color: white;
 }
 
+body.dark .header_searchBar {
+    color: white;
+}
+
 /*  fin configurar carrito black */
 
+body.dark .header_searchBar form input::placeholder {
+    color: white;
+}
 
+body.dark .nav-menu {
+    background: #343D5B;;
+}
+
+
+/* TIENDA */
+body.dark checkbox-Tienda {
+    background: #343D5B;
+}
+
+
+/* Detalle de productos */
+
+body.dark .conteneder_imagenes img{
+    background: rgb(51,59,72);
+    background: linear-gradient(180deg, rgba(51,59,72,1) 0%, rgba(169,177,190,1) 100%);
+}
+
+body.dark .similares_images {
+    background: rgb(51,59,72);
+    background: linear-gradient(180deg, rgba(51,59,72,1) 0%, rgba(169,177,190,1) 100%);
+}
