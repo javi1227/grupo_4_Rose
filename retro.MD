@@ -86,3 +86,25 @@
 ### 5. Dejar de hacer
 
 *** No frustrarse cuando algo no sale como esperamos.**
+
+                                                 *** SPRINT 6 ***
+                                                
+### 1. Comenzar a hacer 
+
+  *** ser mas organizados a la hora del sprint***
+
+### 2. Hacer más
+
+  *** terminar las tareas pendientes y perdirle opinión a los compa sobre cambios en el proyecto*
+
+### 3. Continuar haciendo
+
+  *** llevarnos bien, juntarnos para charlar el sprint y dudas que tengamos respecto al PG y la cursada**
+
+###  4. Hacer menos
+
+ *** no estancarnos en una tarea y no pedir feedbacks a los compañeros**
+
+### 5. Dejar de hacer
+
+*** desaprovechar mucho tiempo de reunión hablando de otras cosas que no tienen que ver con el curso ni el proyecto**
