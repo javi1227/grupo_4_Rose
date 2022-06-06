@@ -1,5 +1,6 @@
 /* config header */
 
+
 .oscuroIcon {
     padding: 8px;
 }
@@ -104,6 +105,12 @@ body.dark footer h2 {
 }
 
 /* fin configurar home black */
+body.dark .no-acc-l {
+    color:#C8C8C8
+}
+body.dark .no-acc {
+    color:#C8C8C8
+}
 
 /*  configurar login/register black*/
 body.dark .sign-in-form-login{
@@ -167,6 +174,12 @@ body.dark checkbox-Tienda {
 
 
 /* Detalle de productos */
+body.dark #buttontienda{
+    background: #C8C8C8;
+}
+body.dark .similares_texts {
+    color: #C8C8C8;
+}
 
 body.dark .conteneder_imagenes img{
     background: rgb(51,59,72);
@@ -176,4 +189,43 @@ body.dark .conteneder_imagenes img{
 body.dark .similares_images {
     background: rgb(51,59,72);
     background: linear-gradient(180deg, rgba(51,59,72,1) 0%, rgba(169,177,190,1) 100%);
+}
+
+body.dark .codigoDescuento {
+    background: #343D5B;
+    color: #C8C8C8
+}
+body.dark .totalYsubtotal{
+    background: #343D5B;
+    color: #C8C8C8
+}
+
+body.dark .subTotalCarrito{
+    background: #343D5B;
+    color: #C8C8C8
+}
+
+body.dark .similares_imagesCarro {
+        background: rgb(51,59,72);
+        background: linear-gradient(180deg, rgba(51,59,72,1) 0%, rgba(169,177,190,1) 100%);
+}
+body.dark .coupon-value {
+    background: rgb(255 255 255 / 8%);
+    color: #C8C8C8;
+}
+body.dark .submit-Compra {
+    background: rgb(255 255 255 / 8%);
+    color: #C8C8C8
+}
+
+body.dark .eliminarBorrar {
+    color: #cca43c;
+}
+
+body.dark .similares_texts {
+    color: #C8C8C8
+}
+
+body.dark .h2delCarrito {
+    color: #C8C8C8
 }
