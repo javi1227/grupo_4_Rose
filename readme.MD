@@ -18,9 +18,6 @@
  
  ***Ernesto Peréz : Soy hermano de Juan Peréz y acompaño a mi hermano desde muy chico en todo lo que es relacionado al viñedo, estudié marketing en Cuba , mi rol en esta empresa es ocuparme del Marketing digital.***
  
- ***Luciana Aimar: Soy co-fundadora mi rol en esta empresa es la de degustar y seleccionar los ingredientes de nuestros fúturos vinos, viajo mucho y me encanta conocer gente que esté ligada al mundo del vino.***
-
-
 ___________________________________________________________________________________________________________
 
 
@@ -38,11 +35,6 @@ ________________________________________________________________________________
 __________________________________________________________________
 
 **Igor Demian Villar**: *Hola, Me llamo igor Villar, Tengo 24 años, trabaje en una empresa de comercio en la parte de administración y siempre tuve curiosidad de saber como funcionaban las paginas y aplicaciones que usabamos. Por eso me quiero dedicar al mundo de la programación*.
-
-__________________________________________________________________
-
-**Noelia Veizaga Arce**: *Hola, me llamo Noelia, tengo 25 años, trabajo como lider de equipo en una empresa que brinda servicios digitales y por eso mi acercamiento al mundo del rubro IT*.
-[Linkedin](https://www.linkedin.com/in/noelia-veizaga-arce-48391417b/ "Linkedin")
 
 ___________________________________________________________________________________________________________
 
