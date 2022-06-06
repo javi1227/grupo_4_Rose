@@ -21,7 +21,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
         },
         password: {
-            type: dataTypes.STRING(70),
+            type: dataTypes.STRING(45),
             allowNull: false,
         },
         avatar: {
@@ -40,10 +40,6 @@ module.exports = (sequelize, dataTypes) => {
         User.belongsTo(models.UserRol, {
             as: "rol",
             foreignKey: "rol_id"
-        })
-        User.hasMany(models.Project, {
-            as: "projects",
-            foreignKey: "user_id"
         })
     };
 

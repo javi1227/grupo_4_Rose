@@ -3,7 +3,7 @@ module.exports = {
     "development": {
       "username": "root",
       "password": null,
-      "database": "rose_table",
+      "database": "rose_db",
       "host": "127.0.0.1",
       "dialect": "mysql"
     },

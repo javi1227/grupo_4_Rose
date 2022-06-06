@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Javier Garcia",
+  "author": "Tobias e Igor",
   "license": "ISC",
   "nodemonConfig": {
     "ignore": "./src/data/*.json"
@@ -15,6 +15,7 @@
     "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.6",
+    "e": "^0.2.1",
     "ejs": "^3.1.8",
     "express": "^4.18.1",
     "express-session": "^1.17.2",

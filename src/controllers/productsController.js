@@ -1,16 +1,18 @@
-const { getCarro, getCategories, getProducts } = require('../data');
+const db = require('../database/models')
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 module.exports = {
-
-
     getAll: (req, res) => {
-        res.render('productos', {
-            titulo: "Rosé",
-            detail: getProducts,
-            toThousand,
-            session: req.session
-    })
+        db.Product.findAll()
+        .then((productos)=>{
+            res.render('productos', {
+                titulo: "Productos",
+                productos,
+                toThousand
+            })
+        })
+        .catch((error) => res.send(error))
+    
     },
     getOne: (req, res) => {
         let product = getProducts.find(product => product.id === +req.params.id)
