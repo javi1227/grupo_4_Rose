@@ -3,13 +3,17 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 module.exports = {
     getAll: (req, res) => {
-        db.Product.findAll()
+        db.Product.findAll({
+
+        })
         .then((productos)=>{
-            res.render('productos', {
+           res.render('productos', {
                 titulo: "Productos",
                 productos,
-                toThousand
-            })
+                toThousand,
+                session: req.session
+                
+            }) 
         })
         .catch((error) => res.send(error))
     

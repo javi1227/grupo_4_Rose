@@ -14,8 +14,8 @@ module.exports = (sequelize, dataTypes) => {
         },
         product_id: {
             type: dataTypes.INTEGER(11),
-            allowNull: false,
-        }
+            allowNull: false
+        },
     };
 
     let config = {
@@ -25,12 +25,12 @@ module.exports = (sequelize, dataTypes) => {
 
     const ProductImage = sequelize.define(alias, cols, config);
 
-    ProductImage.associate = (models) => {
-        ProductImage.hasMany(models.Product, {
+   /*  ProductImage.associate = (models) => {
+        ProductImage.belongsTo(models.Product, {
             as: "product",
             foreingKey: "product_id"
         })
-    } 
+    }   */
 
     return ProductImage;
 }
