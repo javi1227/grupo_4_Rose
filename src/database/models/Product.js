@@ -11,6 +11,9 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(45),
             allowNull: false,
         },
+        category_id: {
+            type: dataTypes.INTEGER(11),
+            allowNull: false,
         price: {
             type: dataTypes.INTEGER(11),
             allowNull: false,
@@ -18,30 +21,37 @@ module.exports = (sequelize, dataTypes) => {
         description: {
             type: dataTypes.TEXT,
             allowNull: false,
-        },
+            },
         discount: {
             type: dataTypes.INTEGER(11),
         },
-        stock: {
-            type: dataTypes.BOOLEAN,
-            allowNull: false,
-        },
+    },
+    stock: {
+        type: dataTypes.BOOLEAN,
+        allowNull: false,
+    },
+    image: {
+        type: dataTypes.STRING(45),
+        allowNull: false
+    }
     }
     let config = {
         tableName: "products",
         timestamps: false,
     }
 
-
     const Product = sequelize.define(alias, cols, config);
 
-
-   /* Product.associate = (models) => {
-    Product.hasMany(models.ProductImage, {
-        as: "productImages",
-        foreignKey: "product_id",
-    })
-    }   */
+    Product.associate = (models) => {
+        Product.belongsTo(models.Category, {
+            as: "category",
+            foreignKey: "category_id",
+        })
+        Product.hasMany(models.ProductImage, {
+            as: "productImages",
+            foreignKey: "product_id",
+        })
+    }
 
     return Product;
 }

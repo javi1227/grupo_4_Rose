@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "Products_images";
+    let alias = "ProductImage";
 
     let cols = {
         id: {
@@ -8,14 +8,14 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true,
             allowNull: false,
         },
-        image_name: {
+        imageName: {
             type: dataTypes.STRING(45),
             allowNull: false,
         },
         product_id: {
             type: dataTypes.INTEGER(11),
-            allowNull: false
-        },
+            allowNull: false,
+        }
     };
 
     let config = {
@@ -25,12 +25,12 @@ module.exports = (sequelize, dataTypes) => {
 
     const ProductImage = sequelize.define(alias, cols, config);
 
-   /*  ProductImage.associate = (models) => {
+    ProductImage.associate = (models) => {
         ProductImage.belongsTo(models.Product, {
             as: "product",
             foreingKey: "product_id"
         })
-    }   */
+    }
 
     return ProductImage;
 }

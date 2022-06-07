@@ -21,12 +21,12 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
         },
         password: {
-            type: dataTypes.STRING(45),
+            type: dataTypes.STRING(70),
             allowNull: false,
         },
         avatar: {
             type: dataTypes.STRING(45),
-        }
+        },
     };
 
     let config = {

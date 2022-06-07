@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "UserRol";
+    let alias = "Category";
 
     let cols = {
         id: {
@@ -8,25 +8,25 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true,
             allowNull: false,
         },
-        rol_name: {
+        name: {
             type: dataTypes.STRING(45),
             allowNull: false,
-        },
+        }
     };
 
     let config = {
-        tableName: "users_rols",
+        tableName: "categories",
         timestamps: false,
     };
 
-    const UserRol = sequelize.define(alias, cols, config);
+    const Category = sequelize.define(alias, cols, config);
 
-    UserRol.associate = (models) => {
-        UserRol.hasMany(models.User, {
-            as: "users",
-            foreignKey: "rol_id"
+    Category.associate = (models) => {
+        Category.hasMany(models.Product, {
+            as: "products",
+            foreignKey: "product_id"
         })
     }
 
-    return UserRol;
+    return Category;
 }

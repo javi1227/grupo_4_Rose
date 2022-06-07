@@ -16,6 +16,30 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `categories`
+--
+
+DROP TABLE IF EXISTS `categories`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `categories` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `categories`
+--
+
+LOCK TABLES `categories` WRITE;
+/*!40000 ALTER TABLE `categories` DISABLE KEYS */;
+INSERT INTO `categories` VALUES (2,'Indumentaria');
+/*!40000 ALTER TABLE `categories` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `products`
 --
 
@@ -25,11 +49,15 @@ DROP TABLE IF EXISTS `products`;
 CREATE TABLE `products` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL,
+  `category_id` int(11) NOT NULL,
   `price` int(11) NOT NULL,
-  `description` text NOT NULL,
-  `discount` int(11) NOT NULL,
+  `description` text DEFAULT NULL,
+  `discount` int(11) DEFAULT NULL,
   `stock` tinyint(4) NOT NULL,
-  PRIMARY KEY (`id`)
+  `image` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK_61` (`category_id`),
+  CONSTRAINT `products_FK` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -51,10 +79,10 @@ DROP TABLE IF EXISTS `products_images`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `products_images` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `image_name` varchar(45) NOT NULL,
+  `imageName` varchar(45) NOT NULL,
   `product_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `products_images_FK` (`product_id`),
+  KEY `FK_79` (`product_id`),
   CONSTRAINT `products_images_FK` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -78,11 +106,14 @@ DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(20) NOT NULL,
+  `rol_id` int(11) NOT NULL,
   `email` varchar(45) NOT NULL,
-  `password` varchar(45) NOT NULL,
-  `avatar` varchar(45) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `password` varchar(70) NOT NULL,
+  `avatar` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK_86` (`rol_id`),
+  CONSTRAINT `users_FK` FOREIGN KEY (`rol_id`) REFERENCES `users_rols` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -91,6 +122,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'Prueba',4,'prueba@mail.com','$2a$10$0hGVre88jc/srUqoOFM8Z.8ueMonj2WcAoVgRd8Nf.3rBK29UAcXC','1654213930774_img_.png'),(2,'Prueba 2',4,'prueba2@mail.com','$2a$10$G/K6qFckIkEDAyPvr1rNaOxhd78bnf4Cx591f/pfqk5Hv53t5vzQK','1654214344805_img_.png'),(3,'Jona',4,'mail2@mail.com','$2a$10$u//LR1XteQTdKuHayw8uiOuA.zc.EkqwllNwkPZS9fgld8TK/feCy','default-image.png'),(4,'Jona',4,'mail3@mail.com','$2a$10$Vxpe7fScNsnLJFOSblPmRuJGg8t1yZTmhtRIEb3UV2flnHY76jc36','1654296521713_img_.jpg');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -104,11 +136,8 @@ DROP TABLE IF EXISTS `users_rols`;
 CREATE TABLE `users_rols` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `rol_name` varchar(45) NOT NULL,
-  `rol_id` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `users_rols_FK` (`rol_id`),
-  CONSTRAINT `users_rols_FK` FOREIGN KEY (`rol_id`) REFERENCES `users` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -117,6 +146,7 @@ CREATE TABLE `users_rols` (
 
 LOCK TABLES `users_rols` WRITE;
 /*!40000 ALTER TABLE `users_rols` DISABLE KEYS */;
+INSERT INTO `users_rols` VALUES (4,'USER'),(5,'ADMIN'),(6,'EMPRENDEDOR');
 /*!40000 ALTER TABLE `users_rols` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -133,4 +163,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-07  1:03:03
+-- Dump completed on 2022-06-07  2:25:49

@@ -15,7 +15,7 @@ module.exports = {
                 
             }) 
         })
-        .catch((error) => res.send(error))
+         .catch((error) => console.log(error))
     
     },
     getOne: (req, res) => {
