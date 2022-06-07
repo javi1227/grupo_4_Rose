@@ -14,6 +14,7 @@ module.exports = (sequelize, dataTypes) => {
         category_id: {
             type: dataTypes.INTEGER(11),
             allowNull: false,
+        },
         price: {
             type: dataTypes.INTEGER(11),
             allowNull: false,
@@ -25,16 +26,15 @@ module.exports = (sequelize, dataTypes) => {
         discount: {
             type: dataTypes.INTEGER(11),
         },
-    },
-    stock: {
+     stock: {
         type: dataTypes.BOOLEAN,
         allowNull: false,
-    },
-    image: {
+      },
+       image: {
         type: dataTypes.STRING(45),
         allowNull: false
     }
-    }
+}
     let config = {
         tableName: "products",
         timestamps: false,

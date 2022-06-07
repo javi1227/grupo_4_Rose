@@ -51,10 +51,10 @@ CREATE TABLE `products` (
   `name` varchar(45) NOT NULL,
   `category_id` int(11) NOT NULL,
   `price` int(11) NOT NULL,
-  `description` text DEFAULT NULL,
-  `discount` int(11) DEFAULT NULL,
   `stock` tinyint(4) NOT NULL,
-  `image` varchar(45) DEFAULT NULL,
+  `discount` varchar(45) NOT NULL,
+  `description` text NOT NULL,
+  `image` varchar(45) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_61` (`category_id`),
   CONSTRAINT `products_FK` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`)
@@ -163,4 +163,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-07  2:25:49
+-- Dump completed on 2022-06-07  2:35:14
