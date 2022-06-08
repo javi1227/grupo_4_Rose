@@ -1,6 +1,7 @@
-const {getUsers, writeUsers} = require('../data');
+
 const { validationResult } = require('express-validator');
 const bcrypt = require("bcryptjs")
+const db = require("../database/models")
 
 module.exports = {
     login: (req, res) => {
@@ -14,7 +15,21 @@ module.exports = {
         let errors = validationResult(req);
         if(errors.isEmpty()){
         // levantar sesión
-        let user= getUsers.find(user => user.email === req.body.email);
+             db.User.findOne({
+                 where:{
+                     email: req.body.email
+                 }
+             })
+             .then((user) => {
+                 req.session.user ={
+                     id: user.id,
+                     name: user.name,
+                     avatar: user.avatar,
+                     email: user.email,
+                     rol: user.rol_id
+
+                 }
+             })
 
         req.session.user = {
             id: user.id,
@@ -55,30 +70,20 @@ module.exports = {
         // verificar si hubo errores en el form
         let errors = validationResult(req);
         // si no hay errores, crea el usuario
-        console.log(req.file);
+       
         if(errors.isEmpty()){
-            // codigo para crear el usuario
-               /* Registrar un usuario - Guardarlo en el JSON */
-                /* 1- Crear un objeto usuario */
-                    let lastId = 0;
-                    getUsers.forEach(user => {
-                        if(user.id > lastId){
-                            lastId = user.id }
-                        });
-                    let newUser = {
-                        id: lastId + 1,
-                        name: req.body.name,
-                        email: req.body.email,
-                        password: bcrypt.hashSync(req.body.password, 10),
-                        avatar: req.file ? req.file.filename : "default-image.png",
-                        rol: "USER"
-                    }
-                    /* 2- Guardar el nuevo usuario en el array de usuarios */
-                    getUsers.push(newUser)
-                    /* 3- Escribir el JSON de usuarios con el array actual */
-                    writeUsers(getUsers)
-                    /* 4- Devolver respuesta */
-                    res.redirect('/usuarios/login')
+            db.User.create({
+                name: req.body.name,
+                email: req.body.email,
+                rol_id: 4,
+                password: bcrypt.hashSync(req.body.password, 10),
+                avatar: req.file ? req.file.filename : "default-image.png"
+            })
+            .then((user) => {
+                res.redirect("/usuarios/login")
+            })
+            .catch(error => res.send(error))
+            
         } else{
             // codigo para mostrar errores
             res.render('register', {

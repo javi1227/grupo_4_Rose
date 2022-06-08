@@ -1,5 +1,7 @@
 const { check, body }= require('express-validator');
-const users = require('../data/users');
+
+/* const users = require('../data/users'); */
+const db = require("../database/models")
 
 let validateRegister = [
     check('name')
@@ -8,13 +10,23 @@ let validateRegister = [
     check('email')
         .notEmpty().withMessage('El email es requerido').bail()
         .isEmail().withMessage('Ingrese un email valido'),
-    body("email").custom((value, { req})=>{
-        let user = users.find(user => user.email === req.body.email);
-        console.log(user);
+    body("email").custom((value)=>{
+        return db.User.findOne({
+            where: {
+                email: value,
+            }
+        })
+        .then((user) => {
+            if(user){
+                return Promise.reject("Email ya registrado")
+            }
+        })
+        .catch(error => res.send(error))
+       /*  let user = users.find(user => user.email === req.body.email);
         if(user){
             return false;
         }
-        return true;
+        return true; */
     }).withMessage("Email ya registrado"),
     check('password')
         .notEmpty().withMessage('Ingrese una contraseña')
