@@ -19,7 +19,7 @@
             <div class="input-box">
               <i class="fas fa-user"></i>
               
-              <input class="input-t" name="name" type="text" id="userName" placeholder="Usuario" /><label for="name"></label>
+              <input class="input-t" name="name" type="text" id="userName" placeholder="Usuario" value="<%= locals.old && old.name%>"/><label for="name"></label>
               <% if (locals.errors && errors.userName) { %>
                 <small class="text-danger"><%= errors.userName.msg %></small>
               <% } %>
@@ -27,7 +27,7 @@
             <div class="input-box">
               <i class="fas fa-user"></i>
               
-              <input class="input-t" name="email" type="email" id="email" placeholder="Email" /><label for="email"></label>
+              <input class="input-t" name="email" type="email" id="email" placeholder="Email" value="<%= locals.old && old.email%>"/><label for="email"></label>
               <% if (locals.errors && errors.email) { %>
                 <small class="text-danger"><%= errors.email.msg %></small>
             <% } %>
