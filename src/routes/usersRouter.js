@@ -8,6 +8,7 @@ const userInSessionCheck = require ('../middlewares/userInSessionCheck');
 const userSessionCheck = require("../middlewares/userSessionCheck");
 const profileValidator = require("../validations/profileValidator");
 
+
 /* GET - ruta login -  reenderiza vista login */
 router.get('/login', userInSessionCheck,usersController.login);
 /* POST - Loguea al usuario */

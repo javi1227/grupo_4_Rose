@@ -53,13 +53,13 @@ module.exports = router;
 /* CRUD PRODUCTOS */
 /* ============== */
 /* GET - Lista de productos */
-router.get('/usuarios', userSessionCheck, adminCheck, adminUsersController.list);
+router.get('/usuarios', userSessionCheck,adminUsersController.list);
 /* GET - Agregar producto */
-router.get('/usuarios/agregar', userSessionCheck, adminCheck, adminUsersController.usersAdd);
+router.get('/usuarios/agregar', userSessionCheck,adminUsersController.usersAdd);
 /* POST - Crea un usero en la DB */
 router.post('/usuarios', uploadFile.any(''), adminUsersController.usersCreate);
 /* GET - Editar usero */
-router.get('/usuarios/editar/:id', userSessionCheck, adminCheck, adminUsersController.usersEdit);
+router.get('/usuarios/editar/:id', userSessionCheck,  adminUsersController.usersEdit);
 /* PUT - Actualiza usero en la DB */
 router.put('/usuarios/:id', adminUsersController.usersUpdate);
 /* DELETE - Elimina un usero */
