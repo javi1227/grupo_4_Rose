@@ -113,7 +113,7 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`),
   KEY `FK_86` (`rol_id`),
   CONSTRAINT `users_FK` FOREIGN KEY (`rol_id`) REFERENCES `users_rols` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -122,7 +122,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Prueba',4,'prueba@mail.com','$2a$10$0hGVre88jc/srUqoOFM8Z.8ueMonj2WcAoVgRd8Nf.3rBK29UAcXC','1654213930774_img_.png'),(2,'Prueba 2',4,'prueba2@mail.com','$2a$10$G/K6qFckIkEDAyPvr1rNaOxhd78bnf4Cx591f/pfqk5Hv53t5vzQK','1654214344805_img_.png'),(3,'Jona',4,'mail2@mail.com','$2a$10$u//LR1XteQTdKuHayw8uiOuA.zc.EkqwllNwkPZS9fgld8TK/feCy','default-image.png'),(4,'Jona',4,'mail3@mail.com','$2a$10$Vxpe7fScNsnLJFOSblPmRuJGg8t1yZTmhtRIEb3UV2flnHY76jc36','1654296521713_img_.jpg');
+INSERT INTO `users` VALUES (1,'Prueba',4,'prueba@mail.com','$2a$10$0hGVre88jc/srUqoOFM8Z.8ueMonj2WcAoVgRd8Nf.3rBK29UAcXC','1654213930774_img_.png'),(2,'Prueba 2',4,'prueba2@mail.com','$2a$10$G/K6qFckIkEDAyPvr1rNaOxhd78bnf4Cx591f/pfqk5Hv53t5vzQK','1654214344805_img_.png'),(3,'Jona',4,'mail2@mail.com','$2a$10$u//LR1XteQTdKuHayw8uiOuA.zc.EkqwllNwkPZS9fgld8TK/feCy','default-image.png'),(4,'Jona',4,'mail3@mail.com','$2a$10$Vxpe7fScNsnLJFOSblPmRuJGg8t1yZTmhtRIEb3UV2flnHY76jc36','1654296521713_img_.jpg'),(5,'igorcito',4,'igorcitogato@hotmail.com','$2a$10$pBr2d03q944lNT8NNTxfQeTpAIoH/4kdqTEOpheqx3Uau3L0s/pmK','1654649246970_img_.jpg'),(6,'javier',4,'javier@hotmail.com','$2a$10$1KgUy0AfEsshVU5kRStzze1Cj2wwZLIdGeUv5kKNUsygdJcFo9Doe','1654654702899_img_.jpg'),(7,'boca',4,'boca@hotmail.com','$2a$10$m1OsvQpZkqEJcVF5pnk.d.NwYdG33UIwOqznm0UIzQvc36bPhq1Km','1654655829711_img_.jpg');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -163,4 +163,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-07  2:35:14
+-- Dump completed on 2022-06-08 19:14:27

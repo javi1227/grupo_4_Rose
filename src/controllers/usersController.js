@@ -39,7 +39,7 @@ module.exports = {
             res.redirect('/');
             
         })
-        .catch(error => console.log('Error USER LOGIN'))
+        .catch(error => res.send(error))
     
 
         }else{
@@ -92,14 +92,13 @@ module.exports = {
             where: {
                 id: req.session.user.id
             },
-            include: [{ association: "addresses" }],
+            include: [{ association: "addresses" }], /*para poner direcciones hay que hacerlo*/ 
         })
         .then((user) => {
-            res.render("users/userProfile", {
+            res.render("/userProfile", {
                 session: req.session,
                 user,
                 titulo: req.session.user.name,
-                css: "userProfile.css"
             })
         })
     },
@@ -115,7 +114,7 @@ module.exports = {
                 }
             })
             .then(() => 
-                res.redirect("/usuarios/perfil")
+                res.redirect("/perfil")
             )
             .catch(error => res.send(error))
         }else{
