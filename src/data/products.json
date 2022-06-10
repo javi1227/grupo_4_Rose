@@ -1,89 +1,75 @@
 [
-  {
-    "id": 1,
-    "name": "Nacha Pinot Noir Rosé 2021",
-    "price": "5.900",
-    "description": "Nacha es un vino orgánico y biodinámico, hecho a la manera del rosé, con poco contacto con pieles, fácil de beber, con poco alcohol, con buena acidez natural, simple, un vino que se da fácilmente.",
-    "discount": 0,
-    "image": "Chacra-Nacha-Pinot-Noir-Rose.png",
-    "projectId": 1,
-    "stock": true
-  },
-  {
-    "id": 2,
-    "name": "OVNI Palomino Fino 2018",
-    "price": "6.500",
-    "description": "OVNI Palomino Fino procede de viñedos ubicados en un pago de interior, de Jerez de la Frontera, si bien no descartamos recurrir a otros viñedos y pagos en futuras añadas. Para la fermentación se añadió al zumo de uva en el depósito flor de vino fino igualmente jerezano.",
-    "discount": 0,
-    "image": "Equipo-Navazos-OVNI-Palomino-Fino-2018.png",
-    "projectId": 1,
-    "stock": true
-  },
-  {
-    "id": 3,
-    "name": "Riccitelli Vintage Malbec 2018",
-    "price": "11.540",
-    "description": "VINTAGE es un vino estilo Porto. Un fortificado con mucha estructura de Malbec, de los mejores lotes de Gualtallary. Es un vino para disfrutar ahora, o guardar muchísimo tiempo.",
-    "discount": 0,
-    "image": "Riccitelli-Vintage-Gualtallary.png",
-    "projectId": 1,
-    "stock": true
-  },
-  {
-    "id": 4,
-    "name": "Zorzal Eggo Tinto de Tiza Malbec 2018",
-    "price": "2.650",
-    "description": "La linea Eggo son vinos sin paso por madera, fermentados y criados en huevos de hormigón, que surgieron como una búsqueda de expresión de terroir y pureza, con la mínima intervención posible. Tinto de Tiza es Malbec de Gualtallary, es fruta y hierbas, es sutileza y fineza, es rico.",
-    "discount": 0,
-    "image": "Zorzal-Eggo-Tinto-de-Tiza.png",
-    "projectId": 1,
-    "stock": true
-  },
-  {
-    "id": 5,
-    "name": "Zuccardi Blanc de Blancs Cuvee Especial 2016",
-    "price": "4.500",
-    "description": "Uno de los primeros aportes de Sebastián Zuccardi a la bodega, el Blanc de Blancs, fruto de su experiencia en Champagne, logra uno de los espumosos más complejos del país, producido siguiendo el método tradicional champenoise.",
-    "discount": 0,
-    "image": "zuccardi-blancdeblancs-cuvee-especial.png",
-    "projectId": 1,
-    "stock": true
-  },
-
-
-  {
-    "id": 6,
-    "name": "Inseparable Malbec 2019",
-    "price": "3.500",
-    "description": "Inseparable proviene de la parte más baja de los viñedos del monasterio en Gualtallary, plantado en espaldero sobre suelos arenosos y gravas calcáreas.",
-    "categoryId": 6,
-    "projectId": 6,
-    "discount": 20,
-    "image": "per-se-inseparable-2018.png",
-    "stock": true
-  },
-
-
-  {
-    "id": 7,
-    "name": "Zuccardi Concreto 2018",
-    "price": "6.400",
-    "description": "Concreto es la búsqueda del terroir de Altamira en su máxima expresión. Fermentado y criado en hormigón, el concreto permite un excelente control de temperatura durante la fermentación, y una crianza sin aporte de aromas externos a la uva pero con el aporte de la microoxigenación aunque en menor medida que en barricas. Un vino franco, austero, con tremenda textura.",
-    "categoryId": 7,
-    "projectId": 7,
-    "discount": 10,
-    "image": "Zuccardi-Concreto.png",
-    "stock": true
-  },
-  {
-    "id": 9,
-    "name": "Y La Nave Va 2020",
-    "price": "6.760",
-    "description": "Canopus es el pequeño y muy cuidado proyecto de Gabriel Dovskin en un viñedo en El Cepillo. La Nave es un “Malbec del Frío”, inspirado en vinos naturales que Gabriel fue probando en sus años europeos (productores como Josko Gravner y Radikon), que surge de la interacción de 9 parcelas que se elaboran por separado y aportan distintas capas al vino. Un vino salvaje, profundo, de gran fineza y muy equilibrado, con un perfil terroso y de gran textura.",
-    "categoryId": 9,
-    "projectId": 9,
-    "discount": 25,
-    "image": "ylanaveva2018.png",
-    "stock": true
-  }
+    {
+        "id": 2,
+        "name": "OVNI Palomino Fino 2018",
+        "price": "6.500",
+        "description": "OVNI Palomino Fino procede de viñedos ubicados en un pago de interior, de Jerez de la Frontera, si bien no descartamos recurrir a otros viñedos y pagos en futuras añadas. Para la fermentación se añadió al zumo de uva en el depósito flor de vino fino igualmente jerezano.",
+        "discount": 0,
+        "image": "Equipo-Navazos-OVNI-Palomino-Fino-2018.png",
+        "projectId": 1,
+        "stock": true
+    },
+    {
+        "id": 3,
+        "name": "Riccitelli Vintage Malbec 2018",
+        "price": "11.540",
+        "description": "VINTAGE es un vino estilo Porto. Un fortificado con mucha estructura de Malbec, de los mejores lotes de Gualtallary. Es un vino para disfrutar ahora, o guardar muchísimo tiempo.",
+        "discount": 0,
+        "image": "Riccitelli-Vintage-Gualtallary.png",
+        "projectId": 1,
+        "stock": true
+    },
+    {
+        "id": 4,
+        "name": "Zorzal Eggo Tinto de Tiza Malbec 2018",
+        "price": "2.650",
+        "description": "La linea Eggo son vinos sin paso por madera, fermentados y criados en huevos de hormigón, que surgieron como una búsqueda de expresión de terroir y pureza, con la mínima intervención posible. Tinto de Tiza es Malbec de Gualtallary, es fruta y hierbas, es sutileza y fineza, es rico.",
+        "discount": 0,
+        "image": "Zorzal-Eggo-Tinto-de-Tiza.png",
+        "projectId": 1,
+        "stock": true
+    },
+    {
+        "id": 5,
+        "name": "Zuccardi Blanc de Blancs Cuvee Especial 2016",
+        "price": "4.500",
+        "description": "Uno de los primeros aportes de Sebastián Zuccardi a la bodega, el Blanc de Blancs, fruto de su experiencia en Champagne, logra uno de los espumosos más complejos del país, producido siguiendo el método tradicional champenoise.",
+        "discount": 0,
+        "image": "zuccardi-blancdeblancs-cuvee-especial.png",
+        "projectId": 1,
+        "stock": true
+    },
+    {
+        "id": 6,
+        "name": "Inseparable Malbec 2019",
+        "price": "3.500",
+        "description": "Inseparable proviene de la parte más baja de los viñedos del monasterio en Gualtallary, plantado en espaldero sobre suelos arenosos y gravas calcáreas.",
+        "categoryId": 6,
+        "projectId": 6,
+        "discount": 20,
+        "image": "per-se-inseparable-2018.png",
+        "stock": true
+    },
+    {
+        "id": 7,
+        "name": "Zuccardi Concreto 2018",
+        "price": "6.400",
+        "description": "Concreto es la búsqueda del terroir de Altamira en su máxima expresión. Fermentado y criado en hormigón, el concreto permite un excelente control de temperatura durante la fermentación, y una crianza sin aporte de aromas externos a la uva pero con el aporte de la microoxigenación aunque en menor medida que en barricas. Un vino franco, austero, con tremenda textura.",
+        "categoryId": 7,
+        "projectId": 7,
+        "discount": 10,
+        "image": "Zuccardi-Concreto.png",
+        "stock": true
+    },
+    {
+        "id": 9,
+        "name": "Y La Nave Va 2020",
+        "price": "6.760",
+        "description": "Canopus es el pequeño y muy cuidado proyecto de Gabriel Dovskin en un viñedo en El Cepillo. La Nave es un “Malbec del Frío”, inspirado en vinos naturales que Gabriel fue probando en sus años europeos (productores como Josko Gravner y Radikon), que surge de la interacción de 9 parcelas que se elaboran por separado y aportan distintas capas al vino. Un vino salvaje, profundo, de gran fineza y muy equilibrado, con un perfil terroso y de gran textura.",
+        "categoryId": 9,
+        "projectId": 9,
+        "discount": 25,
+        "image": "ylanaveva2018.png",
+        "stock": true
+    }
 ]

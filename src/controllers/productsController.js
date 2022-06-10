@@ -5,18 +5,32 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 module.exports = {
     getAll: (req, res) => {
         db.Product.findAll({
-
+            include: [
+                  {association:"category"} 
+             ]
         })
+        .then(products => {
+            res.send(products)
+        })
+        
+           /*  include: [
+              {association:"productImages"}, 
+                {association:"category"} 
+           ]  */
+            
+
+       /*  )
         .then((productos)=>{
-           res.render('productos', {
+           res.send(productos)
+            res.render('productos', {
                 titulo: "Productos",
                 productos,
                 toThousand,
                 session: req.session
                 
-            }) 
+            })  
         })
-         .catch((error) => res.send(error))
+          .catch((error) => console.log(error))  */
     
     },
     getOne: (req, res) => {
