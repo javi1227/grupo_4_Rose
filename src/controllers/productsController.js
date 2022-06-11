@@ -6,9 +6,9 @@ module.exports = {
     getAll: (req, res) => {
         db.Product.findAll({
             include: [
-                  {association:"category"},
-                  {association:"productImage"} 
-             ]
+                {association:"category"},
+                {association:"productImage"} 
+            ]
         })
         .then((productos)=>{
             res.render('productos', {
@@ -18,11 +18,11 @@ module.exports = {
                 session: req.session
             })  
         })
-          .catch((error) => res.send(error))  
+        .catch((error) => res.send(error))  
     
     },
     getOne: (req, res) => {
-        let product =db.Product.find(product => product.id === +req.params.id)
+        let product =getProducts.find(product => product.id === +req.params.id)
 
     res.render('detalle-de-producto', {
         product,
