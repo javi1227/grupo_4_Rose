@@ -24,16 +24,14 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
             },
         discount: {
-            type: dataTypes.INTEGER(11),
+            type: dataTypes.INTEGER(100),
+            allowNull: false,
         },
         stock: {
-        type: dataTypes.BOOLEAN,
-        allowNull: false,
+            type: dataTypes.BOOLEAN,
+            allowNull: false,
         },
-        image: {
-        type: dataTypes.STRING(45),
-        allowNull: false
-    },
+
     
 }
     let config = {

@@ -18,7 +18,7 @@ module.exports = {
                 session: req.session
             })  
         })
-          .catch((error) => console.log(error))  
+          .catch((error) => res.send(error))  
     
     },
     getOne: (req, res) => {

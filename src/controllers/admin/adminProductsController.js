@@ -1,12 +1,21 @@
-const { getProducts, writeProducts } = require('../../data');
+const db = require('../../database/models');
+const Product = require('../../database/models/Product');
 
 module.exports = {
     /* Envia la vista del listado de productos */
     list: (req, res) => {
-        res.render('admin/pages/productos/listado', {
-            titulo: "Listado de productos",
-            productos: getProducts,
-            session: req.session
+        db.Product.findAll({
+            include: [
+                {association: "category"},
+                {association: "productImage"}
+            ]
+        })
+        .then((productos) =>{
+            res.render('admin/pages/productos/listado', {
+                titulo: "Listado de productos",
+                productos,
+                session: req.session
+        })
         })
     },
     /* Envia vista de form de creacion de producto */
@@ -18,66 +27,81 @@ module.exports = {
     },
     /* recibe datos de form de creacion y guarda */
     productCreate: (req, res) => {
-        let lastId = 0;
-        getProducts.forEach(product => {
-            if(product.id > lastId){
-                lastId = product.id;
-            }
-        });
-
-        let newProduct = {
-            ...req.body, 
-            id: lastId + 1,
-            image: "",
-            stock: req.body.stock ? true : false
-        }
-        
-        getProducts.push(newProduct)
-
-       writeProducts(getProducts)
-
-       res.redirect('/admin/productos')
+        db.Product.create({
+            include: [
+                {association: "category"},
+                {association: "productImage"}
+            ],
+            name: req.body.name,
+            category_id: req.body.categoryId,
+            price: req.body.price,
+            stock: req.body.stock,
+            discount: req.body.discount,
+            description: req.body.description,
+            image: req.body.imageName,
+            session: req.session
+          })
+            .then((result) => {
+              res.redirect("/admin/productos");
+            })
+            .catch((error) => res.send(error));
     },
     /* Envia la vista del form de edicion de prod */
     productEdit: (req, res) => {
         let idProducto = +req.params.id;
-        let producto = getProducts.find(producto => producto.id === idProducto)
-        res.render('admin/pages/productos/editarProducto', {
-            titulo: "Edición",
-            producto,
-            session: req.session
-        })
-    },
 
+        db.Product.findByPk(idProducto)
+          .then((producto) => {
+            res.render("admin/pages/productos/editarProducto", {
+              titulo: "Editar producto",
+              producto,
+              session: req.session
+            });
+          })
+          .catch((error) => res.send(error));
+      },
     productUpdate: (req, res) => {
         let idProducto = +req.params.id;
-        getProducts.forEach(producto => {
-            if(producto.id === idProducto){
-                producto.name = req.body.name
-                producto.price = req.body.price
-                producto.discount = req.body.discount
-                producto.categoryId = req.body.categoryId
-                producto.projectId = req.body.projectId
-                producto.stock = req.body.stock ? true : false
-                producto.description = req.body.description
+        db.Product.update(
+            {
+              name: req.body.name,
+              price: req.body.price,
+              discount: req.body.discount,
+              category_id: req.body.categoryId,
+              stock: req.body.stock ? true : false,
+              description: req.body.description
+            },
+            {
+              where: {
+                id: idProducto,
+              },
             }
-        })
-
-        writeProducts(getProducts);
-
-        res.redirect('/admin/productos');
-    },
+          )
+            .then((result) => {
+              if (result) {
+                res.redirect("/admin/productos");
+              } else {
+                res.send("Ups ocurrio un error");
+              }
+            })
+            .catch((error) => res.send(error));
+        },
     
     productDelete: (req, res) => {     
         let idProducto = +req.params.id;
-        getProducts.forEach(producto => {
-            if(producto.id === idProducto){           
-                let productToDeleteIndex = getProducts.indexOf(producto);              
-                getProducts.splice(productToDeleteIndex, 1)
-            }
-        })
-        writeProducts(getProducts);
-        res.redirect('/admin/productos')
+        db.Product.destroy({
+            where: {
+              id: idProducto,
+            },
+          })
+            .then((result) => {
+              if (result) {
+                res.redirect("/admin/productos");
+              } else {
+                res.send("Ups algo rompí");
+              }
+            })
+            .catch((error) => res.send(error));
     },
     productSearch: (req, res) => {
 
