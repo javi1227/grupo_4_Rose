@@ -20,9 +20,12 @@
         <% } %> 
         </div>
         <span>Editar imagen de perfil</span>
-        <div class="inputFile">
-            <input type="file" name="icon">
-        </div>
+          <form action="/images/avatar<%= user.id %>?_method=PUT" method="POST">
+              <div class="inputFile">
+                <input type="file" name="icon">
+              </div>
+              <button type="submit" class="btn5 btn-primary">Modificar</button>
+          </form>
     </div>
     <div class="blueTexto2">
         <h2 class="h2Perfil">Administra tu nombre y dirección. Estos datos personales son privados y no se mostrarán a otros usuarios.</h2>
