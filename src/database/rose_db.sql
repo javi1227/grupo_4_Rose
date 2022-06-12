@@ -16,6 +16,35 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `addresses`
+--
+
+DROP TABLE IF EXISTS `addresses`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `addresses` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `street` varchar(50) NOT NULL,
+  `number` varchar(100) NOT NULL,
+  `province` varchar(100) NOT NULL,
+  `city` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `NewTable_FK` (`user_id`),
+  CONSTRAINT `NewTable_FK` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `addresses`
+--
+
+LOCK TABLES `addresses` WRITE;
+/*!40000 ALTER TABLE `addresses` DISABLE KEYS */;
+/*!40000 ALTER TABLE `addresses` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `categories`
 --
 
@@ -110,6 +139,7 @@ CREATE TABLE `users` (
   `email` varchar(45) NOT NULL,
   `password` varchar(70) NOT NULL,
   `avatar` varchar(45) DEFAULT NULL,
+  `phone` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_86` (`rol_id`),
   CONSTRAINT `users_FK` FOREIGN KEY (`rol_id`) REFERENCES `users_rols` (`id`)
@@ -122,7 +152,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (5,'grupo4',5,'grupo4@gmail.com','$2a$10$W051bnm29dNolIk6drmASuNVxMlWEdKbbRRHvvN1IfF4yXt0y5uLm','1654741585568_img_.jpeg');
+INSERT INTO `users` VALUES (5,'grupo4',5,'grupo4@gmail.com','$2a$10$W051bnm29dNolIk6drmASuNVxMlWEdKbbRRHvvN1IfF4yXt0y5uLm','1654741585568_img_.jpeg',NULL);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -163,4 +193,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-11  1:19:12
+-- Dump completed on 2022-06-11 11:28:46

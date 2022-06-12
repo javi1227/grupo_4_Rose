@@ -100,3 +100,11 @@ if (slides.length) {
     dots[slideIndex-1].className += " active";
     }  
 }
+
+// profile
+// function submitDatosProfile() {
+//     document.getElementById('ProfileEditForm').submit()
+// }
+// function submitDirecciones() {
+//     document.getElementById('ProfileDirForm').submit()
+// }

@@ -1,0 +1,126 @@
+.PerfilBody{
+    padding: 1rem 0.5rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    margin: 8rem 0;
+    box-shadow: 1;
+    -webkit-box-shadow: 1px 1px 18px 0px rgb(0 0 0 / 30%)
+}
+.blueTexto{
+    background-color: #dbedfd;
+    color: #3378b9;
+    border: 1px solid #bbb;
+    font-size: 6px;
+    padding: 0.5rem 5px;
+    width: 84%;
+    margin-left: 7%;
+}
+.contendor-avatar{
+    display: flex;
+    flex-direction: column;
+}
+.imgUser{
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+.imgUser img{
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    border: 2px solid #cca43c;
+    
+}
+.inputFile{
+    /* background-color: #dbedfd; */
+    color: #3378b9;
+    border: 1px solid #bbb;
+    width: 44%;
+    margin-left: 11rem;
+}
+.blueTexto2{
+    background-color: #dbedfd;
+    color: #3378b9;
+    border: 1px solid #bbb;
+    width: 84%;
+    margin: 1rem 7%;
+}
+
+.h2Perfil {
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+.contenedorDeDatos{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.contenedorDeDatos{
+    display: flex;
+    flex-direction: column;
+}
+.datosPersonales{
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.colorDate{
+    color: #3378b9;
+    font-weight: 800;
+}
+.datosAModificar{
+    display: flex;
+    flex-direction: column;
+}
+.btsn{
+   margin:1rem 0;
+   display: flex;
+   justify-content: center;
+   width: 6rem;
+}
+.gestionDeDirecciones{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+.input-barrios {
+    margin-top: 0.5rem;
+}
+
+.formProfile{
+display: flex;
+flex-direction: column;
+margin-bottom: 0.5rem;
+}
+
+.table-responsive {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin-left: 12%;
+    border: 1px solid gray;
+}
+.MisDirecciones{
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    background: #3378b9;
+}
+.opcionesDeTabla{
+    background: #3378b9;
+}
+tbody tr td{
+text-align: center;
+}
+
+@media(min-width:768px){
+    .PerfilBody{
+        max-width: 35rem;
+        margin-left: 15%;
+    }
+}

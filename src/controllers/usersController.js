@@ -69,16 +69,15 @@ module.exports = {
              db.User.create({
                 name: req.body.name,
                 email: req.body.email,
-                rol_id: 5,
+                rol_id: 4,
                 password: bcrypt.hashSync(req.body.password, 10),
                 avatar: req.file ? req.file.filename : "default-image.png"
             })
             .then((user) => {
-               
                 res.redirect("/usuarios/login")
             })
             .catch(error => res.send(error))
-             
+            
         } else{
             // codigo para mostrar errores
             res.render('register', {
@@ -95,10 +94,10 @@ module.exports = {
             where: {
                 id: req.session.user.id
             },
-            include: [{ association: "addresses" }], /*para poner direcciones hay que hacerlo*/ 
+            include: [{ association: "addresses" }],
         })
         .then((user) => {
-            res.render("/userProfile", {
+            res.render("userProfile", {
                 session: req.session,
                 user,
                 titulo: req.session.user.name,
@@ -107,17 +106,18 @@ module.exports = {
     },
     profileUpdate: (req, res) => {
         let errors = validationResult(req);
-
         if(errors.isEmpty()){
             db.User.update({
-                ...req.body
+                email: req.body.email,
+                name: req.body.name,
+                phone: req.body.phone
             },{
                 where: {
                     id: req.session.user.id
                 }
             })
             .then(() => 
-                res.redirect("/perfil")
+                res.redirect("/usuarios/perfil")
             )
             .catch(error => res.send(error))
         }else{
@@ -128,11 +128,10 @@ module.exports = {
                 include: [{ association: "addresses" }],
             })
             .then((user) => {
-                res.render("users/userProfile", {
+                res.render("userProfile", {
                     session: req.session,
                     user,
                     titulo: req.session.user.name,
-                    css: "userProfile.css",
                     errors: errors.mapped()
                 })
             })
@@ -153,7 +152,7 @@ module.exports = {
             }
         })
         .then(() => {
-            res.redirect("/perfil")    
+            res.redirect("/usuarios/perfil")    
         })
         .catch((error) => res.send(error))
     },
