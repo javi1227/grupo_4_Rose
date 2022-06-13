@@ -32,7 +32,7 @@ CREATE TABLE `addresses` (
   PRIMARY KEY (`id`),
   KEY `NewTable_FK` (`user_id`),
   CONSTRAINT `NewTable_FK` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,6 +41,7 @@ CREATE TABLE `addresses` (
 
 LOCK TABLES `addresses` WRITE;
 /*!40000 ALTER TABLE `addresses` DISABLE KEYS */;
+INSERT INTO `addresses` VALUES (18,7,'Brandsen805','2011','',''),(20,5,'Brandsen','0805','Buenos Aires','CABA'),(21,8,'Los Simpsons','555','',''),(22,8,'asda','asdas','Buenos Aires','CABA'),(23,5,'Australia','444','Buenos Aires','CABA');
 /*!40000 ALTER TABLE `addresses` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -143,7 +144,7 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`),
   KEY `FK_86` (`rol_id`),
   CONSTRAINT `users_FK` FOREIGN KEY (`rol_id`) REFERENCES `users_rols` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -152,7 +153,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (5,'grupo4',5,'grupo4@gmail.com','$2a$10$W051bnm29dNolIk6drmASuNVxMlWEdKbbRRHvvN1IfF4yXt0y5uLm','1654741585568_img_.jpeg',NULL);
+INSERT INTO `users` VALUES (5,'grupo4',5,'grupo4@hotmail.com','$2a$10$W051bnm29dNolIk6drmASuNVxMlWEdKbbRRHvvN1IfF4yXt0y5uLm','1655157894437_img_.png','2020'),(6,'Javier',5,'javi12@hotmail.com','$2a$10$D/YRl7.rED3uE746EWvMreFCQ2047lF/wFgUz6f90cRlBTy./H1Yi','1655068071059_img_.jpg','1227'),(7,'prueba',4,'prueba@gmail.com','$2a$10$bVUbx3X4rpje12IRadmJC.YJRe1/stbl2z8KX8E2AIhzLy67jdPP6','1655068442414_img_.jpg',NULL),(8,'javier2',4,'javier2@hotmail.com','$2a$10$lBsb4C0GPjGuDH/5JL6XZuaLrlrFdHX9mVc76/Oh0UAIie4W/1Tr.','1655084190406_img_.jpg','123456789'),(9,'asd2',4,'asd2@hotmail.com','$2a$10$oCbVYjoM9bgwUQfWKn/d3.2y/BKJD7pVQCMrqfmKIWrjgnKW6ybXS','1655151830639_img_.jpg',NULL),(10,'roman',4,'roman@gmail.com','$2a$10$gGrkXw29tM9HBmMPzVke/.Aus38yMjunYB2H0NC224wHFjd4c2IH2','1655154262993_img_.jpg',NULL);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -193,4 +194,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-11 11:28:46
+-- Dump completed on 2022-06-13 19:07:33
