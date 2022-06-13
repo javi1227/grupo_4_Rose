@@ -5,8 +5,8 @@
 
 <!-- HEADER -->
 <%- include('partials/header') %> 
-<!-- END HEADER -->
 <body>
+<!-- END HEADER -->
   <main class="PerfilBody">
     <div class="h2Perfil">EDITAR MIS DATOS</div>
     <h5 class="h2Perfil">(*) Campos obligatorios</h5>
@@ -21,10 +21,10 @@
         </div>
         <span>Editar imagen de perfil</span>
           <form action="/images/avatar<%= user.id %>?_method=PUT" method="POST">
-              <div class="inputFile">
-                <input type="file" name="icon">
-              </div>
+            <div>
+              <input type="file" name="avatar" id="avatar" class="inputRegister" >
               <button type="submit" class="btn5 btn-primary">Modificar</button>
+            </div>
           </form>
     </div>
     <div class="blueTexto2">
@@ -81,25 +81,26 @@
                 <small class="text-danger"><%= errors.number.msg %></small>
                 <% } %>
               </div>
-              <div class="formProfile mb-3 col-md-6">
-                <select class="form-select" name="province">
-                  <option value="" hidden selected>Provincia</option>
-                  <option value="">Buenos Aires</option>
-                </select>
-                <% if (locals.errors && errors.province) { %>
-                <small class="text-danger"><%= errors.province.msg %></small>
-                <% } %>
-              </div>
-              <div class="formProfile mb-3 col-md-6">
-                <select class="form-select" name="city">
-                  <option value=""selected>Ciudad</option>
-                  <option value="">CABA</option>
-                  <option value="">Provincia de Buenos Aires</option>
-                </select>
-                <% if (locals.errors && errors.city) { %>
-                <small class="text-danger"><%= errors.city.msg %></small>
-                <% } %>
-              </div>
+
+              <label>Provincia:</label>
+                  <input list="province" name="province" value="<%= locals.old && old.province %>"/>
+                  <datalist id="province">
+                      <option value="Buenos Aires" />
+                      <% if (locals.errors && errors.province) { %>
+                        <small class="text-danger"><%= errors.province.msg %></small>
+                        <% } %>
+                  </datalist>
+
+                  <label>Ciudad:</label>
+                  <input list="city" name="city" value="<%= locals.old && old.city %>"/>
+                  <datalist id="city">
+                      <option value="Provincia de Buenos Aires" />
+                      <option value="CABA" />
+                      <% if (locals.errors && errors.city) { %>
+                        <small class="text-danger"><%= errors.city.msg %></small>
+                        <% } %>
+                  </datalist>
+
               <div class="formProfile mb-3 d-flex justify-content-center">
                 <button class="btn5 btn-outline-primary" type="submit">
                   Agregar

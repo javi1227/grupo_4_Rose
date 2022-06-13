@@ -64,9 +64,8 @@ module.exports = {
         // verificar si hubo errores en el form
         let errors = validationResult(req);
         // si no hay errores, crea el usuario
-       
         if(errors.isEmpty()){
-             db.User.create({
+            db.User.create({
                 name: req.body.name,
                 email: req.body.email,
                 rol_id: 4,

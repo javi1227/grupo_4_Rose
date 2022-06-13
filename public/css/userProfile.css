@@ -94,7 +94,7 @@
 .formProfile{
 display: flex;
 flex-direction: column;
-margin-bottom: 0.5rem;
+margin: 1.5rem 0;
 }
 
 .table-responsive {
