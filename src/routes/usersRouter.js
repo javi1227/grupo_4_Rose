@@ -21,6 +21,8 @@ router.post('/registro', uploadFile.single('avatar') ,registerValidator ,usersCo
 router.get('/perfil', userSessionCheck, usersController.profile);
 /* PUT - Edita datos de usuario */
 router.put('/perfil', profileValidator ,usersController.profileUpdate)
+/* PUT - Edita datos de avatar */
+router.put('/perfil/avatar', uploadFile.single('avatar'), usersController.avatarUpdate)
 /* POST - Creación de dirección */
 router.post('/direcciones', usersController.addressCreate);
 /* DELETE - Eliminación de dirección */

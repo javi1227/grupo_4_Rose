@@ -1,3 +1,7 @@
+.bodyFalso{
+    display: flex;
+    justify-content: center;
+}
 .PerfilBody{
     padding: 1rem 0.5rem;
     border-radius: 10px;
@@ -121,6 +125,5 @@ text-align: center;
 @media(min-width:768px){
     .PerfilBody{
         max-width: 35rem;
-        margin-left: 15%;
     }
 }

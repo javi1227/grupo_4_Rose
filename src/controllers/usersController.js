@@ -28,7 +28,7 @@ module.exports = {
                     email: user.email,
                     rol: user.rol_id
                 };
-           /*      if(req.body.remember){
+        /*      if(req.body.remember){
                 const TIME_IN_MILISECONDS = 60000 * 60 * 24 * 365;
                 res.cookie('formarCookie', req.session.user, {
                     expires: new Date(Date.now() + TIME_IN_MILISECONDS),
@@ -109,7 +109,7 @@ module.exports = {
             db.User.update({
                 email: req.body.email,
                 name: req.body.name,
-                phone: req.body.phone
+                phone: req.body.phone,
             },{
                 where: {
                     id: req.session.user.id
@@ -136,6 +136,39 @@ module.exports = {
             })
         }
     },
+    avatarUpdate: (req, res) => {
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+            db.User.update({
+                avatar: req.file ? req.file.filename : "default-image.png"
+            },{
+                where: {
+                    id: req.session.user.id
+                }
+            })
+            .then(() => 
+                res.redirect("/usuarios/perfil")
+            )
+            .catch(error => res.send(error))
+        }else{
+            db.User.findOne({
+                where: {
+                    id: req.session.user.id
+                },
+                include: [{ association: "addresses" }],
+            })
+            .then((user) => {
+                res.render("userProfile", {
+                    session: req.session,
+                    user,
+                    titulo: req.session.user.name,
+                    errors: errors.mapped()
+                })
+            })
+        }
+    },
+
+
     addressCreate: (req, res) => {
         db.Address.create({
             ...req.body,
