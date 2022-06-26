@@ -39,11 +39,11 @@
                       </div>
                       <div>
                               <form action="/usuarios/perfil?_method=PUT" class="datosAModificar" method="POST">
-                                  <label for="email" class="">Email (*)</label>
+                                  <!-- <label for="email" class="">Email (*)</label>
                                   <input type="text" class="" name="email" id="email" value="<%= locals.old && old.email%>"/>
                                   <% if (locals.errors && errors.name) { %>
                                   <small class="text-danger"><%= errors.name.msg %></small>
-                                  <% } %>
+                                  <% } %> -->
 
                                   <label for="name" class="form-label">Nombre (*)</label>
                                   <input type="text" class="form-control" name="name" id="name" value="<%= locals.old && old.name %>"/>

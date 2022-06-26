@@ -7,7 +7,7 @@ let ubicacionPrincipal  = window.pageYOffset;
 document.getElementById('button-up').addEventListener('click', scrollUp);
 
 
-// modo incognito
+// modo oscuro
 
 
 const theme = localStorage.getItem('theme');
