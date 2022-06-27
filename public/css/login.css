@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 1rem;
+    margin: 2rem;
     margin-top: 3rem;
 }
 
@@ -29,6 +29,20 @@
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
+.title-t-l{
+    margin: 1rem;
+
+}
+
+.button-submit{
+    margin: 1rem;
+}
+
+.smedia-text-l{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
 
 .container-t {
     position: relative;
@@ -210,8 +224,12 @@ h2.title-t{
     }
     h2.title-t-l{
         margin-top: 2rem;
+        font-size: 2rem;
     }
     .smedia-text-l{
+        font-size: 20px;
+    }
+    .register-container-l{
         font-size: 20px;
     }
     .no-acc-l{
