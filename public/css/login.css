@@ -220,10 +220,10 @@ h2.title-t{
 @media (min-width: 1200px){
     .sign-in-form-login{
         max-width: 480px;
-        height: 36rem;
+        height: 35rem;
     }
     h2.title-t-l{
-        margin-top: 2rem;
+        margin-top: 1rem;
         font-size: 2rem;
     }
     .smedia-text-l{
@@ -237,12 +237,12 @@ h2.title-t{
         font-weight: bold;
     }
     .register-container-l{
-        margin-top: 20px;
+        margin-top: 6px;
     }
     #btn-login{
         width: 180px;
         height: 60px;
         font-size: 16px;
-        margin: 1rem;
+        margin: 1px;
     }
 }

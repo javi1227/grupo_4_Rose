@@ -31,7 +31,7 @@
     border-radius: 5%;
     width: 100%;
     max-width: 475px;
-    height: 42.5rem;
+    height: 46.5rem;
     padding-top: 2.5rem;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
@@ -228,28 +228,33 @@ h2.title-t{
 
 @media (min-width: 1200px){
     .sign-in-form{
-    max-width: 500px;
-    height: 54rem;
+    max-width: 511px;
+    height: 44rem;
     }
     .Signin-signup{
-        padding-top: 4rem;
-    }
-    h2.title-t{
-        margin-top: 2rem;
+        padding-top: 1.3rem;
     }
     .smedia-text{
-        font-size: 20px;
+        font-size: 17px;
+        margin: -2px;
     }
     .no-acc{
         font-size: 20px;
         font-weight: bold;
     }
     .register-container{
-        margin-top: 20px;
+        margin-top: -1px;
     }
     .btn{
         width: 180px;
         height: 60px;
         font-size: 16px;
     }
+    .input-box{
+        height: 3.5rem
+    }
+    .checkRegister1{
+        padding: 11px;
+    }
+
 }
