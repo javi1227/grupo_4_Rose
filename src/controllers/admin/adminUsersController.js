@@ -1,4 +1,5 @@
 const { getUsers, writeUsers } = require('../../data');
+const db = require('../../database/models');
 
 module.exports = {
     /* Envia la vista del listado de productos */
