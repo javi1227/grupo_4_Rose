@@ -1,6 +1,7 @@
 const db = require('../../database/models');
 const Product = require('../../database/models/Product');
 
+let categoriesPromise = db.Category.findAll();
 module.exports = {
     /* Envia la vista del listado de productos */
     list: (req, res) => {
@@ -20,10 +21,14 @@ module.exports = {
     },
     /* Envia vista de form de creacion de producto */
     productAdd: (req, res) => {
+      Promise.all([categoriesPromise])
+      .then(([categories]) =>{
         res.render('admin/pages/productos/agregarProducto', {
             titulo: "Agregar producto",
-            session: req.session
+            session: req.session,
+            categories
         })
+      })
     },
     /* recibe datos de form de creacion y guarda */
     productCreate: (req, res) => {
@@ -33,7 +38,7 @@ module.exports = {
                 {association: "productImage"}
             ],
             name: req.body.name,
-            category_id: req.body.categoryId,
+            category: req.body.category,
             price: req.body.price,
             stock: req.body.stock,
             discount: req.body.discount,
@@ -49,12 +54,14 @@ module.exports = {
     /* Envia la vista del form de edicion de prod */
     productEdit: (req, res) => {
         let idProducto = +req.params.id;
-
-        db.Product.findByPk(idProducto)
-          .then((producto) => {
+        let productPromise = db.Product.findByPk(idProducto)
+        
+        Promise.all([productPromise, categoriesPromise])
+          .then(([producto, categories]) => {
             res.render("admin/pages/productos/editarProducto", {
               titulo: "Editar producto",
               producto,
+              categories,
               session: req.session
             });
           })
@@ -67,7 +74,7 @@ module.exports = {
               name: req.body.name,
               price: req.body.price,
               discount: req.body.discount,
-              category_id: req.body.categoryId,
+              category: req.body.category,
               stock: req.body.stock ? true : false,
               description: req.body.description
             },

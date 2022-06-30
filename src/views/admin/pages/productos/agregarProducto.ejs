@@ -52,15 +52,14 @@
                       </div>
                       <div class="form-group">
                         <label for="category">Categoria</label>
-                        <select name="categoryId" class="form-select" id="category" aria-label="Default select example">
+                        <select name="category" class="form-select" id="category" aria-label="Default select example">
                         <option selected hidden value="">Categoría</option>
-                        <option value="1" <%= (locals.old && old.category.name) && old.category.name === "Especial" ? "selected" : "" %>>Especial</option>
-                        <option value="2" <%= (locals.old && old.category.name) && old.category.name === "2" ? "selected" : "" %>>Tintos</option>
-                        <option value="3" <%= (locals.old && old.category.name) && old.category.name === "3" ? "selected" : "" %>>Blancos</option>
-                        <option value="4" <%= (locals.old && old.category.name) && old.category.name === "3" ? "selected" : "" %>>Rosados</option>
+                        <% categories.forEach(category => { %> 
+                          <option value="<%- category.id %>" <%= (locals.old && old.categories) && old.categories === category.id ? "selected" : "" %>><%- category.name %> </option>
+                          <%  }) %> 
                       </select>
-                    <% if (locals.errors && errors.categoryId) { %>
-                      <small class="text-danger"><%= errors.categoryId.msg%></small>
+                    <% if (locals.errors && errors.category) { %>
+                      <small class="text-danger"><%= errors.category.msg%></small>
                     <% } %>
                       </select>
                     </div>

@@ -14,6 +14,7 @@ const cookieSession = require('./middlewares/cookieSession');
 app.set('view engine', 'ejs');
 app.set('views', 'src/views');
 
+
 /* Enrutadores */
 const indexRouter = require('./routes/indexRouter');
 const productsRouter = require('./routes/productsRouter');
