@@ -46,6 +46,7 @@ module.exports = {
             image: req.body.imageName,
             session: req.session
           })
+        /*   const producto = producto.create({Product,category_id}) */
             .then((result) => {
               res.redirect("/admin/productos");
             })
