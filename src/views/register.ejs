@@ -19,9 +19,9 @@
             <div class="input-box">
               <i class="fas fa-user"></i>
               
-              <input class="input-t" name="name" type="text" id="userName" placeholder="Usuario" value="<%= locals.old && old.name%>"/><label for="name"></label>
-              <% if (locals.errors && errors.userName) { %>
-                <small class="text-danger"><%= errors.userName.msg %></small>
+              <input class="input-t" name="name" type="text" id="name" placeholder="Usuario" value="<%= locals.old && old.name%>"/><label for="name"></label>
+              <% if (locals.errors && errors.name) { %>
+                <small class="text-danger"><%= errors.name.msg %></small>
               <% } %>
             </div>
             <div class="input-box">
