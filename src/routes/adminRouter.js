@@ -7,6 +7,7 @@ const adminUsersController = require('../controllers/admin/adminUsersController'
 const userSessionCheck = require('../middlewares/userSessionCheck');
 const adminCheck = require('../middlewares/adminCheck');
 const uploadFile = require('../middlewares/uploadAvatar');
+const productsValidator = require('../validations/productsValidator')
 
 
 
@@ -24,7 +25,7 @@ router.get('/productos', userSessionCheck, adminCheck, adminProductsController.l
 /* GET - Agregar producto */
 router.get('/productos/agregar', userSessionCheck, adminCheck, adminProductsController.productAdd);
 /* POST - Crea un producto en la DB */
-router.post('/productos', uploadFile.any(''), adminProductsController.productCreate);
+router.post('/productos', uploadFile.any(''), productsValidator, adminProductsController.productCreate);
 /* GET - Editar producto */
 router.get('/productos/editar/:id', userSessionCheck, adminCheck, adminProductsController.productEdit);
 /* PUT - Actualiza producto en la DB */

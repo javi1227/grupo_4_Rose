@@ -1,5 +1,6 @@
 const db = require('../../database/models');
-const Product = require('../../database/models/Product');
+const { validationResult } = require('express-validator');
+const { promiseImpl } = require('ejs');
 
 let categoriesPromise = db.Category.findAll();
 module.exports = {
@@ -32,26 +33,45 @@ module.exports = {
     },
     /* recibe datos de form de creacion y guarda */
     productCreate: (req, res) => {
-        db.Product.create({
-            include: [
-                {association: "category"},
-                {association: "productImage"}
-            ],
+      let errors = validationResult(req);
+      if(errors.isEmpty()){
+          /* 1 - Crear el objeto producto */
+          db.Product.create({
             name: req.body.name,
-            category: req.body.category,
             price: req.body.price,
-            stock: req.body.stock,
             discount: req.body.discount,
+            category_id: req.body.category,
             description: req.body.description,
-            image: req.body.imageName,
-            session: req.session
+            stock: req.body.stock ? 1 : 0
           })
-        /*   const producto = producto.create({Product,category_id}) */
-            .then((result) => {
-              res.redirect("/admin/productos");
-            })
-            .catch((error) => res.send(error));
-    },
+          .then((product) => {
+              let arrayImages = req.files.map(image => {
+                  return {
+                    imageName: image.filename,
+                    product_id: product.id
+                  } 
+                 })
+     
+                 db.ProductImage.bulkCreate(arrayImages)
+                 .then(() => res.redirect('/admin/productos'))
+                 .catch(error => console.log(error))
+          })
+      }else{
+          let productosPromise = db.Product.findAll();
+  
+          Promise.all([productosPromise, categoriesPromise])
+          .then(([productos, categories]) => {
+            res.render("admin/pages/productos/agregarProducto", {
+              titulo: "Agregar producto",
+              productos,
+              categories,
+              errors:errors.mapped(),
+              old: req.body,
+              session: req.session
+              })
+          } )
+      }
+  },
     /* Envia la vista del form de edicion de prod */
     productEdit: (req, res) => {
         let idProducto = +req.params.id;
@@ -75,7 +95,7 @@ module.exports = {
               name: req.body.name,
               price: req.body.price,
               discount: req.body.discount,
-              category: req.body.category,
+              category_id: req.body.category,
               stock: req.body.stock ? true : false,
               description: req.body.description
             },
