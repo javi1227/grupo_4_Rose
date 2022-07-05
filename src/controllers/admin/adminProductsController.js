@@ -50,12 +50,12 @@ module.exports = {
                     imageName: image.filename,
                     product_id: product.id
                   } 
-                 })
-     
-                 db.ProductImage.bulkCreate(arrayImages)
-                 .then(() => res.redirect('/admin/productos'))
-                 .catch(error => console.log(error))
-          })
+                })
+
+                db.ProductImage.bulkCreate(arrayImages)
+                .then(() => res.redirect('/admin/productos'))
+                .catch(error => console.log(error))
+        })
       }else{
           let productosPromise = db.Product.findAll();
   

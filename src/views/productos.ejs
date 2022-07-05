@@ -18,10 +18,11 @@
             </div>
         <div class="body-de-tienda">
             <div class="page-content">
-                <% productos.forEach(producto => { %>      
-                    <a class="items-producto" href="/productos/detalle/<%- producto.id  %> ">
+                <% productos.forEach(producto => { %>  
+                    <p>mostra el<%- producto.id %></p>
+                    <a class="items-producto" href="/images/productos/<%- producto.id  %> ">
                     <div class="product-container-tienda">
-                        <img src="images/productos/" />
+                        <img src="/images/productos/<%- producto.productImage[0].imageName %>" />
                         <div class="bloque-ofertas-tienda">
                         <h3 class="menuh3" >  <%= producto.name  %> </h3>
                             <h1 class="tienda-h1">$<%= producto.price  %>,00</h1>

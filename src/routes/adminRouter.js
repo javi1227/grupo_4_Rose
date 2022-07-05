@@ -7,7 +7,8 @@ const adminUsersController = require('../controllers/admin/adminUsersController'
 const userSessionCheck = require('../middlewares/userSessionCheck');
 const adminCheck = require('../middlewares/adminCheck');
 const uploadFile = require('../middlewares/uploadAvatar');
-const productsValidator = require('../validations/productsValidator')
+const productsValidator = require('../validations/productsValidator');
+const uploadProduct = require('../middlewares/uploadProductos')
 
 
 
@@ -25,7 +26,7 @@ router.get('/productos', userSessionCheck, adminCheck, adminProductsController.l
 /* GET - Agregar producto */
 router.get('/productos/agregar', userSessionCheck, adminCheck, adminProductsController.productAdd);
 /* POST - Crea un producto en la DB */
-router.post('/productos', uploadFile.any(''), productsValidator, adminProductsController.productCreate);
+router.post('/productos', uploadProduct.single('imagen'), productsValidator, adminProductsController.productCreate);
 /* GET - Editar producto */
 router.get('/productos/editar/:id', userSessionCheck, adminCheck, adminProductsController.productEdit);
 /* PUT - Actualiza producto en la DB */
@@ -65,4 +66,3 @@ router.get('/usuarios/editar/:id', userSessionCheck,  adminUsersController.users
 router.put('/usuarios/:id', adminUsersController.usersUpdate);
 /* DELETE - Elimina un usero */
 router.delete('/usuarios/eliminar/:id', adminUsersController.usersDelete);
-
