@@ -1,16 +1,18 @@
   <!-- HEAD -->
   <%- include('partials/head') %> 
   <link rel="stylesheet" href="/css/styles.css">
+  <script src="/js/scrip.js"></script>
   <!-- END HEAD -->
     
   <!-- HEADER -->
   <%- include('partials/header') %> 
   <!-- END HEADER -->
   
-
 <!-- MENU -->
 <!--  INICIO FORM -->
 <body>
+ 
+
   <div class="container-t">
     <div class="forms-container-t">
       <div class="Signin-signup-login">
@@ -22,14 +24,14 @@
             
             <input class="input-t" name="email" type="email" id="userName" placeholder="Email" /><label for="name"></label>
             <% if (locals.errors && errors.email) { %>
-              <small class="text-danger"><%= errors.email.msg %></small>
+              <small id="userNameError" class  ="text-danger"><%= errors.email.msg %></small>
             <% } %>
           </div>
           <div class="input-box">
             <i class="fas fa-lock"></i>
             <input type="password" name="password" id="password" placeholder="Contraseña" /><label for="password"></label>
             <% if (locals.errors && errors.password) { %>
-              <small class="text-danger"><%= errors.password.msg %></small>
+              <small id="passwordError" class="text-danger"><%= errors.password.msg %></small>
             <% } %>
           </div>
           <div class="form-check mb-3">
@@ -85,5 +87,6 @@
   <!-- FOOTER -->
   <%- include('partials/footer') %> 
   <!-- END FOOTER -->
+  
   </body>
 </html>

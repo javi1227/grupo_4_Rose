@@ -21,7 +21,7 @@
               
               <input class="input-t" name="name" type="text" id="name" placeholder="Usuario" value="<%= locals.old && old.name%>"/><label for="name"></label>
               <% if (locals.errors && errors.name) { %>
-                <small class="text-danger"><%= errors.name.msg %></small>
+                <small id="nameErrors" class="text-danger"><%= errors.name.msg %></small>
               <% } %>
             </div>
             <div class="input-box">
@@ -29,7 +29,7 @@
               
               <input class="input-t" name="email" type="email" id="email" placeholder="Email" value="<%= locals.old && old.email%>"/><label for="email"></label>
               <% if (locals.errors && errors.email) { %>
-                <small class="text-danger"><%= errors.email.msg %></small>
+                <small id="emailErrors" class="text-danger"><%= errors.email.msg %></small>
             <% } %>
             </div>
 
@@ -44,24 +44,24 @@
               <i class="fas fa-lock"></i>
               <input type="password" name="password" id="password" placeholder="Contraseña" /><label for="password"></label>
               <% if (locals.errors && errors.password) { %>
-                <small class="text-danger"><%= errors.password.msg %></small>
+                <small id="passwordError" class="text-danger"><%= errors.password.msg %></small>
               <% } %>
             </div>
             <div class="input-box">
               <i class="fas fa-lock"></i>
               
-              <input type="password" name="password2" id="password" placeholder="Repetir contraseña" /><label for="password"></label>
+              <input type="password" name="password2" id="password2" placeholder="Repetir contraseña" /><label for="password"></label>
               <% if (locals.errors && errors.password2) { %>
-                <small class="text-danger"><%= errors.password2.msg %></small>
+                <small id="pass2Errors" class="text-danger"><%= errors.password2.msg %></small>
               <% } %>
             </div>
             <div class="checkRegister1">
-            <input type="checkbox" name="terms" type="checkbox" value="" id="checkRegister">
+            <input type="checkbox" name="terms" type="checkbox" value="" id="terms">
             <label class="form-check-label" for="terms" >
               Acepto los términos y condiciones
             </label> <br>
             <% if (locals.errors && errors.terms) { %>
-              <small class="text-danger"><%= errors.terms.msg %></small>
+              <small id="termsErrors" class="text-danger"><%= errors.terms.msg %></small>
           <% } %>
           </div>
             <input type="submit" class="btn solid" value="Crear cuenta" />
@@ -90,6 +90,7 @@
       </div>
 
       <div class="panel-t"></div>
+      
     </div>
 
 <!-- FIN MENU -->
@@ -103,5 +104,6 @@
   <!-- FOOTER -->
   <%- include('partials/footer') %> 
   <!-- END FOOTER -->
+  <script src="/js/script2.js"></script>
   </body>
 </html>
