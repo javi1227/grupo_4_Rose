@@ -1,7 +1,7 @@
 const { check } = require('express-validator');
 
 
-let validateProfile = [
+let validateProfile2 = [
     
     check("street")
     .notEmpty().withMessage("Ingrese la direccion"),
@@ -10,9 +10,7 @@ let validateProfile = [
     check("province")
         .notEmpty().withMessage("Ingrese la provincia"),
     check("city")
-        .notEmpty().withMessage("Ingrese la ciudad"),
-    check("phone")
-        .notEmpty().withMessage("Ingrese un teléfono"),
+        .notEmpty().withMessage("Ingrese la localidad"),
 ];
 
-module.exports = validateProfile;
+module.exports = validateProfile2;
