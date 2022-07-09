@@ -11,7 +11,6 @@ module.exports = {
             ]
         })
         .then((productos)=>{
-            console.log(productos[0].productImage[0].imageName, "sadasdasd");
             res.render('productos', {
                 titulo: "Productos",
                 productos,
