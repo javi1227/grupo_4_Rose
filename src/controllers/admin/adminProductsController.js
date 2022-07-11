@@ -40,11 +40,12 @@ module.exports = {
             name: req.body.name,
             price: req.body.price,
             discount: req.body.discount,
-            category_id: req.body.category,
+            category_id: req.body.categoryId,
             description: req.body.description,
             stock: req.body.stock ? 1 : 0
           })
           .then((product) => {
+            console.log(req.files)
               let arrayImages = req.files.map(image => {
                   return {
                     imageName: image.filename,
