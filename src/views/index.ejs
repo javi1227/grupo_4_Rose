@@ -98,9 +98,13 @@
 
       <div class="menu-contenedor">
           
-          <%specialProducts.forEach(producto => { %>
+          <%productos.forEach(producto => { %>
             <div class="contenedor">
-              <img src="images/productos/<%= producto.image %> " />
+              <% if (producto.productImage[0]) { %>
+                <img src="/images/productos/<%- producto.productImage[0].imageName %>"/> 
+            <% } else { %>
+                <img src="/images/productos/predeterminada.jpg"/>
+            <% } %> 
               <div class="bloque-ofertas">
                 <span class="titulo-figure">
                     <h3> <%= producto.name  %>  </h3>
@@ -153,9 +157,13 @@
 
   <div class="menu-contenedor">
       
-      <%productsInSale.forEach(producto => { %>
+      <%productos.forEach(producto => { %>
         <div class="contenedor">
-          <img src="images/productos/<%= producto.image %> " />
+          <% if (producto.productImage[0]) { %>
+            <img src="/images/productos/<%- producto.productImage[0].imageName %>"/> 
+        <% } else { %>
+            <img src="/images/productos/predeterminada.jpg"/>
+        <% } %> 
           <div class="bloque-ofertas">
             <span class="titulo-figure">
                 <h3> <%= producto.name  %>  </h3>

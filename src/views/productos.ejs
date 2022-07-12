@@ -19,8 +19,6 @@
         <div class="body-de-tienda">
             <div class="page-content">
                 <% productos.forEach(producto => { %>  
-                    <p>mostra el<%- producto.id %></p>
-                    <a class="items-producto" href="/images/productos/<%- producto.id  %> ">
                     <div class="product-container-tienda">
                         <% if (producto.productImage[0]) { %>
                             <img src="/images/productos/<%- producto.productImage[0].imageName %>"/> 
@@ -28,12 +26,14 @@
                             <img src="/images/productos/predeterminada.jpg"/>
                         <% } %> 
                         <div class="bloque-ofertas-tienda">
-                        <h3 class="menuh3" >  <%= producto.name  %> </h3>
-                            <h1 class="tienda-h1">$<%= producto.price  %>,00</h1>
-                            <button class="button-tienda button-add" id="buttontienda" >Agregar</button>
+                            <div class="contenidoTienda">
+                                <h3 class="menuh3" >  <%= producto.name  %> </h3>
+                                        <h1 class="tienda-h1">$<%= producto.price  %>,00</h1>
+                                        <a href="/productos/detalle/<%- producto.id  %>" id="aProducto"><button class="button-tienda button-add" id="buttontienda" >Agregar</button></a>
+                            </div>
+                            <!-- <button class="button-tienda button-add" id="buttontienda" >Agregar</button> -->
                         </div>
                     </div>
-                    </a>
 
                 <% }) %>
             </div>

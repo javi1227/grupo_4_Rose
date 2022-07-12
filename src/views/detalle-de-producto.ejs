@@ -12,7 +12,7 @@
     <div class="contenedor_productos">
             <a href=""></a>
         <div class="conteneder_imagenes"> 
-            <img src="/images/productos/<%= product.image %>" alt="ejs">
+            <img src="/images/productos/<%- product.productImage[0].imageName %>"/> 
         </div>
         <div class="contenedor_textoProducto">
                 <h2> <%= product.name  %> </h2>

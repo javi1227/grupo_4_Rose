@@ -63,7 +63,7 @@
               </div>
               <div class="container p-5 border rounded">
         
-                  <form action="/usuarios/direcciones" class="row" method="post">
+                  <form action="/usuarios/direcciones?_method=POST" class="row" method="post">
                     <div class="formProfile mb-3 col-md-6">
                       <label for="street" class="form-label">Calle (*)</label>
                       <input type="text" class="form-control" name="street" id="street" value="<%= locals.old && old.street %>"/>

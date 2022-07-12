@@ -127,18 +127,22 @@ module.exports = {
             )
             .catch(error => res.send(error))
         }else{
-            db.User.findOne({
-                where: {
-                    id: req.session.user.id
-                },
-                include: [{ association: "addresses" }],
-            })
-            .then((user) => {
-                res.render("userProfile", {
-                    session: req.session,
-                    user,
-                    titulo: req.session.user.name,
-                    errors: errors.mapped()
+            fetch("https://apis.datos.gob.ar/georef/api/provincias")
+            .then((res)=> res.json())
+            .then((data)=>{
+                db.User.findOne({
+                    where: {
+                        id: req.session.user.id
+                    },
+                    include: [{ association: "addresses" }],
+                })
+                .then((user) => {
+                    res.render("userProfile", {
+                        session: req.session,
+                        user,
+                        titulo: req.session.user.name,
+                        provincias: data.provincias,
+                    })
                 })
             })
         }

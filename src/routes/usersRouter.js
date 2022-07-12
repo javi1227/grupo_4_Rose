@@ -21,11 +21,11 @@ router.post('/registro', uploadFile.single('avatar') ,registerValidator ,usersCo
 /* GET - Perfil de usuario */
 router.get('/perfil', userSessionCheck, usersController.profile);
 /* PUT - Edita datos de usuario */
-router.put('/perfil', profileValidator,validateProfile2 ,usersController.profileUpdate)
+router.put('/perfil', profileValidator,usersController.profileUpdate)
 /* PUT - Edita datos de avatar */
 router.put('/perfil/avatar', uploadFile.single('avatar'), usersController.avatarUpdate)
 /* POST - Creación de dirección */
-router.post('/direcciones', usersController.addressCreate);
+router.post('/direcciones', validateProfile2, usersController.addressCreate);
 /* DELETE - Eliminación de dirección */
 router.delete('/direcciones/:id', usersController.addressDestroy);
 /*GET -Logout*/

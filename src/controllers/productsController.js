@@ -11,6 +11,7 @@ module.exports = {
             ]
         })
         .then((productos)=>{
+            console.log(productos);
             res.render('productos', {
                 titulo: "Productos",
                 productos,
@@ -22,14 +23,25 @@ module.exports = {
     
     },
     getOne: (req, res) => {
-        let product =getProducts.find(product => product.id === +req.params.id)
-
-    res.render('detalle-de-producto', {
-        product,
-        toThousand,
-        session: req.session
-
-    })
+        db.Product.findOne({
+            where:{
+                id: req.params.id
+            },
+            include: [
+                {association:"category"},
+                {association:"productImage"} 
+            ]
+        })
+        .then((product)=>{
+            console.log(product, "leer de aca pa");
+            res.render('detalle-de-producto', {
+                titulo: "detalle",
+                product,
+                toThousand,
+                session: req.session
+            })  
+        })
+        .catch((error) => res.send(error))  
     },
 /* Este archivo tiene la ejecución que se hace cuando se entra en home */
     /* envia la vista */
