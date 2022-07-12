@@ -22,7 +22,11 @@
                     <p>mostra el<%- producto.id %></p>
                     <a class="items-producto" href="/images/productos/<%- producto.id  %> ">
                     <div class="product-container-tienda">
-                        <img src="/images/productos/<%- producto.productImage[0].imageName %>" />
+                        <% if (producto.productImage[0]) { %>
+                            <img src="/images/productos/<%- producto.productImage[0].imageName %>"/> 
+                        <% } else { %>
+                            <img src="/images/productos/predeterminada.jpg"/>
+                        <% } %> 
                         <div class="bloque-ofertas-tienda">
                         <h3 class="menuh3" >  <%= producto.name  %> </h3>
                             <h1 class="tienda-h1">$<%= producto.price  %>,00</h1>

@@ -88,7 +88,7 @@
 *** No frustrarse cuando algo no sale como esperamos.**
 
                                                  *** SPRINT 6 ***
-                                                
+                                                               
 ### 1. Comenzar a hacer 
 
   *** ser mas organizados a la hora del sprint***
@@ -108,3 +108,26 @@
 ### 5. Dejar de hacer
 
 *** desaprovechar mucho tiempo de reunión hablando de otras cosas que no tienen que ver con el curso ni el proyecto**
+
+                                                   *** SPRINT 7 ***
+                                                
+### 1. Comenzar a hacer 
+
+  *** ser mas organizados con los horarios de juntada sobre el proyecto ***
+
+### 2. Hacer más
+
+  *** Terminar las tareas asignadas del proyecto y pedir ayuda sobre el tema *
+
+### 3. Continuar haciendo
+
+  *** Seguir teniendo buenas vibes y comentando dudas sobre el proyecyo e implementando sobre el mismo **
+
+###  4. Hacer menos
+
+ *** Tratas de resolver el problema solo sin consultar con los compañeros **
+
+### 5. Dejar de hacer
+
+*** Aplazar las charlas de equipo y no consultar sobre dudas **
+

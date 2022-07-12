@@ -26,7 +26,7 @@ router.get('/productos', userSessionCheck, adminCheck, adminProductsController.l
 /* GET - Agregar producto */
 router.get('/productos/agregar', userSessionCheck, adminCheck, adminProductsController.productAdd);
 /* POST - Crea un producto en la DB */
-router.post('/productos', uploadProduct.single('imagen'), productsValidator, adminProductsController.productCreate);
+router.post('/productos', uploadProduct.array('imagen'), productsValidator, adminProductsController.productCreate);
 /* GET - Editar producto */
 router.get('/productos/editar/:id', userSessionCheck, adminCheck, adminProductsController.productEdit);
 /* PUT - Actualiza producto en la DB */

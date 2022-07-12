@@ -39,11 +39,7 @@
                       </div>
                       <div>
                               <form action="/usuarios/perfil?_method=PUT" class="datosAModificar" method="POST">
-                                  <!-- <label for="email" class="">Email (*)</label>
-                                  <input type="text" class="" name="email" id="email" value="<%= locals.old && old.email%>"/>
-                                  <% if (locals.errors && errors.name) { %>
-                                  <small class="text-danger"><%= errors.name.msg %></small>
-                                  <% } %> -->
+                            
 
                                   <label for="name" class="form-label">Nombre (*)</label>
                                   <input type="text" class="form-control" name="name" id="name" value="<%= locals.old && old.name %>"/>
@@ -84,23 +80,44 @@
                     </div>
 
                     <label>Provincia:</label>
-                        <input list="province" name="province" value="<%= locals.old && old.province %>"/>
-                        <datalist id="province">
-                            <option value="Buenos Aires" />
-                            <% if (locals.errors && errors.province) { %>
-                              <small class="text-danger"><%= errors.province.msg %></small>
-                              <% } %>
-                        </datalist>
+                    <select name="province" id="province">
+                      <option value="" name="province" hidden selected>Elegi tu provincia</option>
+                      <% provincias.forEach(provincia => { %>
+                        <option value="<%- provincia.nombre %>"><%- provincia.nombre %> </option>
+                      <% }) %>
+                    </select>
+                    <% if (locals.errors && errors.province) { %>
+                    <small class="text-danger"><%= errors.province.msg %></small>
+                    <% } %> <br>
 
-                        <label>Ciudad:</label>
-                        <input list="city" name="city" value="<%= locals.old && old.city %>"/>
-                        <datalist id="city">
-                            <option value="Provincia de Buenos Aires" />
-                            <option value="CABA" />
-                            <% if (locals.errors && errors.city) { %>
-                              <small class="text-danger"><%= errors.city.msg %></small>
-                              <% } %>
-                        </datalist>
+                    <label>Localidad:</label>
+                    <select name="city" id="city">
+                      <option value="" name="city" hidden selected>Elegi tu Localidad</option>
+                    
+                    </select>
+                    <% if (locals.errors && errors.Localidad) { %>
+                    <small class="text-danger"><%= errors.Localidad.msg %></small>
+                    <% } %> <br>
+                    
+                    <script defer>
+                      let selectProvincias= document.querySelector('#province')
+                      let selectCity=document.querySelector('#city')
+                      selectProvincias.addEventListener("change", (event) => {
+                          console.log(event.target);
+                          let idProvincia = event.target.value;
+                          selectCity.innerHTML = `<option value="" hidden selected>Localidad</option>`
+                      
+                          fetch(`https://apis.datos.gob.ar/georef/api/localidades?provincia=${idProvincia}&campos=id,nombre&max=5000`)
+                          .then((response) => response.json())
+                          .then((data) => {
+                              data.localidades.forEach(localidad => {
+                                  selectCity.innerHTML += `<option value="${localidad.nombre}">${localidad.nombre}</option>`
+                              });
+                          })
+                          .catch((error) => console.log(error))
+                      
+                      })</script>
+                  
 
                     <div class="formProfile mb-3 d-flex justify-content-center">
                       <button class="btn5 btn-outline-primary" type="submit">
@@ -155,5 +172,6 @@
 <!-- FOOTER -->
 <%- include('partials/footer') %> 
 <!-- END FOOTER -->   
+<script src="/js/scriptprofile.js"></script>
 </body>
 </html>

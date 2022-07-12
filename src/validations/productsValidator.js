@@ -7,7 +7,7 @@ let productsValidator = [
     check("price")
         .notEmpty().withMessage('Campo requerido').bail()
         .isLength({min : 2}).withMessage('Ingresé 2 digitos o más'),
-    check("category")
+    check("categoryId")
         .notEmpty().withMessage('Seleccione una categoria').bail(),
     check("description")
     .notEmpty().withMessage('Escriba una descripción del producto').bail()

@@ -5,7 +5,7 @@ let validateProfile = [
     check("name")
         .notEmpty().withMessage("El nombre es requerido"),
     check("phone")
-        .notEmpty().withMessage("Ingrese un teléfono"),
+    .notEmpty().isNumeric().withMessage("Ingrese un número telefonico valido"),
 ];
 
 module.exports = validateProfile;
