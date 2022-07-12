@@ -5,21 +5,13 @@ function qs(element) {
 window.addEventListener("load", () =>{
     let $inputName = qs('#name'),
     $nameErrors = qs('#nameErrors'),
-    $inputLastname = qs('#lastname'),
-    $lastnameErrors = qs('#lastnameErrors'),
     $form = qs('#form'),
-    $dni = qs('#dni'),
-    $dniErrors = qs('#dniErrors'),
     $email = qs('#email'),
     $emailErrors = qs('#emailErrors'),
     $pass = qs('#password'),
     $passErrors = qs('#passwordError'),
     $pass2 = qs('#password2'),
     $pass2Errors = qs('#pass2Errors'),
-    $fecha = qs('#fecha'),
-    $fechaErrors = qs('#dateErrors'),
-    $sexo = qs('#sexo'),
-    $sexErrors = qs('#sexErrors'),
     $terms = qs('#terms'),
     $termsErrors = qs('#termsErrors'),
     $file = qs('#formFile'),
@@ -35,7 +27,7 @@ window.addEventListener("load", () =>{
     $inputName.addEventListener("blur", () => {
         switch (true) {
             case !$inputName.value.trim():
-                $nameErrors.innerHTML = "Requerido";
+                $nameErrors.innerHTML = "Ingrese su usuario";
                 $inputName.classList.add("is-invalid");
                 break;
             case !regExAlpha.test($inputName.value):
@@ -52,7 +44,7 @@ window.addEventListener("load", () =>{
     $email.addEventListener("blur", () => {
         switch (true) {
             case !$email.value.trim():
-                $emailErrors.innerHTML = "Requerido";
+                $emailErrors.innerHTML = "El email es requerido";
                 $email.classList.add("is-invalid");
                 break;
             case !regExAlpha.test($email.value):
@@ -69,7 +61,7 @@ window.addEventListener("load", () =>{
     $pass.addEventListener('blur', function(){
         switch (true) {
             case !$pass.value.trim():
-                $passErrors.innerHTML = 'El campo contraseña es obligatorio'
+                $passErrors.innerHTML = 'Ingrese una contraseña'
                 $pass.classList.add('is-invalid')
                 break;
             case !regExPass.test($pass.value):
@@ -128,16 +120,29 @@ window.addEventListener("load", () =>{
             alert("Validado!")
             $form.submit()
         }
-
-    })
-
-
-
-
-
-
-
-
-
-
+        
+        $file.addEventListener('change', 
+    function fileValidation(){
+        let filePath = $file.value, //Capturo el valor del input
+            allowefExtensions = /(.jpg|.jpeg|.png|.gif|.web)$/i //Extensiones permitidas
+        if(!allowefExtensions.exec(filePath)){ 
+            $fileErrors.innerHTML = 'Carga un archivo de imagen válido, con las extensiones (.jpg - .jpeg - .png - .gif)';
+            $file.value = '';
+            $imgPreview.innerHTML = '';
+            return false;
+        }else{
+            // Image preview
+            console.log($file.files);
+            if($file.files && $file.files[0]){
+                let reader = new FileReader();
+                reader.onload = function(e){
+                    $imgPreview.innerHTML = '<img src="' + e.target.result +'"/>';
+                };
+                reader.readAsDataURL($file.files[0]);
+                $fileErrors.innerHTML = '';
+                $file.classList.remove('is-invalid')
+            }
+        }
+     })
+  })
 })
