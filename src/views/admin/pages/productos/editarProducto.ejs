@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <%- include('../../partials/head-head')  %> 
+  <script src="/js/productValidatorFront.js"></script>
   <body>
     <div class="container-scroller">
       <!-- partial:../../partials/_navbar.html -->
@@ -32,21 +33,18 @@
                     <div class="form-group">
                       <label for="name" class="form-label">Nombre del producto</label>
                       <input type="text" name="name" class="form-control" id="name" placeholder="Ej: Chandon" value="<%= producto.name %>">
-                      <% if (locals.errors && errors.name) { %>
-                        <small class="text-danger"><%= errors.name.msg%></small>
-                        <% } %>
+                      <small class="errorMessage" id="nameErrors" ></small>
                       </div>
                     <div class="form-group">
                       <label for="price">Precio</label>
                       <input type="number" name="price" class="form-control" id="price" placeholder="Ej: 1500" value="<%= producto.price %>">
-                      </div>
+                      <small class="errorMessage" id="priceErrors" ></small>  
+                    </div>
                     
                     <div class="form-group">
                       <label for="discount">Descuento</label>
                       <input type="number" name="discount" class="form-control" id="discount" placeholder="Ej: 1500" value="<%= producto.discount %>">
-                      <% if (locals.errors && errors.discount) { %>
-                        <small class="text-danger"><%= errors.discount.msg%></small>
-                        <% } %>
+                      <small class="errorMessage" id="discountErrors" ></small>
                       </div>
                       <div class="form-group">
                         <label for="category">Categoria</label>
@@ -54,26 +52,29 @@
                         <option selected hidden value="">Categoría</option>
                         <% categories.forEach(category => { %> 
                           <option value="<%- category.id %>" <%= (locals.old && old.categories) && old.categories === category.id ? "selected" : "" %>><%- category.name %> </option>
-                          <%  }) %> 
+                          <%  }) %>
+                          <small class="errorMessage" id="categoryErrors" ></small> 
                       </select>
                       </select>
                     </div>
                     <div class="form-group">
                       <label>Imagen del producto</label>
                       <div class="input-group col-xs-12">
-                        <input type="file" class="form-control file-upload-info" placeholder="Upload Image">
+                        <input type="file" class="form-control file-upload-info"  id="image" placeholder="Upload Image">
+                        <small class="errorMessage" id="imageErrors" ></small>
                       </div>
                     </div>
                     <div class="form-group">
                       <label for="stock">Stock</label>
                       <div class="form-check form-switch">
                         <input <%= producto.stock ? "checked" : "" %> class="check-input"  name="stock" type="checkbox" role="switch" id="stock">
-                        
                       </div>
+                      <small class="errorMessage" id="stockErrors" ></small>
                     </div>
                     <div class="form-group">
                       <label for="description">Descripción</label>
                       <textarea name="description" class="form-control" id="description" rows="3"><%= producto.description %></textarea>
+                      <small class="errorMessage" id="descriptionErrors" ></small>
                     </div>
                     <button type="submit" class="btn btn-gradient-primary me-2">Agregar</button>
                     <button class="btn btn-light">Borrar</button>

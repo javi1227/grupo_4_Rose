@@ -3763,9 +3763,7 @@ textarea.form-control-lg {
   border: 1px solid rgba(0, 0, 0, 0.25);
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
-  -webkit-print-color-adjust: exact;
-  color-adjust: exact; }
+  appearance: none; }
   .form-check-input[type="checkbox"] {
     border-radius: 0.25em; }
   .form-check-input[type="radio"] {
@@ -10915,9 +10913,6 @@ body {
   overflow-x: hidden; }
 
 .form-control,
-.form-control:focus {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none; }
 
 .form-control {
   -webkit-box-shadow: none;
@@ -14397,8 +14392,7 @@ dl {
   .rtl .product-chart-wrapper::-webkit-scrollbar-track,
   .rtl .sidebar-fixed .nav::-webkit-scrollbar-track,
   .rtl .table-responsive::-webkit-scrollbar-track,
-  .rtl ul.chats::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); }
+  .rtl ul.chats::-webkit-scrollbar-track 
   .rtl .product-chart-wrapper::-webkit-scrollbar-thumb,
   .rtl .sidebar-fixed .nav::-webkit-scrollbar-thumb,
   .rtl .table-responsive::-webkit-scrollbar-thumb,
@@ -14519,3 +14513,12 @@ dl {
 
 /* @media only screen and (max-width:1541px){
  */
+
+ /* Cambios tobias - admin products*/
+
+ .errorMessage {
+  color: red;
+    position: relative;
+    left: 0.8rem;
+    font-size: 12px;
+ }
