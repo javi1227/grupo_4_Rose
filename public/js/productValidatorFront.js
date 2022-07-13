@@ -4,7 +4,6 @@ alert('dasd')
 function qs(element) {
     return document.querySelector(element)
 }
-alert('dasd')
 window.addEventListener("load", () =>{
     let $inputName = qs('#name'),
     $inputPrice= qs('#price'),
@@ -42,10 +41,10 @@ window.addEventListener("load", () =>{
                 $nameErrors.innerHTML = "Ingrese más de 4 caracteres"
                 $inputName.classList.add("is-invalid")
                 break;
-            case !regExAlpha.test($inputName.value):
+            /* case !regExAlpha.test($inputName.value):
                 $nameErrors.innerHTML = "Nombre inválido";
                 $inputName.classList.add("is-invalid");
-                break;
+                break; */
             default:
                 
                 $inputName.classList.remove("is-invalid");
@@ -66,7 +65,7 @@ window.addEventListener("load", () =>{
                 $priceErrors.innerHTML = "Ingrese 2 números o más"
                 $inputPrice.classList.add("is-invalid")
                 break;
-            case !regExAlpha.test($inputPrice.value):
+            case regExDNI.test($inputPrice.value):
                 $priceErrors.innerHTML = "Nombre inválido";
                 $inputPrice.classList.add("is-invalid");
                 break;
@@ -90,7 +89,17 @@ window.addEventListener("load", () =>{
             }
         })
 
+        $inputDiscount.addEventListener('blur', ()=>{
+            if($inputDiscount.value){
+                $inputDiscount.classList.add('is-valid')
+            }
+        })
 
+        $inputStock.addEventListener('blur', ()=>{
+            if($inputStock.value){
+                $inputStock.classList.add('is-valid')
+            }
+        })
 
     $inputDescription.addEventListener("blur", (e) => {
         let inputLength = $inputDescription.value.length;
@@ -100,15 +109,10 @@ window.addEventListener("load", () =>{
                 $inputDescription.classList.add("is-invalid");
                 break;
             case inputLength < 2:
-                $descriptionErrors.innerHTML = "Ingrese 2 números o más"
+                $descriptionErrors.innerHTML = "Ingrese 2 caracteres o más"
                 $inputDescription.classList.add("is-invalid")
                 break;
-            case !regExAlpha.test($inputDescription.value):
-                $descriptionErrors.innerHTML = "Nombre inválido";
-                $inputDescription.classList.add("is-invalid");
-                break;
             default:
-                
                 $inputDescription.classList.remove("is-invalid");
                 $inputDescription.classList.add("is-valid");
                 $descriptionErrors.innerHTML = "";

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <script src="/js/productValidatorFront.js"></script>
   <%- include('../../partials/head-head')  %> 
   <body>
     <div class="container-scroller">
@@ -31,36 +32,28 @@
                     <div class="form-group">
                       <label for="name" class="form-label">Nombre del producto</label>
                       <input type="text" name="name" class="form-control" id="name" placeholder="Ej: Vino" value="<%= (locals.old && old.name) ? old.name : "" %>">
-                      <% if (locals.errors && errors.name) { %>
-                        <small class="text-danger"><%= errors.name.msg%></small>
-                        <% } %>
+                      <small class="errorMessage" id="nameErrors" ></small>
                       </div>
                     <div class="form-group">
                       <label for="price">Precio</label>
                       <input type="number" name="price" class="form-control" id="price" placeholder="Ej: 1500" value="<%= (locals.old && old.price) ? old.price : "" %>">
-                      <% if (locals.errors && errors.price) { %>
-                        <small class="text-danger"><%= errors.price.msg%>
-                        <% } %>
+                      <small class="errorMessage" id="priceErrors" ></small>
                       </div>
                     
                     <div class="form-group">
                       <label for="discount">Descuento</label>
                       <input type="number" name="discount" class="form-control" id="discount" placeholder="Ej: 1500" value="<%= (locals.old && old.discount) ? old.discount : "" %>">
-                      <% if (locals.errors && errors.discount) { %>
-                        <small class="text-danger"><%= errors.discount.msg%></small>
-                        <% } %>
+                      <small class="errorMessage" id="discountErrors" ></small>
                       </div>
                       <div class="form-group">
                         <label for="category">Categoria</label>
-                        <select name="categoryId" class="form-select" id="categoryId" aria-label="Default select example">
+                        <select name="categoryId" class="form-select" id="category" aria-label="Default select example">
                         <option selected hidden value="">Categoría</option>
                         <% categories.forEach(category => { %> 
                           <option value="<%- category.id %>" <%= (locals.old && old.categories) && old.categories === category.id ? "selected" : "" %>><%- category.name %> </option>
                           <%  }) %> 
                       </select>
-                    <% if (locals.errors && errors.category) { %>
-                      <small class="text-danger"><%= errors.category.msg%></small>
-                    <% } %>
+                      <small class="errorMessage" id="categoryErrors" ></small>
                       </select>
                     </div>
 
@@ -78,11 +71,13 @@
                       <label for="exampleInputCity1">Stock</label>
                       <div class="form-check form-switch">
                         <label class="form-check-label" for="flexSwitchCheckChecked">  <input class="form-check-input" name="stock" type="checkbox" role="switch" id="stock" <%= (locals.old && old.stock) ? "checked" : "" %>> </label>
+                        <small class="errorMessage" id="stockErrors" ></small>
                       </div>
                     </div>
                     <div class="form-group">
                       <label for="description">Descripción</label>
                       <textarea name="description" class="form-control" id="description" rows="3"><%= (locals.old && old.description) ? old.description : "" %></textarea>
+                      <small class="errorMessage" id="descriptionErrors" ></small>
                     </div>
                     <button type="submit" class="btn btn-gradient-primary me-2">Agregar</button>
                     <button class="btn btn-light">Borrar</button>
