@@ -49,8 +49,9 @@
                           <td data-label="Nombre"> <%- producto.name %> </td>
                           <td data-label="Precio"> <%- producto.price %></td>
                           <td data-label="Descripción"> <%- producto.description%></td>
+                          <td data-label="Stock"> <%- producto.stock %>  </td>
                           <td data-label="Descuento"> <%- producto.discount %>  </td>
-                          <td data-label="Categoria"> <%- producto.category_id %>  </td>
+                          <td data-label="Categoria"> <%- producto.category.name %>  </td>
                           <td></td>
                           <td> <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                             <a href="/admin/productos/editar/<%- producto.id %>">
