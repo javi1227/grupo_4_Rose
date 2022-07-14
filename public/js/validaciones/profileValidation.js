@@ -1,32 +1,37 @@
+
 function qs(element) {
-    return document.querySelector(element)
+return document.querySelector(element)
 }
 
-window.addEventListener('load', function(){
+window.addEventListener("load", () =>{
     let $name = qs('#name'),
     $nameError = qs('#nameError'),
-    $dni = qs('#dni'),
-    $dniError = qs('#dniError'),
-    $phone = qs('#phone'),
+    $phone = qs("#phone"),
     $phoneError = qs('#phoneError'),
-    $postCode = qs('#postCode'),
-    $postCodeError = qs('#postCodeError'),
+    $street = qs("#street"),
+    $streetError = qs("#streetError")
+    $number = qs("#number"),
+    $numberError = qs('#numberError'),
     $province = qs('#province'),
     $provinceError = qs('#provinceError'),
-    $district = qs('#district'),
-    $districtError = qs('#districtError'),
-    $direction = qs('#direction'),
-    $directionError = qs('#directionError'),
-    $number = qs('#number'),
-    $numberError = qs('#numberError'),
-    $image = qs('#image'),
-    $imageError = qs('#imageError'),
-    $formProfile = qs('#formProfile'),
+    $city = qs('#city'),
+    $cityError = qs('#cityError'),
+
+
+
+
+    
+    
+
+
+    $termsErrors = qs('#termsErrors'),
+    $file = qs('#formFile'),
+    $fileErrors = qs('#fileErrors'),
+    $imgPreview = qs('#img-preview'),
     regExAlpha = /^[a-zA-Z\sñáéíóúü ]*$/,
     regExDNI = /^[0-9]{7,8}$/,
-    regExPhone = /^(?:(?:00)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}$/,
-    regExNumber = /^0-9$/,
-    regExCode =  /^\d{4,5}$/;
+    regExEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,
+    regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
 
 
     $name.addEventListener('blur', () => {
@@ -44,14 +49,15 @@ window.addEventListener('load', function(){
                 $nameError.innerHTML = "";
                 break;
         }
-    }) 
+    })
+
     $phone.addEventListener('blur', () => {
         switch(true){
             case !$phone.value.trim():
                 $phoneError.innerHTML = "Ingresa teléfono";
                 $phone.classList.add('error-message');
                 break;
-            case !regExPhone.test($phone.value):    /* ver si funciona el exreg */
+            case !regExPhone.test($phone.value):  
                 $phoneError.innerHTML = "Teléfono inválido";
                 $phone.classList.add('error-message');
                 break;
@@ -61,6 +67,25 @@ window.addEventListener('load', function(){
                 break;
         }
     })
+
+    $street.addEventListener("blur", () => {
+        switch (true) {
+            case !$street.value.trim():
+                $streetError.innerHTML = "Requerido";
+                $street.classList.add("is-invalid");
+                break;
+            case !regExAlpha.test($street.value):
+                $streetError.innerHTML = "Nombre inválido";
+                $street.classList.add("is-invalid");
+                break;
+            default:
+                $street.classList.remove("is-invalid");
+                $street.classList.add("is-valid");
+                $streetError.innerHTML = "";
+                break;    
+        }
+    })
+
     $number.addEventListener('blur', () => {
         if(!$number.value.trim() || regExNumber.test($number.value)){
             $numberError.innerHTML = "Ingresa número de calle";
@@ -70,50 +95,26 @@ window.addEventListener('load', function(){
             $numberError.innerHTML = "";
         }
     })
-
-
-
-
-
-
-
-
     
-    /* validar archivos permitidos de imagenes */
-    $image.addEventListener('change', 
-    function fileValidation(){
-        let filePath = $image.value, 
-            allowefExtensions = /(.jpg|.jpeg|.png|.gif|.web)$/i //exReg, valida extensiones permitidas
-            let extension = filePath.substring(filePath.lastIndexOf('.') + 1).toLowerCase();
-        if(!allowefExtensions.exec(filePath)){ 
-            $imageError.innerHTML = `Extension válida '.jpg .jpeg .png .gif' Archivo: ${extension} no es valido`;
-            $image.value = '';
-            return false;
-        }else{
-            $image.classList.remove('error-message')
-            $imageError.innerHTML = ""
+    $province.addEventListener('blur', () => {
+        if(!$province.value.trim()){
+            $provinceError.innerHTML = "Ingresa provincia";
+            $province.classList.add('error-message');
+        } else {
+            $province.classList.remove('error-message');
+            $provinceError.innerHTML = "";
         }
     })
 
-    $formProfile.addEventListener('submit', function(e){
-        e.preventDefault()
-
-        let elementosFormulario = this.elements;
-        let errores = false;
-
-       for (let index = 0; index < elementosFormulario.length -1; index++) { /* obviamos el boton */
-            if(elementosFormulario[index].value == ""
-            && elementosFormulario[index].type !== "file"
-            || elementosFormulario[index].classList.contains('error-message')){
-                elementosFormulario[index].classList.add('error-message');
-                submitError.innerHTML = "Hay errores en el formulario"
-                errores = true;
-            }
-        }
-        
-        if(!errores){
-            $formProfile.submit()
+    $city.addEventListener('blur', () => {
+        if(!$city.value.trim()){
+            $cityError.innerHTML = "Ingresa localidad";
+            $city.classList.add('error-message');
+        } else {
+            $city.classList.remove('error-message');
+            $cityError.innerHTML = "";
         }
     })
+    
 
 })

@@ -46,12 +46,14 @@
                                   <% if (locals.errors && errors.name) { %>
                                   <small class="text-danger"><%= errors.name.msg %></small>
                                   <% } %>
+                                  <span class="error-message" id="nameError"></span>
 
                                   <label for="phone" class="form-label">Teléfono (*)</label>
                                   <input type="text" class="form-control" name="phone" id="phone" value="<%= locals.old && old.phone %>"/>
                                   <% if (locals.errors && errors.phone) { %>
                                   <small class="text-danger"><%= errors.phone.msg %></small>
                                   <% } %>
+                                  <span class="error-message" id="phoneError"></span>
                                   <button class="btsn btn-outline-success" type="submit">
                                       Editar datos
                                   </button>
@@ -70,6 +72,7 @@
                       <% if (locals.errors && errors.street) { %>
                       <small class="text-danger"><%= errors.street.msg %></small>
                       <% } %>
+                      <span class="error-message" id="streetError"></span>
                     </div>
                     <div class="formProfile mb-3 col-md-6" class="form-group">
                       <label for="number" class="form-label">Número (*)</label>
@@ -77,6 +80,7 @@
                       <% if (locals.errors && errors.number) { %>
                       <small class="text-danger"><%= errors.number.msg %></small>
                       <% } %>
+                      <span class="error-message" id="numberError"></span>
                     </div>
 
                     <label>Provincia:</label>
@@ -89,6 +93,7 @@
                     <% if (locals.errors && errors.province) { %>
                     <small class="text-danger"><%= errors.province.msg %></small>
                     <% } %> <br>
+                    <span class="error-message" id="provinceError"></span>
 
                     <label>Localidad:</label>
                     <select name="city" id="city">
@@ -98,6 +103,7 @@
                     <% if (locals.errors && errors.Localidad) { %>
                     <small class="text-danger"><%= errors.Localidad.msg %></small>
                     <% } %> <br>
+                    <span class="error-message" id="cityError"></span>
                     
                     <script defer>
                       let selectProvincias= document.querySelector('#province')
@@ -171,6 +177,6 @@
 <!-- FOOTER -->
 <%- include('partials/footer') %> 
 <!-- END FOOTER -->   
-<script src="/js/scriptprofile.js"></script>
+<script src="/js/validaciones/profileValidation.js"></script>
 </body>
 </html>
