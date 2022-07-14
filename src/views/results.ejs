@@ -9,37 +9,36 @@
 <body>
 	<!-- todos los productos -->
             <h2 class="products-title">Resultados de la búsqueda: <%= search %> </h2>
-        </div>
-        <% if (resultadoBusqueda.length > 0) { %>
-            <% resultadoBusqueda.forEach(product => { %>
-                <div class="contenedor_productos">
-                    <div class="conteneder_imagenes"> 
-                        <img src="/images/productos/<%= product.image %>" alt="ejs">
-                    </div>
-                    <div class="contenedor_textoProducto">
-                            <h2><%= product.name %> </h2>
-                        <hr>
-                        <div class="precio_producto">
-                            <span class="precio_productos"> $4.000,00</span>  <p class="star-DetalledeProducto"><i class="star-Carro fa-solid fa-star"></i><i class="star-Carro fa-solid fa-star"></i><i class="star-Carro fa-solid fa-star"></i><i class="star-Carro fa-solid fa-star"></i></p>
+        <div>
+                <% if (resultadoBusqueda.length > 0) { %>
+                    <% resultadoBusqueda.forEach(product => { %>
+                        <div class="contenedor_productos">
+                                <div class="conteneder_imagenes"> 
+                                    <img src="/images/productos/<%- product.productImage[0].imageName %>"/>
+                                </div>
+                                <div class="contenedor_textoProducto">
+                                        <h2><%= product.name %> </h2>
+                                    <hr>
+                                    <div class="precio_producto">
+                                        <span class="precio_productos"> $4.000,00</span>  <p class="star-DetalledeProducto"><i class="star-Carro fa-solid fa-star"></i><i class="star-Carro fa-solid fa-star"></i><i class="star-Carro fa-solid fa-star"></i><i class="star-Carro fa-solid fa-star"></i></p>
+                                    </div>
+                                    <hr>
+                                    <p class="p_productos">
+                                        <%= product.description %> 
+                                    </p>
+                                    <div class="add-to-cart_producto">
+                                        <button><a href="carro-de-compra">Agregar al Carrito</a></button>
+                                    </div>
+                                </div>
                         </div>
-                        <hr>
-                        <p class="p_productos">
-                            <%= product.description %> 
-                        </p>
-                        <div class="add-to-cart_producto">
-                            <button><a href="carro-de-compra">Agregar al Carrito</a></button>
-                        </div>
-                    </div>
-                </div>
-                    <hr class="separador-DProducto">
-            <% }) %>
-        <% } else { %>
-            <div class="col-12">
-                <h2 class="products-title" style="color: #cca43c ;">No hay productos que coincidan con esa búsqueda</h2>
-            </div>     
-        <% } %>
+                            <hr class="separador-DProducto">
+                <% }) %>
+                <% } else { %>
+                    <div class="col-12">
+                        <h2 class="products-title" style="color: #cca43c ;">No hay productos que coincidan con esa búsqueda</h2>
+                    </div>     
+                <% } %>
     </div>
-</div>
 	<!-- /todos los productos -->
 
 

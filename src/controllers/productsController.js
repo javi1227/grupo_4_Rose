@@ -8,7 +8,8 @@ module.exports = {
             include: [
                 {association:"category"},
                 {association:"productImage"} 
-            ]
+            ],
+            limit
         })
         .then((productos)=>{
             console.log(productos);

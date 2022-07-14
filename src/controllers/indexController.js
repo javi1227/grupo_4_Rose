@@ -1,8 +1,7 @@
 
 const {getProducts} = require('../data');
 const db = require('../database/models');
-const { search } = require('../routes/indexRouter');
-const { contacto } = require('../routes/indexRouter');
+const {search, contacto } = require('../routes/indexRouter');
 const { Op } = require('Sequelize');
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const removeAccents = (str) => {return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
@@ -56,14 +55,19 @@ module.exports = {
 search: (req, res) => {
     let resultado = req.query.search.toLowerCase()
     db.Product.findAll({
+        include: [
+            {association:"category"},
+            {association:"productImage"} 
+        ],
         where: {
             [Op.or]: [
                 {name: {[Op.substring]:resultado}},
+                // {category_id: {[Op.substring]: resultado}},
             ]
         },
     })
     .then(resultadoBusqueda => {
-        res.render('search',{
+        res.render('results',{
             title: "Busqueda",
             resultadoBusqueda,
             search: req.query.search,
