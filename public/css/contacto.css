@@ -1,4 +1,9 @@
-#map {
-	height: 500px;
+.mainContacto{
 	width: 100%;
+	display: flex;
+}
+.contenedorMain {
+	width: 70%;
+	justify-content: center;
+
 }
