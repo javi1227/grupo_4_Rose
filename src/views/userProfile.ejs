@@ -85,7 +85,7 @@
 
                     <label>Provincia:</label>
                     <select name="province" id="province">
-                      <option value="" name="province" hidden selected>Elegi tu provincia</option>
+                      <option value="" name="province" id="province" disabled hidden selected>Elegi tu provincia</option>
                       <% provincias.forEach(provincia => { %>
                         <option value="<%- provincia.nombre %>"><%- provincia.nombre %> </option>
                       <% }) %>
@@ -94,10 +94,11 @@
                     <small class="text-danger"><%= errors.province.msg %></small>
                     <% } %> <br>
                     <span class="error-message" id="provinceError"></span>
+                    <br>
 
                     <label>Localidad:</label>
                     <select name="city" id="city">
-                      <option value="" name="city" hidden selected>Elegi tu Localidad</option>
+                      <option value="" name="city" id="city" disabled hidden selected>Elegi tu Localidad</option>
                     
                     </select>
                     <% if (locals.errors && errors.Localidad) { %>
