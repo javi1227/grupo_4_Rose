@@ -181,12 +181,17 @@ module.exports = {
 
 
     addressCreate: (req, res) => {
-        db.Address.create({
-            ...req.body,
-            user_id: req.session.user.id,
-        })
-        .then(() => res.redirect("/usuarios/perfil"))
-        .catch((error) => res.send(error))
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+            db.Address.create({
+                ...req.body,
+                user_id: req.session.user.id,
+            })
+            .then(() => res.redirect("/usuarios/perfil"))
+            .catch((error) => res.send(error))
+        }
+
+        
     },
     addressDestroy: (req, res) => {
         db.Address.destroy({
