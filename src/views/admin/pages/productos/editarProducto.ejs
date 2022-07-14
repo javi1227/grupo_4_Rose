@@ -49,7 +49,7 @@
                       <div class="form-group">
                         <label for="category">Categoria</label>
                         <select name="category" class="form-select"  id="category" aria-label="Default select example">
-                        <option selected hidden value="">Categoría</option>
+                        <option selected disabled hidden value="">Categoría</option>
                         <% categories.forEach(category => { %> 
                           <option value="<%- category.id %>" <%= (locals.old && old.categories) && old.categories === category.id ? "selected" : "" %>><%- category.name %> </option>
                           <%  }) %>
@@ -98,15 +98,15 @@
     </div>
     <!-- container-scroller -->
     <!-- plugins:js -->
-    <script src="../../assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src=""></script>
     <!-- endinject -->
     <!-- Plugin js for this page -->
     <script src="../../assets/vendors/chart.js/Chart.min.js"></script>
     <!-- End plugin js for this page -->
     <!-- inject:js -->
-    <script src="../../assets/js/off-canvas.js"></script>
-    <script src="../../assets/js/hoverable-collapse.js"></script>
-    <script src="../../assets/js/misc.js"></script>
+    <script src=""></script>
+    <script src=""></script>
+    <script src=""></script>
     <!-- endinject -->
     <!-- Custom js for this page -->
     <script src="../../assets/js/chart.js"></script>
