@@ -3,9 +3,7 @@ const {getProducts} = require('../data');
 const db = require('../database/models');
 const { search } = require('../routes/indexRouter');
 const { contacto } = require('../routes/indexRouter');
-
-
-
+const { Op } = require('Sequelize');
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const removeAccents = (str) => {return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
@@ -21,9 +19,6 @@ module.exports = {
             ]
         })
         .then((productos)=>{
-            // let productsInSale = productos.filter( product => product.discount > 0 );
-            // let specialProducts = [productos.find( product => product.category_id === 14 )]
-            // console.log(productos, "estamos aca");
             res.render('index', {
                 titulo: "Rosé",
                 productos,
@@ -58,21 +53,25 @@ module.exports = {
 },
 
 
-    
-    search: (req, res) => {
-		let searchResult = []
-		getProducts.forEach(product => {
-			if(removeAccents(product.name.toLowerCase()).includes(req.query.keywords.toLowerCase())){
-				searchResult.push(product)
-			}
-		});        
-		res.render('results',{
-			searchResult,
-			keyword: req.query.keywords,
-            session: req.session,
-			toThousand,
-
-		})		
-	},
+search: (req, res) => {
+    let resultado = req.query.search.toLowerCase()
+    db.Product.findAll({
+        where: {
+            [Op.or]: [
+                {name: {[Op.substring]:resultado}},
+            ]
+        },
+    })
+    .then(resultadoBusqueda => {
+        res.render('search',{
+            title: "Busqueda",
+            resultadoBusqueda,
+            search: req.query.search,
+            toThousand,
+            session: req.session
+        })
+    })
+    .catch(errors => console.log(errors))    
+}
 
 }

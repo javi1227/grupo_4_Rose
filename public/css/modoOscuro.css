@@ -153,17 +153,18 @@ body.dark .textoCarrito{
 }
 
 body.dark .header_searchBar {
-    color: white;
+    background-color: #343D5B;
+    color: #C8C8C8
 }
 
 /*  fin configurar carrito black */
 
-body.dark .header_searchBar form input::placeholder {
-    color: white;
+body.dark .header_searchBar form input {
+    color: #C8C8C8;
 }
 
 body.dark .nav-menu {
-    background: #343D5B;;
+    background: #343D5B;
 }
 
 

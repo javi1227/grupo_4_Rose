@@ -8,10 +8,10 @@
 <!-- END HEADER -->
 <body>
 	<!-- todos los productos -->
-            <h2 class="products-title">Resultados de la búsqueda: <%= keyword %> </h2>
+            <h2 class="products-title">Resultados de la búsqueda: <%= search %> </h2>
         </div>
-        <% if (searchResult.length > 0) { %>
-            <% searchResult.forEach(product => { %>
+        <% if (resultadoBusqueda.length > 0) { %>
+            <% resultadoBusqueda.forEach(product => { %>
                 <div class="contenedor_productos">
                     <div class="conteneder_imagenes"> 
                         <img src="/images/productos/<%= product.image %>" alt="ejs">

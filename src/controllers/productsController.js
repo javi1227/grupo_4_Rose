@@ -33,7 +33,6 @@ module.exports = {
             ]
         })
         .then((product)=>{
-            console.log(product, "leer de aca pa");
             res.render('detalle-de-producto', {
                 titulo: "detalle",
                 product,

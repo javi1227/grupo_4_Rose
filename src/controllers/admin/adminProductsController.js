@@ -45,7 +45,6 @@ module.exports = {
             stock: req.body.stock ? 1 : 0
           })
           .then((product) => {
-            console.log(req.files)
               let arrayImages = req.files.map(image => {
                   return {
                     imageName: image.filename,

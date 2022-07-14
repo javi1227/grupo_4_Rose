@@ -98,8 +98,6 @@ window.addEventListener("load", () =>{
         let elementsForm = this.elements;
         let errores = false;
 
-        console.log(elementsForm)
-
         for (let index = 0; index < elementsForm.length - 1; index++) {
             if(elementsForm[index].value == ""
             && elementsForm[index].name !== "apellido"

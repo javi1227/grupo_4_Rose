@@ -103,7 +103,6 @@
                       let selectProvincias= document.querySelector('#province')
                       let selectCity=document.querySelector('#city')
                       selectProvincias.addEventListener("change", (event) => {
-                          console.log(event.target);
                           let idProvincia = event.target.value;
                           selectCity.innerHTML = `<option value="" hidden selected>Localidad</option>`
                       
