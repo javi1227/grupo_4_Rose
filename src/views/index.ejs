@@ -99,7 +99,7 @@
       <div class="menu-contenedor">
           
           <%productos.forEach(producto => { %>
-            <div class="contenedor">
+            <a href="/productos/detalle/<%- producto.id  %> "><div class="contenedor">
               <% if (producto.productImage[0]) { %>
                 <img src="/images/productos/<%- producto.productImage[0].imageName %>"/> 
             <% } else { %>
@@ -114,10 +114,7 @@
                   <span class="oferta-figure">$<%= producto.price  %>,00</span>
                 </div>
               </div>
-              <div class="Añadir-carro-figure">
-                <a href="/productos/detalle/<%- producto.id  %> "><i class="Carro fa-solid fa-cart-arrow-down"></i></a>
-              </div>
-            </div>
+            </div></a>
           <% }) %>
       
       </div>
@@ -158,7 +155,7 @@
   <div class="menu-contenedor">
       
       <%productos.forEach(producto => { %>
-        <div class="contenedor">
+        <a href="/productos/detalle/<%- producto.id  %> "><div class="contenedor">
           <% if (producto.productImage[0]) { %>
             <img src="/images/productos/<%- producto.productImage[0].imageName %>"/> 
         <% } else { %>
@@ -173,10 +170,7 @@
               <span class="oferta-figure">$<%= producto.price  %>,00</span>
             </div>
           </div>
-          <div class="Añadir-carro-figure">
-            <a href="/productos/detalle/<%- producto.id  %> "><i class="Carro fa-solid fa-cart-arrow-down"></i></a>
-          </div>
-        </div>
+        </div></a>
       <% }) %>
   
   </div>

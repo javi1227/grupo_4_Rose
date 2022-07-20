@@ -398,25 +398,6 @@ height: 10px;
     font-weight: 900;
     padding: 10px;
 }
-    
-.Añadir-carro-figure {
-    text-align: center;
-    font-weight: 200;
-    border-radius: 15px;
-    background-color: #39404b86;
-    color: white;
-    width: 85px;
-    height: 32px;
-    display: none;
-    position: absolute;
-    transition: all 400ms ease;
-    
-}
-
-.Añadir-carro-figure :hover {
-    color: var(--color-para-hover);
-}
-
 .Carro {
     display: flex;
     justify-content: center;
@@ -503,6 +484,7 @@ height: 10px;
     border: 4px solid transparent;
     transition: all 300ms ease;
     transform: scale(0);
+    z-index: 99999999999999;
 }
 
 #button-up:hover {
@@ -652,10 +634,6 @@ ol li {
     padding-top: 40px;
 }
 
-.Añadir-carro-figure {
-    margin-bottom: 7.4rem;
-    margin-right: 5.7rem;
-}
 /* fin MAIN */
 }
 /* FIN MEDIAQUERY TABLET */
@@ -782,17 +760,6 @@ ol li {
 .contenedor img{  /*modificador de imagenes*/
     margin: auto;
 }
-
-
-.Añadir-carro-figure {
-    margin-right: auto;
-    margin-left: auto;
-    left: 0;
-    right: 0;
-    position: absolute;
-
-}
-
 
 /* ULTIMO MENU */
 
