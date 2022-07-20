@@ -12,7 +12,8 @@
     height: 100%;
     margin: 8rem 0;
     box-shadow: 1;
-    -webkit-box-shadow: 1px 1px 18px 0px rgb(0 0 0 / 30%)
+    -webkit-box-shadow: 1px 1px 18px 0px rgb(0 0 0 / 30%);
+    background-color: rgba(235, 235, 235, 0.849);
 }
 .blueTexto{
     background-color: #dbedfd;
@@ -81,11 +82,32 @@
     flex-direction: column;
 }
 .btsn{
-   margin:1rem 0;
    display: flex;
    justify-content: center;
    width: 6rem;
+   margin: 3px;
+   padding: 3px;
 }
+.btn5 {
+    background-color: #3378b9;
+    color: white;
+    border-radius: 10px;
+    margin-top: 1rem
+}
+.btn5:hover{
+    background-color: green;
+}
+.btn5c{
+    background-color: #3378b9;
+    margin: 3px;
+    padding: 3px;
+    border-radius: 8px;
+    color: white;
+}
+.btn5c:hover {
+    background-color: red;
+}
+
 .gestionDeDirecciones{
     display: flex;
     flex-direction: column;
@@ -113,10 +135,10 @@ margin: 1.5rem 0;
     display: flex;
     justify-content: center;
     font-size: 1.2rem;
-    background: #3378b9;
+    background-color: #dbedfd;
 }
 .opcionesDeTabla{
-    background: #3378b9;
+    background-color: #dbedfd;
 }
 tbody tr td{
 text-align: center;

@@ -230,3 +230,27 @@ body.dark .similares_texts {
 body.dark .h2delCarrito {
     color: #C8C8C8
 }
+
+/* mi perfil black */
+
+body.dark .PerfilBody{
+    background-color: #282e3f;
+    color: #C8C8C8
+}
+body.dark .blueTexto {
+    background-color: #343D5B ;
+    color: #C8C8C8
+}
+body.dark .h2Perfil {
+    background-color: #343D5B ;
+    color: #C8C8C8
+}
+
+body.dark .MisDirecciones {
+    background-color: #343D5B ;
+    color: #C8C8C8
+}
+body.dark .opcionesDeTabla {
+    background-color: #343D5B ;
+    color: #C8C8C8
+}
