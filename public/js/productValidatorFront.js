@@ -9,7 +9,6 @@ window.addEventListener("load", () =>{
     $inputFile = qs('#image'),
     $inputStock = qs('#stock'),
     $inputDescription = qs('#description'),
-
     $nameErrors = qs('#nameErrors'),
     $priceErrors = qs('#priceErrors'),
     $discountErrors = qs('#DiscountErrors'),
@@ -17,8 +16,6 @@ window.addEventListener("load", () =>{
     $fileErrors = qs('#fileErrors'),
     $stockErrors = qs('#stockErrors'),
     $descriptionErrors = qs('#descriptionErrors'),
-
-
     $imgPreview = qs('#img-preview'),
     regExAlpha = /^[a-zA-Z\sñáéíóúü ]*$/,
     regExDNI = /^[0-9]{7,8}$/,
