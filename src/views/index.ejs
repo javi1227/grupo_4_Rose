@@ -91,31 +91,32 @@
     <section class="ofertas-menu">
       <hr class="hr-mediaPagina" />
       <div class="ofertas">
-        <h2>PRODUCTOS DESTACADOS</h2>
+        <!-- <h2>PRODUCTOS DESTACADOS</h2> -->
       </div>
 
       <!-- MENU -->
 
       <div class="menu-contenedor">
           
-          <%productos.forEach(producto => { %>
-            <a href="/productos/detalle/<%- producto.id  %> "><div class="contenedor">
-              <% if (producto.productImage[0]) { %>
-                <img src="/images/productos/<%- producto.productImage[0].imageName %>"/> 
-            <% } else { %>
-                <img src="/images/productos/predeterminada.jpg"/>
-            <% } %> 
-              <div class="bloque-ofertas">
-                <span class="titulo-figure">
-                    <h3> <%= producto.name  %>  </h3>
-                </span>
-                <div class="precios">
-                  <span class="precio-figure">$<%= producto.discount %>,00</span>
-                  <span class="oferta-figure">$<%= producto.price  %>,00</span>
+          <!-- <%productos.forEach(producto => { %>
+              <a href="/productos/detalle/<%- producto.id  %> "><div class="contenedor">
+                <% if (producto.productImage[0]) { %>
+                  <img src="/images/productos/<%- producto.productImage[0].imageName %>"/> 
+              <% } else { %>
+                  <img src="/images/productos/predeterminada.jpg"/>
+              <% } %> 
+                <div class="bloque-ofertas">
+                  <span class="titulo-figure">
+                      <h3> <%= producto.name  %>  </h3>
+                  </span>
+                  <div class="precios">
+                    <span class="precio-figure">$<%= producto.discount %>,00</span>
+                    <span class="oferta-figure">$<%= producto.price  %>,00</span>
+                  </div>
                 </div>
-              </div>
-            </div></a>
-          <% }) %>
+              </div></a>
+            <% }) %>  -->
+        
       
       </div>
     </section>
