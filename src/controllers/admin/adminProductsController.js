@@ -106,7 +106,6 @@ module.exports = {
               }
         })
         .then(() => {
-          console.log(req.files)
           if(req.files !== undefined){
             //1 - Preguntar si está subiendo imagenes
             if(req.files.length > 0){
@@ -152,7 +151,6 @@ module.exports = {
               })
               .catch(error => console.log(error))
             }else{
-              console.log('else')
               res.redirect('/admin/productos')
             }
           }
@@ -165,7 +163,6 @@ module.exports = {
 
         Promise.all([productPromise, categoriesPromise])
         .then(([producto, categories]) => {
-          console.log('error 1')
           res.render('admin/pages/productos/editarProducto', {
             titulo: "Edición",
             producto,

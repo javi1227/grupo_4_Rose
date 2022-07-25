@@ -91,34 +91,30 @@
     <section class="ofertas-menu">
       <hr class="hr-mediaPagina" />
       <div class="ofertas">
-        <!-- <h2>PRODUCTOS DESTACADOS</h2> -->
+        <h2>PRODUCTOS PREMIUM RECOMENDADOS</h2>
       </div>
 
       <!-- MENU -->
 
       <div class="menu-contenedor">
-          
-          <!-- <%productos.forEach(producto => { %>
-              <a href="/productos/detalle/<%- producto.id  %> "><div class="contenedor">
-                <% if (producto.productImage[0]) { %>
-                  <img src="/images/productos/<%- producto.productImage[0].imageName %>"/> 
-              <% } else { %>
-                  <img src="/images/productos/predeterminada.jpg"/>
-              <% } %> 
-                <div class="bloque-ofertas">
-                  <span class="titulo-figure">
-                      <h3> <%= producto.name  %>  </h3>
-                  </span>
-                  <div class="precios">
-                    <span class="precio-figure">$<%= producto.discount %>,00</span>
-                    <span class="oferta-figure">$<%= producto.price  %>,00</span>
-                  </div>
-                </div>
-              </div></a>
-            <% }) %>  -->
-        
       
-      </div>
+        <%productos.forEach(producto => { %>
+          <% if (producto.category_id === 16) { %>
+          <a href="/productos/detalle/<%- producto.image  %> "><div class="contenedor">
+            <img src="/images/productos/<%- producto.productImage[0].imageName %>"/> 
+              <div class="bloque-ofertas">
+                <span class="titulo-figure">
+                  <h3> <%= producto.name  %>  </h3>
+                </span>
+                <div class="precios">
+                  <span class="oferta-figure">$<%= producto.price %>,00</span>
+                </div>
+              </div>
+            </div></a>
+            <% } %>
+        <% }) %>
+    
+    </div>
     </section>
     <!--FIN DIV MENU-CONTENEDOR-->
 
@@ -156,22 +152,20 @@
   <div class="menu-contenedor">
       
       <%productos.forEach(producto => { %>
-        <a href="/productos/detalle/<%- producto.id  %> "><div class="contenedor">
-          <% if (producto.productImage[0]) { %>
-            <img src="/images/productos/<%- producto.productImage[0].imageName %>"/> 
-        <% } else { %>
-            <img src="/images/productos/predeterminada.jpg"/>
-        <% } %> 
-          <div class="bloque-ofertas">
-            <span class="titulo-figure">
+        <% if (producto.discount > 1) { %>
+        <a href="/productos/detalle/<%- producto.image  %> "><div class="contenedor">
+          <img src="/images/productos/<%- producto.productImage[0].imageName %>"/> 
+            <div class="bloque-ofertas">
+              <span class="titulo-figure">
                 <h3> <%= producto.name  %>  </h3>
-            </span>
-            <div class="precios">
-              <span class="precio-figure">$<%= producto.discount %>,00</span>
-              <span class="oferta-figure">$<%= producto.price  %>,00</span>
+              </span>
+              <div class="precios">
+                <span class="precio-figure">$<%= producto.price %>,00</span>
+                <span class="oferta-figure">$<%= producto.price - producto.discount * producto.price / 100 %>,00</span>
+              </div>
             </div>
-          </div>
-        </div></a>
+          </div></a>
+          <% } %>
       <% }) %>
   
   </div>

@@ -5,11 +5,16 @@ const navMenu = document.querySelector('.nav-menu');
 buttonUp = document.getElementById('button-up');
 let ubicacionPrincipal  = window.pageYOffset;
 document.getElementById('button-up').addEventListener('click', scrollUp);
+// const filterSelect= document.querySelector('#select')
+
+
+
+// filter de productos
+// filterSelect.addEventListener('change', () => {
+// })
 
 
 // modo oscuro
-
-
 const theme = localStorage.getItem('theme');
     if (theme === 'dark') {
         document.body.classList.toggle('dark');
@@ -100,4 +105,3 @@ if (slides.length) {
     dots[slideIndex-1].className += " active";
     }  
 }
-

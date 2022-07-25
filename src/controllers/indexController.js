@@ -29,19 +29,27 @@ module.exports = {
     
     },
     index: (req, res) =>{
-        let productsInSale = getProducts.filter(product => product.discount > 0);
-        let specialProducts = getProducts.filter(product => product.projectId === 1);
-
-        /* reenderiza la vista ejs */
-        res.render('index', {
-            titulo: "Rosé",
-            titulo_producto: "Productos",
-            productos: getProducts,
-            productsInSale,
-            specialProducts,
-            session: req.session,
-            toThousand,
+        db.Product.findAll({
+            include: [
+                {association:"product"},
+                {association:"discount"} 
+            ],
+            where: {
+                [Op.or]: [
+                    {discount: {[Op.substring]:resultado}},
+                ]
+            },
         })
+        .then(products => {
+            res.render('index', {
+                titulo: "Rosé",
+                titulo_producto: "Productos",
+                productos: products,
+                session: req.session,
+                toThousand,
+                })
+
+            })
     },
     contacto:(req, res) => {
         res.render('contacto', {
@@ -62,7 +70,6 @@ search: (req, res) => {
         where: {
             [Op.or]: [
                 {name: {[Op.substring]:resultado}},
-                // {category_id: {[Op.substring]: resultado}},
             ]
         },
     })

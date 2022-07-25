@@ -3,24 +3,23 @@ let {getCarro, getProducts} = require('../data/index')
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 module.exports = {
-    getAll: (req, res) => {
-        db.Product.findAll({
+    getAll: async (req, res) => {
+        const productos = await db.Product.findAll({
             include: [
                 {association:"category"},
                 {association:"productImage"} 
             ],
         })
-        .then((productos)=>{
-            console.log(productos);
-            res.render('productos', {
-                titulo: "Productos",
-                productos,
-                toThousand,
-                session: req.session
-            })  
-        })
         .catch((error) => res.send(error))  
-    
+        const categories = await db.Category.findAll()
+        .catch((error) => res.send(error))  
+        res.render('productos', {
+                    titulo: "Productos",
+                    productos,
+                    categories,
+                    toThousand,
+                    session: req.session
+                })  
     },
     getOne: (req, res) => {
         db.Product.findOne({
