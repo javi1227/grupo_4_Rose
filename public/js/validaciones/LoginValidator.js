@@ -3,24 +3,25 @@ function qs(element) {
 }
 
 window.addEventListener("load", () =>{
-    $email = qs('#userName'),
+    $email = qs('#name'),
     $emailErrors = qs('#userNameError'),
+    $form = qs('#formlogin'),
     $pass = qs('#password'),
     $passErrors = qs('#passwordError'),
     regExAlpha = /^[a-zA-Z\sñáéíóúü ]*$/,
     regExDNI = /^[0-9]{7,8}$/,
     regExEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,
-    regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
+    regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{}$/;
 
 
 
     $email.addEventListener("blur", () => {
         switch (true) {
             case !$email.value.trim():
-                $emailErrors.innerHTML = "El email es requerido";
+                $emailErrors.innerHTML = "Email Invalido";
                 $email.classList.add("is-invalid");
                 break;
-            case !regExAlpha.test($email.value):
+            case !regExEmail.test($email.value):
                 $emailErrors.innerHTML = "email inválido";
                 $email.classList.add("is-invalid");
                 break;
@@ -37,8 +38,8 @@ window.addEventListener("load", () =>{
                 $passErrors.innerHTML = 'Ingrese una contraseña'
                 $pass.classList.add('is-invalid')
                 break;
-            case !regExPass.test($pass.value):
-                $passErrors.innerHTML = 'La contraseña debe tener: entre 6 y 12 caracteres, al menos una mayúscula, una minúscula y un número';
+            case /* !regExPass. */test($pass.value):
+                $passErrors.innerHTML = 'Contraseña Incorrecta';
                 $pass.classList.add('is-invalid')
                 break;    
             default:
@@ -48,6 +49,29 @@ window.addEventListener("load", () =>{
                 break;
         }
     })
+    $form.addEventListener("submit", function(event) {
 
+        event.preventDefault()
+        let elementsForm = this.elements;
+        let errores = false;
+
+        console.log(elementsForm)
+
+        for (let index = 0; index < elementsForm.length - 1; index++) {
+        for (let index = 0; index < elementsForm.length - 2; index++) {
+            if(elementsForm[index].value == ""
+            || elementsForm[index].classList.contains("is-invalid")){
+                elementsForm[index].classList.add("is-invalid");
+                submitErrors.innerHTML = "Email o contraseña erronea"
+                errores = true;
+            }
+        }
+
+        if(!errores){
+            $form.submit()
+            $formLogin.submit()
+        }
+        }
+    })
 })
  

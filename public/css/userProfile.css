@@ -28,6 +28,24 @@
     display: flex;
     flex-direction: column;
 }
+#numberError{
+    color: red;
+}
+#provinceError{
+    color: red;
+}
+#cityError{
+    color: red;
+}
+#phoneError{
+    color: red;
+}
+#nameError{
+    color: red;
+}
+#streetError{
+    color: red;
+}
 .imgUser{
     display: flex;
     justify-content: center;

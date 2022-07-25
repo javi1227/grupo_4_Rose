@@ -13,13 +13,14 @@
     <div class="container-t">
       <div class="forms-container-t">
         <div class="Signin-signup">
-          <form action="/usuarios/registro" method="POST" class="sign-in-form" enctype="multipart/form-data">
+          <form action="/usuarios/registro" method="POST" id="form" class="sign-in-form" enctype="multipart/form-data">
             <h2 class="title-t">Registrarse</h2>
 
             <div class="input-box">
               <i class="fas fa-user"></i>
               
               <input class="input-t" name="name" type="text" id="name" placeholder="Usuario" value="<%= locals.old && old.name%>"/><label for="name"></label>
+              <small class="text-danger" id="nameErrors"></small>
               <% if (locals.errors && errors.name) { %>
                 <small id="nameErrors" class="text-danger"><%= errors.name.msg %></small>
               <% } %>
@@ -28,6 +29,7 @@
               <i class="fas fa-user"></i>
               
               <input class="input-t" name="email" type="email" id="email" placeholder="Email" value="<%= locals.old && old.email%>"/><label for="email"></label>
+              <small class="text-danger" id="emailErrors"></small>
               <% if (locals.errors && errors.email) { %>
                 <small id="emailErrors" class="text-danger"><%= errors.email.msg %></small>
             <% } %>
@@ -37,6 +39,7 @@
             <div class="input-box">
               <i class="fa-solid fa-id-card"></i>
               <input type="file" name="avatar" id="formFile" class="inputRegister" >
+              <small class="text-danger" id="fileErrors"></small>
               <span id="fileErrors"></span>
             </div>
             <!-- fin avatar -->
@@ -44,6 +47,7 @@
             <div class="input-box">
               <i class="fas fa-lock"></i>
               <input type="password" name="password" id="password" placeholder="Contraseña" /><label for="password"></label>
+              <small class="text-danger" id="passwordError"></small>
               <% if (locals.errors && errors.password) { %>
                 <small id="passwordError" class="text-danger"><%= errors.password.msg %></small>
               <% } %>
@@ -52,6 +56,7 @@
               <i class="fas fa-lock"></i>
               
               <input type="password" name="password2" id="password2" placeholder="Repetir contraseña" /><label for="password"></label>
+              <small class="text-danger" id="pass2Errors"></small>
               <% if (locals.errors && errors.password2) { %>
                 <small id="pass2Errors" class="text-danger"><%= errors.password2.msg %></small>
               <% } %>
@@ -59,6 +64,7 @@
             <div class="checkRegister1">
             <input type="checkbox" name="terms" type="checkbox" value="" id="terms">
             <label class="form-check-label" for="terms" >
+              <small class="text-danger" id="termsErrors"></small>
               Acepto los términos y condiciones
             </label> <br>
             <% if (locals.errors && errors.terms) { %>
@@ -66,6 +72,7 @@
           <% } %>
           </div>
             <input type="submit" class="btn solid" value="Crear cuenta" />
+            <span id="submitErrors"></span>
             <p class="smedia-text">O inicia sesión con una de las siguientes plataformas</p>
             <div class="icon-container">
             <div class="social-media">

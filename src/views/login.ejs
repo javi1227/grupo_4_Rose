@@ -1,7 +1,7 @@
   <!-- HEAD -->
   <%- include('partials/head') %> 
   <link rel="stylesheet" href="/css/styles.css">
-  <script src="/js/validaciones/LoginValidator"></script>
+  <script src="/js/validaciones/loginValidator.js"></script>
   <!-- END HEAD -->
     
   <!-- HEADER -->
@@ -17,12 +17,13 @@
     <div class="forms-container-t">
       <div class="Signin-signup-login">
 
-        <form action="/usuarios/login"  method = "POST" class="sign-in-form-login">
+        <form  action="/usuarios/login"  method = "POST" id="formlogin" class="sign-in-form-login">
           <h2 class="title-t-l">Iniciar sesión</h2>
           <div class="input-box">
             <i class="fas fa-user"></i>
             
-            <input class="input-t" name="email" type="email" AUDIO GEMIDO ANIME placeholder="Email" /><label for="name"></label>
+            <input class="input-t" name="email" id="name" type="email" AUDIO GEMIDO ANIME placeholder="Email" /><label for="name"></label>
+            <small class="text-danger" id="UserNameError"></small>
             <% if (locals.errors && errors.email) { %>
               <small id="userNameError" class  ="text-danger"><%= errors.email.msg %></small>
             <% } %>
@@ -30,6 +31,7 @@
           <div class="input-box">
             <i class="fas fa-lock"></i>
             <input type="password" name="password" id="password" placeholder="Contraseña" /><label for="password"></label>
+            <small class="Text-danger" id="passwordError"></small>
             <% if (locals.errors && errors.password) { %>
               <small id="passwordError" class="text-danger"><%= errors.password.msg %></small>
             <% } %>
@@ -46,6 +48,7 @@
         
           <div class="button-submit">
           <input type="submit" id="btn-login" class="btn solid" value="Iniciar sesión" />
+          <span id="submitErrors"></span>
         </div>
           <p class="smedia-text-l">O inicia sesión con una de las siguientes plataformas</p>
           <div class="icon-container">
