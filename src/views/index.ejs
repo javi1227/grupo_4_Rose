@@ -100,7 +100,7 @@
       
         <%productos.forEach(producto => { %>
           <% if (producto.category_id === 16) { %>
-          <a href="/productos/detalle/<%- producto.image  %> "><div class="contenedor">
+          <a href="/productos/detalle/<%- producto.id  %> "><div class="contenedor">
             <img src="/images/productos/<%- producto.productImage[0].imageName %>"/> 
               <div class="bloque-ofertas">
                 <span class="titulo-figure">
@@ -153,7 +153,7 @@
       
       <%productos.forEach(producto => { %>
         <% if (producto.discount > 1) { %>
-        <a href="/productos/detalle/<%- producto.image  %> "><div class="contenedor">
+        <a href="/productos/detalle/<%- producto.id  %> "><div class="contenedor">
           <img src="/images/productos/<%- producto.productImage[0].imageName %>"/> 
             <div class="bloque-ofertas">
               <span class="titulo-figure">
