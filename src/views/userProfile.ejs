@@ -86,7 +86,7 @@
                     <label>Provincia:</label>
                     <select name="province" id="province">
                       <option value="" name="province" disabled hidden selected>Elegi tu provincia</option>
-                      <% provincias.forEach(provincia => { %>
+                      <% provincias?.forEach(provincia => { %>
                         <option value="<%- provincia.nombre %>"><%- provincia.nombre %> </option>
                       <% }) %>
                     </select>
