@@ -30,7 +30,7 @@ router.post('/productos', uploadProduct.array('imagen'), productsValidator, admi
 /* GET - Editar producto */
 router.get('/productos/editar/:id', userSessionCheck, adminCheck, adminProductsController.productEdit);
 /* PUT - Actualiza producto en la DB */
-router.put('/productos/:id', uploadProduct.array('imagen'), adminProductsController.productUpdate);
+router.put('/productos/:id', uploadProduct.array('image'), productsValidator, adminProductsController.productUpdate);
 /* DELETE - Elimina un producto */
 router.delete('/productos/eliminar/:id', adminProductsController.productDelete);
 
