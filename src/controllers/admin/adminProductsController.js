@@ -22,7 +22,7 @@ module.exports = {
     },
     /* Envia vista de form de creacion de producto */
     productAdd: (req, res) => {
-      Promise.all([categoriesPromise])
+      db.Category.findAll()
       .then(([categories]) =>{
         res.render('admin/pages/productos/agregarProducto', {
             titulo: "Agregar producto",
