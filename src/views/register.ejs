@@ -47,6 +47,7 @@
             <div class="input-box">
               <i class="fas fa-lock"></i>
               <input type="password" name="password" id="password" placeholder="Contraseña" /><label for="password"></label>
+              <img src="../../images/show.png" alt="" class="icon" id="Eye">
               <small class="text-danger" id="passwordError"></small>
               <% if (locals.errors && errors.password) { %>
                 <small id="passwordError" class="text-danger"><%= errors.password.msg %></small>
@@ -55,7 +56,8 @@
             <div class="input-box">
               <i class="fas fa-lock"></i>
               
-              <input type="password" name="password2" id="password2" placeholder="Repetir contraseña" /><label for="password"></label>
+              <input type="password2" name="password2" id="password2" placeholder="Repetir contraseña" /><label for="password2"></label>
+              <img src="../../images/show.png" alt="" class="icon2" id="Eye2">
               <small class="text-danger" id="pass2Errors"></small>
               <% if (locals.errors && errors.password2) { %>
                 <small id="pass2Errors" class="text-danger"><%= errors.password2.msg %></small>

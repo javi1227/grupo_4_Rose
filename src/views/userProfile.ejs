@@ -67,7 +67,7 @@
         
                   <form action="/usuarios/direcciones?_method=POST" class="row" method="post">
                     <div class="formProfile mb-3 col-md-6">
-                      <label for="street" class="form-label">Calle (*)</label>
+                      <label for="street" class="form-label">Dirección (*)</label>
                       <input type="text" class="form-control" name="street" id="street" value="<%= locals.old && old.street %>"/>
                       <% if (locals.errors && errors.street) { %>
                       <small class="text-danger"><%= errors.street.msg %></small>

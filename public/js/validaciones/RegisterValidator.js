@@ -134,6 +134,39 @@ window.addEventListener("load", () =>{
         };
     
     }); 
+    var eye = document.getElementById('Eye');
+    var input = document.getElementById('password');
+    eye.addEventListener("click", function(){
+        if(input.type == "password"){
+            input.type = "text"
+            eye.style.opacity=0.8
+        }else{
+            input.type = "password"
+            eye.style.opacity = 0.2
+        }
+    })
+    var eye2 = document.getElementById('Eye2');
+    var input2 = document.getElementById('password2');
+      
+    function mostrarcontra (eye2 , input2){
+        if(input2.type == "password"){
+            input2.type = "text";
+            eye2.classList.remove("eye2")
+            eye2.classList.add("eye2")
+        }else{
+            input2.type = "password";
+            eye2.classList.remove("eye2")
+            eye2.classList.add("eye2")
+        }
+    }
+    
+    eye2.onclick = () => {
+        mostrarcontra(eye2,input2)
+    }
+    
+     
+    
+
 
 
 

@@ -69,6 +69,31 @@
     justify-content: center;
     align-items: center;
 }
+.icon {
+    position: absolute;
+    height: 5%;
+    top: 49%;
+    right: 54px;
+    transform: translate(-50%);
+    opacity: 0.3;
+    cursor: pointer;
+}
+.icon:hover{
+    opacity: 0.8;
+}
+.icon2 { position: absolute;
+    position: absolute;
+    height: 5%;
+    top: 60%;
+    right: 56px;
+    transform: translate(-50%);
+    opacity: 0.3;
+    cursor: pointer;
+    
+}
+.icon2:hover{
+    opacity: 0.8;
+}
 
 
 h2.title-t{
