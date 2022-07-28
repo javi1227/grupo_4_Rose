@@ -12,6 +12,9 @@
     margin: 2rem;
     margin-top: 3rem;
 }
+.small #userNameError{
+    color: red;
+}
 
 .sign-in-form-login {
     display: flex;

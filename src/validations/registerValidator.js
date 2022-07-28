@@ -20,16 +20,12 @@ let validateRegister = [
                 return Promise.reject("Email ya registrado")
             }
         })
-        .catch(error => res.send(error))
-       /*  let user = users.find(user => user.email === req.body.email);
-        if(user){
-            return false;
-        }
-        return true; */
+       
+       
     }).withMessage("Email ya registrado"),
     check('password')
-        .notEmpty().withMessage('Ingrese una contraseña')
-        .isLength({min: 8}).withMessage('La contraseña debe tener por lo menos 8 caracteres'),
+        .notEmpty().withMessage('Ingrese una contraseña').bail()
+        .isLength({min: 7 }).withMessage('La contraseña debe tener por lo menos 7 caracteres'),
     check('password2')
         .notEmpty().withMessage('Reingrese su contraseña'),
         body('password2').custom((value, { req }) => {

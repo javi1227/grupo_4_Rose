@@ -7,7 +7,7 @@ let validateLogin = [
     check("email")
         .notEmpty().withMessage("El email es requerido").bail()
         .isEmail().withMessage("Ingrese un email válido"),
-        body("custom").custom((value, { req })=>{
+        body("email").custom((value, { req })=>{
             return db.User.findOne({
                 where: {
                     email: req.body.email,

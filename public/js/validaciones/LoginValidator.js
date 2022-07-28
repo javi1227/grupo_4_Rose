@@ -3,6 +3,7 @@ function qs(element) {
 }
 
 window.addEventListener("load", () =>{
+    let
     $email = qs('#name'),
     $emailErrors = qs('#userNameError'),
     $form = qs('#formlogin'),
@@ -11,7 +12,7 @@ window.addEventListener("load", () =>{
     regExAlpha = /^[a-zA-Z\sñáéíóúü ]*$/,
     regExDNI = /^[0-9]{7,8}$/,
     regExEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,
-    regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{}$/;
+    regExPass = /^(?=.*\d).{7,100}$/;
 
 
 
@@ -38,7 +39,7 @@ window.addEventListener("load", () =>{
                 $passErrors.innerHTML = 'Ingrese una contraseña'
                 $pass.classList.add('is-invalid')
                 break;
-            case /* !regExPass. */test($pass.value):
+            case !regExPass.test($pass.value):
                 $passErrors.innerHTML = 'Contraseña Incorrecta';
                 $pass.classList.add('is-invalid')
                 break;    

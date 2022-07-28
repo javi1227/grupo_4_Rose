@@ -70,7 +70,7 @@ window.addEventListener("load", () =>{
                 break;    
             default:
                 $pass.classList.remove("is-invalid");
-               /*  $pass.classList.add('is-valid') */
+                $pass.classList.add('is-valid') 
                 $passErrors.innerHTML = ""
                 break;
         }
@@ -129,7 +129,7 @@ window.addEventListener("load", () =>{
         };
     
         if(!errores){
-            alert("validado!!!!!!")
+           
             $form.submit()
         };
     
