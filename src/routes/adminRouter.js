@@ -48,7 +48,6 @@ router.get('/categorias/editar/:id',userSessionCheck, adminCheck, adminCategorie
 router.put('/categorias/:id', adminCategoriesController.categoryUpdate);
 
 router.delete('/categorias/eliminar/:id', adminCategoriesController.categoryDelete);
-module.exports = router;
 
 
 
@@ -63,3 +62,5 @@ router.get('/usuarios/editar/:id', userSessionCheck,  adminUsersController.users
 router.put('/usuarios/:id', adminUsersController.usersUpdate);
 
 router.delete('/usuarios/eliminar/:id', adminUsersController.usersDelete);
+
+module.exports = router;

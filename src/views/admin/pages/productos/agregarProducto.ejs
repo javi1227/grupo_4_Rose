@@ -28,7 +28,7 @@
                   <h4 class="card-title">Agregar producto</h4>
                   <p class="card-description"> </p>
                 </div> 
-                  <form class="forms-sample" action="/admin/productos" method="POST" enctype="multipart/form-data">
+                  <form class="forms-sample" id="form" action="/admin/productos" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
                       <label for="name" class="form-label">Nombre del producto</label>
                       <input type="text" name="name" class="form-control" id="name" placeholder="Ej: Vino" value="<%= (locals.old && old.name) ? old.name : "" %>">

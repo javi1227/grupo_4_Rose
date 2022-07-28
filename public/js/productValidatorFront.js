@@ -16,12 +16,19 @@ window.addEventListener("load", () =>{
     $fileErrors = qs('#fileErrors'),
     $stockErrors = qs('#stockErrors'),
     $descriptionErrors = qs('#descriptionErrors'),
-    $imgPreview = qs('#img-preview'),
+    $form = qs('#form')
     regExAlpha = /^[a-zA-Z\sñáéíóúü ]*$/,
     regExDNI = /^[0-9]{7,8}$/,
     regExEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,
     regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
-
+ 
+    let errors = {
+        name: false,
+        price: false,
+        category: false,
+        description: false
+    }
+ 
 
     /* name validators */
     $inputName.addEventListener("blur", (e) => {
@@ -30,20 +37,22 @@ window.addEventListener("load", () =>{
             case !$inputName.value.trim(): /* trim elimina los espacios en blanco */
                 $nameErrors.innerHTML = "Campo requerido";
                 $inputName.classList.add("is-invalid");
+                errors.name = true
                 break;
             case inputLength <= 4:
                 $nameErrors.innerHTML = "Ingrese más de 4 caracteres"
                 $inputName.classList.add("is-invalid")
+                errors.name = true
                 break;
-            /* case !regExAlpha.test($inputName.value):
+             case !regExAlpha.test($inputName.value):
                 $nameErrors.innerHTML = "Nombre inválido";
                 $inputName.classList.add("is-invalid");
-                break; */
-            default:
-                
+                break; 
+            default: 
                 $inputName.classList.remove("is-invalid");
                 $inputName.classList.add("is-valid");
                 $nameErrors.innerHTML = "";
+                errors.name = false;
                 break;    
             }
         })
@@ -54,20 +63,24 @@ window.addEventListener("load", () =>{
             case !$inputPrice.value.trim(): /* trim elimina los espacios en blanco */
                 $priceErrors.innerHTML = "Campo requerido";
                 $inputPrice.classList.add("is-invalid");
+                errors.price = true;
                 break;
             case inputLength < 2:
                 $priceErrors.innerHTML = "Ingrese 2 números o más"
                 $inputPrice.classList.add("is-invalid")
+                errors.price = true;
                 break;
             case regExDNI.test($inputPrice.value):
                 $priceErrors.innerHTML = "Nombre inválido";
                 $inputPrice.classList.add("is-invalid");
+                errors.price = true;
                 break;
             default:
                 
                 $inputPrice.classList.remove("is-invalid");
                 $inputPrice.classList.add("is-valid");
                 $priceErrors.innerHTML = "";
+                errors.price = false;
                 break;    
             }
         })
@@ -76,10 +89,12 @@ window.addEventListener("load", () =>{
             if(!$inputCategory.value.trim()){
                 $categoryErrors.innerHTML = "Campo requerido"
                 $inputCategory.classList.add('is-invalid');
+                errors.category = true;
             } else {
                 $inputCategory.classList.remove('is-invalid');
                 $inputCategory.classList.add('is-valid');
                 $categoryErrors.innerHTML = '';
+                errors.category = false;
             }
         })
 
@@ -101,20 +116,33 @@ window.addEventListener("load", () =>{
             case !$inputDescription.value.trim(): /* trim elimina los espacios en blanco */
                 $descriptionErrors.innerHTML = "Campo requerido";
                 $inputDescription.classList.add("is-invalid");
+                errors.description = true;
                 break;
             case inputLength < 2:
                 $descriptionErrors.innerHTML = "Ingrese 2 caracteres o más"
                 $inputDescription.classList.add("is-invalid")
+                errors.description = true;
                 break;
             default:
                 $inputDescription.classList.remove("is-invalid");
                 $inputDescription.classList.add("is-valid");
                 $descriptionErrors.innerHTML = "";
+                errors.description = false;
                 break;    
             }
         })
+
+        $form.addEventListener("submit", function(event) {            
+            event.preventDefault();
+            if(!errors.name && !errors.category && !errors.price && !errors.description){
+                $form.submit()
+            }else{
+                alert('¡Tienes errores en el formulario!')
+            }
+
         
-
-
+        }); 
 
 })
+
+console.log(elementsForm)
