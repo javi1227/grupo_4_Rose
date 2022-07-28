@@ -89,45 +89,7 @@ module.exports = {
           .catch((error) => res.send(error));
       },
     productUpdate: (req, res) => {
-
       let errors = validationResult(req);
-      if(errors.isEmpty()){
-          db.Product.findByPk(req.params.id)
-          .then(producto => {
-              db.Product.update({
-                  ...req.body,
-                  image: req.file ? req.file.filename : producto.image
-              },{
-                  where: {
-                      id: req.params.id
-                  }
-              })
-          })
-          .catch((error) => res.send(error))
-          .then(() => {
-              res.redirect('/admin/productos'); 
-          })
-          .catch((error) => res.send(error))
-      } else {
-          let idProducto = +req.params.id; 
-          let promiseProduct = db.Product.findByPk(idProducto)
-          let promiseCategory = db.Category.findAll()
-          Promise.all([ promiseProduct, promiseCategory])
-          .then(([producto, categories]) => {
-              res.render('admin/productsAdmin/editProduct', {
-                  title: "Editar:",
-                  producto,
-                  categories,
-                  session: req.session,
-                  errors: errors.mapped(),
-                  old: req.body
-              })
-          })
-          .catch((error)=>res.send(error))
-  }
-
-
-      /* let errors = validationResult(req);
 
       if(errors.isEmpty()){
         db.Product.update({
@@ -197,21 +159,21 @@ module.exports = {
       }else{
         let idProducto = +req.params.id;
         let productPromise = db.Product.findByPk(idProducto);
-        let categoriesPromise = db.Category.findAll();
+        let categoriesPromise = db.Category.findAll(); 
 
-        Promise.all([productPromise, categoriesPromise])
+        Promise.all([productPromise , categoriesPromise ])
         .then(([producto, categories]) => {
           res.render('admin/pages/productos/editarProducto', {
             titulo: "Edición",
             producto,
-            categories,
+            categories, 
             errors: errors.mapped(),
             old: req.body,
             session: req.session
           })
         })
         .catch(error => console.log(error))
-      } */
+      }
         },
     
     productDelete: (req, res) => {     
