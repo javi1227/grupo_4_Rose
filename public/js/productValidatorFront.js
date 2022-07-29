@@ -85,30 +85,30 @@ window.addEventListener("load", () =>{
             }
         })
 
-        $inputCategory.addEventListener('blur', ()=>{
-            if(!$inputCategory.value.trim()){
-                $categoryErrors.innerHTML = "Campo requerido"
-                $inputCategory.classList.add('is-invalid');
-                errors.category = true;
-            } else {
-                $inputCategory.classList.remove('is-invalid');
-                $inputCategory.classList.add('is-valid');
-                $categoryErrors.innerHTML = '';
-                errors.category = false;
-            }
-        })
+    $inputCategory.addEventListener('blur', ()=>{
+        if(!$inputCategory.value.trim()){
+            $categoryErrors.innerHTML = "Campo requerido"
+            $inputCategory.classList.add('is-invalid');
+            errors.category = true;
+        } else {
+            $inputCategory.classList.remove('is-invalid');
+            $inputCategory.classList.add('is-valid');
+            $categoryErrors.innerHTML = '';
+            errors.category = false;
+        }
+    })
 
-        $inputDiscount.addEventListener('blur', ()=>{
-            if($inputDiscount.value){
-                $inputDiscount.classList.add('is-valid')
-            }
-        })
+    $inputDiscount.addEventListener('blur', ()=>{
+        if($inputDiscount.value){
+            $inputDiscount.classList.add('is-valid')
+        }
+    })
 
-        $inputStock.addEventListener('blur', ()=>{
-            if($inputStock.value){
-                $inputStock.classList.add('is-valid')
-            }
-        })
+    $inputStock.addEventListener('blur', ()=>{
+        if($inputStock.value){
+            $inputStock.classList.add('is-valid')
+        }
+    })
 
     $inputDescription.addEventListener("blur", (e) => {
         let inputLength = $inputDescription.value.length;
@@ -130,18 +130,41 @@ window.addEventListener("load", () =>{
                 errors.description = false;
                 break;    
             }
-        })
+    })
 
-        $form.addEventListener("submit", function(event) {            
-            event.preventDefault();
-            if(!errors.name && !errors.category && !errors.price && !errors.description){
-                $form.submit()
-            }else{
-                alert('¡Tienes errores en el formulario!')
+    $form.addEventListener("submit", function(event) {            
+       /*  event.preventDefault();
+        if(!errors.name && !errors.category && !errors.price && !errors.description){
+            $form.submit()
+        }else{
+            alert('¡Tienes errores en el formulario!')
+        }
+ */
+        event.preventDefault()
+        let elementsForm = this.elements;
+        let errores = false;
+
+        console.log(elementsForm)
+        let elementosNoValidados = 2
+        for (let index = 0; index < elementsForm.length - elementosNoValidados; index++) {
+            if(elementsForm[index].value == ""
+            && elementsForm[index].name !== "stock"
+            && elementsForm[index].name !== "discount"
+            && elementsForm[index].type !== "file"
+            || elementsForm[index].classList.contains("is-invalid")){
+                elementsForm[index].classList.add("is-invalid");
+                submitErrors.innerHTML = "Hay errores en el formulario"
+                errores = true;
             }
+        }
 
-        
-        }); 
+        if(!errores){
+            alert("Validado!")
+            $form.submit()
+        }
+
+    
+    }); 
 
 })
 

@@ -50,7 +50,7 @@
               <img src="../../images/show.png" alt="" class="icon" id="Eye">
               <small class="text-danger" id="passwordError"></small>
               <% if (locals.errors && errors.password) { %>
-                <small id="passwordError" class="text-danger"><%= errors.password.msg %></small>
+                <small id="passwordError" style="width: 800%;" class="text-danger"><%= errors.password.msg %></small>
               <% } %>
             </div>
             <div class="input-box">
@@ -74,7 +74,7 @@
           <% } %>
           </div>
             <input type="submit" class="btn solid" value="Crear cuenta" />
-            <span id="submitErrors"></span>
+            <span style="margin-top: 3px;" id="submitErrors"></span>
             <p class="smedia-text">O inicia sesión con una de las siguientes plataformas</p>
             <div class="icon-container">
             <div class="social-media">

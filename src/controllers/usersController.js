@@ -1,4 +1,3 @@
-
 const { validationResult } = require('express-validator');
 const bcrypt = require("bcryptjs")
 const db = require("../database/models")
@@ -29,14 +28,14 @@ module.exports = {
                     email: user.email,
                     rol: user.rol_id
                 };
-        /*      if(req.body.remember){
+             if(req.body.remember){
                 const TIME_IN_MILISECONDS = 60000 * 60 * 24 * 365;
-                res.cookie('formarCookie', req.session.user, {
+                res.cookie('Rose', req.session.user, {
                     expires: new Date(Date.now() + TIME_IN_MILISECONDS),
                     httpOnly: true,
                     secure: true
                 });
-            }; */
+            };
             res.locals.user = req.session.user;
     
             res.redirect('/');
@@ -122,8 +121,35 @@ module.exports = {
                     id: req.session.user.id
                 }
             })
-            .then(() => 
-                res.redirect("/usuarios/perfil")
+            .then(() => {
+                db.User.findByPk(req.session.user.id)
+                .then(user => {
+                    
+                    req.session.user = {
+                        id: user.id,
+                        name: user.name,
+                        avatar:user.avatar,
+                        email: user.email,
+                        rol: user.rol_id
+                    };
+                   
+                    if(req.cookies.Rose){
+                        res.cookie('Rose', "", { maxAge: -1 })
+                    }
+
+                    const TIME_IN_MILISECONDS = 60000 * 60 * 24 * 365;
+                    res.cookie('Rose', req.session.user, {
+                        expires: new Date(Date.now() + TIME_IN_MILISECONDS),
+                        httpOnly: true,
+                        secure: true
+                    });
+    
+                    res.locals.user = req.session.user;
+    
+                    res.redirect("/usuarios/perfil")
+                })
+
+            }
             )
             .catch(error => res.send(error))
         }else{
@@ -157,8 +183,34 @@ module.exports = {
                     id: req.session.user.id
                 }
             })
-            .then(() => 
-                res.redirect("/usuarios/perfil")
+            .then(() => {
+                db.User.findByPk(req.session.user.id)
+                .then(user => {
+                    
+                    req.session.user = {
+                        id: user.id,
+                        name: user.name,
+                        avatar:user.avatar,
+                        email: user.email,
+                        rol: user.rol_id
+                    };
+                   
+                    if(req.cookies.Rose){
+                        res.cookie('Rose', "", { maxAge: -1 })
+                    }
+
+                    const TIME_IN_MILISECONDS = 60000 * 60 * 24 * 365;
+                    res.cookie('Rose', req.session.user, {
+                        expires: new Date(Date.now() + TIME_IN_MILISECONDS),
+                        httpOnly: true,
+                        secure: true
+                    });
+    
+                    res.locals.user = req.session.user;
+    
+                    res.redirect("/usuarios/perfil")
+                })
+            }
             )
             .catch(error => res.send(error))
         }else{
@@ -207,8 +259,8 @@ module.exports = {
     logout: (req, res) => {
         req.session.destroy();
 
-        if(req.cookies.formarCookie){
-            res.cookie('Rosé', "", { maxAge: -1 })
+        if(req.cookies.Rose){
+            res.cookie('Rose', "", { maxAge: -1 })
         }
 
         res.redirect('/')

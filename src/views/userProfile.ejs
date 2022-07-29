@@ -15,7 +15,7 @@
                   <h2>Es muy importante que mantengas actualizados tus datos para seguir conectados y poder informarte sobre novedades Rosé.</h2>
           </div>
           <div class="contendor-avatar">
-              <div class="imgUser">
+              <div class="imgUser" id="img-preview">
               <% if (typeof session.user != "undefined") { %>
                   <img src="/images/avatar/<%= session.user.avatar %>" alt="Foto de perfil de <%= session.user.name  %> ">
               <% } %> 

@@ -80,6 +80,7 @@
                       <textarea name="description" class="form-control" id="description" rows="3"><%= (locals.old && old.description) ? old.description : "" %></textarea>
                       <small class="errorMessage" id="descriptionErrors" ></small>
                     </div>
+                    <small id="submitErrors" style="color: red"></small>
                     <button type="submit" class="btn btn-gradient-primary me-2">Agregar</button>
                     <button class="btn btn-light">Borrar</button>
                   </form>
