@@ -222,8 +222,8 @@ h2.title-t{
 
 @media (min-width: 1200px){
     .sign-in-form-login{
-        max-width: 480px;
-        height: 35rem;
+        max-width: 511px;
+        height: auto;
     }
     h2.title-t-l{
         margin-top: 1rem;

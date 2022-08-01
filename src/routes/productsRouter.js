@@ -8,5 +8,7 @@ router.get('/', productsController.getAll);
 router.get('/detalle/:id', productsController.getOne)
 /* Ruta de carrito :D */
 router.get('/carro-de-compra', productsController.Carro)
+/*filtro*/
+router.get('/filtro', productsController.filter)
 
 module.exports = router;

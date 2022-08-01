@@ -500,7 +500,6 @@ height: 10px;
 footer{
     width: 100%;
     padding: 50px 0.7rem;
-    /* background-image:  url(../images/iconfinder-icon.svg); */
     -webkit-mask-image:  url(../../images/background-footer2.svg);
     background-image: url(../../images/background-footer2.svg);
     -webkit-mask-size: cover;

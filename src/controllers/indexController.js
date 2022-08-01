@@ -65,13 +65,10 @@ search: (req, res) => {
     db.Product.findAll({
         include: [
             {association:"category"},
-            {association:"productImage"} 
         ],
         where: {
-            [Op.or]: [
-                {name: {[Op.substring]:resultado}},
-            ]
-        },
+            category_Id: {[db.Sequelize.Op.substring] : busqueda}
+        }
     })
     .then(resultadoBusqueda => {
         res.render('results',{

@@ -51,8 +51,12 @@
                     <div class="subTotalCarrito" style="font-weight: 800 ; font-size: 1.3rem;">
                         <span>Total</span> <span>$6.400,00</span>
                     </div>
-                    <span><button class="submit-Compra" type="submit" style="background: #343d5b ; color: #cca43c;" >FINALIZAR COMPRA</button></span>
-                    <span><button class="submit-Compra" type="submit">CONTINUAR COMPRANDO</button></span>
+                    <% if (typeof session.user !== "undefined") { %>
+                        <span><button class="submit-Compra" type="submit" style="background: #343d5b ; color: #cca43c;" >FINALIZAR COMPRA</button></span>
+                        <%} else{ %> 
+                            <a href="/usuarios/login"><span><button class="submit-Compra" type="submit" style="background: #343d5b ; color: #cca43c;" >FINALIZAR COMPRA</button></span></a>
+                            <% } %> 
+                            <span><button class="submit-Compra" type="submit">CONTINUAR COMPRANDO</button></span>
                 </div>
         </div>    
 </div>

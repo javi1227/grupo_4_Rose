@@ -14,13 +14,19 @@
     <!-- MENU -->
     <div class="checkbox-Tienda">
         <legend class="legendCategories" >Nuestros Productos</legend>
-            <!-- <div>
-                <select name="select" id="select">
-                    <% categories.forEach(category => { %> 
-                    <option value=<%-category.id%>><%-category.name%></option>
-                    <% }) %>
-                </select>
-            </div> -->
+    
+        <form class="filter" action="/productos/filtro?_method=GET" method="GET">
+            <select name="search" id="searchProductos" class="buscadorProductos">
+                <option value="">Categorias</option>
+                <option value=13>Tinto</option>
+                <option value=14>Dulce</option>
+                <option value=15>Blanco</option>
+                <option value=16>Premium</option>
+                <option value=17>Rosado</option>
+            </select>
+
+            <button class=" btn9 btn-outline-success" type="submit">Buscar</button>
+        </form>
                 <div class="next-previous-tienda"> 
                 </div>
             <div class="body-de-tienda">
