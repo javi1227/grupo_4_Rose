@@ -53,8 +53,8 @@
 }
 .imgUser img{
     border-radius: 50%;
-    width: 5rem;
-    height: 5rem;
+    width: 10rem;
+    height: 10rem;
     border: 2px solid #cca43c;
     
 }
@@ -177,4 +177,44 @@ text-align: center;
     .PerfilBody{
         max-width: 50rem;
     }
+}
+
+.input_file-container .avatar{
+    background-color: coral;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    width: 10rem;
+    position: relative;
+    margin: -3.5rem auto 2rem ;
+}
+
+/* id de el boton subir imagen  */
+#span {
+    background-color: #dbedfd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    height: 30px;
+    margin: 0 auto; 
+    font-size: 14px;
+    border-radius: 80px;
+}
+
+.input_file-container input[type = file] { 
+    /* sirve esto para seleccinar un solo input(un input puntual) ..puede ser con clase o asi */
+    opacity: 0;
+    cursor: pointer;
+}
+#span {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    height: 30px;
+    margin: 0 auto; 
+    font-size: 14px;
+    border-radius: 80px;
+    margin-top: -7rem;
 }

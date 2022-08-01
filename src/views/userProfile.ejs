@@ -19,12 +19,13 @@
               <% if (typeof session.user != "undefined") { %>
                   <img src="/images/avatar/<%= session.user.avatar %>" alt="Foto de perfil de <%= session.user.name  %> ">
               <% } %> 
-              </div>
-              <span>Editar imagen de perfil</span>
+              </div >
+             
                 <form action="/usuarios/perfil/avatar?_method=PUT" method="POST" enctype="multipart/form-data">
-                  <div>
-                    <input type="file" name="avatar" id="avatar">
-                    <button type="submit" class="btn5 btn-primary">Modificar</button>
+                  <div class="input_file-container" style="margin-top: -8rem">
+                    <input type="file" name="avatar" id="avatar" class="avatar">
+                  
+                    <button type="submit" class="btn5 btn-primary" style="margin-left: 6rem;" >Editar Foto</button>
                   </div>
                 </form>
           </div>
