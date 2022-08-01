@@ -18,7 +18,7 @@ let validateLogin = [
                 }
             })
             .catch((error) => {
-                return Promise.reject("Email o contraseña incorrecto")
+                return Promise.reject("")
             })
         }),
     check("password")

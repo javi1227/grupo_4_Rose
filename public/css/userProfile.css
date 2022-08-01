@@ -110,7 +110,9 @@
     background-color: #3378b9;
     color: white;
     border-radius: 10px;
-    margin-top: 1rem
+    margin-top: 1rem;
+    height: 2rem;
+    
 }
 .btn5:hover{
     background-color: green;
