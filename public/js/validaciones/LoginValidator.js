@@ -50,7 +50,7 @@ window.addEventListener("load", () =>{
                 break;
         }
     })
-   /*  $form.addEventListener("submit", function(event) {
+   $form.addEventListener("submit", function(event) {
 
         event.preventDefault()
         let elementsForm = this.elements;
@@ -70,10 +70,10 @@ window.addEventListener("load", () =>{
 
         if(!errores){
             $form.submit()
-            $formprofile.submit()
+            $formlogin.submit()
         }
         }
-    }) */
+    }) 
 
 
 

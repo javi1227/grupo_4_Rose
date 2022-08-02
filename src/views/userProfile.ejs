@@ -17,12 +17,11 @@
           <div class="contendor-avatar">
               <div class="imgUser" id="img-preview">
               <% if (typeof session.user != "undefined") { %>
-                  <img src="/images/avatar/<%= session.user.avatar %>" alt="Foto de perfil de <%= session.user.name  %> ">
+                  <img style="height: 9rem ;width: 9rem;" src="/images/avatar/<%= session.user.avatar %>" alt="Foto de perfil de <%= session.user.name  %> ">
               <% } %> 
-              </div>
-              <span>Editar imagen de perfil</span>
+              </div >             
                 <form action="/usuarios/perfil/avatar?_method=PUT" method="POST" enctype="multipart/form-data">
-                  <div>
+                  <div class="input_file-container" style="margin-top: -7rem">
                     <input type="file" name="avatar" id="avatar">
                     <button type="submit" class="btn5 btn-primary">Modificar</button>
                   </div>
