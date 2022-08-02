@@ -1,6 +1,7 @@
 const db = require('../../database/models');
 const { validationResult } = require('express-validator');
-const { promiseImpl } = require('ejs');
+const fs = require("fs");
+const path = require("path");
 
 let categoriesPromise = db.Category.findAll();
 module.exports = {
@@ -96,7 +97,7 @@ module.exports = {
               name: req.body.name,
               price: req.body.price,
               discount: req.body.discount,
-              category_id: req.body.category,
+              category_id: req.body.categoryId,
               stock: req.body.stock ? true : false,
               description: req.body.description
             },
@@ -105,57 +106,47 @@ module.exports = {
                 id: req.params.id,
               }
         })
-        .then(() => {
-          if(req.files !== undefined){
-            //1 - Preguntar si está subiendo imagenes
-            if(req.files.length > 0){
-              //2 - a. obtener todas las imágenes del proyecto
+        .then((result) => {
+          /* res.send(result) */
+          //1 - Preguntar si está subiendo imagenes
+          console.log("1", req.file)
+          if(req.file !== undefined){
+            //2- Busco la imagen guardada
               db.ProductImage.findAll({
                 where: {
                   product_id: req.params.id,
                 }
               })
-              .then((images) => {
-                
-                
-                //2 - b. hacer un array con los nombres de las imagenes.
-                let imageNames = images.map(image => image.imageName);
-                //3 - Eliminar imagenes del servidor
-                imageNames.forEach(image => {
-                  if(fs.existsSync(path.join(__dirname, `../../../public/images/products/${image}`))){
-                    fs.unlinkSync(path.join(__dirname, `../../../public/images/products/${image}`))
-                  }else{
-                    console.log("-- No se encontró el archivo");
-                  }
-                });
-                //4 - Eliminar las imágenes de la tabla
+              .then((image) => {
+                console.log("2", image)
+                //Elimino la imagen del servidor
+                if(fs.existsSync(path.join(__dirname, `../../../public/images/productos/${image}`))){
+                  fs.unlinkSync(path.join(__dirname, `../../../public/images/productos/${image}`))
+                }else{
+                  console.log("-- No se encontró el archivo");
+                }
                 db.ProductImage.destroy({
                   where: {
                     product_id: req.params.id,
                   }
                 })
                 .then(() => {
-                  //5 - Cargar nuevas imágenes
-                  let arrayImages = req.files.map(image => {
-                    return {
-                      imageName: image.filename,
-                      product_id: req.params.id
-                    } 
+                   db.ProductImage.create({
+                    product_id: req.params.id,
+                    imageName: req.file.filename
                    })
-       
-                   db.ProductImage.bulkCreate(arrayImages)
-                   .then(() => res.redirect('/admin/productos'))
+                   .then((result) => { 
+                    console.log("3", result) 
+                    return res.redirect('/admin/productos')})
                    .catch(error => console.log(error))
                 })
                 .catch(error => console.log(error))
               })
               .catch(error => console.log(error))
-            }else{
+          }else{
               res.redirect('/admin/productos')
-            }
           }
-        })
-        .catch(error => console.log(error))
+        }).catch(error => console.log(error))
       }else{
         let idProducto = +req.params.id;
         let productPromise = db.Product.findByPk(idProducto);

@@ -19,13 +19,12 @@
               <% if (typeof session.user != "undefined") { %>
                   <img src="/images/avatar/<%= session.user.avatar %>" alt="Foto de perfil de <%= session.user.name  %> ">
               <% } %> 
-              </div >
-             
+              </div>
+              <span>Editar imagen de perfil</span>
                 <form action="/usuarios/perfil/avatar?_method=PUT" method="POST" enctype="multipart/form-data">
-                  <div class="input_file-container" style="margin-top: -8rem">
-                    <input type="file" name="avatar" id="avatar" class="avatar">
-                  
-                    <button type="submit" class="btn5 btn-primary" style="margin-left: 6rem;" >Editar Foto</button>
+                  <div>
+                    <input type="file" name="avatar" id="avatar">
+                    <button type="submit" class="btn5 btn-primary">Modificar</button>
                   </div>
                 </form>
           </div>
@@ -40,24 +39,27 @@
                       </div>
                       <div>
                               <form action="/usuarios/perfil?_method=PUT" class="datosAModificar" method="POST">
-                            
-
-                                  <label for="name" class="form-label">Nombre (*)</label>
-                                  <input type="text" class="form-control" name="name" id="name" value="<%= locals.old && old.name %>"/>
-                                  <% if (locals.errors && errors.name) { %>
-                                  <small class="text-danger"><%= errors.name.msg %></small>
-                                  <% } %>
-                                  <span class="error-message" id="nameError"></span>
-
-                                  <label for="phone" class="form-label">Teléfono (*)</label>
-                                  <input type="text" class="form-control" name="phone" id="phone" value="<%= locals.old && old.phone %>"/>
-                                  <% if (locals.errors && errors.phone) { %>
-                                  <small class="text-danger"><%= errors.phone.msg %></small>
-                                  <% } %>
-                                  <span class="error-message" id="phoneError"></span>
-                                  <button class="btn5 btn-outline-success" type="submit">
-                                      Editar datos
-                                  </button>
+                                <div class="datosAModificarContainer">
+                                  <div class="input-group">
+                                    <label for="name" class="form-label">Nombre (*)</label>
+                                    <input type="text" class="form-control" name="name" id="name" value="<%= locals.old && old.name %>"/>
+                                    <% if (locals.errors && errors.name) { %>
+                                    <small class="text-danger"><%= errors.name.msg %></small>
+                                    <% } %>
+                                    <span class="error-message" id="nameError"></span>
+                                  </div>
+                                  <div class="input-group">
+                                    <label for="phone" class="form-label">Teléfono (*)</label>
+                                    <input type="text" class="form-control" name="phone" id="phone" value="<%= locals.old && old.phone %>"/>
+                                    <% if (locals.errors && errors.phone) { %>
+                                    <small class="text-danger"><%= errors.phone.msg %></small>
+                                    <% } %>
+                                    <span class="error-message" id="phoneError"></span>
+                                  </div>
+                                </div>
+                                <button class="btn-editar btn-outline-success" type="submit">
+                                    Editar datos
+                                </button>
                               </form>
                       </div>
               </div>

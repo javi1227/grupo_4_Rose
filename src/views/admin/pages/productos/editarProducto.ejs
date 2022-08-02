@@ -28,7 +28,7 @@
                   <h4 class="name-editProduct" style="text-align: center; font-weight:700" ><%= producto.name %> </h4>
                   <p class="card-description"> </p>
                 </div> 
-                 <form class="forms-sample" id="form" action="/admin/productos/<%= producto.id %>?_method=PUT" method="POST"> 
+                 <form class="forms-sample" id="form" action="/admin/productos/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data"> 
                     <div class="form-group">
                       <label for="name" class="form-label">Nombre del producto</label>
                       <input type="text" name="name" class="form-control" id="name" placeholder="Ej: Chandon" value="<%= producto.name %>">
@@ -59,7 +59,7 @@
                     <div class="form-group">
                       <label>Imagen del producto</label>
                       <div class="input-group col-xs-12">
-                        <input type="file" class="form-control file-upload-info"  id="image" placeholder="Upload Image">
+                        <input type="file" class="form-control file-upload-info" name="image" id="image" placeholder="Upload Image">
                         <small class="errorMessage" id="imageErrors" ></small>
                       </div>
                     </div>
