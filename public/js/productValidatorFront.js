@@ -159,7 +159,7 @@ window.addEventListener("load", () =>{
         }
 
         if(!errores){
-            alert("Validado!")
+           
             $form.submit()
         }
 
