@@ -4,13 +4,13 @@ const { check } = require('express-validator');
 let validateProfile2 = [
     
     check("street")
-    .notEmpty().withMessage("Ingrese la direccion"),
+    .notEmpty().withMessage(""),
     check("number")
-        .notEmpty().withMessage("Ingrese altura de calle"),
+        .notEmpty().withMessage(""),
     check("province")
-        .notEmpty().withMessage("Ingrese la provincia"),
+        .notEmpty().withMessage(""),
     check("city")
-        .notEmpty().withMessage("Ingrese la localidad"),
+        .notEmpty().withMessage(""),
 ];
 
 module.exports = validateProfile2;

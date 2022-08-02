@@ -10,7 +10,7 @@
 <div class="bodyFalso">
         <main class="PerfilBody">
           <div class="h2Perfil" style="font-size: 1.5rem">EDITAR MIS DATOS</div>
-          <h5 class="h2Perfil">(*) Campos obligatorios</h5>
+          
           <div class="blueTexto">
                   <h2 style="font-size: 1rem">Es muy importante que mantengas actualizados tus datos para seguir conectados y poder informarte sobre novedades Rosé.</h2>
           </div>
@@ -33,12 +33,12 @@
           </div>
               <div class="contenedorDeDatos">
                       <div class="datosPersonales">
-                          <p><div class="colorDate">Email:</div><%= user.email %></p>
-                          <p><div class="colorDate">Name:</div><%= user.name %></p>
-                          <p><div class="colorDate">Telefono:</div><%= user.phone ? user.phone : "------" %></p>
+                          <p><div class="colorDate" style="text-transform: uppercase;" >Email:</div><%= user.email %></p>
+                          <p><div class="colorDate" style="text-transform: uppercase;" >Nombre:</div><%= user.name %></p>
+                          <p><div class="colorDate" style="text-transform: uppercase;" >Telefono:</div><%= user.phone ? user.phone : "------" %></p>
                       </div>
                       <div>
-                              <form action="/usuarios/perfil?_method=PUT" class="datosAModificar" method="POST">
+                              <form action="/usuarios/perfil?_method=PUT" class="datosAModificar" id="formprofile" method="POST">
                                 <div class="datosAModificarContainer">
                                   <div class="input-group">
                                     <label for="name" class="form-label">Nombre (*)</label>
@@ -67,25 +67,26 @@
                 <h2 class="h2Perfil" style="font-weight: bold; font-size: 1rem;">Gestiona tus direcciones</h2>
               </div>
               <div class="container p-5 border rounded">
-        
-                  <form action="/usuarios/direcciones?_method=POST" class="row" method="post">
-                    <div class="formProfile mb-3 col-md-6">
+                <form action="/usuarios/direcciones?_method=POST" class="row" class="datosAModificar" method="post">
+                    <div class="datosAModificarContainer">
+                    <div class=input-group>
                       <label for="street" class="form-label">Dirección (*)</label>
                       <input type="text" class="form-control" name="street" id="street" value="<%= locals.old && old.street %>"/>
                       <% if (locals.errors && errors.street) { %>
-                      <small class="text-danger"><%= errors.street.msg %></small>
-                      <% } %>
-                      <span class="error-message" id="streetError"></span>
-                    </div>
-                    <div class="formProfile mb-3 col-md-6" class="form-group">
-                      <label for="number" class="form-label">Número (*)</label>
-                      <input type="text" class="form-control" name="number" id="number" value="<%= locals.old && old.number %>"/>
-                      <% if (locals.errors && errors.number) { %>
-                      <small class="text-danger"><%= errors.number.msg %></small>
-                      <% } %>
-                      <span class="text-danger" id="numberError"></span>
-                    </div>
-
+                        <small class="text-danger"><%= errors.street.msg %></small>
+                        <% } %>
+                        <span class="error-message" id="streetError"></span>
+                      </div>
+                      <div class=input-group class="form-group">
+                        <label for="number" class="form-label">Número (*)</label>
+                        <input type="text" class="form-control" name="number" id="number" value="<%= locals.old && old.number %>"/>
+                        <% if (locals.errors && errors.number) { %>
+                          <small class="text-danger"><%= errors.number.msg %></small>
+                          <% } %>
+                          <span class="text-danger" id="numberError"></span>
+                        </div>
+                      </div>               
+                        
                     <label>Provincia:</label>
                     <select name="province" id="province">
                       <option value="" name="province" disabled hidden selected>Elegi tu provincia</option>
@@ -128,7 +129,7 @@
                   
 
                     <div class="formProfile mb-3 d-flex justify-content-center">
-                      <button class="btn5 btn-outline-primary" type="submit">
+                      <button class="btn-editar btn-outline-success" type="submit">
                         Agregar
                       </button>
                     </div>
@@ -172,7 +173,7 @@
                 </div>
         </main>
 </div>
-
+<span class=""></span>
 <!-- JS del home -->
 <%- include('partials/js') %> 
 <!-- END JS del home -->

@@ -29,7 +29,7 @@ function qs(element) {
         $name.addEventListener('blur', () => {
             switch(true){
                 case !$name.value.trim():
-                    $nameError.innerHTML = "Requerido";
+                    $nameError.innerHTML = "Ingresa Nombre";
                     $name.classList.add('error-message');
                     break;
                 case !regExAlpha.test($name.value):
@@ -63,7 +63,7 @@ function qs(element) {
         $street.addEventListener("blur", () => {
             switch (true) {
                 case !$street.value.trim():
-                    $streetError.innerHTML = "Requerido";
+                    $streetError.innerHTML = "Ingresa Dirección ";
                     $street.classList.add("is-invalid");
                     break;
                 case !regExAlpha.test($street.value):

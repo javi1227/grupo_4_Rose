@@ -23,6 +23,7 @@
     padding: 0.5rem 5px;
     width: 84%;
     margin-left: 7%;
+    border-radius: 3rem;
 }
 .contendor-avatar{
     display: flex;
@@ -71,6 +72,7 @@
     border: 1px solid #bbb;
     width: 84%;
     margin: 1rem 7%;
+    border-radius: 3rem;
 }
 
 .h2Perfil {
