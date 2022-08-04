@@ -27,8 +27,8 @@
                   </div>
                 </form>
           </div>
-          <div class="blueTexto2">
-              <h2 class="h2Perfil" style="font-size: 1rem">Administra tu nombre y dirección. Estos datos personales son privados y no se mostrarán a otros usuarios.</h2>
+          <div class="blueTexto2" id="adm-text">
+              <h2 class="h2Perfil"  style="font-size: 1rem">Administra tu nombre y dirección. Estos datos personales son privados y no se mostrarán a otros usuarios.</h2>
           </div>
               <div class="contenedorDeDatos">
                       <div class="datosPersonales">
@@ -86,8 +86,8 @@
                         </div>
                       </div>               
                         
-                    <label>Provincia:</label>
-                    <select name="province" id="province">
+                    <label>Provincia </label>
+                    <select class="province-select" name="province" id="province">
                       <option value="" name="province" disabled hidden selected>Elegi tu provincia</option>
                       <% provincias?.forEach(provincia => { %>
                         <option value="<%- provincia.nombre %>"><%- provincia.nombre %> </option>
@@ -96,10 +96,10 @@
                     <% if (locals.errors && errors.province) { %>
                     <small class="text-danger"><%= errors.province.msg %></small>
                     <% } %> <br>
-                    <span class="error-message" id="provinceError"></span>
+                    <span style="display: block; margin-bottom: 8px;" class="error-message" id="provinceError"></span>
 
-                    <label>Localidad:</label>
-                    <select name="city" id="city">
+                    <label>Localidad </label>
+                    <select class="province-select" name="city" id="city">
                       <option value="" name="city" hidden selected>Elegi tu Localidad</option>
                     
                     </select>
@@ -144,7 +144,7 @@
                           <th scope="col">Número</th>
                           <th scope="col">Provincia</th>
                           <th scope="col">Localidad</th>
-                          <th scope="col">Eliminar</th>
+                          <th scope="col"></th>
                         </tr>
                       </thead>
                       <tbody>

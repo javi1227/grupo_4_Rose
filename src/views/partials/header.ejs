@@ -30,13 +30,12 @@
                     <!-- <li class="nav-item"> <a href="#" class="nav-link">Contacto</a></li> -->
                     <li class="nav-item"> <a href="/productos/carro-de-compra"  class="nav-link">Mi carrito</a></li>
                     <% if (typeof session.user != "undefined") { %>
-                        <li class="nav-item"><a href="/usuarios/perfil">Mi perfil</a></li>
-                        <li class="nav-item"><a href="/usuarios/logout">Cerrar sesión</a></li>
+                        <li class="nav-item nav-link"><a href="/usuarios/perfil">Mi perfil</a></li>
+                        <li class="nav-item nav-link"><a href="/usuarios/logout">Cerrar sesión</a></li>
                     <% if (session.user.rol === 5) { %>
-                        <li class="nav-item"><a href="/admin">Admin</a></li>
                     <% } %>
                     <% }else{ %> 
-                        <li><a href="/usuarios/login">Ingresá</a></li>
+                        <li><a class="nav-item nav-link" href="/usuarios/login">Ingresá</a></li>
                     <% } %> 
                     <button class="switch" id="switch">
                         <span><i class="oscuroIcon fas fa-sun"></i></span>

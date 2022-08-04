@@ -5,8 +5,8 @@ const db= require("../database/models")
 
 let validateLogin = [
     check("email")
-        .notEmpty().withMessage("").bail()
-        .isEmail().withMessage(""),
+        .notEmpty().withMessage("dasda").bail()
+        .isEmail().withMessage("dasdasda"),
         body("email").custom((value, { req })=>{
             return db.User.findOne({
                 where: {
